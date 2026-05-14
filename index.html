@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FoodPro Studio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1 id="appTitle">FoodPro Studio</h1>
+    <div class="topbar-controls">
+      <label>
+        <span data-i18n="language">語言</span>
+        <select id="languageSelect"></select>
+      </label>
+      <button id="applyBatch" data-i18n="applyBatch">套用到整批照片</button>
+    </div>
+  </header>
+
+  <main class="layout">
+    <aside class="left-panel">
+      <section class="card">
+        <h2 data-i18n="upload">上傳照片</h2>
+        <input type="file" id="imageUpload" accept="image/*" />
+      </section>
+
+      <section class="card">
+        <h2 data-i18n="uploadRef">上傳參考圖</h2>
+        <input type="file" id="referenceUpload" accept="image/*" />
+        <small data-i18n="refHint">上傳後會優先參考色調、布景、風格。</small>
+      </section>
+
+      <section class="card">
+        <h2 data-i18n="quickPreset">靈感尺寸快速選擇</h2>
+        <select id="sizePreset"></select>
+      </section>
+
+      <section class="card">
+        <h2 data-i18n="tonePreset">色調 / 對比色預設</h2>
+        <select id="tonePreset"></select>
+      </section>
+
+      <section class="card">
+        <h2 data-i18n="styleSet">Set Style</h2>
+        <div id="styleOptions" class="chips"></div>
+      </section>
+
+      <section class="card">
+        <h2 data-i18n="lockedSeries">菜單系列一致性</h2>
+        <label><input type="checkbox" id="lockBackground" checked /> <span data-i18n="lockBackground">固定背景風格</span></label>
+        <label><input type="checkbox" id="lockLighting" checked /> <span data-i18n="lockLighting">固定光源方向</span></label>
+        <label><input type="checkbox" id="lockColor" checked /> <span data-i18n="lockColor">固定色調</span></label>
+        <label><input type="checkbox" id="lockAngle" /> <span data-i18n="lockAngle">固定拍攝角度</span></label>
+      </section>
+    </aside>
+
+    <section class="center-panel">
+      <div class="preview card">
+        <h2 data-i18n="preview">預覽</h2>
+        <img id="previewImage" alt="preview" src="https://placehold.co/800x600?text=Food+Preview" />
+      </div>
+
+      <div class="card">
+        <h2 data-i18n="angles">13 種常用拍攝角度</h2>
+        <div id="angleGrid" class="angle-grid"></div>
+      </div>
+    </section>
+
+    <aside class="right-panel card">
+      <h2 data-i18n="adjust">調整面板</h2>
+      <div id="controls"></div>
+      <button id="generateBtn" class="primary" data-i18n="generate">生成商業級照片</button>
+    </aside>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
