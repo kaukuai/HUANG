@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#143e39">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="description" content="把西班牙旅程放進口袋：現在、下一站、票券與每天的路線。">
+  <title>西班牙・口袋旅程</title>
+  <link rel="icon" href="./icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./icon-192.png">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">跳至主要內容</a>
+  <div id="app"><main class="loading"><span class="brand-mark">ES</span><h1>正在打開你的旅程</h1><p>把下一站，放進口袋。</p></main></div>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <input id="pack-input" type="file" accept=".json,application/json" hidden>
+  <dialog id="viewer" aria-label="附件檢視"><div class="viewer-head"><strong id="viewer-title"></strong><button class="icon-button" id="close-viewer" aria-label="關閉附件">✕</button></div><div id="viewer-body"></div></dialog>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

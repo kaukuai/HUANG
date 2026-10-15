@@ -1,0 +1,11 @@
+node_modules/
+dist/
+artifacts/
+private/
+*.travelpack.json
+__pycache__/
+.DS_Store
+.vercel/
+.env
+.env.*
+!.env.example

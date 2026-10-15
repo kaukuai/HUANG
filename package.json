@@ -1,0 +1,13 @@
+{
+  "name": "spain-pocket-trip",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-site.mjs",
+    "data:update": "python scripts/build_app.py && node scripts/build-site.mjs",
+    "start": "python scripts/serve.py",
+    "test": "node --test tests/time.test.mjs",
+    "test:browser": "python tests/browser_test.py"
+  }
+}
