@@ -42,7 +42,7 @@ export function validatePack(pack) {
     if (!/^\d{4}-\d{2}-\d{2}$/.test(day.date) || !Array.isArray(day.events)) throw new Error('日期格式不完整');
     for (const e of day.events) if (!e.id || !e.title || !Number.isFinite(Date.parse(e.start)) || Date.parse(e.end) <= Date.parse(e.start)) throw new Error('行程時段有誤');
   }
-  const allowed = /^(application\/(pdf|vnd\.apple\.pkpass|vnd\.openxmlformats-officedocument\.spreadsheetml\.sheet)|image\/(png|jpeg|webp))$/;
+  const allowed = /^(application\/(pdf|vnd\.apple\.pkpass|vnd\.openxmlformats-officedocument\.spreadsheetml\.sheet)|image\/(png|jpeg|webp)|text\/calendar)$/;
   if (pack.assets.length > 200) throw new Error('附件數量超出支援範圍');
   const ids = new Set();
   for (const a of pack.assets) {

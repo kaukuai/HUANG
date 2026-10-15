@@ -46,7 +46,8 @@ def maps(query):return 'https://www.google.com/maps/search/?api=1&query='+quote_
 days=[]
 for row in values['行程總覽'].iter_rows(min_row=6,max_row=16,values_only=True):
     date=row[0].strftime('%Y-%m-%d')
-    days.append({'date':date,'city':txt(row[2]),'title':txt(row[3]),'hotel':txt(row[7]),'events':[],'mapAsset':None})
+    days.append({'date':date,'city':txt(row[2]),'title':txt(row[3]),'hotel':txt(row[7]),'events':[],'mapAsset':None,
+                 'optionalStops':master.get('day_optional_stops',{}).get(date,[])})
 day_by_date={d['date']:d for d in days}
 for row, fr in zip(values['詳細時間流'].iter_rows(min_row=6), formulas['詳細時間流'].iter_rows(min_row=6)):
     v=[c.value for c in row]
@@ -69,6 +70,7 @@ for row, fr in zip(values['詳細時間流'].iter_rows(min_row=6), formulas['詳
     if 'Murillo' in title and category=='午餐':event.update(status='尚未訂位',statusKind='warning')
     if 'Madrid→Sevilla'==title:event['ticketIds']=['K17']
     if '聖米格爾市場' in title and category=='午餐':event.update(status='聖誕營業待確認',statusKind='warning')
+    if 'Gelateria MITO' in title:event.update(status='13:00關門（使用者提供）',statusKind='neutral')
     day_by_date[date]['events'].append(event)
 assert sum(len(d['events']) for d in days)==211
 
@@ -119,16 +121,25 @@ tickets.append({'id':'F01','date':'2026-12-23','title':'國際機票 · 中國�
 for i,title,date,time,url in [('P01','普拉多美術館','2026-12-26','15:45–17:00目標','https://entradas.museodelprado.es/'),('P02','奎爾宮 Palau Güell','2027-01-02','14:30目標','https://inici.palauguell.cat/en/')]:
     tickets.append({'id':i,'title':title,'date':date,'time':time,'report':'待購票確認','status':'尚未購票','statusKind':'warning','note':'目前是規劃時段，尚未取得有效入場票。','files':[],'url':url})
 tickets.sort(key=lambda t:(t['date'],t['id']))
-for tid,title,date,time,note in [
+restaurant_tickets=[
     ('RLOS','Los Galayos晚餐','2026-12-25','19:00','使用者確認已訂位；18:50到店目標，晚餐前順逛Plaza Mayor。確認信尚未提供。'),
     ('RBOT','Botín午餐','2026-12-26','13:00','使用者確認已訂位，預計15:00用餐結束，再前往Prado。確認信尚未提供。'),
     ('RELR','El Rinconcillo晚餐','2026-12-26','22:30','使用者確認已訂位，只保留十分鐘至22:40。21:39列車抵達後先入住，銜接偏緊，需預辦入住與接車。確認信尚未提供。'),
-]:
-    tickets.append({'id':tid,'title':title,'date':date,'time':time,'report':'依行程提早到店','status':'已訂位 · 使用者確認','statusKind':'confirmed','note':note,'files':[],'url':''})
+]
+for key,tid in [('postiguillo','RPOST'),('el_paseillo','RPASE')]:
+    booking=master.get('reservation_status_updates',{}).get(key)
+    if booking:
+        title='Bar Postiguillo Tapas' if key=='postiguillo' else 'Restaurante El Paseíllo'
+        restaurant_tickets.append((tid,title,booking['date'],booking['time'],booking['note']))
+for tid,title,date,time,note in restaurant_tickets:
+    pending=tid=='RPASE'
+    tickets.append({'id':tid,'title':title,'date':date,'time':time,'report':'依行程提早到店' if not pending else '11/27開始查位；尚未訂位','status':'尚未訂位' if pending else '已訂位 · 使用者確認','statusKind':'warning' if pending else 'confirmed','note':note,'files':[],'url':''})
 for d in days:
     for e in d['events']:
-        for name,tid in [('Los Galayos','RLOS'),('Botín','RBOT'),('El Rinconcillo','RELR')]:
-            if e['title']==name:e['ticketIds']=[tid]
+        for name,tid in [('Los Galayos','RLOS'),('Botín','RBOT'),('El Rinconcillo','RELR'),('Bar Postiguillo Tapas','RPOST'),('Restaurante El Paseíllo','RPASE')]:
+            if e['title']==name:
+                e['ticketIds']=[tid]
+                if tid in ['RPOST','RPASE']:e.update(status='尚未訂位' if tid=='RPASE' else '已訂位 · 四位',statusKind='warning' if tid=='RPASE' else 'confirmed')
 tickets.append({'id':'REF','title':'購票清單與對照表','date':'','time':'票券資料參考','report':'','status':'參考資料','statusKind':'neutral','note':'清單用於對照，不是景點入場票。','files':[{k:f[k] for k in ['label','url','assetId']} for f in drive_files if f['label']=='SPAIN TICKETS LIST'],'url':''})
 tickets.sort(key=lambda t:(t['date'] or '9999',t['id']))
 flights=[]
@@ -154,6 +165,14 @@ todos=[
  {'title':'補上高鐵原票','note':'19:00–21:39已購，四人總€100.75；車次、業者與實際站名待票面確認。','url':''},
  {'title':'12/24晚餐與聖誕營業','note':'主人尚未聯絡到，未成行在飯店自理；市場、超市部與早到寄物仍需確認。','url':''},
 ]
+if master.get('reservation_status_updates',{}).get('el_paseillo'):
+    todos.insert(1,{'title':'11/27開始預約El Paseíllo晚餐','note':'12/27四位19:30目標，墨魚燉飯供應／是否需預訂待確認；僅提前一個月開放為使用者提供，精確放位時間未核。','url':''})
+for reminder in master.get('calendar_reminders',[]):
+    path=P/reminder['file']
+    if path.is_file():
+        aid=asset(path,mime='text/calendar')
+        target=next((t for t in todos if ('Paseíllo' in t['title'])==('Paseíllo' in reminder['title']) and ('Murillo' in t['title'] or 'Paseíllo' in t['title'])),None)
+        if target:target.update(assetId=aid,reminderNote=reminder['date']+' '+reminder['time']+'台灣時間；匯入行事曆才生效')
 trip={'schema':1,'version':master['version'],'title':'西班牙・口袋旅程','timezone':'Europe/Madrid','people':4,
       'days':days,'tickets':tickets,'hotels':hotels,'todos':todos,'flights':flights,
       'budget':{'core':master['budget']['core_including_domestic_excluding_international_per_person_twd'],
@@ -165,6 +184,7 @@ share.update(tickets=[],hotels=[],todos=[],flights=[],budget=None)
 hotel_pattern=re.compile(r'Arenal(?: Suites(?: Puerta del Sol)?)?|Enjoy\s*Sevilla|EnjoySevilla|Sercotel(?: Granada Suites)?|Inside Barcelona Apartments Príncep|Príncep',re.I)
 for day in share['days']:
     day['hotel']='';day['mapAsset']=None
+    for stop in day.get('optionalStops',[]):stop['note']='有空才去；不壓縮已購景點與演出報到時間。'
     for e in day['events']:
         sensitive=bool(hotel_pattern.search(e['title']+' '+unquote(e['mapUrl']))) or any(s in e['title'] for s in ['住宿','飯店','公寓','主人'])
         e['title']=hotel_pattern.sub('住宿',e['title'])
@@ -192,7 +212,7 @@ private_dir=P/'app-private';private_dir.mkdir(exist_ok=True)
 pack_path=private_dir/f'Spain_Travel_{master["version"]}.travelpack.json'
 pack_path.write_text(json.dumps({'format':'spain-pocket-trip/v1','trip':trip,'assets':assets},ensure_ascii=False,separators=(',',':')),encoding='utf-8')
 # Icon rendering from the source SVG uses Chromium in the browser test/build finalization.
-report={'public_dir':str(OUT),'private_pack':str(pack_path),'days':len(days),'events':sum(len(d['events']) for d in days),
+report={'public_dir':str(OUT),'private_pack':str(pack_path),'planning_version':master['version'],'days':len(days),'events':sum(len(d['events']) for d in days),
         'tickets':len(tickets),'evidence_files':len(evidence),'maps':len(anchors),'assets':len(assets),'private_bytes':pack_path.stat().st_size,'build_id':build_id}
 (P/'review/app-build-report.json').write_text(json.dumps(report,ensure_ascii=False,indent=2))
 print(json.dumps(report,ensure_ascii=False,indent=2))

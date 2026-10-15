@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "version": "2026-10-15-v2",
+  "version": "2026-10-15-v3",
   "title": "西班牙・口袋旅程",
   "timezone": "Europe/Madrid",
   "people": 4,
@@ -284,7 +284,8 @@
           "statusKind": "neutral"
         }
       ],
-      "mapAsset": null
+      "mapAsset": null,
+      "optionalStops": []
     },
     {
       "date": "2026-12-25",
@@ -629,7 +630,8 @@
           "statusKind": "neutral"
         }
       ],
-      "mapAsset": null
+      "mapAsset": null,
+      "optionalStops": []
     },
     {
       "date": "2026-12-26",
@@ -1022,12 +1024,13 @@
           "statusKind": "neutral"
         }
       ],
-      "mapAsset": null
+      "mapAsset": null,
+      "optionalStops": []
     },
     {
       "date": "2026-12-27",
       "city": "塞維亞",
-      "title": "王宮、大教堂與佛朗明哥",
+      "title": "王宮、大教堂、佛朗明哥與新餐飲",
       "hotel": "",
       "events": [
         {
@@ -1146,7 +1149,7 @@
           "id": "9b626f668f78",
           "date": "2026-12-27",
           "start": "2026-12-27T11:00:00+01:00",
-          "end": "2026-12-27T12:25:00+01:00",
+          "end": "2026-12-27T12:00:00+01:00",
           "category": "必看",
           "title": "四人合看宮殿與花園",
           "transport": "",
@@ -1159,48 +1162,48 @@
           "statusKind": "neutral"
         },
         {
-          "id": "7baa7472b0be",
+          "id": "2e6762c0568e",
           "date": "2026-12-27",
-          "start": "2026-12-27T12:25:00+01:00",
-          "end": "2026-12-27T12:55:00+01:00",
-          "category": "必逛",
-          "title": "Santa Cruz小巷庭院",
+          "start": "2026-12-27T12:00:00+01:00",
+          "end": "2026-12-27T12:40:00+01:00",
+          "category": "甜點",
+          "title": "前往Gelateria MITO並吃雪糕",
           "transport": "",
           "note": "",
           "ticketIds": [],
-          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Santa+Cruz+%E7%8C%B6%E5%A4%AA%E5%8D%80+%E4%BB%A5+Plaza+de+Do%C3%B1a+Elvira+%E9%99%84%E8%BF%91%E7%82%BA%E4%B8%AD%E5%BF%83+Sevilla",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Gelateria+MITO+Sevilla",
           "infoUrl": "",
           "conditional": false,
-          "status": "",
+          "status": "13:00關門（使用者提供）",
           "statusKind": "neutral"
         },
         {
-          "id": "ddc70bd1653b",
+          "id": "91325964a43c",
           "date": "2026-12-27",
-          "start": "2026-12-27T12:55:00+01:00",
-          "end": "2026-12-27T13:10:00+01:00",
+          "start": "2026-12-27T12:40:00+01:00",
+          "end": "2026-12-27T13:00:00+01:00",
           "category": "交通",
-          "title": "往Arfe32午餐",
+          "title": "前往Bar Postiguillo Tapas",
           "transport": "",
           "note": "",
           "ticketIds": [],
-          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Bodeguita+Antonio+Romero+Arfe+Calle+Arfe+32+Sevilla",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Bar+Postiguillo+Tapas+Sevilla",
           "infoUrl": "",
           "conditional": false,
           "status": "",
           "statusKind": "neutral"
         },
         {
-          "id": "52747e634580",
+          "id": "6dfd4c9b200c",
           "date": "2026-12-27",
-          "start": "2026-12-27T13:10:00+01:00",
+          "start": "2026-12-27T13:00:00+01:00",
           "end": "2026-12-27T14:00:00+01:00",
           "category": "午餐",
-          "title": "piripi與安達魯西亞小盤",
+          "title": "Bar Postiguillo Tapas",
           "transport": "",
           "note": "",
           "ticketIds": [],
-          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Bodeguita+Antonio+Romero+Arfe+Calle+Arfe+32+Sevilla",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Bar+Postiguillo+Tapas+Sevilla",
           "infoUrl": "",
           "conditional": false,
           "status": "",
@@ -1303,12 +1306,12 @@
           "statusKind": "neutral"
         },
         {
-          "id": "ff5ac1fad490",
+          "id": "3b8f6c34186d",
           "date": "2026-12-27",
           "start": "2026-12-27T17:15:00+01:00",
           "end": "2026-12-27T17:30:00+01:00",
           "category": "交通",
-          "title": "經La Campana買巴士早餐",
+          "title": "前往劇場；巴士早餐僅順路快取",
           "transport": "",
           "note": "",
           "ticketIds": [],
@@ -1351,36 +1354,36 @@
           "statusKind": "neutral"
         },
         {
-          "id": "6b10993e2f30",
+          "id": "48623659358b",
           "date": "2026-12-27",
           "start": "2026-12-27T19:00:00+01:00",
           "end": "2026-12-27T19:30:00+01:00",
           "category": "交通",
-          "title": "走到El Pintón",
+          "title": "前往Restaurante El Paseíllo",
           "transport": "",
           "note": "",
           "ticketIds": [],
-          "mapUrl": "https://www.google.com/maps/search/?api=1&query=El+Pint%C3%B3n+Calle+Francos+42+Sevilla",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Restaurante+El+Pase%C3%ADllo+Sevilla",
           "infoUrl": "",
           "conditional": false,
-          "status": "",
-          "statusKind": "neutral"
+          "status": "尚未安排",
+          "statusKind": "warning"
         },
         {
-          "id": "68a4b56c17d0",
+          "id": "222ad2bad47c",
           "date": "2026-12-27",
           "start": "2026-12-27T19:30:00+01:00",
           "end": "2026-12-27T20:45:00+01:00",
           "category": "晚餐",
-          "title": "現代安達魯西亞餐",
+          "title": "Restaurante El Paseíllo",
           "transport": "",
           "note": "",
           "ticketIds": [],
-          "mapUrl": "https://www.google.com/maps/search/?api=1&query=El+Pint%C3%B3n+Calle+Francos+42+Sevilla",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Restaurante+El+Pase%C3%ADllo+Sevilla",
           "infoUrl": "",
           "conditional": false,
-          "status": "",
-          "statusKind": "neutral"
+          "status": "尚未訂位",
+          "statusKind": "warning"
         },
         {
           "id": "77b3eca90f2e",
@@ -1415,7 +1418,14 @@
           "statusKind": "neutral"
         }
       ],
-      "mapAsset": null
+      "mapAsset": null,
+      "optionalStops": [
+        {
+          "title": "99 Cheesecake | Sevilla",
+          "note": "有空才去；不壓縮已購景點與演出報到時間。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=99+Cheesecake+Sevilla"
+        }
+      ]
     },
     {
       "date": "2026-12-28",
@@ -1824,7 +1834,8 @@
           "statusKind": "neutral"
         }
       ],
-      "mapAsset": null
+      "mapAsset": null,
+      "optionalStops": []
     },
     {
       "date": "2026-12-29",
@@ -2121,7 +2132,8 @@
           "statusKind": "neutral"
         }
       ],
-      "mapAsset": null
+      "mapAsset": null,
+      "optionalStops": []
     },
     {
       "date": "2026-12-30",
@@ -2466,7 +2478,8 @@
           "statusKind": "neutral"
         }
       ],
-      "mapAsset": null
+      "mapAsset": null,
+      "optionalStops": []
     },
     {
       "date": "2026-12-31",
@@ -2763,7 +2776,8 @@
           "statusKind": "neutral"
         }
       ],
-      "mapAsset": null
+      "mapAsset": null,
+      "optionalStops": []
     },
     {
       "date": "2027-01-01",
@@ -3044,7 +3058,8 @@
           "statusKind": "neutral"
         }
       ],
-      "mapAsset": null
+      "mapAsset": null,
+      "optionalStops": []
     },
     {
       "date": "2027-01-02",
@@ -3357,7 +3372,8 @@
           "statusKind": "neutral"
         }
       ],
-      "mapAsset": null
+      "mapAsset": null,
+      "optionalStops": []
     },
     {
       "date": "2027-01-03",
@@ -3478,7 +3494,8 @@
           "statusKind": "neutral"
         }
       ],
-      "mapAsset": null
+      "mapAsset": null,
+      "optionalStops": []
     }
   ],
   "tickets": [],

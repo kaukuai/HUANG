@@ -74,7 +74,8 @@ function beforeTripHome() {
   <div class="section-heading"><h2>四座城市，一路向東</h2></div><div class="cities">${[['MADRID','馬德里','2 晚'],['SEVILLA','塞維亞','2 晚'],['GRANADA','格拉納達','1 晚'],['BARCELONA','巴塞隆納','5 晚']].map(([en,zh,n],i)=>`<div class="city-tile"><span>0${i+1} / ${n}</span><strong>${zh}</strong><small>${en}</small></div>`).join('')}</div>`;
 }
 function pendingSection() {
-  return `<div class="section-heading"><h2>出發前，還有這幾件</h2><span>待處理</span></div><div class="todo-list">${data().todos.slice(0,4).map(t => `<article><span class="todo-dot"></span><div><strong>${esc(t.title)}</strong><p>${esc(t.note)}</p>${extLink(t.url, '開啟相關連結 ↗', 'inline-link')}</div></article>`).join('')}</div>`;
+  const limit=state.tab==='trip'?data().todos.length:4;
+  return `<div class="section-heading"><h2>出發前，還有這幾件</h2><span>待處理</span></div><div class="todo-list">${data().todos.slice(0,limit).map(t => `<article><span class="todo-dot"></span><div><strong>${esc(t.title)}</strong><p>${esc(t.note)}</p>${extLink(t.url, '開啟相關連結 ↗', 'inline-link')}${t.assetId?`<button class="file-button" data-action="asset" data-id="${esc(t.assetId)}">下載訂位提醒</button><p class="caption">${esc(t.reminderNote)}</p>`:''}</div></article>`).join('')}</div>`;
 }
 function home() {
   const t = now(); const {current,next} = currentAndNext(events(),t);
@@ -96,6 +97,7 @@ function itinerary() {
   return `<div class="page-heading"><div><p class="eyebrow">ONE DAY AT A TIME</p><h1>每天，都有好風景。</h1></div></div>${dayPicker()}
   <div class="day-heading"><div><p>D${data().days.indexOf(day)+1} · ${esc(day.city)}</p><h2>${esc(day.title)}</h2></div>${privateMode() && day.mapAsset ? `<button class="icon-button" data-action="asset" data-id="${day.mapAsset}" aria-label="開啟當日離線路線圖">${icon('map')}</button>`:''}</div>
   <p class="caption">所有時段為西班牙當地時間 · 導航需連線</p>
+  ${day.optionalStops?.length?`<aside class="optional-stops"><h3>有空再去</h3>${day.optionalStops.map(stop=>`<div><strong>${esc(stop.title)}</strong><p>${esc(stop.note)}</p>${extLink(stop.mapUrl,`${icon('map')}查看店家位置`,'button secondary')}</div>`).join('')}</aside>`:''}
   <div class="timeline">${day.events.map(e => {
     const active=Date.parse(e.start)<=Number(t)&&Number(t)<Date.parse(e.end); const done=state.done.has(e.id);
     return `<article class="timeline-event ${active?'current':''} ${done?'completed':''}" id="event-${esc(e.id)}"><div class="time-rail"><strong>${clock(new Date(e.start))}</strong><small>${clock(new Date(e.end))}</small><span class="timeline-dot"></span></div><div class="event-content"><div class="event-meta"><span>${esc(e.category)}</span>${active?'<span class="live-label">此刻</span>':''}${done?'<span>已標記完成</span>':''}</div><h3>${esc(e.title)}</h3>${badge(e)}<details><summary>查看提醒與連結</summary>${e.note?`<p>${esc(e.note)}</p>`:''}${e.transport?`<p class="caption">${esc(e.transport)}</p>`:''}${eventActions(e)}${extLink(e.infoUrl,'官方資訊 ↗','inline-link')}<button class="text-button" data-action="done" data-id="${esc(e.id)}">${done?'取消完成標記':'標記完成'}</button></details></div></article>`;
