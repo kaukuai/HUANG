@@ -10,7 +10,7 @@
 - 日期錯誤、未購票、已購但原票未補及條件行程會分別顯示。
 - 12/27 新餐飲與彈性甜點已同步；可下載 Murillo 11/25 與 El Paseíllo 11/27 訂位提醒，匯入行事曆後生效。
 
-已提供可直接由 GitHub 匯入 Vercel 的設定。尚未在實體 iPhone Safari 測試。沒有伺服器帳號、多人即時同步、背景推播或 Google Drive 自動同步；匯入新版資料包才會更新各手機的同行內容。
+已提供可直接由 GitHub 匯入 Vercel 的設定。公開行程連網後會自動更新，已匯入舊同行包的手機也會顯示最新安排；票券、私人提醒與離線路線圖需另匯入新版同行包。尚未在實體 iPhone Safari 測試。沒有伺服器帳號、多人即時同步、背景推播或 Google Drive 自動同步。
 
 ## GitHub → Vercel
 
@@ -62,18 +62,22 @@ python scripts/build_app.py --planning /path/to/spain-planning --output /path/to
 npm test
 python -m pip install -r requirements-test.txt
 npm run test:browser
+npm run test:updates
 ```
 
-目前瀏覽器測試使用 `/usr/bin/chromium` 與本機 4173 連接埠。測試涵蓋西班牙／台灣跨日、列車精確切換時間、國際機場時區、資料包匯入、手機排版、飛航模式重開、離線 PDF 與路線圖，以及分享版資料分離。
+目前瀏覽器測試使用 `/usr/bin/chromium` 與本機 4173 連接埠。測試涵蓋西班牙／台灣跨日、列車精確切換時間、國際機場時區、資料包匯入、手機排版、飛航模式重開、離線 PDF 與路線圖，以及分享版資料分離。`test:updates` 自行啟動暫存伺服器，驗證舊版快取與同行包升級、連網刷新及離線保留。
 
 ## 後續行程更新
 
 1. 先更新規劃資料與 `latest-planning-state.json`。
 2. 執行 `npm run data:update`，產生新的公開行程資料與同行資料包。
-3. 推送程式碼與 `app/data/share.json` 到 GitHub，Vercel 自動部署；同行者各自在「旅程 → 匯入新版資料」選擇新包。
-4. 檢查畫面版本日期與待處理事項，再以飛航模式開啟一份票券。
+3. 推送程式碼與 `app/data/share.json` 到 GitHub，Vercel 自動部署。App 在開啟、恢復連線、回到前景及每分鐘會檢查公開行程；也可按「旅程 → 檢查並更新行程」。
+4. 同行者各自在「旅程 → 匯入新版資料」選擇新包以更新私人附件與提醒。已調整日期的舊離線路線圖會暫停顯示，避免使用舊路線；當日景點導航仍可開啟。
+5. 檢查行程與同行附件的版本，再以飛航模式開啟一份票券。
 
-行程完成標記只保留在各自裝置，不會修改供應商訂位或其他同行者的狀態。正式網站的更新會刷新 App 頁面，私人行程更新仍需匯入。
+行程完成標記只保留在各自裝置，不會修改供應商訂位或其他同行者的狀態。新版程式會在完成離線快取後載入；匯入資料或開啟附件期間可稍後按「開啟新版畫面」。
+
+若網站仍顯示舊內容，先查看「旅程 → 行程更新」的版本及網站部署編號。網站的 `/version.json` 也提供 `sourceCommit`、`itineraryVersion` 與建置時間，可對照 GitHub 最新提交及 Vercel Deployments。端點不存在代表部署尚未包含此功能；到 Vercel 確認專案連接 `kaukuai/HUANG`、Production Branch 為 `main`，最新提交已部署成功，必要時重新部署。
 
 ## 上線方式
 

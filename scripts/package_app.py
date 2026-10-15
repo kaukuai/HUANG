@@ -52,7 +52,7 @@ state=json.loads((P/'latest-planning-state.json').read_text())
 app_state=state.setdefault('app',{})
 app_state.update({'source':'/workspace/HUANG','source_data_version':re.search(r"spain-pocket-([^']+)",(R/'dist/sw.js').read_text()).group(1),'planning_version':version,
               'public_package':public_name,'companion_package':companion_name,'preview':preview_name,
-              'update_mode':'依最新版規劃重建；各手機匯入同行包，不是多人即時同步'})
+              'update_mode':'連網自動更新公開行程；私人票券、提醒及離線路線圖由各手機匯入新版同行包'})
 (P/'latest-planning-state.json').write_text(json.dumps(state,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 (P/'review/app-package-validation.json').write_text(json.dumps(outputs,ensure_ascii=False,indent=2),encoding='utf-8')
 print(json.dumps(outputs,ensure_ascii=False,indent=2))

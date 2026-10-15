@@ -1,5 +1,8 @@
 import { dateInZone, clock, currentAndNext, shortDate, minutesUntil, tripPhase } from './time.js';
 import { read, saveSetting, importPack, clearPrivate, isOlderVersion } from './storage.js';
+import { currentTrip, validPublicTrip } from './updates.js';
+
+const APP_BUILD = '__BUILD_ID__';
 
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' }[c]));
@@ -22,9 +25,14 @@ const icon = name => `<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" st
 const safeUrl = value => { try { const u = new URL(value); return u.protocol === 'https:' ? u.href : ''; } catch { return ''; } };
 const extLink = (url, label, cls = 'button secondary') => safeUrl(url) ? `<a class="${cls}" href="${esc(safeUrl(url))}" target="_blank" rel="noopener noreferrer">${label}</a>` : '';
 const money = n => Number(n).toLocaleString('zh-TW', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-const state = { tab:'now', date:null, search:'', filter:'all', mode:'share', privateTrip:null, share:null, preview:null, done:new Set(), offlineReady:false, installing:null, busy:false };
+const state = { tab:'now', date:null, search:'', filter:'all', mode:'share', privateTrip:null, share:null, preview:null, done:new Set(), offlineReady:false, installing:null, busy:false, syncing:false, syncMessage:'尚未檢查', checkedAt:null, siteVersion:null, swReg:null, shellUpdate:false };
 let viewerUrl, toastTimer, lastRefresh;
-const data = () => state.mode === 'private' && state.privateTrip ? state.privateTrip : state.share;
+let viewCache;
+const data = () => {
+  if (state.mode !== 'private' || !state.privateTrip) return state.share;
+  if (!viewCache || viewCache.publicTrip !== state.share || viewCache.privateTrip !== state.privateTrip) viewCache = {publicTrip:state.share,privateTrip:state.privateTrip,value:currentTrip(state.share,state.privateTrip)};
+  return viewCache.value;
+};
 const now = () => state.preview ? new Date(state.preview) : new Date();
 const privateMode = () => state.mode === 'private' && !!state.privateTrip;
 const events = () => {
@@ -97,6 +105,7 @@ function itinerary() {
   return `<div class="page-heading"><div><p class="eyebrow">ONE DAY AT A TIME</p><h1>每天，都有好風景。</h1></div></div>${dayPicker()}
   <div class="day-heading"><div><p>D${data().days.indexOf(day)+1} · ${esc(day.city)}</p><h2>${esc(day.title)}</h2></div>${privateMode() && day.mapAsset ? `<button class="icon-button" data-action="asset" data-id="${day.mapAsset}" aria-label="開啟當日離線路線圖">${icon('map')}</button>`:''}</div>
   <p class="caption">所有時段為西班牙當地時間 · 導航需連線</p>
+  ${day.offlineMapNeedsUpdate?'<p class="caption map-update-note">本日路線已調整，請匯入新版同行包以更新離線路線圖；景點導航已使用最新行程。</p>':''}
   ${day.optionalStops?.length?`<aside class="optional-stops"><h3>有空再去</h3>${day.optionalStops.map(stop=>`<div><strong>${esc(stop.title)}</strong><p>${esc(stop.note)}</p>${extLink(stop.mapUrl,`${icon('map')}查看店家位置`,'button secondary')}</div>`).join('')}</aside>`:''}
   <div class="timeline">${day.events.map(e => {
     const active=Date.parse(e.start)<=Number(t)&&Number(t)<Date.parse(e.end); const done=state.done.has(e.id);
@@ -112,9 +121,14 @@ function tickets() {
   <div class="filters">${[['all','全部'],['confirmed','已確認'],['pending','待處理']].map(([key,title])=>`<button data-action="filter" data-filter="${key}" class="${state.filter===key?'selected':''}" aria-pressed="${state.filter===key}">${title}</button>`).join('')}</div>
   <p class="caption">「開啟附件」可離線使用；Drive 與官方網站需連線。</p><div class="ticket-grid">${filtered.map(t=>`<article class="ticket-card"><div class="ticket-top"><span>${esc(t.date ? shortDate(t.date):'航程')}</span>${badge(t)}</div><h2>${esc(t.title)}</h2><p class="ticket-time">${esc(t.time)}</p>${t.report?`<p class="caption">報到／到站：${esc(t.report)}</p>`:''}${t.id==='K17'?'<div class="price-note">四人合計 <strong>€100.75</strong><small>使用者確認已購 · 原票待補</small></div>':''}<div class="ticket-cut"></div><details ${t.statusKind==='warning'?'open':''}><summary>注意事項與附件${t.files.length?' · '+t.files.length+' 份':''}</summary><p>${esc(t.note)}</p>${t.files.length?`<ul class="file-list">${t.files.map(f=>`<li><span>${esc(f.label)}</span><div>${f.assetId?`<button class="file-button" data-action="asset" data-id="${f.assetId}">開啟附件</button>`:''}${extLink(f.url,'Drive ↗','inline-link')}</div></li>`).join('')}</ul>`:'<p class="caption">目前沒有可出示的原始附件。</p>'}${extLink(t.url,t.statusKind==='warning'?'查看訂位／購票入口 ↗':'開啟來源 ↗','inline-link')}</details></article>`).join('')||'<div class="empty-state"><p>沒有符合的票券，試試其他關鍵字。</p></div>'}</div>`;
 }
+function updatesPanel() {
+  const versions = `<p class="caption">行程版本：${esc(data().version)}${state.privateTrip?`<br>同行附件版本：${esc(state.privateTrip.version)}`:''}${state.siteVersion?.sourceCommit?`<br>網站部署：${esc(state.siteVersion.sourceCommit.slice(0,7))}`:''}</p>`;
+  return `<section class="settings-card update-settings"><h2>行程更新</h2><p id="sync-status" role="status">${esc(state.syncMessage)}</p><button class="button primary" data-action="sync" ${state.syncing?'disabled':''}>${state.syncing?'正在檢查…':'檢查並更新行程'}</button>${state.shellUpdate?'<button class="button secondary" data-action="apply-shell">開啟新版畫面</button>':''}${versions}${data().hasNewerItinerary?'<p class="notice">行程已套用網站最新版。票券與私人提醒仍保留原同行包；匯入新版可更新附件及離線路線圖。</p>':''}<p class="caption">連網後會自動檢查公開行程，票券附件繼續保存在這台手機。</p></section>`;
+}
 function journey() {
   const d=data(); const updated=d.version.replace(/^(\d{4})-(\d{2})-(\d{2})/,'$1/$2/$3');
   return `<div class="page-heading"><div><p class="eyebrow">ALL THE LITTLE DETAILS</p><h1>旅程的安心小事。</h1></div></div>
+  ${updatesPanel()}
   <section class="settings-card"><div class="section-heading"><h2>${privateMode()?'同行完整版':'分享行程版'}</h2><span class="badge confirmed">${esc(updated)}</span></div><p>${privateMode()?'你的行程、票券與路線圖已儲存在這台裝置。':'這個版本可分享給親友，瀏覽每日行程與景點導航。'}</p><div class="actions"><button class="button primary" data-action="import">${icon('download')}${state.privateTrip?'匯入新版資料':'匯入同行資料包'}</button>${state.privateTrip?`<button class="button secondary" data-action="mode">切換${privateMode()?'分享行程':'同行完整'}版</button>`:''}</div><p class="caption">同行資料包只在這台裝置讀取，不會上傳。更新時請四位同行者各自匯入最新版。</p></section>
   <section class="settings-card"><h2>帶著旅程離線出發</h2><div class="storage-state"><span class="status-dot ${state.offlineReady?'ready':''}"></span>${state.offlineReady?'行程頁面已可離線開啟':'正在準備離線頁面'}</div><p>${state.privateTrip?'已匯入的附件與路線圖可離線查看。':'先匯入同行資料包，才能離線查看票券附件。'}地圖即時導航與外部網站仍需網路。</p><button class="button secondary" data-action="persist">保留這台手機的離線資料</button><p class="caption">清除瀏覽器資料會移除離線內容；出發前請開飛航模式測試一次。</p></section>
   <section class="settings-card"><h2>加到手機主畫面</h2><p>iPhone：用 Safari 開啟，按分享 → 加入主畫面。Android：用 Chrome 選單 → 安裝應用程式／加到主畫面。</p>${state.installing?'<button class="button primary" data-action="install">安裝到主畫面</button>':''}<p class="caption">正式安裝與離線功能需透過 HTTPS 網址開啟。</p></section>
@@ -126,7 +140,8 @@ function journey() {
 function render() {
   if (!data()) return;
   const scroll = window.scrollY;
-  $('#app').innerHTML = `${header()}<main id="main" class="main" tabindex="-1">${({now:home,plan:itinerary,tickets,trip:journey})[state.tab]()}</main>${navigation()}`;
+  const updateBanner=data().hasNewerItinerary?'<div class="data-update-banner">已顯示最新行程；同行附件可另匯入新版。<button data-action="tab" data-tab="trip">查看更新</button></div>':'';
+  $('#app').innerHTML = `${header()}${updateBanner}<main id="main" class="main" tabindex="-1">${({now:home,plan:itinerary,tickets,trip:journey})[state.tab]()}</main>${navigation()}`;
   if (state.tab==='plan') $('.day-chip.selected')?.scrollIntoView({block:'nearest',inline:'center'});
   window.scrollTo(0,scroll);
 }
@@ -144,7 +159,7 @@ async function openAsset(id) {
 async function action(button) {
   const a=button.dataset.action;
   if (a==='tab') tab(button.dataset.tab);
-  else if (a==='day') {state.date=button.dataset.date;tab('plan');}
+  else if (a==='day') {state.date=button.dataset.date;saveSetting('selectedDate',state.date).catch(()=>{});tab('plan');}
   else if (a==='today') {state.date=data().days.some(d=>d.date===dateInZone(now()))?dateInZone(now()):data().days[0].date;tab('plan');}
   else if (a==='event-tickets') {state.search=button.dataset.ids.split(',')[0];state.filter='all';state.tab='tickets';render();window.scrollTo(0,0);}
   else if (a==='filter') {state.filter=button.dataset.filter;render();}
@@ -153,7 +168,9 @@ async function action(button) {
   else if (a==='live') {state.preview=null;render();toast('已回到裝置實際時間');}
   else if (a==='import') {if(state.busy)return toast('正在匯入，請稍候');$('#pack-input').click();}
   else if (a==='asset') await openAsset(button.dataset.id);
-  else if (a==='mode') {state.mode=privateMode()?'share':'private';await saveSetting('mode',state.mode);render();toast(privateMode()?'已切換同行完整版':'已切換分享行程版');}
+  else if (a==='mode') {if(privateMode()&&!state.share)return toast('目前沒有可用的分享行程，請連線後再試');state.mode=privateMode()?'share':'private';await saveSetting('mode',state.mode);render();toast(privateMode()?'已切換同行完整版':'已切換分享行程版');}
+  else if (a==='sync') {await refreshPublicData(true);await state.swReg?.update().catch(()=>{});}
+  else if (a==='apply-shell') {if(state.busy)return toast('資料匯入完成後再更新畫面');location.reload();}
   else if (a==='done') {const id=button.dataset.id;state.done.has(id)?state.done.delete(id):state.done.add(id);await saveSetting('done',[...state.done]);render();toast('已更新這台裝置的完成標記');}
   else if (a==='persist') {const result=await navigator.storage?.persist?.();toast(result?'已取得較穩定的離線儲存權限':'瀏覽器未提供保留權限；目前資料仍可離線使用，請保留原資料包');}
   else if (a==='install'&&state.installing) {await state.installing.prompt();state.installing=null;render();}
@@ -184,19 +201,58 @@ $('#pack-input').addEventListener('change',async e=>{
   }catch(error){toast(`匯入失敗：${error.message}。原資料仍保留。`);}finally{state.busy=false;e.target.value='';}
 });
 window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();state.installing=e;if(state.tab==='trip')render();});
-window.addEventListener('online',()=>{render();toast('已恢復連線');});
+window.addEventListener('online',()=>{render();toast('已恢復連線，正在檢查行程更新');refreshPublicData();});
 window.addEventListener('offline',()=>{render();toast('目前離線，已儲存的行程與附件仍可查看');});
 window.addEventListener('hashchange',()=>{const h=location.hash.slice(1);if(['now','plan','tickets','trip'].includes(h)){state.tab=h;render();window.scrollTo(0,0);}});
-document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible')render();});
+document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible'){render();refreshPublicData();state.swReg?.update().catch(()=>{});}});
+async function fetchFresh(path) {
+  const controller=new AbortController();const timeout=setTimeout(()=>controller.abort(),10000);
+  try {return await fetch(path,{cache:'no-store',signal:controller.signal});} finally {clearTimeout(timeout);}
+}
+async function refreshPublicData(manual=false) {
+  if(state.syncing||state.busy)return;
+  state.syncing=true;
+  if(manual){state.syncMessage='正在檢查網站最新行程…';render();}
+  try {
+    const response=await fetchFresh('./data/share.json');
+    if(!response.ok)throw new Error('網站資料暫時無法取得');
+    const fresh=await response.json();if(!validPublicTrip(fresh))throw new Error('網站行程格式不完整');
+    const cached=response.headers.get('X-Spain-Offline')==='1';
+    if(!state.share||!isOlderVersion(fresh.version,state.share.version)) {
+      state.share=fresh;await saveSetting('publicTrip',fresh).catch(()=>{});
+      state.syncMessage=cached?'目前使用已儲存的行程，連線後會再檢查。':`行程已是最新：${fresh.version}`;
+    } else state.syncMessage=`網站目前提供${fresh.version}，這台手機已保留較新的${state.share.version}；請核對Vercel部署。`;
+    if(!cached)state.checkedAt=new Date().toISOString();
+    try {
+      const versionResponse=await fetchFresh('./version.json');
+      if(versionResponse.ok&&versionResponse.headers.get('X-Spain-Offline')!=='1')state.siteVersion=await versionResponse.json();
+    }catch{}
+    if(state.date&&!data()?.days.some(d=>d.date===state.date))state.date=data()?.days[0]?.date;
+    if(manual)toast(state.syncMessage);
+    return true;
+  }catch(error){state.syncMessage='目前無法取得網站更新，繼續使用已儲存行程。';if(manual)toast(state.syncMessage);return false;}
+  finally{state.syncing=false;if(data())render();}
+}
+if('serviceWorker'in navigator)navigator.serviceWorker.addEventListener('message',event=>{
+  if(event.data?.type!=='APP_VERSION')return;
+  event.source?.postMessage({type:'CLIENT_VERSION',build:APP_BUILD});
+  if(event.data.build===APP_BUILD)return;
+  state.shellUpdate=true;
+  if(!state.busy&&!$('#viewer').open)location.reload();else if(data())render();
+});
 async function boot() {
   try {
-    const response=await fetch('./data/share.json');if(!response.ok)throw new Error('行程資料尚未載入');state.share=await response.json();
-    try {const [p,mode,done]=await Promise.all([read('settings','privateTrip'),read('settings','mode'),read('settings','done')]);state.privateTrip=p||null;state.mode=p?(mode||'private'):'share';state.done=new Set(done||[]);}catch{toast('瀏覽器儲存無法使用，目前可瀏覽分享行程版。');}
+    try {const [p,mode,done,publicTrip,date]=await Promise.all([read('settings','privateTrip'),read('settings','mode'),read('settings','done'),read('settings','publicTrip'),read('settings','selectedDate')]);state.privateTrip=p||null;state.mode=p?(mode||'private'):'share';state.done=new Set(done||[]);state.share=validPublicTrip(publicTrip)?publicTrip:null;state.date=date||null;}catch{toast('瀏覽器儲存無法使用，目前可瀏覽分享行程版。');}
+    if(data())render();
+    await refreshPublicData();
+    if(!data())throw new Error('行程資料尚未載入');
     const today=dateInZone(now());state.date=data().days.some(d=>d.date===today)?today:data().days[0].date;
+    const savedDate=await read('settings','selectedDate').catch(()=>null);if(data().days.some(d=>d.date===savedDate))state.date=savedDate;
     const hash=location.hash.slice(1);if(['now','plan','tickets','trip'].includes(hash))state.tab=hash;
     render();
-    if('serviceWorker'in navigator) navigator.serviceWorker.register('./sw.js').then(()=>navigator.serviceWorker.ready).then(()=>{state.offlineReady=true;if(state.tab==='trip')render();}).catch(()=>toast('離線頁面尚未準備完成，請確認使用 HTTPS 網址。'));
+    if('serviceWorker'in navigator)navigator.serviceWorker.register('./sw.js',{updateViaCache:'none'}).then(reg=>{state.swReg=reg;return navigator.serviceWorker.ready;}).then(()=>{state.offlineReady=true;if(state.tab==='trip')render();}).catch(()=>toast('離線頁面尚未準備完成，請確認使用 HTTPS 網址。'));
     setInterval(()=>{const key=clock(now())+dateInZone(now());if(key!==lastRefresh&&!state.preview&&!state.busy&&state.tab==='now')render();lastRefresh=key;},15000);
+    setInterval(()=>{if(document.visibilityState==='visible'&&navigator.onLine)refreshPublicData();},60000);
   }catch(error){$('#app').innerHTML=`<main class="empty-state"><h1>還沒能打開旅程</h1><p>${esc(error.message)}</p><p>第一次使用請保持連線，完成開啟後即可離線查看。</p><button class="button primary" onclick="location.reload()">重新開啟</button></main>`;}
 }
 boot();

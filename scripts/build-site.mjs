@@ -3,6 +3,7 @@ import { readFileSync, readdirSync, mkdirSync, rmSync, cpSync, writeFileSync } f
 import { resolve, join, relative, extname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import assert from 'node:assert/strict';
+import { execFileSync } from 'node:child_process';
 
 const root = resolve(fileURLToPath(new URL('..', import.meta.url)));
 const source = join(root, 'app');
@@ -50,5 +51,9 @@ rmSync(output, { recursive: true, force: true });
 mkdirSync(output, { recursive: true });
 cpSync(source, output, { recursive: true });
 writeFileSync(join(output, 'sw.js'), readFileSync(join(source,'sw.js'),'utf8').replace('__BUILD_ID__',version));
+writeFileSync(join(output, 'app.js'), readFileSync(join(source,'app.js'),'utf8').replace('__BUILD_ID__',version));
+let sourceCommit=process.env.VERCEL_GIT_COMMIT_SHA || '';
+if (!sourceCommit) {try {sourceCommit=execFileSync('git',['rev-parse','HEAD'],{cwd:root,encoding:'utf8',stdio:['ignore','pipe','ignore']}).trim();}catch{}}
+writeFileSync(join(output,'version.json'),JSON.stringify({build:version,itineraryVersion:data.version,sourceCommit,builtAt:new Date().toISOString()}));
 console.log(`Built public PWA: ${data.days.length} days, ${data.days.reduce((n,d)=>n+d.events.length,0)} events; version ${version}`);
 console.log('Output: dist/ · No private ticket files are included.');

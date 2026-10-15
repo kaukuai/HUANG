@@ -208,6 +208,8 @@ for source in sorted((ROOT/'app').iterdir()):
     if source.is_file():build_hash.update(source.read_bytes())
 build_id=build_hash.hexdigest()[:12]
 (OUT/'sw.js').write_text((ROOT/'app/sw.js').read_text().replace('__BUILD_ID__',build_id))
+(OUT/'app.js').write_text((ROOT/'app/app.js').read_text().replace('__BUILD_ID__',build_id))
+(OUT/'version.json').write_text(json.dumps({'build':build_id,'itineraryVersion':master['version'],'sourceCommit':'','builtAt':datetime.now().astimezone().isoformat()}))
 private_dir=P/'app-private';private_dir.mkdir(exist_ok=True)
 pack_path=private_dir/f'Spain_Travel_{master["version"]}.travelpack.json'
 pack_path.write_text(json.dumps({'format':'spain-pocket-trip/v1','trip':trip,'assets':assets},ensure_ascii=False,separators=(',',':')),encoding='utf-8')
