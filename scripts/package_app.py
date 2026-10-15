@@ -20,8 +20,8 @@ def archive(name,files):
     outputs[name]={'bytes':path.stat().st_size,'sha256':hashlib.sha256(path.read_bytes()).hexdigest(),'members':len(files)}
 archive('Spain_2026_App_Public_1015.zip',[(f,str(f.relative_to(R/'dist'))) for f in sorted((R/'dist').rglob('*')) if f.is_file()])
 archive('Spain_2026_App_Companion_1015.zip',[(pack,pack.name),(readme,readme.name)])
-sources=[R/'README.md',R/'package.json',R/'requirements-build.txt',R/'requirements-test.txt',R/'.gitignore']
-for folder in ['app','scripts','tests']:
+sources=[R/'README.md',R/'package.json',R/'package-lock.json',R/'vercel.json',R/'requirements-build.txt',R/'requirements-test.txt',R/'.gitignore']
+for folder in ['app','scripts','tests','.github']:
     sources += [f for f in sorted((R/folder).rglob('*')) if f.is_file() and '__pycache__' not in f.parts]
 archive('Spain_2026_App_Source_1015.zip',[(f,str(f.relative_to(R))) for f in sources])
 
