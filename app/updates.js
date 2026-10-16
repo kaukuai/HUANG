@@ -32,7 +32,9 @@ export function currentTrip(publicTrip, privateTrip) {
       }),
     };
   });
-  return { ...privateTrip, days, ticketReview:publicTrip.ticketReview?{...privateTrip.ticketReview,...publicTrip.ticketReview}:privateTrip.ticketReview, version: publicTrip.version, companionVersion: privateTrip.version, hasNewerItinerary: true };
+  const ticketReview=publicTrip.ticketReview?{...privateTrip.ticketReview,...publicTrip.ticketReview}:privateTrip.ticketReview;
+  if(ticketReview && publicTrip.ticketReview?.status==='current')ticketReview.status='import_required';
+  return { ...privateTrip, days, ticketReview, version: publicTrip.version, companionVersion: privateTrip.version, hasNewerItinerary: true };
 }
 
 export function validPublicTrip(trip) {

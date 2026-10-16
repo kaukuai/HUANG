@@ -50,7 +50,7 @@ with sync_playwright() as p:
     expect(page.locator('#toast')).to_contain_text('匯入完成',timeout=60000)
     expect(page.locator('.mode-pill')).to_contain_text('同行完整版')
     checks.append(f'同行包完整匯入並儲存{report["assets"]}份附件／地圖／提醒')
-    if report['planning_version'].startswith('2026-10-16'):
+    if report.get('ticket_review_status')=='pending':
         expect(page.locator('.ticket-review')).to_contain_text('尚待重新核對')
         assert page.locator('.ticket-review a').get_attribute('href').startswith('https://drive.google.com/drive/folders/')
         checks.append('票券明示沿用先前核對附件，提供雲端資料夾入口且未宣稱已同步新票')
@@ -94,9 +94,22 @@ with sync_playwright() as p:
     page.screenshot(path=str(screens/'04-mobile-tickets.png'))
     page.locator('#ticket-search').fill('K17')
     expect(page.locator('.ticket-card')).to_contain_text('€100.75')
-    expect(page.locator('.ticket-card .badge')).to_contain_text('原票待補')
-    assert page.locator('.ticket-card .file-button').count()==0
-    checks.append('地下教堂日期錯誤及高鐵已購但原票未附的狀態正確')
+    if report.get('ticket_review_status')=='current':
+        expect(page.locator('.ticket-card .badge')).to_contain_text('原票已核對')
+        expect(page.locator('.ticket-card')).to_contain_text('€121.20')
+        expect(page.locator('.ticket-card')).to_contain_text('差€20.45')
+        page.locator('.ticket-card summary').click()
+        expect(page.locator('.ticket-card .file-button')).to_have_count(1)
+        page.locator('.ticket-card .file-button').click()
+        expect(page.locator('#viewer iframe')).to_be_visible()
+        page.locator('#close-viewer').click()
+        page.locator('#ticket-search').fill('REF')
+        assert page.locator('.ticket-card .file-button').count()==0
+        checks.append('新高鐵原票可開啟、票面與先前總額分列；身分及付款核對試算表未放入離線附件')
+    else:
+        expect(page.locator('.ticket-card .badge')).to_contain_text('原票待補')
+        assert page.locator('.ticket-card .file-button').count()==0
+        checks.append('地下教堂日期錯誤及高鐵已購但原票未附的狀態正確')
     context.set_offline(True)
     page.reload(wait_until='networkidle')
     expect(page.locator('.mode-pill')).to_contain_text('同行完整版')
@@ -107,6 +120,13 @@ with sync_playwright() as p:
     expect(page.locator('#viewer iframe')).to_be_visible()
     assert page.locator('#viewer iframe').get_attribute('src').startswith('blob:')
     page.locator('#close-viewer').click()
+    if report.get('ticket_review_status')=='current':
+        page.locator('#ticket-search').fill('K17')
+        page.locator('.ticket-card summary').click()
+        page.locator('.ticket-card .file-button').click()
+        expect(page.locator('#viewer iframe')).to_be_visible()
+        page.locator('#close-viewer').click()
+        checks.append('新取得高鐵PDF匯入後可在飛航模式離線開啟')
     page.locator('.nav-item[data-tab="plan"]').click()
     page.locator('[data-action="day"][data-date="2027-01-02"]').click()
     page.locator('.day-heading [data-action="asset"]').click()

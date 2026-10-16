@@ -68,3 +68,13 @@ test('An older companion pack keeps new public activity descriptions and untimed
   assert.equal(result.days[0].optionalStops[0].start,undefined);
   assert.equal(result.days[0].optionalStops[0].end,undefined);
 });
+test('Fresh cloud verification still requires importing new attachments on older devices',()=>{
+  const {privateTrip,publicTrip}=trips();
+  privateTrip.ticketReview={status:'pending',last_verified:'2026-10-15'};
+  publicTrip.ticketReview={status:'current',last_verified:'2026-10-16'};
+  assert.equal(currentTrip(publicTrip,privateTrip).ticketReview.status,'import_required');
+  assert.equal(privateTrip.ticketReview.status,'pending');
+  privateTrip.version=publicTrip.version;
+  privateTrip.ticketReview=publicTrip.ticketReview;
+  assert.equal(currentTrip(publicTrip,privateTrip).ticketReview.status,'current');
+});

@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "version": "2026-10-16-v1",
+  "version": "2026-10-16-v2",
   "title": "西班牙・口袋旅程",
   "timezone": "Europe/Madrid",
   "people": 4,
@@ -5065,8 +5065,8 @@
   "todos": [],
   "flights": [],
   "ticketReview": {
-    "status": "pending",
-    "last_verified": "2026-10-15",
+    "status": "current",
+    "last_verified": "2026-10-16",
     "requested_refresh": "2026-10-16"
   },
   "budget": null

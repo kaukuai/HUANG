@@ -33,10 +33,12 @@ def asset(path=None, content=None, name=None, mime=None):
     if path is not None:
         by_path[str(path.resolve())]=key;by_name.setdefault(path.name,key)
     return key
-evidence=sorted(f for f in (P/'booking-evidence/2026-10-14').rglob('*') if f.is_file())
+evidence=sorted(P/path for path in master['app_evidence_files']) if master.get('app_evidence_files') else sorted(f for f in (P/'booking-evidence/2026-10-14').rglob('*') if f.is_file())
 for path in evidence:
+    assert path.resolve().is_relative_to((P/'booking-evidence').resolve())
     assert not re.search(r'passport|護照',path.name,re.I)
     asset(path)
+evidence_count=len(assets)
 def href(cell):
     text=str(cell.value or '')
     m=re.search(r'HYPERLINK\("((?:[^"]|"")+)"',text)
@@ -120,6 +122,12 @@ for row,fr in zip(values['票券核對'].iter_rows(min_row=6),formulas['票券�
     tickets.append({'id':v[0],'date':txt(v[1]),'title':txt(v[2]),'time':txt(v[3]),'report':txt(v[4]),
                     'status':('票券日期待改訂' if v[0]=='K16' else '晚餐尚未安排' if v[0]=='K10' else '已購 · 原票待補' if v[0]=='K17' else '已購票'),
                     'statusKind':'warning' if pending else 'confirmed','note':txt(v[9]),'url':url if url.startswith('https://') else '', 'files':files})
+    verified=master.get('verified_cloud_tickets',{}).get(v[0])
+    if verified and v[0] in ['K08','K17']:
+        selected=drive_by_url[verified['drive_url']]
+        tickets[-1].update(files=[{k:selected[k] for k in ['label','url','assetId']}],url=verified['drive_url'],note=verified['note'],status='已購票 · 原票已核對',statusKind='confirmed')
+        assert selected['assetId'],'Verified ticket must have an offline original'
+        if v[0]=='K17':tickets[-1]['price']={key:verified[key] for key in ['face_total_eur','user_reported_total_eur','price_difference_eur']}
 tickets.append({'id':'F01','date':'2026-12-23','title':'國際機票 · 中國東方航空','time':'12/23出發 · 1/4返抵台灣','report':'各航段依機場當地時間',
                 'status':'已開票','statusKind':'confirmed','note':'四人同一訂單，國際航段每人一件23kg托運、一件8kg手提及一件座下個人物品。請依航司最新通知確認航廈及截止時間。',
                 'files':[local_file('電子行程單.pdf','四人國際機票行程單'),local_file('電子收據 (已含英文版本).pdf','國際機票付款收據')],'url':''})
@@ -172,6 +180,9 @@ todos=[
 ]
 if master.get('reservation_status_updates',{}).get('el_paseillo'):
     todos.insert(1,{'title':'11/27開始預約El Paseíllo晚餐','note':'12/27四位19:30目標，墨魚燉飯供應／是否需預訂待確認；僅提前一個月開放為使用者提供，精確放位時間未核。','url':''})
+if master.get('verified_cloud_tickets',{}).get('K17'):
+    todos=[todo for todo in todos if todo['title']!='補上高鐵原票']
+    todos.append({'title':'核對高鐵票面與先前總額差異','note':'原票已讀取：四張票面€121.20；先前提供四人總€100.75，差€20.45待付款／折扣憑證核實。預算先不改動。','url':''})
 for reminder in master.get('calendar_reminders',[]):
     path=P/reminder['file']
     if path.is_file():
@@ -225,6 +236,6 @@ pack_path=private_dir/f'Spain_Travel_{master["version"]}.travelpack.json'
 pack_path.write_text(json.dumps({'format':'spain-pocket-trip/v1','trip':trip,'assets':assets},ensure_ascii=False,separators=(',',':')),encoding='utf-8')
 # Icon rendering from the source SVG uses Chromium in the browser test/build finalization.
 report={'public_dir':str(OUT),'private_pack':str(pack_path),'planning_version':master['version'],'days':len(days),'events':sum(len(d['events']) for d in days),
-        'tickets':len(tickets),'evidence_files':len(evidence),'maps':len(anchors),'assets':len(assets),'private_bytes':pack_path.stat().st_size,'build_id':build_id}
+        'tickets':len(tickets),'evidence_files':evidence_count,'evidence_source_files':len(evidence),'ticket_review_status':master.get('ticket_review',{}).get('status'),'maps':len(anchors),'assets':len(assets),'private_bytes':pack_path.stat().st_size,'build_id':build_id}
 (P/'review/app-build-report.json').write_text(json.dumps(report,ensure_ascii=False,indent=2))
 print(json.dumps(report,ensure_ascii=False,indent=2))
