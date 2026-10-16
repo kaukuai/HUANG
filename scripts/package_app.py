@@ -39,6 +39,7 @@ for file,title,note in [
     ('03-mobile-itinerary.png','每日行程','切換日期，查看時間軸、導航與離線路線圖。'),
     ('04-mobile-tickets.png','隨身票夾','可搜尋票券，清楚區分已確認與待改訂。'),
     ('05-mobile-sevilla.png','12/27更新與彈性蛋糕店','MITO午餐前吃、Postiguillo已訂、El Paseíllo未訂，99 Cheesecake有空再去。'),
+    ('06-mobile-granada.png','12/28格拉納達與活動資訊','油條午餐、La Sitarilla現場排隊，Sexitana以淡字列為無固定時間備選。'),
 ]:
     if not (P/'app-preview'/file).exists():continue
     image=(P/'app-preview'/file).read_bytes()

@@ -66,11 +66,19 @@ with TemporaryDirectory(prefix='spain-update-test-') as temp:
     legacy = temp / 'legacy'
     (legacy / 'data').mkdir(parents=True)
     public = json.loads((ROOT / 'dist/data/share.json').read_text())
+    date, revision = public['version'].split('-v')
+    manual_version = date + '-v' + str(int(revision)+1)
+    online_version = date + '-v' + str(int(revision)+2)
     old = json.loads(json.dumps(public))
     old['version'] = '2026-10-15-v2'
     day = next(d for d in old['days'] if d['date'] == '2026-12-27')
     day['events'] = [e for e in day['events'] if 'MITO' not in e['title']]
     day.pop('optionalStops', None)
+    for legacy_day in old['days']:
+        legacy_day.pop('optionalStops',None)
+        for event in legacy_day['events']:
+            event.pop('activity',None)
+            event.pop('displayTitle',None)
     (legacy / 'data/share.json').write_text(json.dumps(old))
     # Reproduce the earlier shell's cache behavior and absence of an update listener.
     (legacy / 'index.html').write_text('''<!doctype html><meta charset="utf-8">
@@ -146,16 +154,16 @@ with TemporaryDirectory(prefix='spain-update-test-') as temp:
 
             page.locator('.nav-item[data-tab="trip"]').click()
             site['data'] = json.loads(json.dumps(public))
-            site['data']['version'] = '2026-10-15-v4'
+            site['data']['version'] = manual_version
             latest = next(d for d in site['data']['days'] if d['date'] == '2026-12-27')
             latest['optionalStops'][0]['title'] = '99 Cheesecake | Updated live'
             page.locator('[data-action="sync"]').click()
-            expect(page.locator('#sync-status')).to_contain_text('2026-10-15-v4')
+            expect(page.locator('#sync-status')).to_contain_text(manual_version)
             page.locator('.nav-item[data-tab="plan"]').click()
             expect(page.locator('.optional-stops')).to_contain_text('Updated live')
             checks.append('不重開頁面即可按鈕更新公開行程，私人附件版本維持不變')
 
-            site['data']['version'] = '2026-10-15-v5'
+            site['data']['version'] = online_version
             latest['optionalStops'][0]['title'] = '99 Cheesecake | Reconnected'
             context.set_offline(True)
             context.set_offline(False)
@@ -191,10 +199,10 @@ with TemporaryDirectory(prefix='spain-update-test-') as temp:
                 path = next_shell / name
                 path.write_text(path.read_text().replace(build, 'regression-next'))
             site['root'] = next_shell
+            page.evaluate("""window.shellNotice=false;navigator.serviceWorker.addEventListener('message',e=>{if(e.data?.type==='APP_VERSION'&&e.data.build==='regression-next')window.shellNotice=true;});""")
             page.evaluate('navigator.serviceWorker.getRegistration().then(r=>r.update())')
-            page.wait_for_function("caches.keys().then(keys=>keys.includes('spain-pocket-regression-next'))")
-            page.wait_for_function("document.querySelector('#viewer').open && navigator.serviceWorker.controller")
-            page.wait_for_timeout(1200)
+            page.wait_for_function("window.shellNotice && document.querySelector('#viewer').open")
+            page.wait_for_function("navigator.serviceWorker.getRegistration().then(r=>r.active?.state==='activated')")
             expect(page.locator('#viewer iframe')).to_be_visible()
             page.locator('#close-viewer').click()
             page.locator('.nav-item[data-tab="trip"]').click()

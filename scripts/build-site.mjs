@@ -21,7 +21,13 @@ assert.ok(Array.isArray(data.days) && data.days.length > 0, '缺少分享行程'
 for (const day of data.days) {
   assert.equal(day.hotel, '', '公開資料不能包含住宿名稱');
   assert.equal(day.mapAsset, null, '公開資料不能包含私人地圖附件');
+  for (const stop of day.optionalStops || []) {
+    assert.ok(stop.title && stop.mapUrl, '備選地點需要名稱與導航');
+    assert.ok(!stop.start && !stop.end, '備選地點不可占用固定時段');
+  }
   for (const event of day.events) {
+    assert.ok(event.displayTitle && event.activity?.description, '每段活動需要清楚標題與說明');
+    if (['早餐','午餐','晚餐'].includes(event.category)) assert.ok(event.activity.mustTry?.length, '餐飲活動需要推薦或菜單待確認資訊');
     assert.equal(event.note, '', '請先由資料匯出流程產生分享版');
     assert.equal(event.infoUrl, '');
     assert.equal(event.transport, '');

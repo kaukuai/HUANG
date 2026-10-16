@@ -7,6 +7,7 @@ from xml.etree import ElementTree as ET
 from urllib.parse import unquote, quote_plus
 import argparse, base64, hashlib, json, mimetypes, posixpath, re, shutil
 import openpyxl
+from activity_content import make_library, enrich, public_activity, public_text
 
 ROOT = Path(__file__).resolve().parents[1]
 parser = argparse.ArgumentParser()
@@ -42,6 +43,7 @@ def href(cell):
     return m.group(1).replace('""','"') if m else (cell.hyperlink.target if getattr(cell,'hyperlink',None) else '')
 def txt(value):return str(value or '').strip()
 def maps(query):return 'https://www.google.com/maps/search/?api=1&query='+quote_plus(query)
+library=make_library(values,formulas,href)
 
 days=[]
 for row in values['行程總覽'].iter_rows(min_row=6,max_row=16,values_only=True):
@@ -71,8 +73,11 @@ for row, fr in zip(values['詳細時間流'].iter_rows(min_row=6), formulas['詳
     if 'Madrid→Sevilla'==title:event['ticketIds']=['K17']
     if '聖米格爾市場' in title and category=='午餐':event.update(status='聖誕營業待確認',statusKind='warning')
     if 'Gelateria MITO' in title:event.update(status='13:00關門（使用者提供）',statusKind='neutral')
-    day_by_date[date]['events'].append(event)
-assert sum(len(d['events']) for d in days)==211
+    day_by_date[date]['events'].append(enrich(event,txt(v[11]),library))
+assert all(day['events'] for day in days), 'Each day must contain a usable schedule'
+for day in days:
+    for event in day['events']:assert datetime.fromisoformat(event['end'])>datetime.fromisoformat(event['start'])
+    for first,second in zip(day['events'],day['events'][1:]):assert first['end']<=second['start']
 
 # Read each drawing relationship instead of assuming image numbering.
 with ZipFile(workbook) as z:
@@ -174,20 +179,25 @@ for reminder in master.get('calendar_reminders',[]):
         target=next((t for t in todos if ('Paseíllo' in t['title'])==('Paseíllo' in reminder['title']) and ('Murillo' in t['title'] or 'Paseíllo' in t['title'])),None)
         if target:target.update(assetId=aid,reminderNote=reminder['date']+' '+reminder['time']+'台灣時間；匯入行事曆才生效')
 trip={'schema':1,'version':master['version'],'title':'西班牙・口袋旅程','timezone':'Europe/Madrid','people':4,
-      'days':days,'tickets':tickets,'hotels':hotels,'todos':todos,'flights':flights,
+      'days':days,'tickets':tickets,'hotels':hotels,'todos':todos,'flights':flights,'ticketReview':{**master['ticket_review'],'folderUrl':master.get('drive_folder_url','')} if master.get('ticket_review') else None,
       'budget':{'core':master['budget']['core_including_domestic_excluding_international_per_person_twd'],
                 'allIn':master['budget']['including_international_per_person_twd']}}
 
 # Public mode contains no evidence, lodging addresses, booking IDs or private links.
 share=json.loads(json.dumps(trip))
-share.update(tickets=[],hotels=[],todos=[],flights=[],budget=None)
+share.update(tickets=[],hotels=[],todos=[],flights=[],budget=None,ticketReview={k:master['ticket_review'][k] for k in ['status','last_verified','requested_refresh']} if master.get('ticket_review') else None)
 hotel_pattern=re.compile(r'Arenal(?: Suites(?: Puerta del Sol)?)?|Enjoy\s*Sevilla|EnjoySevilla|Sercotel(?: Granada Suites)?|Inside Barcelona Apartments Príncep|Príncep',re.I)
 for day in share['days']:
     day['hotel']='';day['mapAsset']=None
-    for stop in day.get('optionalStops',[]):stop['note']='有空才去；不壓縮已購景點與演出報到時間。'
+    for stop in day.get('optionalStops',[]):
+        assert not stop.get('start') and not stop.get('end'), 'Optional places must not reserve schedule time'
+        for key in ['note','description','openingHours']:stop[key]=public_text(stop.get(key,''))
+        stop['mustTry']=[public_text(s) for s in stop.get('mustTry',[])]
     for e in day['events']:
         sensitive=bool(hotel_pattern.search(e['title']+' '+unquote(e['mapUrl']))) or any(s in e['title'] for s in ['住宿','飯店','公寓','主人'])
         e['title']=hotel_pattern.sub('住宿',e['title'])
+        e['displayTitle']=public_text(e.get('displayTitle',e['title']))
+        e['activity']=public_activity(e['activity'])
         e.update(note='',transport='',ticketIds=[],infoUrl='')
         if sensitive:e['mapUrl']=''
         if e['statusKind']=='confirmed':e.update(status='',statusKind='neutral')

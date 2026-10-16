@@ -58,3 +58,13 @@ test('Only complete public itinerary data is accepted for automatic updates',()=
   assert.equal(validPublicTrip(publicTrip),true);
   for(const invalid of [null,{}, {...publicTrip,tickets:[{id:'private'}]}, {...publicTrip,days:[]}, {...publicTrip,days:[{events:[event('broken','oops')]}]}])assert.ok(!validPublicTrip(invalid));
 });
+test('An older companion pack keeps new public activity descriptions and untimed places',()=>{
+  const {privateTrip,publicTrip}=trips();
+  publicTrip.days[0].events[0].activity={description:'New description',mustTry:['Current recommendation']};
+  publicTrip.days[0].events[0].displayTitle='Clear venue and activity';
+  const result=currentTrip(publicTrip,privateTrip);
+  assert.deepEqual(result.days[0].events[0].activity,publicTrip.days[0].events[0].activity);
+  assert.equal(result.days[0].events[0].displayTitle,'Clear venue and activity');
+  assert.equal(result.days[0].optionalStops[0].start,undefined);
+  assert.equal(result.days[0].optionalStops[0].end,undefined);
+});

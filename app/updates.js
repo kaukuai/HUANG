@@ -32,7 +32,7 @@ export function currentTrip(publicTrip, privateTrip) {
       }),
     };
   });
-  return { ...privateTrip, days, version: publicTrip.version, companionVersion: privateTrip.version, hasNewerItinerary: true };
+  return { ...privateTrip, days, ticketReview:publicTrip.ticketReview?{...privateTrip.ticketReview,...publicTrip.ticketReview}:privateTrip.ticketReview, version: publicTrip.version, companionVersion: privateTrip.version, hasNewerItinerary: true };
 }
 
 export function validPublicTrip(trip) {

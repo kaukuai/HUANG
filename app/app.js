@@ -25,6 +25,7 @@ const icon = name => `<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" st
 const safeUrl = value => { try { const u = new URL(value); return u.protocol === 'https:' ? u.href : ''; } catch { return ''; } };
 const extLink = (url, label, cls = 'button secondary') => safeUrl(url) ? `<a class="${cls}" href="${esc(safeUrl(url))}" target="_blank" rel="noopener noreferrer">${label}</a>` : '';
 const money = n => Number(n).toLocaleString('zh-TW', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+const activityTitle = e => e.displayTitle || e.title;
 const state = { tab:'now', date:null, search:'', filter:'all', mode:'share', privateTrip:null, share:null, preview:null, done:new Set(), offlineReady:false, installing:null, busy:false, syncing:false, syncMessage:'尚未檢查', checkedAt:null, siteVersion:null, swReg:null, shellUpdate:false };
 let viewerUrl, toastTimer, lastRefresh;
 let viewCache;
@@ -54,6 +55,15 @@ function ticketAction(e) {
 function eventActions(e) {
   return `<div class="actions">${extLink(e.mapUrl, `${icon('map')}開啟導航`)}${ticketAction(e)}</div>`;
 }
+function activityDetails(e) {
+  const info=e.activity||{};
+  const list=(items,label)=>items?.length?`<div class="activity-block"><h4>${label}</h4><ul>${items.map(item=>`<li>${esc(item)}</li>`).join('')}</ul></div>`:'';
+  return `<div class="activity-details">${info.description?`<div class="activity-block"><h4>活動資訊</h4><p>${esc(info.description)}</p></div>`:''}${list(info.highlights,'參觀重點')}${list(info.mustTry,'必點／推薦')}${info.openingHours?`<div class="activity-block"><h4>營業資訊</h4><p>${esc(info.openingHours)}</p></div>`:''}${list(info.tips,'注意事項')}${info.photoTip?`<div class="activity-block"><h4>拍照提示</h4><p>${esc(info.photoTip)}</p></div>`:''}</div>`;
+}
+function optionalStops(day) {
+  if(!day.optionalStops?.length)return '';
+  return `<aside class="optional-stops" aria-label="無固定時間的備選地點"><h3>附近備選・有空再去</h3><p class="caption">沒有安排固定時間，順路、有空再選。</p>${day.optionalStops.map(stop=>`<article class="optional-stop"><span class="optional-label">彈性地點</span><h3>${esc(stop.title)}</h3><p>${esc(stop.description||stop.note)}</p>${stop.openingHours?`<p class="optional-hours">營業：${esc(stop.openingHours)}</p>`:''}<details><summary>店家資訊與注意事項</summary>${activityDetails({activity:{mustTry:stop.mustTry||[],tips:stop.note?[stop.note]:[]}})}${extLink(stop.mapUrl,`${icon('map')}查看店家位置`,'button secondary')}</details></article>`).join('')}</aside>`;
+}
 function header() {
   return `<header class="header"><a class="wordmark" href="#now" aria-label="西班牙口袋旅程首頁"><span class="brand-mark">ES<span>26</span></span><span>西班牙<span class="brand-sub">口袋旅程</span></span></a><button class="mode-pill" data-action="tab" data-tab="trip">${icon('user')}${privateMode() ? '同行完整版' : '分享行程版'}</button></header>
   ${state.preview ? `<div class="preview-banner">時間預覽 · ${shortDate(dateInZone(now()))} ${clock(now())} 西班牙 <button data-action="live">回到實際時間</button></div>` : ''}`;
@@ -68,7 +78,7 @@ function eventCard(e, label, prominent = false) {
   if (!e) return '';
   const limit=prominent?56:48;
   const brief=e.note?.length>limit?e.note.slice(0,limit)+'…':e.note;
-  return `<article class="${prominent ? 'focus-card' : 'next-card'}"><div class="eyebrow">${esc(label)}<span>${esc(timeLabel(e))}</span></div><h2>${esc(e.title)}</h2>${badge(e)}${brief ? `<p class="event-note">${esc(brief)}</p>` : ''}${e.note?.length>limit?`<details class="full-note"><summary>完整提醒</summary><p>${esc(e.note)}</p></details>`:''}${eventActions(e)}${prominent && e.id ? `<button class="text-button done-button" data-action="done" data-id="${esc(e.id)}">${icon('check')}${state.done.has(e.id) ? '已標記完成 · 再按取消' : '標記這一站已完成'}</button>` : ''}</article>`;
+  return `<article class="${prominent ? 'focus-card' : 'next-card'}"><div class="eyebrow">${esc(label)}<span>${esc(timeLabel(e))}</span></div><h2>${esc(activityTitle(e))}</h2>${badge(e)}${brief ? `<p class="event-note">${esc(brief)}</p>` : ''}<details class="full-note"><summary>活動資訊與完整提醒</summary>${activityDetails(e)}${e.note?`<p>${esc(e.note)}</p>`:''}</details>${eventActions(e)}${prominent && e.id ? `<button class="text-button done-button" data-action="done" data-id="${esc(e.id)}">${icon('check')}${state.done.has(e.id) ? '已標記完成 · 再按取消' : '標記這一站已完成'}</button>` : ''}</article>`;
 }
 function beforeTripHome() {
   const first = data().days[0];
@@ -106,17 +116,18 @@ function itinerary() {
   <div class="day-heading"><div><p>D${data().days.indexOf(day)+1} · ${esc(day.city)}</p><h2>${esc(day.title)}</h2></div>${privateMode() && day.mapAsset ? `<button class="icon-button" data-action="asset" data-id="${day.mapAsset}" aria-label="開啟當日離線路線圖">${icon('map')}</button>`:''}</div>
   <p class="caption">所有時段為西班牙當地時間 · 導航需連線</p>
   ${day.offlineMapNeedsUpdate?'<p class="caption map-update-note">本日路線已調整，請匯入新版同行包以更新離線路線圖；景點導航已使用最新行程。</p>':''}
-  ${day.optionalStops?.length?`<aside class="optional-stops"><h3>有空再去</h3>${day.optionalStops.map(stop=>`<div><strong>${esc(stop.title)}</strong><p>${esc(stop.note)}</p>${extLink(stop.mapUrl,`${icon('map')}查看店家位置`,'button secondary')}</div>`).join('')}</aside>`:''}
   <div class="timeline">${day.events.map(e => {
     const active=Date.parse(e.start)<=Number(t)&&Number(t)<Date.parse(e.end); const done=state.done.has(e.id);
-    return `<article class="timeline-event ${active?'current':''} ${done?'completed':''}" id="event-${esc(e.id)}"><div class="time-rail"><strong>${clock(new Date(e.start))}</strong><small>${clock(new Date(e.end))}</small><span class="timeline-dot"></span></div><div class="event-content"><div class="event-meta"><span>${esc(e.category)}</span>${active?'<span class="live-label">此刻</span>':''}${done?'<span>已標記完成</span>':''}</div><h3>${esc(e.title)}</h3>${badge(e)}<details><summary>查看提醒與連結</summary>${e.note?`<p>${esc(e.note)}</p>`:''}${e.transport?`<p class="caption">${esc(e.transport)}</p>`:''}${eventActions(e)}${extLink(e.infoUrl,'官方資訊 ↗','inline-link')}<button class="text-button" data-action="done" data-id="${esc(e.id)}">${done?'取消完成標記':'標記完成'}</button></details></div></article>`;
-  }).join('')}</div>`;
+    return `<article class="timeline-event ${active?'current':''} ${done?'completed':''}" id="event-${esc(e.id)}"><div class="time-rail"><strong>${clock(new Date(e.start))}</strong><small>${clock(new Date(e.end))}</small><span class="timeline-dot"></span></div><div class="event-content"><div class="event-meta"><span>${esc(e.category)}</span>${active?'<span class="live-label">此刻</span>':''}${done?'<span>已標記完成</span>':''}</div><h3>${esc(activityTitle(e))}</h3>${badge(e)}<details><summary>活動資訊、提醒與連結</summary>${activityDetails(e)}${e.note?`<div class="activity-block private-note"><h4>同行提醒</h4><p>${esc(e.note)}</p></div>`:''}${e.transport?`<p class="caption">${esc(e.transport)}</p>`:''}${eventActions(e)}${extLink(e.infoUrl,'官方資訊 ↗','inline-link')}<button class="text-button" data-action="done" data-id="${esc(e.id)}">${done?'取消完成標記':'標記完成'}</button></details></div></article>`;
+  }).join('')}${optionalStops(day)}</div>`;
 }
 function tickets() {
   if (!privateMode()) return `<div class="page-heading"><div><p class="eyebrow">YOUR TRAVEL WALLET</p><h1>票券，都放在這裡。</h1></div></div><section class="empty-state"><span class="empty-icon">${icon('ticket')}</span><h2>同行者專屬的票夾</h2><p>匯入同行資料包，票券附件就會儲存在這台手機，離線也能開啟。</p><button class="button primary" data-action="import">匯入同行資料包 ${icon('download')}</button><small>分享網址只會顯示行程版。</small></section>`;
   const query=state.search.toLowerCase();
+  const ticketReview=data().ticketReview;
   const filtered=data().tickets.filter(t => (state.filter==='all'||(state.filter==='pending'?t.statusKind==='warning':t.statusKind==='confirmed')) && `${t.title} ${t.date} ${t.status} ${t.id}`.toLowerCase().includes(query));
   return `<div class="page-heading"><div><p class="eyebrow">READY AT THE GATE</p><h1>出示票券，就出發。</h1></div><span class="count-bubble">${data().tickets.length}</span></div>
+  ${ticketReview?.status==='pending'?`<aside class="notice ticket-review"><p>雲端票券有更新通知，尚待重新核對。離線附件目前沿用 ${esc(ticketReview.last_verified)} 核對版本。</p>${extLink(ticketReview.folderUrl,'開啟雲端票券資料夾 ↗','inline-link')}</aside>`:''}
   <label class="search-field">${icon('search')}<input id="ticket-search" type="search" placeholder="搜尋景點、日期或車票" value="${esc(state.search)}" aria-label="搜尋票券"></label>
   <div class="filters">${[['all','全部'],['confirmed','已確認'],['pending','待處理']].map(([key,title])=>`<button data-action="filter" data-filter="${key}" class="${state.filter===key?'selected':''}" aria-pressed="${state.filter===key}">${title}</button>`).join('')}</div>
   <p class="caption">「開啟附件」可離線使用；Drive 與官方網站需連線。</p><div class="ticket-grid">${filtered.map(t=>`<article class="ticket-card"><div class="ticket-top"><span>${esc(t.date ? shortDate(t.date):'航程')}</span>${badge(t)}</div><h2>${esc(t.title)}</h2><p class="ticket-time">${esc(t.time)}</p>${t.report?`<p class="caption">報到／到站：${esc(t.report)}</p>`:''}${t.id==='K17'?'<div class="price-note">四人合計 <strong>€100.75</strong><small>使用者確認已購 · 原票待補</small></div>':''}<div class="ticket-cut"></div><details ${t.statusKind==='warning'?'open':''}><summary>注意事項與附件${t.files.length?' · '+t.files.length+' 份':''}</summary><p>${esc(t.note)}</p>${t.files.length?`<ul class="file-list">${t.files.map(f=>`<li><span>${esc(f.label)}</span><div>${f.assetId?`<button class="file-button" data-action="asset" data-id="${f.assetId}">開啟附件</button>`:''}${extLink(f.url,'Drive ↗','inline-link')}</div></li>`).join('')}</ul>`:'<p class="caption">目前沒有可出示的原始附件。</p>'}${extLink(t.url,t.statusKind==='warning'?'查看訂位／購票入口 ↗':'開啟來源 ↗','inline-link')}</details></article>`).join('')||'<div class="empty-state"><p>沒有符合的票券，試試其他關鍵字。</p></div>'}</div>`;
