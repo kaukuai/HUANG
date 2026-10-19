@@ -157,6 +157,7 @@ with TemporaryDirectory(prefix='spain-update-test-') as temp:
             site['data']['version'] = manual_version
             latest = next(d for d in site['data']['days'] if d['date'] == '2026-12-27')
             latest['optionalStops'][0]['title'] = '99 Cheesecake | Updated live'
+            latest['optionalStops'][0]['displayTitle'] = '起司蛋糕店（99 Cheesecake | Updated live）'
             page.locator('[data-action="sync"]').click()
             expect(page.locator('#sync-status')).to_contain_text(manual_version)
             page.locator('.nav-item[data-tab="plan"]').click()
@@ -165,6 +166,7 @@ with TemporaryDirectory(prefix='spain-update-test-') as temp:
 
             site['data']['version'] = online_version
             latest['optionalStops'][0]['title'] = '99 Cheesecake | Reconnected'
+            latest['optionalStops'][0]['displayTitle'] = '起司蛋糕店（99 Cheesecake | Reconnected）'
             context.set_offline(True)
             context.set_offline(False)
             expect(page.locator('.optional-stops')).to_contain_text('Reconnected', timeout=15000)
@@ -183,8 +185,8 @@ with TemporaryDirectory(prefix='spain-update-test-') as temp:
             page.reload()
             expect(page.locator('.optional-stops')).to_contain_text('Reconnected')
             page.locator('.nav-item[data-tab="tickets"]').click()
-            page.locator('.ticket-card summary').click()
-            page.locator('.ticket-card [data-action="asset"]').click()
+            page.locator('.ticket-card').filter(has_text='Test ticket').locator('summary').click()
+            page.locator('.ticket-card').filter(has_text='Test ticket').locator('[data-action="asset"]').click()
             expect(page.locator('#viewer iframe')).to_be_visible()
             saved = page.evaluate("import('./storage.js').then(m=>m.read('assets', '" + ticket['id'] + "')).then(a=>a.blob.text())")
             assert saved == pdf_bytes().decode()

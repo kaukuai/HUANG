@@ -8,7 +8,8 @@ export function currentTrip(publicTrip, privateTrip) {
   const days = publicTrip.days.map(day => {
     const old = oldDays.get(day.date);
     const previous = new Map((old?.events || []).map(event => [event.id, event]));
-    const routeChanged = !old || JSON.stringify(day.events.map(e => [e.id,e.start,e.end])) !== JSON.stringify(old.events.map(e => [e.id,e.start,e.end]));
+    const route = events => events.filter(e=>!e.isFlight).map(e=>[e.id,e.start,e.end]);
+    const routeChanged = !old || JSON.stringify(route(day.events)) !== JSON.stringify(route(old.events));
     return {
       ...day,
       hotel: old?.hotel || '',
@@ -17,11 +18,11 @@ export function currentTrip(publicTrip, privateTrip) {
       events: day.events.map(event => {
         const saved = previous.get(event.id);
         const unchanged = saved && saved.start === event.start && saved.end === event.end;
-        if (!unchanged) return { ...event, ticketIds: saved?.ticketIds || [] };
+        if (!unchanged) return { ...event, ticketIds: event.reservation ? [event.reservation.id] : saved?.ticketIds || (event.isFlight && privateTrip.tickets.some(t=>t.id==='F01') ? ['F01'] : []) };
         return {
           ...event,
           title: saved.title,
-          note: saved.note,
+          note: event.reminderUpdated ? event.note : saved.note,
           transport: saved.transport,
           infoUrl: saved.infoUrl,
           mapUrl: event.mapUrl || saved.mapUrl,
@@ -33,8 +34,11 @@ export function currentTrip(publicTrip, privateTrip) {
     };
   });
   const ticketReview=publicTrip.ticketReview?{...privateTrip.ticketReview,...publicTrip.ticketReview}:privateTrip.ticketReview;
-  if(ticketReview && publicTrip.ticketReview?.status==='current')ticketReview.status='import_required';
-  return { ...privateTrip, days, ticketReview, version: publicTrip.version, companionVersion: privateTrip.version, hasNewerItinerary: true };
+  if(ticketReview && publicTrip.ticketReview?.status==='current' &&
+      (privateTrip.ticketReview?.status!=='current' || (privateTrip.ticketReview?.last_verified || '') < publicTrip.ticketReview.last_verified))ticketReview.status='import_required';
+  const reservations=publicTrip.days.flatMap(d=>d.events).filter(e=>e.reservation).map(e=>e.reservation);
+  const tickets=reservations.length ? [...privateTrip.tickets.filter(t=>!reservations.some(r=>r.id===t.id)),...reservations] : privateTrip.tickets;
+  return { ...privateTrip, days, tickets, ticketReview, version: publicTrip.version, companionVersion: privateTrip.version, hasNewerItinerary: true };
 }
 
 export function validPublicTrip(trip) {

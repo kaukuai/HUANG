@@ -1,16 +1,106 @@
 {
   "schema": 1,
-  "version": "2026-10-16-v2",
+  "version": "2026-10-19-v1",
   "title": "西班牙・口袋旅程",
   "timezone": "Europe/Madrid",
   "people": 4,
   "days": [
+    {
+      "hotel": "",
+      "mapAsset": null,
+      "events": [
+        {
+          "id": "journey-mu5006",
+          "date": "2026-12-23",
+          "start": "2026-12-23T18:40:00+08:00",
+          "end": "2026-12-23T20:25:00+08:00",
+          "category": "航班",
+          "title": "台灣出發｜桃園 T2 → 上海浦東 T1（MU5006）",
+          "displayTitle": "台灣出發｜桃園 T2 → 上海浦東 T1（MU5006）",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "activity": {
+            "description": "搭乘中國東方航空；起飛與抵達時間各依機場當地時間顯示。時間已從原始國際機票行程單核對，後續異動以航空公司通知為準。",
+            "tips": [
+              "航廈及登機門以航空公司最新通知為準。"
+            ]
+          },
+          "timezone": "Asia/Taipei",
+          "endTimezone": "Asia/Shanghai",
+          "isFlight": true,
+          "number": "MU5006",
+          "displayTime": "12/23 18:40 → 12/23 20:25（各地時間）"
+        },
+        {
+          "id": "journey-outbound-transfer",
+          "date": "2026-12-23",
+          "start": "2026-12-23T20:25:00+08:00",
+          "end": "2026-12-24T00:50:00+08:00",
+          "category": "轉機",
+          "title": "上海浦東 T1｜轉機 4 小時 25 分",
+          "displayTitle": "上海浦東 T1｜轉機 4 小時 25 分",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "activity": {
+            "description": "20:25 抵達，隔日 00:50 續飛馬德里；依轉機流程與航司指示前往下一航段。",
+            "tips": []
+          },
+          "timezone": "Asia/Shanghai"
+        }
+      ],
+      "optionalStops": [],
+      "offlineMapNeedsUpdate": false,
+      "date": "2026-12-23",
+      "city": "台灣→上海",
+      "title": "台灣出發、上海轉機",
+      "timezone": "Asia/Taipei"
+    },
     {
       "date": "2026-12-24",
       "city": "馬德里",
       "title": "落地、市場午餐、市集與採買",
       "hotel": "",
       "events": [
+        {
+          "id": "journey-mu709",
+          "date": "2026-12-24",
+          "start": "2026-12-24T00:50:00+08:00",
+          "end": "2026-12-24T08:00:00+01:00",
+          "category": "航班",
+          "title": "前往西班牙｜上海浦東 T1 → 馬德里 T1（MU709）",
+          "displayTitle": "前往西班牙｜上海浦東 T1 → 馬德里 T1（MU709）",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "activity": {
+            "description": "搭乘中國東方航空；起飛與抵達時間各依機場當地時間顯示。時間已從原始國際機票行程單核對，後續異動以航空公司通知為準。",
+            "tips": [
+              "航廈及登機門以航空公司最新通知為準。"
+            ]
+          },
+          "timezone": "Asia/Shanghai",
+          "endTimezone": "Europe/Madrid",
+          "isFlight": true,
+          "number": "MU709",
+          "displayTime": "12/24 00:50 → 12/24 08:00（各地時間）"
+        },
         {
           "id": "08a37c9eec4e",
           "date": "2026-12-24",
@@ -51,7 +141,9 @@
           "activity": {
             "description": "從上一站前往機場大車至住宿公寓。先核對接車點、交通方式與行李安排，再開啟導航；表列時間包含規劃緩衝。",
             "tips": []
-          }
+          },
+          "lodgingAction": "返回飯店休息",
+          "cityId": "madrid"
         },
         {
           "id": "a6462a74eaa9",
@@ -72,7 +164,9 @@
           "activity": {
             "description": "先完成行李寄放、取件方式確認及洗手間，再輕裝前往午餐或景點。",
             "tips": []
-          }
+          },
+          "lodgingAction": "寄放行李",
+          "cityId": "madrid"
         },
         {
           "id": "e2ac933ebc02",
@@ -110,14 +204,20 @@
           "conditional": false,
           "status": "聖誕營業待確認",
           "statusKind": "warning",
-          "displayTitle": "聖米格爾市場逛攤與午餐",
+          "displayTitle": "聖米格爾市場（Mercado de San Miguel）｜午餐",
           "activity": {
             "description": "在本時段完成午餐，先確認供餐與候位，並留意下一段交通或入場時間。",
             "tips": [],
             "mustTry": [
               "目前未確認本店固定必點品項，依當日菜單現場選擇。"
             ]
-          }
+          },
+          "venue": {
+            "cityId": "madrid",
+            "nameZh": "聖米格爾市場",
+            "nameEn": "Mercado de San Miguel"
+          },
+          "cityId": "madrid"
         },
         {
           "id": "04c734b12475",
@@ -155,7 +255,7 @@
           "conditional": false,
           "status": "",
           "statusKind": "neutral",
-          "displayTitle": "Plaza Mayor聖誕市集",
+          "displayTitle": "主廣場聖誕市集（Plaza Mayor）",
           "activity": {
             "description": "拱廊圍起的主廣場在聖誕季變成節慶市集，重點是降生馬槽人物、聖誕裝飾與趣味小物。平安夜午餐後來，先完成此次真正的聖誕市集體驗。",
             "highlights": [
@@ -165,7 +265,13 @@
               "2026 官網列到 12/31，12/24 特別收攤時刻仍需確認；白天到訪較穩。免費入場，購物從預備金支出。"
             ],
             "photoTip": "從拱廊向廣場拍框景；避免把攤販當不經同意的人像主角。"
-          }
+          },
+          "venue": {
+            "cityId": "madrid",
+            "nameZh": "主廣場聖誕市集",
+            "nameEn": "Plaza Mayor"
+          },
+          "cityId": "madrid"
         },
         {
           "id": "391f6bfa61a3",
@@ -203,7 +309,7 @@
           "conditional": false,
           "status": "",
           "statusKind": "neutral",
-          "displayTitle": "Supermercado El Corte Inglés採買",
+          "displayTitle": "英國宮超市（Supermercado El Corte Inglés）",
           "activity": {
             "description": "Supermercado El Corte Inglés採買；Callao市中心店點僅規劃候選，食品超市實際入口／樓層及12/24營業未核；不推定已採買或實付。",
             "highlights": [
@@ -213,7 +319,13 @@
               "Supermercado El Corte Inglés採買；Callao市中心店點僅規劃候選，食品超市實際入口／樓層及12/24營業未核；不推定已採買或實付。"
             ],
             "photoTip": "依現場規則拍照"
-          }
+          },
+          "venue": {
+            "cityId": "madrid",
+            "nameZh": "英國宮超市",
+            "nameEn": "Supermercado El Corte Inglés"
+          },
+          "cityId": "madrid"
         },
         {
           "id": "df3d24421886",
@@ -234,7 +346,9 @@
           "activity": {
             "description": "從上一站前往帶採買物返回住宿。先核對接車點、交通方式與行李安排，再開啟導航；表列時間包含規劃緩衝。",
             "tips": []
-          }
+          },
+          "lodgingAction": "返回飯店休息",
+          "cityId": "madrid"
         },
         {
           "id": "432ca698e3e1",
@@ -255,7 +369,9 @@
           "activity": {
             "description": "辦理住宿入住、暖身休息並準備翌日早餐；確認入口、門碼及隔天離開方式。",
             "tips": []
-          }
+          },
+          "lodgingAction": "辦理入住、放行李與休息",
+          "cityId": "madrid"
         },
         {
           "id": "c9db000ca0c8",
@@ -293,7 +409,7 @@
           "conditional": true,
           "status": "彈性／條件行程",
           "statusKind": "conditional",
-          "displayTitle": "Gran Vía聖誕燈飾（有餘裕才去）",
+          "displayTitle": "格蘭大道聖誕燈飾（Gran Vía）",
           "activity": {
             "description": "格蘭大道把大城的劇院、商店與近代街景串在一起，適合用聖誕燈飾補足馬德里的都市面貌。路線以 Sol、Callao 到 Gran Vía 的短段為主。",
             "highlights": [
@@ -303,7 +419,13 @@
               "17:30–18:10只作條件燈飾散步；採買與休息優先，若未成行則留在住宿備餐。沒有18:00主人家接送或19:00–21:00已確認餐桌。"
             ],
             "photoTip": "藍調時刻從人行道取街景；不要走到車道或單車道。"
-          }
+          },
+          "venue": {
+            "cityId": "madrid",
+            "nameZh": "格蘭大道聖誕燈飾",
+            "nameEn": "Gran Vía"
+          },
+          "cityId": "madrid"
         },
         {
           "id": "39d1d8a19c6b",
@@ -324,7 +446,9 @@
           "activity": {
             "description": "從上一站前往返回住宿住宿。先核對接車點、交通方式與行李安排，再開啟導航；表列時間包含規劃緩衝。",
             "tips": []
-          }
+          },
+          "lodgingAction": "返回飯店休息",
+          "cityId": "madrid"
         },
         {
           "id": "e8253714cdfb",
@@ -390,7 +514,9 @@
           "activity": {
             "description": "保留暖身、休息與整理用品的時間；先處理翌日早餐，依當日體力調整免費散步。",
             "tips": []
-          }
+          },
+          "lodgingAction": "休息與整理用品",
+          "cityId": "madrid"
         }
       ],
       "mapAsset": null,
@@ -417,14 +543,20 @@
           "conditional": false,
           "status": "",
           "statusKind": "neutral",
-          "displayTitle": "San Ginés／前晚備好糕餅",
+          "displayTitle": "聖吉內斯油條店／備好糕餅（Chocolatería San Ginés）｜早餐",
           "activity": {
             "description": "用餐並補充熱飲；若店家未開，使用前晚準備的早餐，保留接車與景點報到時間。",
             "tips": [],
             "mustTry": [
               "目前未確認本店固定必點品項，依當日菜單現場選擇。"
             ]
-          }
+          },
+          "venue": {
+            "cityId": "madrid",
+            "nameZh": "聖吉內斯油條店／備好糕餅",
+            "nameEn": "Chocolatería San Ginés"
+          },
+          "cityId": "madrid"
         },
         {
           "id": "9b2d32bde7e0",
@@ -462,7 +594,7 @@
           "conditional": false,
           "status": "",
           "statusKind": "neutral",
-          "displayTitle": "Puerta de Alcalá",
+          "displayTitle": "阿爾卡拉門（Puerta de Alcalá）",
           "activity": {
             "description": "阿爾卡拉門是馬德里經典新古典主義地標，位於麗池公園入口外。計程車在公園旁下車後先看外觀，再進公園湖畔。",
             "highlights": [
@@ -472,7 +604,13 @@
               "戶外免費。圓環中央不作上下車點，請司機在合法路邊停車。"
             ],
             "photoTip": "在廣場人行道拍正面；用較長焦段壓縮門拱。"
-          }
+          },
+          "venue": {
+            "cityId": "madrid",
+            "nameZh": "阿爾卡拉門",
+            "nameEn": "Puerta de Alcalá"
+          },
+          "cityId": "madrid"
         },
         {
           "id": "007f9e376d30",
@@ -489,7 +627,7 @@
           "conditional": false,
           "status": "",
           "statusKind": "neutral",
-          "displayTitle": "Retiro湖畔與公園",
+          "displayTitle": "麗池公園（Parque del Retiro）",
           "activity": {
             "description": "麗池公園是馬德里生活的一部分，湖畔、步道與阿方索十二世紀念碑能讓聖誕早晨放慢腳步。這天以冬季日照下散步為主，不再加博物館。",
             "highlights": [
@@ -499,7 +637,13 @@
               "強風時市府可能封園；當日若關閉改走 Paseo del Prado 外圍。不要為划船或玻璃宮另排隊。"
             ],
             "photoTip": "湖的西側朝紀念碑拍全景；冬天用散步取代長時間久坐。"
-          }
+          },
+          "venue": {
+            "cityId": "madrid",
+            "nameZh": "麗池公園",
+            "nameEn": "Parque del Retiro"
+          },
+          "cityId": "madrid"
         },
         {
           "id": "1fca8b4525ad",
@@ -537,11 +681,17 @@
           "conditional": false,
           "status": "",
           "statusKind": "neutral",
-          "displayTitle": "Prado周邊外觀／咖啡",
+          "displayTitle": "普拉多周邊外觀與咖啡（Museo del Prado）",
           "activity": {
             "description": "這一站安排Prado周邊外觀／咖啡。依現場開放與動線參觀，留意下一段固定報到或交通時間。",
             "tips": []
-          }
+          },
+          "venue": {
+            "cityId": "madrid",
+            "nameZh": "普拉多周邊外觀與咖啡",
+            "nameEn": "Museo del Prado"
+          },
+          "cityId": "madrid"
         },
         {
           "id": "e73db37f5dc9",
@@ -579,7 +729,7 @@
           "conditional": false,
           "status": "尚未訂位",
           "statusKind": "warning",
-          "displayTitle": "Murillo Café - Restaurante｜午餐",
+          "displayTitle": "穆里略咖啡餐廳（Murillo Café - Restaurante）｜午餐",
           "activity": {
             "description": "Prado門旁咖啡與小盤料理",
             "mustTry": [
@@ -590,7 +740,13 @@
               "12:45到店、13:00–14:30用餐目標；14:30直接搭車往CSIC，15:00外觀打卡。Murillo尚未訂成，不能當成確認餐桌；備選須重新核對聖誕營業與動線，不能當日晚點自動切換。",
               "推薦餐點依既有美食指南；價格、當日供應與過敏原請點餐前向店家確認。"
             ]
-          }
+          },
+          "venue": {
+            "cityId": "madrid",
+            "nameZh": "穆里略咖啡餐廳",
+            "nameEn": "Murillo Café - Restaurante"
+          },
+          "cityId": "madrid"
         },
         {
           "id": "f5477f951eaa",
@@ -628,11 +784,17 @@
           "conditional": true,
           "status": "彈性／條件行程",
           "statusKind": "conditional",
-          "displayTitle": "CSIC《紙房子》拍攝地點",
+          "displayTitle": "西班牙高等科學研究理事會・紙房子外景（Consejo Superior de Investigaciones Científicas (CSIC)）",
           "activity": {
             "description": "這一站安排CSIC《紙房子》拍攝地點。依現場開放與動線參觀，留意下一段固定報到或交通時間。",
             "tips": []
-          }
+          },
+          "venue": {
+            "cityId": "madrid",
+            "nameZh": "西班牙高等科學研究理事會・紙房子外景",
+            "nameEn": "Consejo Superior de Investigaciones Científicas (CSIC)"
+          },
+          "cityId": "madrid"
         },
         {
           "id": "c3a58a871b2d",
@@ -670,7 +832,7 @@
           "conditional": false,
           "status": "",
           "statusKind": "neutral",
-          "displayTitle": "Álex Cordobés | Velázquez",
+          "displayTitle": "起司蛋糕店・有開門才去（Álex Cordobés | Velázquez）",
           "activity": {
             "description": "使用者指定Velázquez店名",
             "mustTry": [
@@ -680,7 +842,13 @@
               "使用者指定Velázquez店名；有開才去，候位最多15分鐘、16:40離開，未開跳過。不能保證聖誕營業或猜門牌。",
               "推薦餐點依既有美食指南；價格、當日供應與過敏原請點餐前向店家確認。"
             ]
-          }
+          },
+          "venue": {
+            "cityId": "madrid",
+            "nameZh": "起司蛋糕店・有開門才去",
+            "nameEn": "Álex Cordobés | Velázquez"
+          },
+          "cityId": "madrid"
         },
         {
           "id": "499c213fa7f7",
@@ -745,7 +913,7 @@
           "conditional": false,
           "status": "",
           "statusKind": "neutral",
-          "displayTitle": "Cibeles西貝雷斯廣場",
+          "displayTitle": "西貝雷斯廣場（Plaza de Cibeles）",
           "activity": {
             "description": "西貝雷斯噴泉、宮殿外觀與阿爾卡拉街構成馬德里典型的首都景觀。聖誕傍晚來看燈，比假日依賴商店或博物館更容易成立。",
             "highlights": [
@@ -755,7 +923,13 @@
               "只看戶外，不買觀景臺票。若天冷或下雨，把夜景縮成 20 分鐘並搭車回飯店。"
             ],
             "photoTip": "站在人行道取噴泉及宮殿；不進入車流圓環。"
-          }
+          },
+          "venue": {
+            "cityId": "madrid",
+            "nameZh": "西貝雷斯廣場",
+            "nameEn": "Plaza de Cibeles"
+          },
+          "cityId": "madrid"
         },
         {
           "id": "0e0df3c814c1",
@@ -772,7 +946,7 @@
           "conditional": false,
           "status": "",
           "statusKind": "neutral",
-          "displayTitle": "Gran Vía東段燈飾",
+          "displayTitle": "格蘭大道燈飾（Gran Vía）",
           "activity": {
             "description": "從Cibeles經Alcalá往GranVía東段，接Sol／PlazaMayor晚餐，不走到西端折返。",
             "highlights": [
@@ -782,7 +956,13 @@
               "點燈依當日實際，2026精確時刻未核；守18:50到Los、19:00已訂。"
             ],
             "photoTip": "以現場規範為準；不推定內部可拍"
-          }
+          },
+          "venue": {
+            "cityId": "madrid",
+            "nameZh": "格蘭大道燈飾",
+            "nameEn": "Gran Vía"
+          },
+          "cityId": "madrid"
         },
         {
           "id": "dc29d2d36cd7",
@@ -820,7 +1000,7 @@
           "conditional": false,
           "status": "",
           "statusKind": "neutral",
-          "displayTitle": "Plaza Mayor",
+          "displayTitle": "主廣場（Plaza Mayor）",
           "activity": {
             "description": "火腿與西班牙簡餐",
             "mustTry": [
@@ -830,7 +1010,13 @@
               "火腿與西班牙簡餐；在市集旁，適合快速且有鹹食的午餐；核對Plaza Mayor分店；吧檯與座席價格可能不同",
               "推薦餐點依既有美食指南；價格、當日供應與過敏原請點餐前向店家確認。"
             ]
-          }
+          },
+          "venue": {
+            "cityId": "madrid",
+            "nameZh": "主廣場",
+            "nameEn": "Plaza Mayor"
+          },
+          "cityId": "madrid"
         },
         {
           "id": "943e994a88ae",
@@ -868,7 +1054,7 @@
           "conditional": false,
           "status": "",
           "statusKind": "neutral",
-          "displayTitle": "Los Galayos｜晚餐",
+          "displayTitle": "傳統西班牙餐廳（Los Galayos）｜晚餐",
           "activity": {
             "description": "傳統西班牙料理與廣場餐桌",
             "mustTry": [
@@ -879,7 +1065,13 @@
               "18:50到店、19:00準時訂位；19:00–20:15為預估用餐時段，20:30目標回住宿整理行李。白天不回飯店；晚點先自行聯絡餐廳，不自動改備選。",
               "推薦餐點依既有美食指南；價格、當日供應與過敏原請點餐前向店家確認。"
             ]
-          }
+          },
+          "venue": {
+            "cityId": "madrid",
+            "nameZh": "傳統西班牙餐廳",
+            "nameEn": "Los Galayos"
+          },
+          "cityId": "madrid"
         },
         {
           "id": "2015cff95fc2",
@@ -900,7 +1092,9 @@
           "activity": {
             "description": "從上一站前往回住宿整理行李。先核對接車點、交通方式與行李安排，再開啟導航；表列時間包含規劃緩衝。",
             "tips": []
-          }
+          },
+          "lodgingAction": "返回飯店休息",
+          "cityId": "madrid"
         }
       ],
       "mapAsset": null,
@@ -955,7 +1149,9 @@
           "activity": {
             "description": "完成退房後寄放大件行李，確認領取時間與方式，再前往景點。",
             "tips": []
-          }
+          },
+          "lodgingAction": "退房並寄放行李",
+          "cityId": "madrid"
         },
         {
           "id": "1ca0d1c4267a",
@@ -1035,7 +1231,7 @@
           "conditional": false,
           "status": "",
           "statusKind": "neutral",
-          "displayTitle": "馬德里皇宮",
+          "displayTitle": "馬德里王宮（Palacio Real de Madrid）",
           "activity": {
             "description": "馬德里皇宮展示西班牙王室的國事空間與收藏，用一個上午理解首都的歷史份量。它仍用於官方活動，因此即使訂好票，臨時國事封閉仍可能影響參觀。",
             "highlights": [
@@ -1045,7 +1241,13 @@
               "已購12/26 10:15四人，09:50安檢，12:00離館。票為皇宮普通自助參觀，Royal Collections另購；票面Brambila活動期限至10/12，不能當12/26免費。音導€3/裝置為可選。"
             ],
             "photoTip": "建築外觀與 Plaza de Oriente 好拍；室內按工作人員指示收相機。"
-          }
+          },
+          "venue": {
+            "cityId": "madrid",
+            "nameZh": "馬德里王宮",
+            "nameEn": "Palacio Real de Madrid"
+          },
+          "cityId": "madrid"
         },
         {
           "id": "3c51803b50c8",
@@ -1131,7 +1333,7 @@
           "conditional": false,
           "status": "",
           "statusKind": "neutral",
-          "displayTitle": "Botín｜午餐",
+          "displayTitle": "波丁烤乳豬餐廳（Botín）｜午餐",
           "activity": {
             "description": "歷史烤爐與卡斯提亞肉料理",
             "mustTry": [
@@ -1142,7 +1344,13 @@
               "12:50到店，13:00準時訂位；15:00預估結束，非店家承諾時長。15:00搭車往Prado，15:25報到、15:45–17:00為尚未購票目標；17:00離館以保護取箱與19:00已購列車，不擅自改餐廳或火車。",
               "推薦餐點依既有美食指南；價格、當日供應與過敏原請點餐前向店家確認。"
             ]
-          }
+          },
+          "venue": {
+            "cityId": "madrid",
+            "nameZh": "波丁烤乳豬餐廳",
+            "nameEn": "Botín"
+          },
+          "cityId": "madrid"
         },
         {
           "id": "1e93e75d8dab",
@@ -1201,7 +1409,7 @@
           "conditional": false,
           "status": "尚未購票",
           "statusKind": "warning",
-          "displayTitle": "Prado名畫精選",
+          "displayTitle": "普拉多美術館（Museo del Prado）",
           "activity": {
             "description": "普拉多是此行看西班牙藝術的核心，以王室收藏為基礎，濃縮委拉斯奎茲與哥雅，也能看到波希。時間有限時追三組作品比全館跑透更有收穫。",
             "highlights": [
@@ -1211,7 +1419,13 @@
               "尚未購；12/26新目標15:45–17:00，15:25到入口安檢，75分鐘精選，17:00離館硬截止；17:30回住宿取箱、17:45離開、18:15到出發站。無合適可售票需另協調，不能當已出票。"
             ],
             "photoTip": "把相機收起來，專注看畫；外觀可在入口前拍。"
-          }
+          },
+          "venue": {
+            "cityId": "madrid",
+            "nameZh": "普拉多美術館",
+            "nameEn": "Museo del Prado"
+          },
+          "cityId": "madrid"
         },
         {
           "id": "b25d16feb656",
@@ -1232,7 +1446,9 @@
           "activity": {
             "description": "從上一站前往Prado→住宿。先核對接車點、交通方式與行李安排，再開啟導航；表列時間包含規劃緩衝。",
             "tips": []
-          }
+          },
+          "lodgingAction": "返回飯店休息",
+          "cityId": "madrid"
         },
         {
           "id": "61bfebdfa263",
@@ -1253,7 +1469,9 @@
           "activity": {
             "description": "回住宿領取寄放行李、清點四人行李，準備下一段接車或車站移動。",
             "tips": []
-          }
+          },
+          "lodgingAction": "領回寄放行李",
+          "cityId": "madrid"
         },
         {
           "id": "dd20ffc36ec9",
@@ -1358,7 +1576,9 @@
           "activity": {
             "description": "從上一站前往車站→住宿公寓。先核對接車點、交通方式與行李安排，再開啟導航；表列時間包含規劃緩衝。",
             "tips": []
-          }
+          },
+          "lodgingAction": "返回飯店休息",
+          "cityId": "sevilla"
         },
         {
           "id": "b996636e0765",
@@ -1379,7 +1599,9 @@
           "activity": {
             "description": "辦理住宿入住、暖身休息並準備翌日早餐；確認入口、門碼及隔天離開方式。",
             "tips": []
-          }
+          },
+          "lodgingAction": "辦理入住、放行李與休息",
+          "cityId": "sevilla"
         },
         {
           "id": "460962a32847",
@@ -1417,7 +1639,7 @@
           "conditional": false,
           "status": "",
           "statusKind": "neutral",
-          "displayTitle": "El Rinconcillo｜晚餐",
+          "displayTitle": "老牌塔帕斯酒館（El Rinconcillo）｜晚餐",
           "activity": {
             "description": "歷史酒館與安達魯西亞小盤",
             "mustTry": [
@@ -1428,7 +1650,13 @@
               "21:39到站→21:50上車→22:05到公寓→22:05–22:15快速入住放行李→22:15出發→22:30到店訂位。須事前完成線上入住、核實門碼並預約可載四人四箱車；全段偏緊，不保證趕上。23:30預估結束、23:50回住宿；22:40只是保留截止，禁止晚點自動切換備選。",
               "推薦餐點依既有美食指南；價格、當日供應與過敏原請點餐前向店家確認。"
             ]
-          }
+          },
+          "venue": {
+            "cityId": "sevilla",
+            "nameZh": "老牌塔帕斯酒館",
+            "nameEn": "El Rinconcillo"
+          },
+          "cityId": "sevilla"
         },
         {
           "id": "aa05f20049ef",
@@ -1449,7 +1677,9 @@
           "activity": {
             "description": "從上一站前往回住宿休息。先核對接車點、交通方式與行李安排，再開啟導航；表列時間包含規劃緩衝。",
             "tips": []
-          }
+          },
+          "lodgingAction": "返回飯店休息",
+          "cityId": "sevilla"
         }
       ],
       "mapAsset": null,
@@ -1476,15 +1706,14 @@
           "conditional": false,
           "status": "",
           "statusKind": "neutral",
-          "displayTitle": "99 Cheesecake | Sevilla｜早餐",
+          "displayTitle": "公寓吃前日Mallorquina乾糕餅",
           "activity": {
-            "description": "有空順路才吃乳酪蛋糕，不分配固定時段",
+            "description": "在住宿吃前晚準備的早餐，完成後依原定接車或外出時間出發。",
             "mustTry": [
-              "蛋糕"
+              "前晚準備的麵包、糕餅與飲水；依實際採買內容。"
             ],
             "tips": [
-              "有空順路才吃乳酪蛋糕，不分配固定時段；先看店址、排隊與當日營業，17:30劇場報到優先。與救主教堂短訪視情況擇一，不把兩站都排滿。",
-              "推薦餐點依既有美食指南；價格、當日供應與過敏原請點餐前向店家確認。"
+              "這段為住宿內早餐，沒有安排前往甜點店。"
             ]
           }
         },
@@ -1524,7 +1753,7 @@
           "conditional": false,
           "status": "",
           "statusKind": "neutral",
-          "displayTitle": "塞維亞西班牙廣場｜省份瓷磚、拱廊與拍照",
+          "displayTitle": "塞維亞西班牙廣場（Plaza de España）",
           "activity": {
             "description": "西班牙廣場為 1929 年博覽會打造，半圓建築、運河、小橋和省份陶瓷壁龕讓它成為塞維亞最具辨識度的景點。午前順路來，再回古城午餐。",
             "highlights": [
@@ -1534,7 +1763,13 @@
               "08:30–09:00拍省份瓷磚與拱廊，09:00離開走至王宮、09:30開始安檢。戶外免費，不排划船。"
             ],
             "photoTip": "從中央橋拍半圓建築；廣角與一張陶磚細節即可。"
-          }
+          },
+          "venue": {
+            "cityId": "sevilla",
+            "nameZh": "塞維亞西班牙廣場",
+            "nameEn": "Plaza de España"
+          },
+          "cityId": "sevilla"
         },
         {
           "id": "dfd3b6520730",
@@ -1593,7 +1828,7 @@
           "conditional": false,
           "status": "",
           "statusKind": "neutral",
-          "displayTitle": "塞維亞王宮｜四人入園、確認上層報到處",
+          "displayTitle": "塞維亞王宮（Real Alcázar de Sevilla）",
           "activity": {
             "description": "塞維亞王宮把伊斯蘭、基督教王室及穆德哈爾裝飾語言疊在一起，庭院、水池與花園是安達魯西亞的精華。與隔日阿爾罕布拉比較，能看出不同宮廷的空間氣質。",
             "highlights": [
@@ -1603,7 +1838,13 @@
               "12/27 09:30入口安檢，四人10:00一般入場；只有上層票持有人10:15到上層報到、10:30參觀。三位留一般園區，11:00集合；上層不攝影，遵守現場規則。 王宮12:00離園赴MITO，10:00與10:30已購票時段不變。"
             ],
             "photoTip": "庭院水池取對稱倒影；等人流間隙，避免閃光燈。"
-          }
+          },
+          "venue": {
+            "cityId": "sevilla",
+            "nameZh": "塞維亞王宮",
+            "nameEn": "Real Alcázar de Sevilla"
+          },
+          "cityId": "sevilla"
         },
         {
           "id": "9815640d3c85",
@@ -1620,7 +1861,7 @@
           "conditional": false,
           "status": "",
           "statusKind": "neutral",
-          "displayTitle": "塞維亞王宮｜1 人參觀上層、3 人園內短逛",
+          "displayTitle": "塞維亞王宮（Real Alcázar de Sevilla）",
           "activity": {
             "description": "塞維亞王宮把伊斯蘭、基督教王室及穆德哈爾裝飾語言疊在一起，庭院、水池與花園是安達魯西亞的精華。與隔日阿爾罕布拉比較，能看出不同宮廷的空間氣質。",
             "highlights": [
@@ -1630,7 +1871,13 @@
               "12/27 09:30入口安檢，四人10:00一般入場；只有上層票持有人10:15到上層報到、10:30參觀。三位留一般園區，11:00集合；上層不攝影，遵守現場規則。 王宮12:00離園赴MITO，10:00與10:30已購票時段不變。"
             ],
             "photoTip": "庭院水池取對稱倒影；等人流間隙，避免閃光燈。"
-          }
+          },
+          "venue": {
+            "cityId": "sevilla",
+            "nameZh": "塞維亞王宮",
+            "nameEn": "Real Alcázar de Sevilla"
+          },
+          "cityId": "sevilla"
         },
         {
           "id": "9b626f668f78",
@@ -1647,7 +1894,7 @@
           "conditional": false,
           "status": "",
           "statusKind": "neutral",
-          "displayTitle": "塞維亞王宮｜四人會合、參觀宮殿與花園",
+          "displayTitle": "塞維亞王宮（Real Alcázar de Sevilla）",
           "activity": {
             "description": "塞維亞王宮把伊斯蘭、基督教王室及穆德哈爾裝飾語言疊在一起，庭院、水池與花園是安達魯西亞的精華。與隔日阿爾罕布拉比較，能看出不同宮廷的空間氣質。",
             "highlights": [
@@ -1657,7 +1904,13 @@
               "12/27 09:30入口安檢，四人10:00一般入場；只有上層票持有人10:15到上層報到、10:30參觀。三位留一般園區，11:00集合；上層不攝影，遵守現場規則。 王宮12:00離園赴MITO，10:00與10:30已購票時段不變。"
             ],
             "photoTip": "庭院水池取對稱倒影；等人流間隙，避免閃光燈。"
-          }
+          },
+          "venue": {
+            "cityId": "sevilla",
+            "nameZh": "塞維亞王宮",
+            "nameEn": "Real Alcázar de Sevilla"
+          },
+          "cityId": "sevilla"
         },
         {
           "id": "2e6762c0568e",
@@ -1674,7 +1927,7 @@
           "conditional": false,
           "status": "13:00關門（使用者提供）",
           "statusKind": "neutral",
-          "displayTitle": "前往Gelateria MITO並吃雪糕",
+          "displayTitle": "義式雪糕店（Gelateria MITO）",
           "activity": {
             "description": "使用者提供僅營業到13:00",
             "mustTry": [
@@ -1684,7 +1937,13 @@
               "使用者提供僅營業到13:00；12:00離王宮，步行目標12:20到店、12:20–12:35吃雪糕，12:40前離店。店址與步行時間仍待核，排隊最多10分鐘；不影響13:00已訂午餐。",
               "推薦餐點依既有美食指南；價格、當日供應與過敏原請點餐前向店家確認。"
             ]
-          }
+          },
+          "venue": {
+            "cityId": "sevilla",
+            "nameZh": "義式雪糕店",
+            "nameEn": "Gelateria MITO"
+          },
+          "cityId": "sevilla"
         },
         {
           "id": "91325964a43c",
@@ -1722,7 +1981,7 @@
           "conditional": false,
           "status": "",
           "statusKind": "neutral",
-          "displayTitle": "Bar Postiguillo Tapas｜午餐",
+          "displayTitle": "塔帕斯餐廳（Bar Postiguillo Tapas）｜午餐",
           "activity": {
             "description": "塞維亞 tapas 午餐；點餐時先問份量，四人可分食幾道小盤。",
             "mustTry": [
@@ -1734,7 +1993,13 @@
               "推薦餐點依既有美食指南；價格、當日供應與過敏原請點餐前向店家確認。",
               "14:00前離席，保留大教堂報到。"
             ]
-          }
+          },
+          "venue": {
+            "cityId": "sevilla",
+            "nameZh": "塔帕斯餐廳",
+            "nameEn": "Bar Postiguillo Tapas"
+          },
+          "cityId": "sevilla"
         },
         {
           "id": "87c5a73787e8",
@@ -1793,7 +2058,7 @@
           "conditional": false,
           "status": "",
           "statusKind": "neutral",
-          "displayTitle": "塞維亞主教座堂｜先登 Giralda 希拉達塔",
+          "displayTitle": "塞維亞主教座堂與希拉達塔（Catedral de Sevilla / Giralda）",
           "activity": {
             "description": "塞維亞主教座堂的尺度、哥德式空間與 Giralda 鐘塔，對照王宮形成這座城的另一個重心。Giralda 保留原清真寺宣禮塔的歷史層次，登塔可看古城。",
             "highlights": [
@@ -1803,7 +2068,13 @@
               "已購12/27 14:35四人含語音。14:20到票面入口，按票面先登Giralda14:35–15:25，再看主殿至16:35；不可重入，ElSalvador已含。"
             ],
             "photoTip": "鐘塔外觀可在橘樹庭院或廣場取景；禮拜與室內按規定拍攝。"
-          }
+          },
+          "venue": {
+            "cityId": "sevilla",
+            "nameZh": "塞維亞主教座堂與希拉達塔",
+            "nameEn": "Catedral de Sevilla / Giralda"
+          },
+          "cityId": "sevilla"
         },
         {
           "id": "b6315737d7bd",
@@ -1820,7 +2091,7 @@
           "conditional": false,
           "status": "",
           "statusKind": "neutral",
-          "displayTitle": "塞維亞主教座堂｜主殿、哥倫布墓與祭壇",
+          "displayTitle": "塞維亞主教座堂與希拉達塔（Catedral de Sevilla / Giralda）",
           "activity": {
             "description": "塞維亞主教座堂的尺度、哥德式空間與 Giralda 鐘塔，對照王宮形成這座城的另一個重心。Giralda 保留原清真寺宣禮塔的歷史層次，登塔可看古城。",
             "highlights": [
@@ -1830,7 +2101,13 @@
               "已購12/27 14:35四人含語音。14:20到票面入口，按票面先登Giralda14:35–15:25，再看主殿至16:35；不可重入，ElSalvador已含。"
             ],
             "photoTip": "鐘塔外觀可在橘樹庭院或廣場取景；禮拜與室內按規定拍攝。"
-          }
+          },
+          "venue": {
+            "cityId": "sevilla",
+            "nameZh": "塞維亞主教座堂與希拉達塔",
+            "nameEn": "Catedral de Sevilla / Giralda"
+          },
+          "cityId": "sevilla"
         },
         {
           "id": "6cc4926cf182",
@@ -1868,7 +2145,7 @@
           "conditional": false,
           "status": "",
           "statusKind": "neutral",
-          "displayTitle": "救世主教堂 Iglesia del Salvador｜短訪",
+          "displayTitle": "救世主教堂（Iglesia del Salvador）",
           "activity": {
             "description": "票已含的巴洛克教堂，金色祭壇和雕塑可補足大教堂體驗。",
             "highlights": [
@@ -1878,7 +2155,13 @@
               "12/27 16:50–17:15短訪；一般週日文化參觀14:30–19:30，最後19:00，宗教活動可調整。 99 Cheesecake | Sevilla只列有空才吃；候選空檔16:35–17:15，僅店址、當日營業、路線與等候允許時選用，與El Salvador短訪擇一。17:15前離店往劇場，17:30報到優先；不把兩站都硬排。"
             ],
             "photoTip": "依現場規則，不用閃光燈或干擾他人。"
-          }
+          },
+          "venue": {
+            "cityId": "sevilla",
+            "nameZh": "救世主教堂",
+            "nameEn": "Iglesia del Salvador"
+          },
+          "cityId": "sevilla"
         },
         {
           "id": "3b8f6c34186d",
@@ -1937,7 +2220,7 @@
           "conditional": false,
           "status": "",
           "statusKind": "neutral",
-          "displayTitle": "Casa de la Memoria｜佛朗明哥演出",
+          "displayTitle": "記憶之家佛朗明哥（Casa de la Memoria）",
           "activity": {
             "description": "佛朗明哥以歌、吉他與舞者的節奏對答，提供安達魯西亞最直接的文化體驗。Casa de la Memoria 的小劇場適合專注看演出，安排獨立場次再吃晚餐。",
             "highlights": [
@@ -1947,7 +2230,13 @@
               "已購12/27 18:00–19:00四人，17:30報到選座，Calle Cuna6；以現場影像規則為準。"
             ],
             "photoTip": "以票根與劇場外觀作記錄；場內收手機，避免幹擾。"
-          }
+          },
+          "venue": {
+            "cityId": "sevilla",
+            "nameZh": "記憶之家佛朗明哥",
+            "nameEn": "Casa de la Memoria"
+          },
+          "cityId": "sevilla"
         },
         {
           "id": "48623659358b",
@@ -1985,7 +2274,7 @@
           "conditional": false,
           "status": "尚未訂位",
           "statusKind": "warning",
-          "displayTitle": "Restaurante El Paseíllo｜晚餐",
+          "displayTitle": "墨魚燉飯餐廳（Restaurante El Paseíllo）｜晚餐",
           "activity": {
             "description": "12/27 19:30四位晚餐目標，尚未訂位",
             "mustTry": [
@@ -1996,7 +2285,13 @@
               "主選El Paseíllo19:30四位未訂；11/27開始查位，墨魚燉飯待確認。備選須另確認，不能當已訂。20:45結帳返宿。",
               "推薦餐點依既有美食指南；價格、當日供應與過敏原請點餐前向店家確認。"
             ]
-          }
+          },
+          "venue": {
+            "cityId": "sevilla",
+            "nameZh": "墨魚燉飯餐廳",
+            "nameEn": "Restaurante El Paseíllo"
+          },
+          "cityId": "sevilla"
         },
         {
           "id": "77b3eca90f2e",
@@ -2017,7 +2312,9 @@
           "activity": {
             "description": "從上一站前往回公寓。先核對接車點、交通方式與行李安排，再開啟導航；表列時間包含規劃緩衝。",
             "tips": []
-          }
+          },
+          "lodgingAction": "返回飯店休息",
+          "cityId": "sevilla"
         },
         {
           "id": "a6d63b70360c",
@@ -2051,7 +2348,13 @@
             "先詢問當日乳酪蛋糕口味與單片供應。"
           ],
           "mapUrl": "https://www.google.com/maps/search/?api=1&query=99+Cheesecake+Sevilla",
-          "openingHours": ""
+          "openingHours": "",
+          "venue": {
+            "cityId": "sevilla",
+            "nameZh": "起司蛋糕店",
+            "nameEn": "99 Cheesecake | Sevilla"
+          },
+          "displayTitle": "起司蛋糕店（99 Cheesecake | Sevilla）"
         }
       ]
     },
@@ -2076,15 +2379,14 @@
           "conditional": false,
           "status": "",
           "statusKind": "neutral",
-          "displayTitle": "99 Cheesecake | Sevilla｜早餐",
+          "displayTitle": "公寓吃前晚早餐盒",
           "activity": {
-            "description": "有空順路才吃乳酪蛋糕，不分配固定時段",
+            "description": "在住宿吃前晚準備的早餐，完成後依原定接車或外出時間出發。",
             "mustTry": [
-              "蛋糕"
+              "前晚準備的麵包、糕餅與飲水；依實際採買內容。"
             ],
             "tips": [
-              "有空順路才吃乳酪蛋糕，不分配固定時段；先看店址、排隊與當日營業，17:30劇場報到優先。與救主教堂短訪視情況擇一，不把兩站都排滿。",
-              "推薦餐點依既有美食指南；價格、當日供應與過敏原請點餐前向店家確認。"
+              "這段為住宿內早餐，沒有安排前往甜點店。"
             ]
           }
         },
@@ -2107,7 +2409,9 @@
           "activity": {
             "description": "完成退房、清點行李與隨身物品，依約定方式前往接車點。",
             "tips": []
-          }
+          },
+          "lodgingAction": "退房、清點行李",
+          "cityId": "sevilla"
         },
         {
           "id": "bd1dd130f148",
@@ -2214,7 +2518,9 @@
           "activity": {
             "description": "從上一站前往住宿。先核對接車點、交通方式與行李安排，再開啟導航；表列時間包含規劃緩衝。",
             "tips": []
-          }
+          },
+          "lodgingAction": "返回飯店休息",
+          "cityId": "granada"
         },
         {
           "id": "88f230fa4543",
@@ -2235,7 +2541,9 @@
           "activity": {
             "description": "先完成行李寄放、取件方式確認及洗手間，再輕裝前往午餐或景點。",
             "tips": []
-          }
+          },
+          "lodgingAction": "寄放行李",
+          "cityId": "granada"
         },
         {
           "id": "d65dcdfb32ca",
@@ -2252,7 +2560,7 @@
           "conditional": false,
           "status": "",
           "statusKind": "neutral",
-          "displayTitle": "Alhambra Churrería｜西班牙油條午餐",
+          "displayTitle": "西班牙油條店（Alhambra Churrería | Granada）｜午餐",
           "activity": {
             "description": "格拉納達的西班牙油條午餐；寄物後前往，11:45–12:25包含步行、點餐與用餐。",
             "mustTry": [
@@ -2263,7 +2571,13 @@
               "12:25離店搭車上山，保留14:30宮殿報到與15:00 Nasrid入場。",
               "需確認午間是否供應現炸油條；排隊過久時以快速用餐保護已購宮殿時段。"
             ]
-          }
+          },
+          "venue": {
+            "cityId": "granada",
+            "nameZh": "西班牙油條店",
+            "nameEn": "Alhambra Churrería | Granada"
+          },
+          "cityId": "granada"
         },
         {
           "id": "88af32380190",
@@ -2322,7 +2636,7 @@
           "conditional": false,
           "status": "",
           "statusKind": "neutral",
-          "displayTitle": "阿爾罕布拉｜Generalife 夏宮與花園",
+          "displayTitle": "阿爾罕布拉・夏宮與花園（Alhambra / Generalife）",
           "activity": {
             "description": "Generalife 是宮殿群的夏宮花園，水渠、樹籬與庭院讓阿爾罕布拉的觀看轉為舒緩的步行。冬天不以花況作保證，重點在空間與流水。",
             "highlights": [
@@ -2332,7 +2646,13 @@
               "主線13:00–14:05先參觀，14:05開始走往Nasrid，留25分鐘園內移動與30分鐘隊伍。"
             ],
             "photoTip": "水渠形成引導線；冬季低角度陽光拍柱廊。"
-          }
+          },
+          "venue": {
+            "cityId": "granada",
+            "nameZh": "阿爾罕布拉・夏宮與花園",
+            "nameEn": "Alhambra / Generalife"
+          },
+          "cityId": "granada"
         },
         {
           "id": "7ffad10c98b7",
@@ -2391,7 +2711,7 @@
           "conditional": false,
           "status": "",
           "statusKind": "neutral",
-          "displayTitle": "阿爾罕布拉｜15:00 納斯里德宮殿入場",
+          "displayTitle": "阿爾罕布拉・納斯里德宮殿（Alhambra / Palacios Nazaríes）",
           "activity": {
             "description": "納斯里德宮殿是阿爾罕布拉的精華，以細緻灰泥、書法、柱廊與水池展現宮廷工藝。這是一整趟行程最不應遲到的時段票。",
             "highlights": [
@@ -2401,7 +2721,13 @@
               "已購12/28 15:00，14:30到安檢隊伍；遲到可能拒入。使用購票所用身分證件原件，不以影本替代。"
             ],
             "photoTip": "水池倒影與柱廊細節；不使用閃光，狹窄通道快速讓路。"
-          }
+          },
+          "venue": {
+            "cityId": "granada",
+            "nameZh": "阿爾罕布拉・納斯里德宮殿",
+            "nameEn": "Alhambra / Palacios Nazaríes"
+          },
+          "cityId": "granada"
         },
         {
           "id": "d3fcac83c96f",
@@ -2418,7 +2744,7 @@
           "conditional": false,
           "status": "",
           "statusKind": "neutral",
-          "displayTitle": "阿爾罕布拉｜Partal 花園與宮殿倒影",
+          "displayTitle": "阿爾罕布拉・帕塔爾花園（Alhambra / Partal）",
           "activity": {
             "description": "以水池、柱廊和花園延續Nasrid宮殿的空間，出口後直接接堡壘，避免繞回入口。",
             "highlights": [
@@ -2428,7 +2754,13 @@
               "16:15–16:35，園區各票控區只入一次。"
             ],
             "photoTip": "依現場規則，不用閃光燈或干擾他人。"
-          }
+          },
+          "venue": {
+            "cityId": "granada",
+            "nameZh": "阿爾罕布拉・帕塔爾花園",
+            "nameEn": "Alhambra / Partal"
+          },
+          "cityId": "granada"
         },
         {
           "id": "ca0a1fe2df71",
@@ -2445,7 +2777,7 @@
           "conditional": false,
           "status": "",
           "statusKind": "neutral",
-          "displayTitle": "阿爾罕布拉｜Alcazaba 堡壘與城市全景",
+          "displayTitle": "阿爾罕布拉・阿爾卡薩瓦堡壘（Alhambra / Alcazaba）",
           "activity": {
             "description": "Alcazaba 是阿爾罕布拉最具軍事堡壘性格的部分，與細膩的王宮形成鮮明的參觀順序。這段包含從主入口走到西端的時間，實際登塔停留可以縮短。",
             "highlights": [
@@ -2455,7 +2787,13 @@
               "主線16:35–17:10參觀後從正義之門離園；先完成15:00宮殿，不重複進票控區。"
             ],
             "photoTip": "城牆向城市拍全景，樓梯處不駐足阻擋。"
-          }
+          },
+          "venue": {
+            "cityId": "granada",
+            "nameZh": "阿爾罕布拉・阿爾卡薩瓦堡壘",
+            "nameEn": "Alhambra / Alcazaba"
+          },
+          "cityId": "granada"
         },
         {
           "id": "5c11584a0013",
@@ -2514,7 +2852,7 @@
           "conditional": false,
           "status": "",
           "statusKind": "neutral",
-          "displayTitle": "San Nicolás 觀景臺｜阿爾罕布拉夕景",
+          "displayTitle": "聖尼古拉斯觀景臺（Mirador de San Nicolás）",
           "activity": {
             "description": "San Nicolás 觀景臺讓阿爾罕布拉與山景同框，是格拉納達最值得保留的傍晚視角。12 月日落較早，抵達後先拍天光，再看建築逐漸亮起。",
             "highlights": [
@@ -2524,7 +2862,13 @@
               "戶外免費；日落時刻與天候出發前查。石板路不平，晚間冷；回飯店可選計程車，不硬走暗巷。"
             ],
             "photoTip": "靠廣場安全邊緣取全景；人多時別架阻擋通行的腳架。"
-          }
+          },
+          "venue": {
+            "cityId": "granada",
+            "nameZh": "聖尼古拉斯觀景臺",
+            "nameEn": "Mirador de San Nicolás"
+          },
+          "cityId": "granada"
         },
         {
           "id": "8c8f74304c98",
@@ -2545,7 +2889,9 @@
           "activity": {
             "description": "從上一站前往住宿。先核對接車點、交通方式與行李安排，再開啟導航；表列時間包含規劃緩衝。",
             "tips": []
-          }
+          },
+          "lodgingAction": "返回飯店休息",
+          "cityId": "granada"
         },
         {
           "id": "80a3cd7c88ee",
@@ -2566,7 +2912,9 @@
           "activity": {
             "description": "辦理住宿入住、暖身休息並準備翌日早餐；確認入口、門碼及隔天離開方式。",
             "tips": []
-          }
+          },
+          "lodgingAction": "辦理入住、放行李與休息",
+          "cityId": "granada"
         },
         {
           "id": "68ffa52ac7a1",
@@ -2628,7 +2976,7 @@
           "conditional": false,
           "status": "",
           "statusKind": "neutral",
-          "displayTitle": "La Sitarilla｜晚餐",
+          "displayTitle": "塔帕斯餐廳（La Sitarilla）｜晚餐",
           "activity": {
             "description": "格拉納達現場候位的 tapas 晚餐；20:00–21:00是用餐目標，實際入座依排隊進度。",
             "mustTry": [
@@ -2641,7 +2989,13 @@
               "返宿後保留航班報到、司機與行李準備；隔日07:45接車安排保留。"
             ],
             "openingHours": "20:00開門（使用者提供；當日營業待核）"
-          }
+          },
+          "venue": {
+            "cityId": "granada",
+            "nameZh": "塔帕斯餐廳",
+            "nameEn": "La Sitarilla"
+          },
+          "cityId": "granada"
         },
         {
           "id": "27ee5b70d313",
@@ -2662,7 +3016,9 @@
           "activity": {
             "description": "從上一站前往住宿。先核對接車點、交通方式與行李安排，再開啟導航；表列時間包含規劃緩衝。",
             "tips": []
-          }
+          },
+          "lodgingAction": "返回飯店休息",
+          "cityId": "granada"
         },
         {
           "id": "281b57de2fec",
@@ -2696,14 +3052,20 @@
           "mustTry": [
             "可詢問西班牙起司試吃、小份切裝與保存方式；品項依當日供應。"
           ],
-          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Sexitana+Ultramarinos+Granada"
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Sexitana+Ultramarinos+Granada",
+          "venue": {
+            "cityId": "granada",
+            "nameZh": "起司與食品店",
+            "nameEn": "Sexitana Ultramarinos"
+          },
+          "displayTitle": "起司與食品店（Sexitana Ultramarinos）"
         }
       ]
     },
     {
       "date": "2026-12-29",
       "city": "格拉納達→巴塞隆納",
-      "title": "已購班機與巴特略",
+      "title": "直赴住宿、巴特略之家與 El Glop 晚餐",
       "hotel": "",
       "events": [
         {
@@ -2721,15 +3083,14 @@
           "conditional": false,
           "status": "",
           "statusKind": "neutral",
-          "displayTitle": "Alhambra Churrería | Granada｜早餐",
+          "displayTitle": "公寓吃前晚早餐盒",
           "activity": {
-            "description": "午餐改Alhambra Churrería | Granada，吃西班牙油條。11:45–12:25含步行、點餐及用餐，12:25離店搭車上山",
+            "description": "在住宿吃前晚準備的早餐，完成後依原定接車或外出時間出發。",
             "mustTry": [
-              "churros＋熱巧克力（供應待核）"
+              "前晚準備的麵包、糕餅與飲水；依實際採買內容。"
             ],
             "tips": [
-              "午餐改Alhambra Churrería | Granada，吃西班牙油條。11:45–12:25含步行、點餐及用餐，12:25離店搭車上山；當日是否午間供應油條與等候需現場確認，不壓縮14:30 Nasrid報到／15:00票面入場。推薦點法：先問現炸churros與熱巧克力，供應及份量依當日菜單。",
-              "推薦餐點依既有美食指南；價格、當日供應與過敏原請點餐前向店家確認。"
+              "這段為住宿內早餐，沒有安排前往甜點店。"
             ]
           }
         },
@@ -2752,7 +3113,9 @@
           "activity": {
             "description": "完成退房、清點行李與隨身物品，依約定方式前往接車點。",
             "tips": []
-          }
+          },
+          "lodgingAction": "退房、清點行李",
+          "cityId": "granada"
         },
         {
           "id": "509a62a0960b",
@@ -2842,7 +3205,7 @@
           "id": "60e192cf021d",
           "date": "2026-12-29",
           "start": "2026-12-29T12:20:00+01:00",
-          "end": "2026-12-29T13:10:00+01:00",
+          "end": "2026-12-29T13:05:00+01:00",
           "category": "領箱",
           "title": "領箱至T1公共區",
           "transport": "",
@@ -2860,34 +3223,10 @@
           }
         },
         {
-          "id": "2a9018b4e918",
-          "date": "2026-12-29",
-          "start": "2026-12-29T13:10:00+01:00",
-          "end": "2026-12-29T13:50:00+01:00",
-          "category": "午餐",
-          "title": "公共區Tabernnus",
-          "transport": "",
-          "note": "",
-          "ticketIds": [],
-          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Tabernnus+T1%E5%85%AC%E5%85%B1%E5%8D%80+BCN+T1%E4%B8%80%E6%A8%93%E6%8A%B5%E9%81%94%E5%85%AC%E5%85%B1%E5%8D%80+Barcelona%E6%A9%9F%E5%A0%B4",
-          "infoUrl": "",
-          "conditional": false,
-          "status": "",
-          "statusKind": "neutral",
-          "displayTitle": "BCN T1 公共區 Tabernnus｜抵達後午餐",
-          "activity": {
-            "description": "在本時段完成午餐，先確認供餐與候位，並留意下一段交通或入場時間。",
-            "tips": [],
-            "mustTry": [
-              "目前未確認本店固定必點品項，依當日菜單現場選擇。"
-            ]
-          }
-        },
-        {
           "id": "9cfdff1b412a",
           "date": "2026-12-29",
-          "start": "2026-12-29T13:50:00+01:00",
-          "end": "2026-12-29T14:00:00+01:00",
+          "start": "2026-12-29T13:05:00+01:00",
+          "end": "2026-12-29T13:15:00+01:00",
           "category": "報到",
           "title": "司機會合點",
           "transport": "",
@@ -2907,8 +3246,8 @@
         {
           "id": "7de0b30bce2b",
           "date": "2026-12-29",
-          "start": "2026-12-29T14:00:00+01:00",
-          "end": "2026-12-29T15:00:00+01:00",
+          "start": "2026-12-29T13:15:00+01:00",
+          "end": "2026-12-29T14:15:00+01:00",
           "category": "交通",
           "title": "BCN T1大車到住宿",
           "transport": "",
@@ -2923,13 +3262,15 @@
           "activity": {
             "description": "從上一站前往住宿。先核對接車點、交通方式與行李安排，再開啟導航；表列時間包含規劃緩衝。",
             "tips": []
-          }
+          },
+          "lodgingAction": "返回飯店休息",
+          "cityId": "barcelona"
         },
         {
           "id": "7e3a31eba804",
           "date": "2026-12-29",
-          "start": "2026-12-29T15:00:00+01:00",
-          "end": "2026-12-29T15:40:00+01:00",
+          "start": "2026-12-29T14:15:00+01:00",
+          "end": "2026-12-29T15:15:00+01:00",
           "category": "入住",
           "title": "登記門碼入住短休",
           "transport": "",
@@ -2940,16 +3281,18 @@
           "conditional": false,
           "status": "",
           "statusKind": "neutral",
-          "displayTitle": "登記門碼入住短休",
+          "displayTitle": "住宿｜寄放行李、入住與短休",
           "activity": {
-            "description": "辦理住宿入住、暖身休息並準備翌日早餐；確認入口、門碼及隔天離開方式。",
+            "description": "下飛機領箱後直接前往住宿，不安排機場午餐。抵達先放行李；若尚未到入住時間，依住宿安排寄放，再輕裝出門。",
             "tips": []
-          }
+          },
+          "lodgingAction": "先放行李、入住或寄物",
+          "cityId": "barcelona"
         },
         {
           "id": "d9def6010abb",
           "date": "2026-12-29",
-          "start": "2026-12-29T15:40:00+01:00",
+          "start": "2026-12-29T15:15:00+01:00",
           "end": "2026-12-29T16:10:00+01:00",
           "category": "交通",
           "title": "Espanya L3至Passeig de Gràcia",
@@ -3003,7 +3346,7 @@
           "conditional": false,
           "status": "",
           "statusKind": "neutral",
-          "displayTitle": "已購Casa Batlló鉑金票16:30",
+          "displayTitle": "巴特略之家（Casa Batlló）｜依已購票時間入場",
           "activity": {
             "description": "巴特婁之家由高第改造既有住宅，外牆色彩、骨骼般窗框與起伏屋頂，把都市住宅變成有生命感的空間。這站作為巴塞隆納高第旅程的第一站，最容易進入他的想像。",
             "highlights": [
@@ -3013,7 +3356,13 @@
               "已購2026/12/29 16:30四人鉑金普通參觀票K11；16:10到場為規劃緩衝。全員含展覽，僅其中1張另含屋頂甜點、後院卡瓦及屋頂開胃酒；無姓名／時長，不能推定4人均含。暫留參觀至18:15，後段散步彈性；票券未載語音語種、退改及遲到條款。"
             ],
             "photoTip": "採光井抬頭與窗框細節；避免在窄梯停太久。"
-          }
+          },
+          "venue": {
+            "cityId": "barcelona",
+            "nameZh": "巴特略之家",
+            "nameEn": "Casa Batlló"
+          },
+          "cityId": "barcelona"
         },
         {
           "id": "b7bd2b142c9b",
@@ -3037,67 +3386,165 @@
               "巴特婁鄰近的外牆；街燈與鋪面；街區櫥窗。"
             ],
             "tips": [
-              "免費外觀散步。不要把每棟建築都加室內票；1/1 已安排米拉。晚餐 El Nacional 也在附近。"
+              "免費外觀散步；1/1 已安排米拉之家，不再額外加入室內參觀。",
+              "19:15 左右開始前往 El Glop Plaça Catalunya，保留 20:00 訂位。"
             ],
             "photoTip": "街道上層建築細節；站在人行道拍夜景。"
-          }
+          },
+          "reminderUpdated": true,
+          "venue": {
+            "cityId": "barcelona",
+            "nameZh": "格拉西亞大道燈飾",
+            "nameEn": "Passeig de Gràcia"
+          },
+          "cityId": "barcelona"
         },
         {
-          "id": "479062076fb2",
+          "id": "d29-walk-el-glop",
           "date": "2026-12-29",
           "start": "2026-12-29T19:15:00+01:00",
-          "end": "2026-12-29T19:30:00+01:00",
+          "end": "2026-12-29T19:45:00+01:00",
           "category": "交通",
-          "title": "走到El Nacional",
+          "title": "前往加泰隆尼亞餐廳（El Glop Plaça Catalunya）",
+          "displayTitle": "前往加泰隆尼亞餐廳（El Glop Plaça Catalunya）",
           "transport": "",
           "note": "",
           "ticketIds": [],
-          "mapUrl": "https://www.google.com/maps/search/?api=1&query=El+Nacional+Passeig+de+Gr%C3%A0cia+24+bis+Barcelona",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=El+Glop+Pla%C3%A7a+Catalunya+Barcelona",
           "infoUrl": "",
           "conditional": false,
           "status": "",
           "statusKind": "neutral",
-          "displayTitle": "走到El Nacional",
           "activity": {
-            "description": "從上一站前往El Nacional。先核對接車點、交通方式與行李安排，再開啟導航；表列時間包含規劃緩衝。",
+            "description": "從格拉西亞大道前往餐廳，20:00 已訂位；先核對訂位分店。",
             "tips": []
           }
         },
         {
-          "id": "639390344667",
+          "id": "d29-el-glop-arrive",
           "date": "2026-12-29",
-          "start": "2026-12-29T19:30:00+01:00",
-          "end": "2026-12-29T20:45:00+01:00",
-          "category": "晚餐",
-          "title": "西班牙美食空間",
+          "start": "2026-12-29T19:45:00+01:00",
+          "end": "2026-12-29T20:00:00+01:00",
+          "category": "報到",
+          "title": "El Glop Plaça Catalunya｜訂位報到",
+          "displayTitle": "El Glop Plaça Catalunya｜訂位報到",
           "transport": "",
           "note": "",
           "ticketIds": [],
-          "mapUrl": "https://www.google.com/maps/search/?api=1&query=El+Nacional+Passeig+de+Gr%C3%A0cia+24+bis+Barcelona",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=El+Glop+Pla%C3%A7a+Catalunya+Barcelona",
           "infoUrl": "",
           "conditional": false,
           "status": "",
           "statusKind": "neutral",
-          "displayTitle": "El Nacional｜西班牙美食空間晚餐",
           "activity": {
-            "description": "多區西班牙美食空間",
-            "mustTry": [
-              "番茄麵包、croquetas、tapas"
-            ],
-            "tips": [
-              "先選子餐廳與四人桌，未收到確認不算完成；見聯絡連結",
-              "按此分店位置換店，取消原主選；先守本餐離席及下個已購報到時間。；巴特略後19:30–20:45，在Passeig/Eixample擇一家，餐後L3回公寓；不同分店別混用。",
-              "推薦餐點依既有美食指南；價格、當日供應與過敏原請點餐前向店家確認。"
-            ]
+            "description": "20:00 已訂位（使用者確認），提早到店報到；目前尚未提供訂位確認信。",
+            "tips": []
           }
         },
         {
-          "id": "72f41d12a6d0",
+          "id": "d29-el-glop-dinner",
           "date": "2026-12-29",
-          "start": "2026-12-29T20:45:00+01:00",
-          "end": "2026-12-29T21:20:00+01:00",
+          "start": "2026-12-29T20:00:00+01:00",
+          "end": "2026-12-29T21:15:00+01:00",
+          "category": "晚餐",
+          "title": "加泰隆尼亞餐廳（El Glop Plaça Catalunya）｜晚餐",
+          "displayTitle": "加泰隆尼亞餐廳（El Glop Plaça Catalunya）｜晚餐",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=El+Glop+Pla%C3%A7a+Catalunya+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "20:00 已訂位 · 使用者確認",
+          "statusKind": "confirmed",
+          "activity": {
+            "description": "20:00 晚餐已訂位（使用者確認）；用餐結束時間為規劃估計，依現場上菜調整。",
+            "tips": [
+              "確認 Plaça Catalunya 分店、訂位姓名及人數；依訂位確認紀錄為準。",
+              "飯後若有體力可到家樂福採買，留意超市關門時間。"
+            ],
+            "mustTry": [
+              "可詢問西班牙飯或炭烤料理，再依當日菜單選擇；本分店供應尚未核實。"
+            ]
+          },
+          "reservation": {
+            "id": "REGLOP",
+            "title": "El Glop Plaça Catalunya｜晚餐",
+            "date": "2026-12-29",
+            "time": "20:00",
+            "report": "19:45 到店目標",
+            "status": "已訂位 · 使用者確認",
+            "statusKind": "confirmed",
+            "note": "20:00 已訂位，使用者於 10/19 確認；尚未提供確認信，訂位人數與姓名請依訂位紀錄。",
+            "files": [],
+            "url": ""
+          },
+          "venue": {
+            "cityId": "barcelona",
+            "nameZh": "加泰隆尼亞餐廳",
+            "nameEn": "El Glop Plaça Catalunya"
+          },
+          "cityId": "barcelona"
+        },
+        {
+          "id": "d29-walk-carrefour",
+          "date": "2026-12-29",
+          "start": "2026-12-29T21:15:00+01:00",
+          "end": "2026-12-29T21:30:00+01:00",
           "category": "交通",
-          "title": "L3回Espanya公寓",
+          "title": "步行至家樂福超市（Carrefour Market）",
+          "displayTitle": "步行至家樂福超市（Carrefour Market）",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Carrefour+Market+La+Rambla+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "activity": {
+            "description": "飯後順路前往家樂福；先用導航核對分店、步行距離及當日營業。",
+            "tips": []
+          }
+        },
+        {
+          "id": "d29-carrefour",
+          "date": "2026-12-29",
+          "start": "2026-12-29T21:30:00+01:00",
+          "end": "2026-12-29T22:00:00+01:00",
+          "category": "採買",
+          "title": "家樂福超市（Carrefour Market）｜早餐與飲水採買",
+          "displayTitle": "家樂福超市（Carrefour Market）｜早餐與飲水採買",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Carrefour+Market+La+Rambla+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "activity": {
+            "description": "採買飲水、隔日備用早餐與零食；23:30 打烊為使用者提供，規劃 22:00 前結束採買。",
+            "tips": [
+              "23:30 打烊為使用者提供，當日分店營業仍需確認。",
+              "若晚餐延後或太累可縮短、略過採買。"
+            ]
+          },
+          "venue": {
+            "cityId": "barcelona",
+            "nameZh": "家樂福超市",
+            "nameEn": "Carrefour Market"
+          },
+          "cityId": "barcelona"
+        },
+        {
+          "id": "d29-return-hotel",
+          "date": "2026-12-29",
+          "start": "2026-12-29T22:00:00+01:00",
+          "end": "2026-12-29T22:40:00+01:00",
+          "category": "交通",
+          "title": "返回住宿・整理翌日用品",
+          "displayTitle": "返回住宿・整理翌日用品",
           "transport": "",
           "note": "",
           "ticketIds": [],
@@ -3106,85 +3553,98 @@
           "conditional": false,
           "status": "",
           "statusKind": "neutral",
-          "displayTitle": "L3回Espanya公寓",
           "activity": {
-            "description": "從上一站前往住宿。先核對接車點、交通方式與行李安排，再開啟導航；表列時間包含規劃緩衝。",
+            "description": "採買後返回住宿，整理隔日用品；翌日早餐出門時帶齊全天票券、身分證件、耳機與保暖衣物。",
             "tips": []
-          }
+          },
+          "lodgingAction": "返回飯店休息",
+          "cityId": "barcelona"
         }
       ],
       "mapAsset": null,
-      "optionalStops": []
+      "optionalStops": [],
+      "offlineMapNeedsUpdate": false
     },
     {
       "date": "2026-12-30",
       "city": "巴塞隆納",
-      "title": "聖保祿與聖家堂誕生立面塔",
+      "title": "麵包店早餐、聖保祿與聖家堂、Vinitus 晚餐",
       "hotel": "",
       "events": [
         {
-          "id": "aa50bfae09ea",
+          "id": "d30-pack-before-breakfast",
+          "date": "2026-12-30",
+          "start": "2026-12-30T07:40:00+01:00",
+          "end": "2026-12-30T08:00:00+01:00",
+          "category": "準備",
+          "title": "住宿｜出門前帶齊全天用品",
+          "displayTitle": "住宿｜出門前帶齊全天用品",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "activity": {
+            "description": "出門時帶齊全天票券、身分證件、耳機、行動電源及保暖用品；早餐後不再返回住宿。",
+            "tips": []
+          },
+          "lodgingAction": "出門前帶齊全天用品",
+          "cityId": "barcelona"
+        },
+        {
+          "id": "d30-puiggros",
           "date": "2026-12-30",
           "start": "2026-12-30T08:00:00+01:00",
           "end": "2026-12-30T08:40:00+01:00",
           "category": "早餐",
-          "title": "Buenas Migas早餐",
+          "title": "普伊格羅斯麵包店（Forn de pa Puiggròs 1）｜早餐",
+          "displayTitle": "普伊格羅斯麵包店（Forn de pa Puiggròs 1）｜早餐",
           "transport": "",
           "note": "",
           "ticketIds": [],
-          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Buenas+Migas+Pla%C3%A7a+Espanya+Gran+Via+de+les+Corts+Catalanes+357+Barcelona",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Forn+de+pa+Puiggr%C3%B2s+1+Barcelona",
           "infoUrl": "",
           "conditional": false,
           "status": "",
           "statusKind": "neutral",
-          "displayTitle": "Buenas Migas早餐",
           "activity": {
-            "description": "用餐並補充熱飲；若店家未開，使用前晚準備的早餐，保留接車與景點報到時間。",
-            "tips": [],
+            "description": "改到 Forn de pa Puiggròs 1 吃早餐；出門時已帶齊全天用品，吃完直接前往當天景點。",
+            "tips": [
+              "尚未核實本分店早晨開門時間；太早未開時以附近已開店家或前晚麵包備案。",
+              "原有 10:00 聖保祿、14:30 聖家堂、15:15 登塔時段保留。"
+            ],
             "mustTry": [
-              "目前未確認本店固定必點品項，依當日菜單現場選擇。"
+              "可選麵包、可頌與咖啡；依當日出爐品項選擇，尚未核實固定必點。"
             ]
-          }
+          },
+          "venue": {
+            "cityId": "barcelona",
+            "nameZh": "普伊格羅斯麵包店",
+            "nameEn": "Forn de pa Puiggròs 1"
+          },
+          "cityId": "barcelona"
         },
         {
-          "id": "5330bda75e27",
+          "id": "d30-breakfast-to-sant-pau",
           "date": "2026-12-30",
           "start": "2026-12-30T08:40:00+01:00",
-          "end": "2026-12-30T09:00:00+01:00",
-          "category": "準備",
-          "title": "行前準備／整理用品",
-          "transport": "",
-          "note": "",
-          "ticketIds": [],
-          "mapUrl": "",
-          "infoUrl": "",
-          "conditional": false,
-          "status": "",
-          "statusKind": "neutral",
-          "displayTitle": "公寓取身分證件耳機與票",
-          "activity": {
-            "description": "核對翌日票券、航班報到與接車資訊，整理隨身物品和大件行李，並將所需資料存離線。",
-            "tips": []
-          }
-        },
-        {
-          "id": "f899b71275f2",
-          "date": "2026-12-30",
-          "start": "2026-12-30T09:00:00+01:00",
           "end": "2026-12-30T09:40:00+01:00",
           "category": "交通",
-          "title": "公寓至Sant Pau",
+          "title": "早餐後直接前往聖保祿醫院（Sant Pau）",
+          "displayTitle": "早餐後直接前往聖保祿醫院（Sant Pau）",
           "transport": "",
           "note": "",
           "ticketIds": [],
-          "mapUrl": "",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Recinte+Modernista+de+Sant+Pau+Barcelona",
           "infoUrl": "",
           "conditional": false,
           "status": "",
           "statusKind": "neutral",
-          "displayTitle": "公寓至Sant Pau",
           "activity": {
-            "description": "從上一站前往Sant Pau 聖保祿醫院。先核對接車點、交通方式與行李安排，再開啟導航；表列時間包含規劃緩衝。",
+            "description": "早餐後不回飯店，直接前往 10:00 已購票的聖保祿醫院；14:30 再依原票參觀聖家堂。",
             "tips": []
           }
         },
@@ -3224,7 +3684,7 @@
           "conditional": false,
           "status": "",
           "statusKind": "neutral",
-          "displayTitle": "已購聖保祿10:00含英語語音",
+          "displayTitle": "聖保祿醫院（Recinte Modernista de Sant Pau）｜依已購票時間入場",
           "activity": {
             "description": "聖保祿醫院是多梅內克・蒙塔內爾的現代主義作品，用分散的院館、花園與工藝回應醫療空間。它不屬高第作品，但與聖家堂相鄰，是理解巴塞隆納建築的重要比較。",
             "highlights": [
@@ -3234,13 +3694,19 @@
               "已購2026/12/30 10:00四人Self-Guided Visit 既有票券，英語語音4人已含（€0項目）；09:40到遊客入口為規劃緩衝。需準時、不可退款或離場重入；出示確認票。與14:30聖家堂同為已出票時段，勿自行對調。"
             ],
             "photoTip": "花園對稱院館與馬賽克細節。"
-          }
+          },
+          "venue": {
+            "cityId": "barcelona",
+            "nameZh": "聖保祿醫院",
+            "nameEn": "Recinte Modernista de Sant Pau"
+          },
+          "cityId": "barcelona"
         },
         {
           "id": "5340290ed456",
           "date": "2026-12-30",
           "start": "2026-12-30T11:30:00+01:00",
-          "end": "2026-12-30T12:20:00+01:00",
+          "end": "2026-12-30T12:10:00+01:00",
           "category": "必逛",
           "title": "高第大道步行",
           "transport": "",
@@ -3258,85 +3724,76 @@
               "由醫院回望；聖家堂逐步接近的視角；街邊短休息。"
             ],
             "tips": [
-              "免費街道。12:40 前到海鮮店排隊，避免午餐耽誤入場。"
+              "免費街道散步；接著前往 Hasta Los Andares 或 Sagradas Tapas 擇一午餐，保留 14:00 聖家堂報到。"
             ],
             "photoTip": "以大道線條引向聖家堂；不要站在路口中間。"
-          }
+          },
+          "reminderUpdated": true,
+          "venue": {
+            "cityId": "barcelona",
+            "nameZh": "高第大道",
+            "nameEn": "Avinguda de Gaudí"
+          },
+          "cityId": "barcelona"
         },
         {
-          "id": "4f197cfec79c",
+          "id": "d30-find-lunch",
           "date": "2026-12-30",
-          "start": "2026-12-30T12:20:00+01:00",
-          "end": "2026-12-30T12:40:00+01:00",
+          "start": "2026-12-30T12:10:00+01:00",
+          "end": "2026-12-30T12:30:00+01:00",
           "category": "交通",
-          "title": "找到午餐與洗手間",
+          "title": "前往聖家堂周邊午餐店",
+          "displayTitle": "前往聖家堂周邊午餐店",
           "transport": "",
           "note": "",
           "ticketIds": [],
-          "mapUrl": "https://www.google.com/maps/search/?api=1&query=La+Paradeta+Sagrada+Fam%C3%ADlia+Passatge+Sim%C3%B3+18+Barcelona",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Hasta+Los+Andares+Sagrada+Fam%C3%ADlia+Barcelona",
           "infoUrl": "",
           "conditional": false,
           "status": "",
           "statusKind": "neutral",
-          "displayTitle": "找到午餐與洗手間",
           "activity": {
-            "description": "從上一站前往La Paradeta Sagrada Família。先核對接車點、交通方式與行李安排，再開啟導航；表列時間包含規劃緩衝。",
+            "description": "先前往 Hasta Los Andares；若營業或候位不合適，改 Sagradas Tapas。保留 14:00 聖家堂報到。",
             "tips": []
           }
         },
         {
-          "id": "a4ccfe95d4ab",
+          "id": "d30-hasta-lunch",
           "date": "2026-12-30",
-          "start": "2026-12-30T12:40:00+01:00",
-          "end": "2026-12-30T13:00:00+01:00",
-          "category": "報到",
-          "title": "13:00開門前排隊",
-          "transport": "",
-          "note": "",
-          "ticketIds": [],
-          "mapUrl": "https://www.google.com/maps/search/?api=1&query=La+Paradeta+Sagrada+Fam%C3%ADlia+Passatge+Sim%C3%B3+18+Barcelona",
-          "infoUrl": "",
-          "conditional": false,
-          "status": "",
-          "statusKind": "neutral",
-          "displayTitle": "13:00開門前排隊",
-          "activity": {
-            "description": "到入口或車站後，先確認安檢、驗票及排隊位置。這段是報到緩衝，下一段票面入場或發車時間優先。",
-            "tips": []
-          }
-        },
-        {
-          "id": "531de4e63f5e",
-          "date": "2026-12-30",
-          "start": "2026-12-30T13:00:00+01:00",
-          "end": "2026-12-30T13:45:00+01:00",
+          "start": "2026-12-30T12:30:00+01:00",
+          "end": "2026-12-30T13:30:00+01:00",
           "category": "午餐",
-          "title": "海鮮快餐或Migas外帶",
+          "title": "火腿起司餐館（Hasta Los Andares | Sagrada Família）｜午餐",
+          "displayTitle": "火腿起司餐館（Hasta Los Andares | Sagrada Família）｜午餐",
           "transport": "",
           "note": "",
           "ticketIds": [],
-          "mapUrl": "https://www.google.com/maps/search/?api=1&query=La+Paradeta+Sagrada+Fam%C3%ADlia+Passatge+Sim%C3%B3+18+Barcelona",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Hasta+Los+Andares+Sagrada+Fam%C3%ADlia+Barcelona",
           "infoUrl": "",
           "conditional": false,
           "status": "",
           "statusKind": "neutral",
-          "displayTitle": "La Paradeta Sagrada Família｜午餐",
           "activity": {
-            "description": "自選海鮮秤重現煮",
-            "mustTry": [
-              "蝦、貝類、魚；先看每公斤價"
-            ],
+            "description": "午餐改為西班牙火腿、起司盤配啤酒；Sagradas Tapas 為同餐次備案，兩間擇一，不重複排餐。",
             "tips": [
-              "12:40排隊13:00開，13:10未點妥改Migas，13:45離席；先說四人分享控制重量；見聯絡連結",
-              "按此分店位置換店，取消原主選；先守本餐離席及下個已購報到時間。；13:10若海鮮沒點妥即改Migas外帶；13:45離席、14:00教堂報到。Puiggròs須13:35離席。",
-              "推薦餐點依既有美食指南；價格、當日供應與過敏原請點餐前向店家確認。"
+              "未提供訂位確認，先確認營業及候位。",
+              "若改去 Sagradas Tapas，13:30 左右仍需結束午餐、保留聖家堂報到。"
+            ],
+            "mustTry": [
+              "西班牙火腿、起司拼盤配啤酒（使用者指定）；品項與供應依當日菜單。"
             ]
-          }
+          },
+          "venue": {
+            "cityId": "barcelona",
+            "nameZh": "火腿起司餐館",
+            "nameEn": "Hasta Los Andares | Sagrada Família"
+          },
+          "cityId": "barcelona"
         },
         {
           "id": "9ec7707494ad",
           "date": "2026-12-30",
-          "start": "2026-12-30T13:45:00+01:00",
+          "start": "2026-12-30T13:30:00+01:00",
           "end": "2026-12-30T14:00:00+01:00",
           "category": "交通",
           "title": "走Marina入口",
@@ -3397,10 +3854,18 @@
               "誕生立面全景；水面倒影；新主塔與十字架的外觀。"
             ],
             "tips": [
-              "教堂旁戶外倒影可選，包含在16:45–17:15外觀拍照窗；17:15直接往晚餐區，不另外增加行程。"
+              "依已購票保留 14:30 聖家堂入場與 15:15 誕生立面塔。",
+              "16:45–17:15 可在教堂外拍照；之後順路吃 Five Guys 為彈性加餐，視食量與候位決定，再前往 Vinitus。"
             ],
             "photoTip": "池邊廣角取水面和建築；需遵守園區邊界。"
-          }
+          },
+          "reminderUpdated": true,
+          "venue": {
+            "cityId": "barcelona",
+            "nameZh": "聖家堂・教堂與誕生立面塔",
+            "nameEn": "Basílica de la Sagrada Família"
+          },
+          "cityId": "barcelona"
         },
         {
           "id": "60c864b74d07",
@@ -3445,10 +3910,18 @@
               "誕生立面全景；水面倒影；新主塔與十字架的外觀。"
             ],
             "tips": [
-              "教堂旁戶外倒影可選，包含在16:45–17:15外觀拍照窗；17:15直接往晚餐區，不另外增加行程。"
+              "依已購票保留 14:30 聖家堂入場與 15:15 誕生立面塔。",
+              "16:45–17:15 可在教堂外拍照；之後順路吃 Five Guys 為彈性加餐，視食量與候位決定，再前往 Vinitus。"
             ],
             "photoTip": "池邊廣角取水面和建築；需遵守園區邊界。"
-          }
+          },
+          "reminderUpdated": true,
+          "venue": {
+            "cityId": "barcelona",
+            "nameZh": "聖家堂・教堂與誕生立面塔",
+            "nameEn": "Basílica de la Sagrada Família"
+          },
+          "cityId": "barcelona"
         },
         {
           "id": "b3a32f192428",
@@ -3472,10 +3945,18 @@
               "誕生立面全景；水面倒影；新主塔與十字架的外觀。"
             ],
             "tips": [
-              "教堂旁戶外倒影可選，包含在16:45–17:15外觀拍照窗；17:15直接往晚餐區，不另外增加行程。"
+              "依已購票保留 14:30 聖家堂入場與 15:15 誕生立面塔。",
+              "16:45–17:15 可在教堂外拍照；之後順路吃 Five Guys 為彈性加餐，視食量與候位決定，再前往 Vinitus。"
             ],
             "photoTip": "池邊廣角取水面和建築；需遵守園區邊界。"
-          }
+          },
+          "reminderUpdated": true,
+          "venue": {
+            "cityId": "barcelona",
+            "nameZh": "聖家堂・教堂與誕生立面塔",
+            "nameEn": "Basílica de la Sagrada Família"
+          },
+          "cityId": "barcelona"
         },
         {
           "id": "8052a125234a",
@@ -3499,86 +3980,136 @@
               "誕生立面全景；水面倒影；新主塔與十字架的外觀。"
             ],
             "tips": [
-              "教堂旁戶外倒影可選，包含在16:45–17:15外觀拍照窗；17:15直接往晚餐區，不另外增加行程。"
+              "依已購票保留 14:30 聖家堂入場與 15:15 誕生立面塔。",
+              "16:45–17:15 可在教堂外拍照；之後順路吃 Five Guys 為彈性加餐，視食量與候位決定，再前往 Vinitus。"
             ],
             "photoTip": "池邊廣角取水面和建築；需遵守園區邊界。"
-          }
+          },
+          "reminderUpdated": true,
+          "venue": {
+            "cityId": "barcelona",
+            "nameZh": "聖家堂・教堂與誕生立面塔",
+            "nameEn": "Basílica de la Sagrada Família"
+          },
+          "cityId": "barcelona"
         },
         {
-          "id": "03acae9bd317",
+          "id": "d30-five-guys",
           "date": "2026-12-30",
           "start": "2026-12-30T17:15:00+01:00",
-          "end": "2026-12-30T18:00:00+01:00",
-          "category": "交通",
-          "title": "到Eixample晚餐區",
+          "end": "2026-12-30T17:40:00+01:00",
+          "category": "甜點",
+          "title": "美式漢堡店（Five Guys）｜彈性加餐",
+          "displayTitle": "美式漢堡店（Five Guys）｜彈性加餐",
           "transport": "",
           "note": "",
           "ticketIds": [],
-          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Vinitus+Carrer+del+Consell+de+Cent+333+Barcelona",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Five+Guys+Sagrada+Familia+Barcelona",
           "infoUrl": "",
-          "conditional": false,
-          "status": "",
-          "statusKind": "neutral",
-          "displayTitle": "到Eixample晚餐區",
+          "conditional": true,
+          "status": "彈性加餐・視食量與候位",
+          "statusKind": "conditional",
           "activity": {
-            "description": "從上一站前往Vinitus。先核對接車點、交通方式與行李安排，再開啟導航；表列時間包含規劃緩衝。",
-            "tips": []
-          }
+            "description": "聖家堂參觀及外觀拍照後，順路到 Five Guys 吃薯條與奶昔；此為彈性加餐，依食量與候位縮短或略過。",
+            "tips": [
+              "使用者推薦薯條與奶昔；可分食，避免影響晚餐食量。",
+              "選擇聖家堂附近順路分店，實際營業與候位待確認。"
+            ],
+            "mustTry": [
+              "薯條、奶昔（使用者推薦）。",
+              "想吃正餐可加漢堡，依當日食量決定。"
+            ]
+          },
+          "venue": {
+            "cityId": "barcelona",
+            "nameZh": "美式漢堡店",
+            "nameEn": "Five Guys"
+          },
+          "cityId": "barcelona"
         },
         {
-          "id": "d05bbbbeee8f",
+          "id": "d30-to-vinitus",
           "date": "2026-12-30",
-          "start": "2026-12-30T18:00:00+01:00",
+          "start": "2026-12-30T17:40:00+01:00",
           "end": "2026-12-30T18:15:00+01:00",
-          "category": "報到",
-          "title": "等位或換備選",
+          "category": "交通",
+          "title": "前往塔帕斯餐廳（Vinitus）",
+          "displayTitle": "前往塔帕斯餐廳（Vinitus）",
           "transport": "",
           "note": "",
           "ticketIds": [],
-          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Vinitus+Carrer+del+Consell+de+Cent+333+Barcelona",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Vinitus+Barcelona",
           "infoUrl": "",
           "conditional": false,
           "status": "",
           "statusKind": "neutral",
-          "displayTitle": "等位或換備選",
           "activity": {
-            "description": "到入口或車站後，先確認安檢、驗票及排隊位置。這段是報到緩衝，下一段票面入場或發車時間優先。",
+            "description": "離開聖家堂周邊，前往 Vinitus 晚餐；無法訂位，預留現場候位。",
             "tips": []
           }
         },
         {
-          "id": "430def0ab7d3",
+          "id": "d30-vinitus-queue",
           "date": "2026-12-30",
           "start": "2026-12-30T18:15:00+01:00",
-          "end": "2026-12-30T19:30:00+01:00",
-          "category": "晚餐",
-          "title": "Vinitus tapas",
+          "end": "2026-12-30T18:45:00+01:00",
+          "category": "候位",
+          "title": "塔帕斯餐廳（Vinitus）｜現場候位",
+          "displayTitle": "塔帕斯餐廳（Vinitus）｜現場候位",
           "transport": "",
           "note": "",
           "ticketIds": [],
-          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Vinitus+Carrer+del+Consell+de+Cent+333+Barcelona",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Vinitus+Barcelona",
           "infoUrl": "",
           "conditional": false,
           "status": "",
           "statusKind": "neutral",
-          "displayTitle": "Vinitus｜晚餐",
           "activity": {
-            "description": "海鮮小盤與tapas",
-            "mustTry": [
-              "當日海鮮、croquetas、番茄麵包"
-            ],
+            "description": "無法訂位（使用者提供）；18:15 到店排隊，18:45 入座為規劃目標，無法保證。",
             "tips": [
-              "Consell de Cent333本店，最多等15分鐘，當日用餐時段18:15–19:30先核供餐。；見聯絡連結",
-              "按此分店位置換店，取消原主選；先守本餐離席及下個已購報到時間。；18:15–19:30，Vinitus最多候位15分鐘；換店依所選位置、餐後直接接L3，不再回教堂。",
-              "推薦餐點依既有美食指南；價格、當日供應與過敏原請點餐前向店家確認。"
+              "若排隊過久，視體力與店家等位估計調整晚餐及後續散步。"
             ]
           }
         },
         {
+          "id": "d30-vinitus-dinner",
+          "date": "2026-12-30",
+          "start": "2026-12-30T18:45:00+01:00",
+          "end": "2026-12-30T20:00:00+01:00",
+          "category": "晚餐",
+          "title": "塔帕斯餐廳（Vinitus）｜鵝肝牛排晚餐",
+          "displayTitle": "塔帕斯餐廳（Vinitus）｜鵝肝牛排晚餐",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Vinitus+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "無法訂位 · 現場候位",
+          "statusKind": "neutral",
+          "activity": {
+            "description": "晚餐在 Vinitus，指定想吃鵝肝牛排；無法訂位，實際入座及結束時間依當日候位調整。",
+            "tips": [
+              "無法訂位，需現場候位（使用者提供）。",
+              "鵝肝牛排供應、菜名與份量請向店家確認，不能視為已預留。"
+            ],
+            "mustTry": [
+              "鵝肝牛排（使用者指定）。",
+              "其他 tapas 依現場菜單與四人食量分食。"
+            ]
+          },
+          "venue": {
+            "cityId": "barcelona",
+            "nameZh": "塔帕斯餐廳",
+            "nameEn": "Vinitus"
+          },
+          "cityId": "barcelona"
+        },
+        {
           "id": "56a2233f90f0",
           "date": "2026-12-30",
-          "start": "2026-12-30T19:30:00+01:00",
-          "end": "2026-12-30T19:55:00+01:00",
+          "start": "2026-12-30T20:00:00+01:00",
+          "end": "2026-12-30T20:25:00+01:00",
           "category": "必逛",
           "title": "燈飾短逛買翌日早餐",
           "transport": "",
@@ -3598,8 +4129,8 @@
         {
           "id": "982f1d8b08f3",
           "date": "2026-12-30",
-          "start": "2026-12-30T19:55:00+01:00",
-          "end": "2026-12-30T20:30:00+01:00",
+          "start": "2026-12-30T20:25:00+01:00",
+          "end": "2026-12-30T21:00:00+01:00",
           "category": "交通",
           "title": "L3回公寓",
           "transport": "",
@@ -3614,11 +4145,30 @@
           "activity": {
             "description": "從上一站前往住宿。先核對接車點、交通方式與行李安排，再開啟導航；表列時間包含規劃緩衝。",
             "tips": []
-          }
+          },
+          "lodgingAction": "返回飯店休息",
+          "cityId": "barcelona"
         }
       ],
       "mapAsset": null,
-      "optionalStops": []
+      "optionalStops": [
+        {
+          "title": "人氣塔帕斯餐廳（Sagradas Tapas）｜午餐備案",
+          "description": "12/30 午餐與 Hasta Los Andares 擇一；人氣店家為使用者提供。未另安排用餐時段。",
+          "note": "先確認營業與候位，不壓縮 14:00 聖家堂報到。",
+          "mustTry": [
+            "依當日 tapas 菜單選擇，尚未核實固定必點品項。"
+          ],
+          "openingHours": "當日營業待確認",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Sagradas+Tapas+Barcelona",
+          "venue": {
+            "cityId": "barcelona",
+            "nameZh": "人氣塔帕斯餐廳・午餐備案",
+            "nameEn": "Sagradas Tapas"
+          }
+        }
+      ],
+      "offlineMapNeedsUpdate": false
     },
     {
       "date": "2026-12-31",
@@ -3728,7 +4278,7 @@
           "conditional": false,
           "status": "",
           "statusKind": "neutral",
-          "displayTitle": "已購奎爾公園09:30",
+          "displayTitle": "奎爾公園（Park Güell）",
           "activity": {
             "description": "奎爾公園把自然地形、排水結構與碎瓷馬賽克變成公共空間。從上方入口進入再下行，可減少爬坡，並把公園與文森之家銜接成一個上午。",
             "highlights": [
@@ -3738,7 +4288,13 @@
               "已購2026/12/31 09:30四人一般票K13；08:15出發、09:00到入口為規劃緩衝。票准最遲10:00入場，仍守09:30；不可離場重入、不含Gaudí House Museum。11:15由下方出口離園、11:45到文森之家。"
             ],
             "photoTip": "先拍長椅與城市，再由下方拍龍階梯；不要跨進受保護區。"
-          }
+          },
+          "venue": {
+            "cityId": "barcelona",
+            "nameZh": "奎爾公園",
+            "nameEn": "Park Güell"
+          },
+          "cityId": "barcelona"
         },
         {
           "id": "054728ec3ad3",
@@ -3797,7 +4353,7 @@
           "conditional": false,
           "status": "",
           "statusKind": "neutral",
-          "displayTitle": "已購文森之家12:00",
+          "displayTitle": "文森之家（Casa Vicens）",
           "activity": {
             "description": "文森之家是高第早期住宅作品，帶有鮮明的幾何瓷磚、植物圖案與東方風格裝飾。先看過巴特婁與聖家堂，再回看這裡，能理解高第語言如何形成。",
             "highlights": [
@@ -3807,7 +4363,13 @@
               "已購2026/12/31 12:00四人普通成人票K14；11:15公園離園、下坡步行約25–30分鐘、11:45到場為規劃緩衝。票券未載語音、退改或遲到條款，不推定包含；此票已有時段，無須因舊營業待確認文字移至1/2。"
             ],
             "photoTip": "外牆瓷磚細節與室內天花；依館方規則攝影。"
-          }
+          },
+          "venue": {
+            "cityId": "barcelona",
+            "nameZh": "文森之家",
+            "nameEn": "Casa Vicens"
+          },
+          "cityId": "barcelona"
         },
         {
           "id": "fa0321a7e5e6",
@@ -3845,7 +4407,7 @@
           "conditional": false,
           "status": "",
           "statusKind": "neutral",
-          "displayTitle": "Bodega Quimet Gràcia｜午餐",
+          "displayTitle": "格拉西亞區塔帕斯酒館（Bodega Quimet Gràcia）｜午餐",
           "activity": {
             "description": "Gràcia傳統酒館與小盘",
             "mustTry": [
@@ -3856,7 +4418,13 @@
               "按此分店位置換店，取消原主選；先守本餐離席及下個已購報到時間。；13:15–14:15在Gràcia擇一；Vinitus備選改13:25–14:25並刪市場散步；Botafumeiro留90分鐘也刪散步，15:20前後回公寓午睡。",
               "推薦餐點依既有美食指南；價格、當日供應與過敏原請點餐前向店家確認。"
             ]
-          }
+          },
+          "venue": {
+            "cityId": "barcelona",
+            "nameZh": "格拉西亞區塔帕斯酒館",
+            "nameEn": "Bodega Quimet Gràcia"
+          },
+          "cityId": "barcelona"
         },
         {
           "id": "257f6fd40d2f",
@@ -3873,7 +4441,7 @@
           "conditional": false,
           "status": "",
           "statusKind": "neutral",
-          "displayTitle": "Llibertat市場與Gràcia",
+          "displayTitle": "自由市場與格拉西亞區（Mercat de la Llibertat / Gràcia）",
           "activity": {
             "description": "Gràcia 保留較小尺度的街道、廣場與居民生活，與格拉西亞大道的都市街景形成補充。跨年前只安排短逛，把休息與早晚餐留足。",
             "highlights": [
@@ -3883,7 +4451,13 @@
               "午餐後先買葡萄與水，14:45從Fontana搭L3往ZonaUniversitària，Espanya下車；15:20回公寓午睡，18:00準備保暖用品。"
             ],
             "photoTip": "拍街角，不追求全區走遍。"
-          }
+          },
+          "venue": {
+            "cityId": "barcelona",
+            "nameZh": "自由市場與格拉西亞區",
+            "nameEn": "Mercat de la Llibertat / Gràcia"
+          },
+          "cityId": "barcelona"
         },
         {
           "id": "62b4e0c0daf4",
@@ -3904,7 +4478,9 @@
           "activity": {
             "description": "從上一站前往住宿。先核對接車點、交通方式與行李安排，再開啟導航；表列時間包含規劃緩衝。",
             "tips": []
-          }
+          },
+          "lodgingAction": "返回飯店休息",
+          "cityId": "barcelona"
         },
         {
           "id": "321a8200609f",
@@ -3925,7 +4501,9 @@
           "activity": {
             "description": "保留暖身、休息與整理用品的時間；先處理翌日早餐，依當日體力調整免費散步。",
             "tips": []
-          }
+          },
+          "lodgingAction": "休息與整理用品",
+          "cityId": "barcelona"
         },
         {
           "id": "7a993eccb41c",
@@ -3984,7 +4562,7 @@
           "conditional": false,
           "status": "",
           "statusKind": "neutral",
-          "displayTitle": "La Lola Arenas｜晚餐",
+          "displayTitle": "競技場商場餐廳（La Lola Arenas）｜晚餐",
           "activity": {
             "description": "西班牙小盤、米飯與烤物",
             "mustTry": [
@@ -3995,7 +4573,13 @@
               "Arenas／Espanya附近，20:30前結帳，步行去歷年活動區；散場步行回公寓。；LaLolaArenas19:00–20:30，€60–85/人是規劃目標，並非節日已公告菜單；確認後步行去活動區及散場返家。",
               "推薦餐點依既有美食指南；價格、當日供應與過敏原請點餐前向店家確認。"
             ]
-          }
+          },
+          "venue": {
+            "cityId": "barcelona",
+            "nameZh": "競技場商場餐廳",
+            "nameEn": "La Lola Arenas"
+          },
+          "cityId": "barcelona"
         },
         {
           "id": "232b8f423962",
@@ -4033,11 +4617,17 @@
           "conditional": false,
           "status": "",
           "statusKind": "neutral",
-          "displayTitle": "歷年場地預案與葡萄",
+          "displayTitle": "西班牙廣場跨年・歷年場地預案（Plaça d’Espanya）",
           "activity": {
             "description": "這一站安排歷年場地預案與葡萄。依現場開放與動線參觀，留意下一段固定報到或交通時間。",
             "tips": []
-          }
+          },
+          "venue": {
+            "cityId": "barcelona",
+            "nameZh": "西班牙廣場跨年・歷年場地預案",
+            "nameEn": "Plaça d’Espanya"
+          },
+          "cityId": "barcelona"
         }
       ],
       "mapAsset": null,
@@ -4068,7 +4658,9 @@
           "activity": {
             "description": "從上一站前往住宿。先核對接車點、交通方式與行李安排，再開啟導航；表列時間包含規劃緩衝。",
             "tips": []
-          }
+          },
+          "lodgingAction": "返回飯店休息",
+          "cityId": "barcelona"
         },
         {
           "id": "fbc21d49dcc9",
@@ -4089,7 +4681,9 @@
           "activity": {
             "description": "保留暖身、休息與整理用品的時間；先處理翌日早餐，依當日體力調整免費散步。",
             "tips": []
-          }
+          },
+          "lodgingAction": "休息與整理用品",
+          "cityId": "barcelona"
         },
         {
           "id": "3da3592f223e",
@@ -4127,7 +4721,7 @@
           "conditional": false,
           "status": "",
           "statusKind": "neutral",
-          "displayTitle": "Ugot Bruncherie｜早餐",
+          "displayTitle": "早午餐店（Ugot Bruncherie）｜早餐",
           "activity": {
             "description": "地中海brunch與手工蛋糕",
             "mustTry": [
@@ -4138,7 +4732,13 @@
               "按此分店位置換店，取消原主選；先守本餐離席及下個已購報到時間。；元旦09:45–10:30brunch，11:00米拉報到。BillyBailèn備選需08:30起床09:00出門；其他遠店按路線欄提早出發。",
               "推薦餐點依既有美食指南；價格、當日供應與過敏原請點餐前向店家確認。"
             ]
-          }
+          },
+          "venue": {
+            "cityId": "barcelona",
+            "nameZh": "早午餐店",
+            "nameEn": "Ugot Bruncherie"
+          },
+          "cityId": "barcelona"
         },
         {
           "id": "8c28a5f36015",
@@ -4197,7 +4797,7 @@
           "conditional": false,
           "status": "",
           "statusKind": "neutral",
-          "displayTitle": "已購米拉之家11:30",
+          "displayTitle": "米拉之家（Casa Milà / La Pedrera）",
           "activity": {
             "description": "米拉之家把起伏的石造外牆與自由平面推向成熟階段，公寓、閣樓及屋頂使參觀更接近日常生活與建築結構。元旦官網晚開門，排 11:30 正好容納跨年後晚起。",
             "highlights": [
@@ -4207,7 +4807,13 @@
               "已購2027/1/1 11:30四人La Pedrera Essential 既有票券，票券含免費語音、未載選定語言；11:00到Carrer de Provença 265入口為規劃緩衝。最遲11:45入場，仍守11:30；Flexible Ticket非任意遲到。雨天屋頂關閉不退款，未開始參觀可依票載規定改期。"
             ],
             "photoTip": "庭院仰視與屋頂煙囪；屋頂不跨欄拍照。"
-          }
+          },
+          "venue": {
+            "cityId": "barcelona",
+            "nameZh": "米拉之家",
+            "nameEn": "Casa Milà / La Pedrera"
+          },
+          "cityId": "barcelona"
         },
         {
           "id": "729326f119bd",
@@ -4266,7 +4872,7 @@
           "conditional": false,
           "status": "",
           "statusKind": "neutral",
-          "displayTitle": "7 Portes｜元旦午餐、加泰隆尼亞飯料理",
+          "displayTitle": "七扇門餐廳（7 Portes）｜午餐",
           "activity": {
             "description": "歷史餐廳的加泰隆尼亞飯食",
             "mustTry": [
@@ -4277,7 +4883,13 @@
               "按此分店位置換店，取消原主選；先守本餐離席及下個已購報到時間。；14:15–15:45正式海鮮飯，六店都先確認1/1桌位及節日價格；米飯先問兩人份起點與總價。",
               "推薦餐點依既有美食指南；價格、當日供應與過敏原請點餐前向店家確認。"
             ]
-          }
+          },
+          "venue": {
+            "cityId": "barcelona",
+            "nameZh": "七扇門餐廳",
+            "nameEn": "7 Portes"
+          },
+          "cityId": "barcelona"
         },
         {
           "id": "097bd02df3ad",
@@ -4294,7 +4906,7 @@
           "conditional": false,
           "status": "",
           "statusKind": "neutral",
-          "displayTitle": "Port Vell港邊",
+          "displayTitle": "舊港（Port Vell）",
           "activity": {
             "description": "Port Vell 是巴塞隆納舊港，以棧道、船隻與海面把舊城連接到海邊。元旦午餐後順路散步，不安排需另排隊的水族館或購物商場。",
             "highlights": [
@@ -4304,7 +4916,13 @@
               "戶外免費。用短散步消化午餐，天氣差就提前回飯店。"
             ],
             "photoTip": "港面與建築倒影；注意海風。"
-          }
+          },
+          "venue": {
+            "cityId": "barcelona",
+            "nameZh": "舊港",
+            "nameEn": "Port Vell"
+          },
+          "cityId": "barcelona"
         },
         {
           "id": "c3cc0ab27a17",
@@ -4321,7 +4939,7 @@
           "conditional": false,
           "status": "",
           "statusKind": "neutral",
-          "displayTitle": "Barceloneta海邊夕照",
+          "displayTitle": "巴塞羅內塔海灘（Platja de la Barceloneta）",
           "activity": {
             "description": "Barceloneta 原有漁民街區的背景與海灘相鄰，冬天的海風和開闊視野是這一趟都市旅程的調劑。只安排短段海濱，避免冷天走到太遠。",
             "highlights": [
@@ -4331,7 +4949,13 @@
               "16:20–17:05冬季海邊短走，不游泳。17:05由Barceloneta搭L4轉L3回Espanya，18:00回公寓暖身與買次日早餐。"
             ],
             "photoTip": "海灘取低地平線與冬季光線；強風不用腳架。"
-          }
+          },
+          "venue": {
+            "cityId": "barcelona",
+            "nameZh": "巴塞羅內塔海灘",
+            "nameEn": "Platja de la Barceloneta"
+          },
+          "cityId": "barcelona"
         },
         {
           "id": "cf894e4e7cea",
@@ -4352,7 +4976,9 @@
           "activity": {
             "description": "從上一站前往住宿。先核對接車點、交通方式與行李安排，再開啟導航；表列時間包含規劃緩衝。",
             "tips": []
-          }
+          },
+          "lodgingAction": "返回飯店休息",
+          "cityId": "barcelona"
         },
         {
           "id": "b7855d7b8307",
@@ -4373,7 +4999,9 @@
           "activity": {
             "description": "保留暖身、休息與整理用品的時間；先處理翌日早餐，依當日體力調整免費散步。",
             "tips": []
-          }
+          },
+          "lodgingAction": "休息與整理用品",
+          "cityId": "barcelona"
         },
         {
           "id": "02565d2b3e7e",
@@ -4411,7 +5039,7 @@
           "conditional": false,
           "status": "",
           "statusKind": "neutral",
-          "displayTitle": "Mussol Arenas｜晚餐",
+          "displayTitle": "加泰隆尼亞餐廳（Mussol Arenas）｜晚餐",
           "activity": {
             "description": "加泰隆尼亞烤物",
             "mustTry": [
@@ -4422,7 +5050,13 @@
               "按此分店位置換店，取消原主選；先守本餐離席及下個已購報到時間。；19:00–20:15在Espanya附近擇一，餐後走回公寓；18:00–18:45先備妥1/2早餐，避免晚餐後糕餅店關門。",
               "推薦餐點依既有美食指南；價格、當日供應與過敏原請點餐前向店家確認。"
             ]
-          }
+          },
+          "venue": {
+            "cityId": "barcelona",
+            "nameZh": "加泰隆尼亞餐廳",
+            "nameEn": "Mussol Arenas"
+          },
+          "cityId": "barcelona"
         },
         {
           "id": "16838d30a4ce",
@@ -4443,7 +5077,9 @@
           "activity": {
             "description": "從上一站前往住宿。先核對接車點、交通方式與行李安排，再開啟導航；表列時間包含規劃緩衝。",
             "tips": []
-          }
+          },
+          "lodgingAction": "返回飯店休息",
+          "cityId": "barcelona"
         }
       ],
       "mapAsset": null,
@@ -4578,7 +5214,7 @@
           "conditional": false,
           "status": "",
           "statusKind": "neutral",
-          "displayTitle": "地下教堂目標；已訂錯日期待改訂",
+          "displayTitle": "奎爾紡織村地下教堂・票券待改訂（Cripta de la Colònia Güell）",
           "activity": {
             "description": "奎爾紡織村地下教堂是高第實驗結構的重要作品，傾斜柱與不規則窗讓它與城市住宅不同。安排週六上午，下午回城看奎爾宮，完成七處高第主線。",
             "highlights": [
@@ -4588,7 +5224,13 @@
               "Drive已有地下教堂General×4票券K16，原票DATE02/11/2026、HOUR10:00，團€40，含audioguide。使用者於2026/10/14確認訂錯日期，將自行修改訂單；目標仍為2027/1/2 10:00，沿用原計畫，尚未取得新確認信／票券，不能以原票當作1/2有效票。未載FGC往返已含；火車另購。無新TWD付款收據，不加計或重複購票費。 待使用者改訂並提供新確認信／票券後，再依原計畫09:40先到遊客中心、10:00入場。"
             ],
             "photoTip": "窗戶與柱子的角度；先看遊客中心村區圖，避免誤入居民私宅。"
-          }
+          },
+          "venue": {
+            "cityId": "barcelona",
+            "nameZh": "奎爾紡織村地下教堂・票券待改訂",
+            "nameEn": "Cripta de la Colònia Güell"
+          },
+          "cityId": "barcelona"
         },
         {
           "id": "074779ba75ea",
@@ -4668,7 +5310,7 @@
           "conditional": false,
           "status": "",
           "statusKind": "neutral",
-          "displayTitle": "El Quim de la Boqueria｜午餐",
+          "displayTitle": "波蓋利亞市場餐廳（El Quim de la Boqueria）｜午餐",
           "activity": {
             "description": "市場現做海鮮吧檯",
             "mustTry": [
@@ -4679,7 +5321,13 @@
               "按此分店位置換店，取消原主選；先守本餐離席及下個已購報到時間。；市場最多等10分鐘，13:40結帳，13:55離市場、14:10奎爾宮報到，下午票不是可遲到時段。",
               "推薦餐點依既有美食指南；價格、當日供應與過敏原請點餐前向店家確認。"
             ]
-          }
+          },
+          "venue": {
+            "cityId": "barcelona",
+            "nameZh": "波蓋利亞市場餐廳",
+            "nameEn": "El Quim de la Boqueria"
+          },
+          "cityId": "barcelona"
         },
         {
           "id": "0d62df18e45d",
@@ -4696,11 +5344,17 @@
           "conditional": false,
           "status": "",
           "statusKind": "neutral",
-          "displayTitle": "市場小攤買杏仁糖往奎爾宮",
+          "displayTitle": "波蓋利亞市場（Mercat de la Boqueria）",
           "activity": {
             "description": "這一站安排市場小攤買杏仁糖往奎爾宮。依現場開放與動線參觀，留意下一段固定報到或交通時間。",
             "tips": []
-          }
+          },
+          "venue": {
+            "cityId": "barcelona",
+            "nameZh": "波蓋利亞市場",
+            "nameEn": "Mercat de la Boqueria"
+          },
+          "cityId": "barcelona"
         },
         {
           "id": "e364ab4503ec",
@@ -4738,7 +5392,7 @@
           "conditional": false,
           "status": "",
           "statusKind": "neutral",
-          "displayTitle": "奎爾宮目標尚未購",
+          "displayTitle": "奎爾宮・尚未購票（Palau Güell）",
           "activity": {
             "description": "奎爾宮是高第為奎爾家族設計的都市住宅，用小地塊容納接待、生活與服務空間。地窖、中央大廳與屋頂煙囪讓住宅功能變成垂直的建築體驗。",
             "highlights": [
@@ -4748,7 +5402,13 @@
               "冬季通常10:00–17:30、1/1閉館，本行程排1/2。14:10到場報到，14:30–16:00自助參觀；雨天屋頂可能暫停。"
             ],
             "photoTip": "中央廳向上取光；屋頂煙囪細節，雨天依工作人員指示。"
-          }
+          },
+          "venue": {
+            "cityId": "barcelona",
+            "nameZh": "奎爾宮・尚未購票",
+            "nameEn": "Palau Güell"
+          },
+          "cityId": "barcelona"
         },
         {
           "id": "dc534d54def8",
@@ -4765,7 +5425,7 @@
           "conditional": false,
           "status": "",
           "statusKind": "neutral",
-          "displayTitle": "皇家廣場聖若梅與哥德區外觀",
+          "displayTitle": "皇家廣場、聖若梅廣場與哥德區（Plaça Reial / Plaça de Sant Jaume / Barri Gòtic）",
           "activity": {
             "description": "哥德區把巴塞隆納舊城廣場、窄巷與政治宗教建築串在一起。路線從奎爾宮近旁的皇家廣場走到聖若梅廣場，再到主教座堂，只看外觀已足以建立城市歷史的層次。",
             "highlights": [
@@ -4775,7 +5435,13 @@
               "戶外免費，不臨時加博物館。17:30 結束後由 Jaume I 搭 L4 至 Girona，在 Casa Amàlia 周邊休息，19:00 晚餐後才回公寓整理行李。"
             ],
             "photoTip": "皇家廣場拱廊、舊巷框景；居民區保持安靜。"
-          }
+          },
+          "venue": {
+            "cityId": "barcelona",
+            "nameZh": "皇家廣場、聖若梅廣場與哥德區",
+            "nameEn": "Plaça Reial / Plaça de Sant Jaume / Barri Gòtic"
+          },
+          "cityId": "barcelona"
         },
         {
           "id": "7aa06146b298",
@@ -4840,7 +5506,7 @@
           "conditional": false,
           "status": "",
           "statusKind": "neutral",
-          "displayTitle": "Casa Amàlia｜晚餐",
+          "displayTitle": "市場料理餐廳（Casa Amàlia）｜晚餐",
           "activity": {
             "description": "市場季節菜與加泰隆尼亞料理",
             "mustTry": [
@@ -4851,7 +5517,13 @@
               "按此分店位置換店，取消原主選；先守本餐離席及下個已購報到時間。；19:00–20:15告別晚餐；LaPepita備選餐後Diagonal L3直接回公寓，20:55前後到住宿收行李。",
               "推薦餐點依既有美食指南；價格、當日供應與過敏原請點餐前向店家確認。"
             ]
-          }
+          },
+          "venue": {
+            "cityId": "barcelona",
+            "nameZh": "市場料理餐廳",
+            "nameEn": "Casa Amàlia"
+          },
+          "cityId": "barcelona"
         },
         {
           "id": "27a03d586431",
@@ -4872,7 +5544,9 @@
           "activity": {
             "description": "從上一站前往住宿。先核對接車點、交通方式與行李安排，再開啟導航；表列時間包含規劃緩衝。",
             "tips": []
-          }
+          },
+          "lodgingAction": "返回飯店休息",
+          "cityId": "barcelona"
         },
         {
           "id": "48c1fd40ba3f",
@@ -4945,7 +5619,9 @@
           "activity": {
             "description": "完成退房、清點行李與隨身物品，依約定方式前往接車點。",
             "tips": []
-          }
+          },
+          "lodgingAction": "退房、清點行李",
+          "cityId": "barcelona"
         },
         {
           "id": "fe43050f1ee1",
@@ -5054,10 +5730,121 @@
             "description": "核對登機門與登機截止時間，依登機證完成登機；航廈和行李規則以票面及航司通知為準。",
             "tips": []
           }
+        },
+        {
+          "id": "journey-mu250",
+          "date": "2027-01-03",
+          "start": "2027-01-03T10:20:00+01:00",
+          "end": "2027-01-04T05:30:00+08:00",
+          "category": "航班",
+          "title": "返國航班｜巴塞隆納 T1 → 上海浦東 T1（MU250）",
+          "displayTitle": "返國航班｜巴塞隆納 T1 → 上海浦東 T1（MU250）",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "activity": {
+            "description": "搭乘中國東方航空；起飛與抵達時間各依機場當地時間顯示。時間已從原始國際機票行程單核對，後續異動以航空公司通知為準。",
+            "tips": [
+              "航廈及登機門以航空公司最新通知為準。"
+            ]
+          },
+          "endTimezone": "Asia/Shanghai",
+          "isFlight": true,
+          "number": "MU250",
+          "displayTime": "01/03 10:20 → 01/04 05:30（各地時間）"
         }
       ],
       "mapAsset": null,
       "optionalStops": []
+    },
+    {
+      "hotel": "",
+      "mapAsset": null,
+      "events": [
+        {
+          "id": "journey-return-transfer",
+          "date": "2027-01-04",
+          "start": "2027-01-04T05:30:00+08:00",
+          "end": "2027-01-04T12:05:00+08:00",
+          "category": "轉機",
+          "title": "上海浦東 T1｜轉機 6 小時 35 分",
+          "displayTitle": "上海浦東 T1｜轉機 6 小時 35 分",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "activity": {
+            "description": "05:30 抵達上海，12:05 續飛台灣；轉機時間依票面，留意航班異動。",
+            "tips": []
+          },
+          "timezone": "Asia/Shanghai"
+        },
+        {
+          "id": "journey-mu5007",
+          "date": "2027-01-04",
+          "start": "2027-01-04T12:05:00+08:00",
+          "end": "2027-01-04T14:00:00+08:00",
+          "category": "航班",
+          "title": "返回台灣｜上海浦東 T1 → 桃園 T2（MU5007）",
+          "displayTitle": "返回台灣｜上海浦東 T1 → 桃園 T2（MU5007）",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "activity": {
+            "description": "搭乘中國東方航空；起飛與抵達時間各依機場當地時間顯示。時間已從原始國際機票行程單核對，後續異動以航空公司通知為準。",
+            "tips": [
+              "航廈及登機門以航空公司最新通知為準。"
+            ]
+          },
+          "timezone": "Asia/Shanghai",
+          "endTimezone": "Asia/Taipei",
+          "isFlight": true,
+          "number": "MU5007",
+          "displayTime": "01/04 12:05 → 01/04 14:00（各地時間）"
+        },
+        {
+          "id": "journey-home-arrival",
+          "date": "2027-01-04",
+          "start": "2027-01-04T14:00:00+08:00",
+          "end": "2027-01-04T15:00:00+08:00",
+          "category": "抵達",
+          "title": "返抵台灣｜桃園國際機場 T2",
+          "displayTitle": "返抵台灣｜桃園國際機場 T2",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Taiwan+Taoyuan+International+Airport+Terminal+2",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "activity": {
+            "description": "票面抵達台灣時間為 1/4 14:00；後續入境與領箱預留一小時為規劃估計。",
+            "tips": []
+          },
+          "timezone": "Asia/Taipei"
+        }
+      ],
+      "optionalStops": [],
+      "offlineMapNeedsUpdate": false,
+      "date": "2027-01-04",
+      "city": "上海→台灣",
+      "title": "上海轉機、14:00 返抵台灣",
+      "timezone": "Asia/Taipei"
     }
   ],
   "tickets": [],

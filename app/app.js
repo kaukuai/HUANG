@@ -1,6 +1,7 @@
 import { dateInZone, clock, currentAndNext, shortDate, minutesUntil, tripPhase } from './time.js';
 import { read, saveSetting, importPack, clearPrivate, isOlderVersion } from './storage.js';
 import { currentTrip, validPublicTrip } from './updates.js';
+import { cities, eventKind, activityTitle as titleFor, eventClock, cityHighlights } from './presentation.js';
 
 const APP_BUILD = '__BUILD_ID__';
 
@@ -25,8 +26,8 @@ const icon = name => `<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" st
 const safeUrl = value => { try { const u = new URL(value); return u.protocol === 'https:' ? u.href : ''; } catch { return ''; } };
 const extLink = (url, label, cls = 'button secondary') => safeUrl(url) ? `<a class="${cls}" href="${esc(safeUrl(url))}" target="_blank" rel="noopener noreferrer">${label}</a>` : '';
 const money = n => Number(n).toLocaleString('zh-TW', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-const activityTitle = e => e.displayTitle || e.title;
-const state = { tab:'now', date:null, search:'', filter:'all', mode:'share', privateTrip:null, share:null, preview:null, done:new Set(), offlineReady:false, installing:null, busy:false, syncing:false, syncMessage:'尚未檢查', checkedAt:null, siteVersion:null, swReg:null, shellUpdate:false };
+const activityTitle = e => titleFor(e, data().days.find(d => d.date === e.date), data().hotels);
+const state = { tab:'now', date:null, city:null, search:'', filter:'all', mode:'share', privateTrip:null, share:null, preview:null, done:new Set(), offlineReady:false, installing:null, busy:false, syncing:false, syncMessage:'尚未檢查', checkedAt:null, siteVersion:null, swReg:null, shellUpdate:false };
 let viewerUrl, toastTimer, lastRefresh;
 let viewCache;
 const data = () => {
@@ -39,7 +40,8 @@ const privateMode = () => state.mode === 'private' && !!state.privateTrip;
 const events = () => {
   const d = data();
   const flights = d.flights || [];
-  return [...d.days.flatMap(day => day.events).filter(e => !flights.some(f => f.start === e.start && e.title.includes(f.number))), ...flights];
+  const scheduled = d.days.flatMap(day => day.events);
+  return [...scheduled, ...flights.filter(f => !scheduled.some(e => e.start === f.start && (e.number === f.number || e.title.includes(f.number))))];
 };
 const selectedDay = () => data().days.find(d => d.date === state.date) || data().days[0];
 const badge = (e) => e.status ? `<span class="badge ${['neutral','warning','confirmed','conditional'].includes(e.statusKind) ? e.statusKind : 'neutral'}">${esc(e.status)}</span>` : '';
@@ -48,7 +50,7 @@ function toast(text) {
   $('#toast').textContent = text; $('#toast').classList.add('visible');
   clearTimeout(toastTimer); toastTimer = setTimeout(() => $('#toast').classList.remove('visible'), 4200);
 }
-function timeLabel(e) { return e.displayTime || `${clock(new Date(e.start))}–${clock(new Date(e.end))}`; }
+function timeLabel(e) { return e.displayTime || `${eventClock(e)}–${eventClock(e,true)}`; }
 function ticketAction(e) {
   return privateMode() && e.ticketIds?.length ? `<button class="button secondary" data-action="event-tickets" data-ids="${esc(e.ticketIds.join(','))}">${icon('ticket')}票券</button>` : '';
 }
@@ -62,7 +64,12 @@ function activityDetails(e) {
 }
 function optionalStops(day) {
   if(!day.optionalStops?.length)return '';
-  return `<aside class="optional-stops" aria-label="無固定時間的備選地點"><h3>附近備選・有空再去</h3><p class="caption">沒有安排固定時間，順路、有空再選。</p>${day.optionalStops.map(stop=>`<article class="optional-stop"><span class="optional-label">彈性地點</span><h3>${esc(stop.title)}</h3><p>${esc(stop.description||stop.note)}</p>${stop.openingHours?`<p class="optional-hours">營業：${esc(stop.openingHours)}</p>`:''}<details><summary>店家資訊與注意事項</summary>${activityDetails({activity:{mustTry:stop.mustTry||[],tips:stop.note?[stop.note]:[]}})}${extLink(stop.mapUrl,`${icon('map')}查看店家位置`,'button secondary')}</details></article>`).join('')}</aside>`;
+  return `<aside class="optional-stops" aria-label="無固定時間的備選地點"><h3>附近備選・有空再去</h3><p class="caption">沒有安排固定時間，順路、有空再選。</p>${day.optionalStops.map(stop=>`<article class="optional-stop"><span class="optional-label">彈性地點</span><h3>${esc(stop.displayTitle||stop.title)}</h3><p>${esc(stop.description||stop.note)}</p>${stop.openingHours?`<p class="optional-hours">營業：${esc(stop.openingHours)}</p>`:''}<details><summary>店家資訊與注意事項</summary>${activityDetails({activity:{mustTry:stop.mustTry||[],tips:stop.note?[stop.note]:[]}})}${extLink(stop.mapUrl,`${icon('map')}查看店家位置`,'button secondary')}</details></article>`).join('')}</aside>`;
+}
+function citySection() {
+  const city=cities.find(c=>c.id===state.city);
+  return `<div class="section-heading"><h2>四座城市，一路向東</h2><span>點選查看景點與餐廳</span></div><div class="cities">${cities.map((c,i)=>`<button class="city-tile ${state.city===c.id?'selected':''}" data-action="city" data-city="${c.id}" aria-expanded="${state.city===c.id}" aria-controls="city-overview"><span>0${i+1} / ${c.nights} 晚</span><strong>${c.name}</strong><small>${c.english} ${icon('chevron')}</small></button>`).join('')}</div>
+  <section id="city-overview" class="city-overview" aria-label="城市景點與餐廳" ${city?'':'hidden'}>${city?`<div class="section-heading"><h2>${city.name}・景點與餐廳</h2><button class="text-button" data-action="city" data-city="${city.id}">收起</button></div><p class="caption">依到訪日期、時間排列；點開可看介紹與推薦。</p>${cityHighlights(data(),city.id).map(day=>`<section class="city-day"><div class="section-heading"><h3>${shortDate(day.date)}</h3><button class="text-button" data-action="day" data-date="${day.date}">當日完整行程 →</button></div>${day.stops.map(e=>`<details class="city-stop kind-${eventKind(e)}"><summary><span class="city-stop-meta">${esc(timeLabel(e))} · ${esc(e.category)}${e.conditional?' · 彈性':''}</span><strong>${esc(e.overviewTitle)}</strong></summary>${badge(e)}${activityDetails(e)}${eventActions(e)}</details>`).join('')}${day.optional.map(s=>`<details class="city-stop optional"><summary><span class="city-stop-meta">有空再去・無固定時間</span><strong>${esc(s.displayTitle||s.title)}</strong></summary><p class="caption">${esc(s.description||s.note)}</p>${s.openingHours?`<p class="caption">${esc(s.openingHours)}</p>`:''}${extLink(s.mapUrl,'查看位置 ↗','inline-link')}</details>`).join('')}</section>`).join('')}`:''}</section>`;
 }
 function header() {
   return `<header class="header"><a class="wordmark" href="#now" aria-label="西班牙口袋旅程首頁"><span class="brand-mark">ES<span>26</span></span><span>西班牙<span class="brand-sub">口袋旅程</span></span></a><button class="mode-pill" data-action="tab" data-tab="trip">${icon('user')}${privateMode() ? '同行完整版' : '分享行程版'}</button></header>
@@ -78,18 +85,19 @@ function eventCard(e, label, prominent = false) {
   if (!e) return '';
   const limit=prominent?56:48;
   const brief=e.note?.length>limit?e.note.slice(0,limit)+'…':e.note;
-  return `<article class="${prominent ? 'focus-card' : 'next-card'}"><div class="eyebrow">${esc(label)}<span>${esc(timeLabel(e))}</span></div><h2>${esc(activityTitle(e))}</h2>${badge(e)}${brief ? `<p class="event-note">${esc(brief)}</p>` : ''}<details class="full-note"><summary>活動資訊與完整提醒</summary>${activityDetails(e)}${e.note?`<p>${esc(e.note)}</p>`:''}</details>${eventActions(e)}${prominent && e.id ? `<button class="text-button done-button" data-action="done" data-id="${esc(e.id)}">${icon('check')}${state.done.has(e.id) ? '已標記完成 · 再按取消' : '標記這一站已完成'}</button>` : ''}</article>`;
+  return `<article class="${prominent ? 'focus-card' : 'next-card'} kind-${eventKind(e)}"><div class="eyebrow">${esc(label)}<span>${esc(timeLabel(e))}</span></div><h2>${esc(activityTitle(e))}</h2>${badge(e)}${brief ? `<p class="event-note">${esc(brief)}</p>` : ''}<details class="full-note"><summary>活動資訊與完整提醒</summary>${activityDetails(e)}${e.note?`<p>${esc(e.note)}</p>`:''}</details>${eventActions(e)}${prominent && e.id ? `<button class="text-button done-button" data-action="done" data-id="${esc(e.id)}">${icon('check')}${state.done.has(e.id) ? '已標記完成 · 再按取消' : '標記這一站已完成'}</button>` : ''}</article>`;
 }
 function beforeTripHome() {
-  const first = data().days[0];
-  const departure = privateMode() && data().flights.length ? new Date(data().flights[0].start) : new Date(first.events[0].start);
-  const departureZone=privateMode()?'Asia/Taipei':'Europe/Madrid';
+  const first = data().days.find(d=>d.date==='2026-12-24') || data().days[0];
+  const start = [...events()].sort((a,b)=>Date.parse(a.start)-Date.parse(b.start))[0];
+  const departure = new Date(start.start);
+  const departureZone=start.timezone||'Asia/Taipei';
   const daysLeft = Math.max(0, Math.round((Date.parse(dateInZone(departure,departureZone))-Date.parse(dateInZone(now(),departureZone))) / 86400000));
-  return `<section class="hero"><div class="eyebrow">¡HOLA, ESPAÑA! <span>冬日慢遊</span></div><h1>下一站，<br>西班牙<span class="sun-dot"></span></h1><p>從馬德里的聖誕燈飾，走到巴塞隆納的新年。</p><div class="hero-bottom"><div><strong>${daysLeft}</strong><span>天後${privateMode() ? '出發' : '抵達'}</span></div><span class="trip-stamp">12.24 — 01.03<br><small>11 天・4 座城市</small></span></div><div class="arch-art" aria-hidden="true"><i></i><i></i><i></i></div></section>
+  return `<section class="hero"><div class="eyebrow">¡HOLA, ESPAÑA! <span>冬日慢遊</span></div><h1>下一站，<br>西班牙<span class="sun-dot"></span></h1><p>從馬德里的聖誕燈飾，走到巴塞隆納的新年。</p><div class="hero-bottom"><div><strong>${daysLeft}</strong><span>天後出發</span></div><span class="trip-stamp">12.23 — 01.04<br><small>西班牙 11 天・4 座城市</small></span></div><div class="arch-art" aria-hidden="true"><i></i><i></i><i></i></div></section>
   <div class="section-heading"><h2>先看看抵達日</h2><span>12/24 · 馬德里</span></div>
   <button class="arrival-card" data-action="day" data-date="${first.date}"><div class="arrival-icon">${icon('pin')}</div><div><strong>市場午餐、聖誕市集</strong><p>寄物後到聖米格爾市場，下午輕鬆逛。</p></div>${icon('chevron')}</button>
   ${privateMode() ? pendingSection() : `<section class="import-prompt"><h3>我們四個人的旅行工具</h3><p>同行者匯入旅行資料包，就能查看票券、住宿與離線地圖。</p><button class="button primary" data-action="import">${icon('download')}匯入同行資料包</button></section>`}
-  <div class="section-heading"><h2>四座城市，一路向東</h2></div><div class="cities">${[['MADRID','馬德里','2 晚'],['SEVILLA','塞維亞','2 晚'],['GRANADA','格拉納達','1 晚'],['BARCELONA','巴塞隆納','5 晚']].map(([en,zh,n],i)=>`<div class="city-tile"><span>0${i+1} / ${n}</span><strong>${zh}</strong><small>${en}</small></div>`).join('')}</div>`;
+  ${citySection()}`;
 }
 function pendingSection() {
   const limit=state.tab==='trip'?data().todos.length:4;
@@ -102,23 +110,24 @@ function home() {
   const departed = privateMode() && data().flights.length && Number(t) >= Date.parse(data().flights[0].start);
   if (phase === 'before' && !onFlight && !departed) return beforeTripHome();
   if (phase === 'after' && !onFlight && !next) return `<section class="hero compact"><div class="eyebrow">HASTA LA PRÓXIMA</div><h1>旅程收進口袋，<br>回憶留在身邊。</h1><p>隨時回看走過的行程與每一站。</p></section><button class="button primary" data-action="tab" data-tab="plan">回顧旅程 ${icon('arrow')}</button>`;
-  const day = data().days.find(d => d.date === dateInZone(t));
+  const day = data().days.find(d => d.date === (current?.date || dateInZone(t)));
   return `<div class="page-heading"><div><p class="eyebrow">${day ? `D${data().days.indexOf(day)+1} · ${esc(day.city)}` : '移動日 · 航空行程'}</p><h1>把此刻，交給旅程。</h1></div><span class="date-label">${shortDate(dateInZone(t))}</span></div>
   <div class="clock-strip"><span>西班牙 <b>${clock(t)}</b></span><span>台灣 <b>${clock(t,'Asia/Taipei')}</b></span><span class="online-dot ${navigator.onLine?'':'offline'}">${navigator.onLine?'已連線':'離線中'}</span></div>
   ${current ? eventCard(current,current.conditional ? '此刻的彈性安排' : '現在的行程',true) : `<section class="breather"><span>${icon('now')}</span><h2>${next ? '慢一點也沒關係' : '今天可以好好休息了'}</h2><p>${next ? `下一段在 ${shortDate(dateInZone(new Date(next.start)))} ${clock(new Date(next.start))} 開始。` : '當天排定的活動已結束。'}</p></section>`}
   ${next ? eventCard(next,`接下來${minutesUntil(next.start,t)<120 ? ' · '+minutesUntil(next.start,t)+' 分鐘後':''}`) : ''}
   ${dateInZone(t)==='2026-12-26' && privateMode() ? '<aside class="notice">21:39 到站後先入住，再赴 22:30 晚餐。只有 51 分鐘，需預辦入住與接車；22:40 僅為保留截止。</aside>' : ''}
-  <button class="button wide secondary" data-action="today">查看當天全部行程 ${icon('arrow')}</button>`;
+  <button class="button wide secondary" data-action="today">查看當天全部行程 ${icon('arrow')}</button>${citySection()}`;
 }
 function itinerary() {
   const day=selectedDay();const t=now();
   return `<div class="page-heading"><div><p class="eyebrow">ONE DAY AT A TIME</p><h1>每天，都有好風景。</h1></div></div>${dayPicker()}
   <div class="day-heading"><div><p>D${data().days.indexOf(day)+1} · ${esc(day.city)}</p><h2>${esc(day.title)}</h2></div>${privateMode() && day.mapAsset ? `<button class="icon-button" data-action="asset" data-id="${day.mapAsset}" aria-label="開啟當日離線路線圖">${icon('map')}</button>`:''}</div>
-  <p class="caption">所有時段為西班牙當地時間 · 導航需連線</p>
+  <p class="caption">${day.timezone==='Asia/Taipei'?'本日顯示台灣／上海當地時間':'西班牙行程顯示當地時間；跨國航班依起降機場時間'} · 導航需連線</p><div class="timeline-legend"><span class="legend-dining">餐廳／餐飲</span><span class="legend-lodging">住宿／返回飯店</span></div>
   ${day.offlineMapNeedsUpdate?'<p class="caption map-update-note">本日路線已調整，請匯入新版同行包以更新離線路線圖；景點導航已使用最新行程。</p>':''}
   <div class="timeline">${day.events.map(e => {
     const active=Date.parse(e.start)<=Number(t)&&Number(t)<Date.parse(e.end); const done=state.done.has(e.id);
-    return `<article class="timeline-event ${active?'current':''} ${done?'completed':''}" id="event-${esc(e.id)}"><div class="time-rail"><strong>${clock(new Date(e.start))}</strong><small>${clock(new Date(e.end))}</small><span class="timeline-dot"></span></div><div class="event-content"><div class="event-meta"><span>${esc(e.category)}</span>${active?'<span class="live-label">此刻</span>':''}${done?'<span>已標記完成</span>':''}</div><h3>${esc(activityTitle(e))}</h3>${badge(e)}<details><summary>活動資訊、提醒與連結</summary>${activityDetails(e)}${e.note?`<div class="activity-block private-note"><h4>同行提醒</h4><p>${esc(e.note)}</p></div>`:''}${e.transport?`<p class="caption">${esc(e.transport)}</p>`:''}${eventActions(e)}${extLink(e.infoUrl,'官方資訊 ↗','inline-link')}<button class="text-button" data-action="done" data-id="${esc(e.id)}">${done?'取消完成標記':'標記完成'}</button></details></div></article>`;
+    const zoneLabel=z=>z==='Asia/Taipei'?'台灣':z==='Asia/Shanghai'?'上海':'西班牙';
+    return `<article class="timeline-event kind-${eventKind(e)} ${active?'current':''} ${done?'completed':''}" id="event-${esc(e.id)}"><div class="time-rail"><strong>${eventClock(e)}</strong>${e.timezone?`<span class="rail-zone">${zoneLabel(e.timezone)}</span>`:''}<small>${e.end.slice(0,10)!==e.start.slice(0,10)?shortDate(e.end.slice(0,10))+' ':''}${eventClock(e,true)}</small>${e.isFlight?`<span class="rail-zone">${zoneLabel(e.endTimezone||e.timezone)}</span>`:''}<span class="timeline-dot"></span></div><div class="event-content"><div class="event-meta"><span>${e.lodgingAction?'住宿':esc(e.category)}</span>${active?'<span class="live-label">此刻</span>':''}${done?'<span>已標記完成</span>':''}</div><h3>${esc(activityTitle(e))}</h3>${badge(e)}<details><summary>活動資訊、提醒與連結</summary>${activityDetails(e)}${e.note?`<div class="activity-block private-note"><h4>同行提醒</h4><p>${esc(e.note)}</p></div>`:''}${e.transport?`<p class="caption">${esc(e.transport)}</p>`:''}${eventActions(e)}${extLink(e.infoUrl,'官方資訊 ↗','inline-link')}<button class="text-button" data-action="done" data-id="${esc(e.id)}">${done?'取消完成標記':'標記完成'}</button></details></div></article>`;
   }).join('')}${optionalStops(day)}</div>`;
 }
 function tickets() {
@@ -171,8 +180,9 @@ async function openAsset(id) {
 async function action(button) {
   const a=button.dataset.action;
   if (a==='tab') tab(button.dataset.tab);
+  else if (a==='city') {state.city=state.city===button.dataset.city?null:button.dataset.city;render();}
   else if (a==='day') {state.date=button.dataset.date;saveSetting('selectedDate',state.date).catch(()=>{});tab('plan');}
-  else if (a==='today') {state.date=data().days.some(d=>d.date===dateInZone(now()))?dateInZone(now()):data().days[0].date;tab('plan');}
+  else if (a==='today') {const current=currentAndNext(events(),now()).current;state.date=current?.date || (data().days.some(d=>d.date===dateInZone(now()))?dateInZone(now()):data().days[0].date);tab('plan');}
   else if (a==='event-tickets') {state.search=button.dataset.ids.split(',')[0];state.filter='all';state.tab='tickets';render();window.scrollTo(0,0);}
   else if (a==='filter') {state.filter=button.dataset.filter;render();}
   else if (a==='preview') {state.preview=button.dataset.time;tab('now');}

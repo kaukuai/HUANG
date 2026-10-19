@@ -7,6 +7,7 @@ from xml.etree import ElementTree as ET
 from urllib.parse import unquote, quote_plus
 import argparse, base64, hashlib, json, mimetypes, posixpath, re, shutil
 import openpyxl
+from itinerary_revision import apply_revision
 from activity_content import make_library, enrich, public_activity, public_text
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -193,6 +194,7 @@ trip={'schema':1,'version':master['version'],'title':'西班牙・口袋旅程',
       'days':days,'tickets':tickets,'hotels':hotels,'todos':todos,'flights':flights,'ticketReview':{**master['ticket_review'],'folderUrl':master.get('drive_folder_url','')} if master.get('ticket_review') else None,
       'budget':{'core':master['budget']['core_including_domestic_excluding_international_per_person_twd'],
                 'allIn':master['budget']['including_international_per_person_twd']}}
+apply_revision(trip)
 
 # Public mode contains no evidence, lodging addresses, booking IDs or private links.
 share=json.loads(json.dumps(trip))
@@ -211,7 +213,7 @@ for day in share['days']:
         e['activity']=public_activity(e['activity'])
         e.update(note='',transport='',ticketIds=[],infoUrl='')
         if sensitive:e['mapUrl']=''
-        if e['statusKind']=='confirmed':e.update(status='',statusKind='neutral')
+        if e['statusKind']=='confirmed' and not e.get('reservation'):e.update(status='',statusKind='neutral')
         if '主人' in e['title']:e['title']='自由安排／住宿休息'
         if any(word in e['title'] for word in ['護照','passport']):e['title']='行前準備／整理用品'
 share_json=json.dumps(share,ensure_ascii=False,separators=(',',':'))
@@ -230,12 +232,12 @@ for source in sorted((ROOT/'app').iterdir()):
 build_id=build_hash.hexdigest()[:12]
 (OUT/'sw.js').write_text((ROOT/'app/sw.js').read_text().replace('__BUILD_ID__',build_id))
 (OUT/'app.js').write_text((ROOT/'app/app.js').read_text().replace('__BUILD_ID__',build_id))
-(OUT/'version.json').write_text(json.dumps({'build':build_id,'itineraryVersion':master['version'],'sourceCommit':'','builtAt':datetime.now().astimezone().isoformat()}))
+(OUT/'version.json').write_text(json.dumps({'build':build_id,'itineraryVersion':trip['version'],'sourceCommit':'','builtAt':datetime.now().astimezone().isoformat()}))
 private_dir=P/'app-private';private_dir.mkdir(exist_ok=True)
-pack_path=private_dir/f'Spain_Travel_{master["version"]}.travelpack.json'
+pack_path=private_dir/f'Spain_Travel_{trip["version"]}.travelpack.json'
 pack_path.write_text(json.dumps({'format':'spain-pocket-trip/v1','trip':trip,'assets':assets},ensure_ascii=False,separators=(',',':')),encoding='utf-8')
 # Icon rendering from the source SVG uses Chromium in the browser test/build finalization.
-report={'public_dir':str(OUT),'private_pack':str(pack_path),'planning_version':master['version'],'days':len(days),'events':sum(len(d['events']) for d in days),
+report={'public_dir':str(OUT),'private_pack':str(pack_path),'planning_version':trip['version'],'days':len(days),'events':sum(len(d['events']) for d in days),
         'tickets':len(tickets),'evidence_files':evidence_count,'evidence_source_files':len(evidence),'ticket_review_status':master.get('ticket_review',{}).get('status'),'maps':len(anchors),'assets':len(assets),'private_bytes':pack_path.stat().st_size,'build_id':build_id}
 (P/'review/app-build-report.json').write_text(json.dumps(report,ensure_ascii=False,indent=2))
 print(json.dumps(report,ensure_ascii=False,indent=2))

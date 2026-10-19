@@ -1,0 +1,2029 @@
+{
+  "version": "2026-10-19-v1",
+  "days": [
+    {
+      "date": "2026-12-23",
+      "city": "台灣→上海",
+      "title": "台灣出發、上海轉機",
+      "timezone": "Asia/Taipei",
+      "events": [
+        {
+          "id": "journey-mu5006",
+          "date": "2026-12-23",
+          "start": "2026-12-23T18:40:00+08:00",
+          "end": "2026-12-23T20:25:00+08:00",
+          "category": "航班",
+          "title": "台灣出發｜桃園 T2 → 上海浦東 T1（MU5006）",
+          "displayTitle": "台灣出發｜桃園 T2 → 上海浦東 T1（MU5006）",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "activity": {
+            "description": "搭乘中國東方航空；起飛與抵達時間各依機場當地時間顯示。時間已從原始國際機票行程單核對，後續異動以航空公司通知為準。",
+            "tips": [
+              "航廈及登機門以航空公司最新通知為準。"
+            ]
+          },
+          "timezone": "Asia/Taipei",
+          "endTimezone": "Asia/Shanghai",
+          "isFlight": true,
+          "number": "MU5006",
+          "displayTime": "12/23 18:40 → 12/23 20:25（各地時間）"
+        },
+        {
+          "id": "journey-outbound-transfer",
+          "date": "2026-12-23",
+          "start": "2026-12-23T20:25:00+08:00",
+          "end": "2026-12-24T00:50:00+08:00",
+          "category": "轉機",
+          "title": "上海浦東 T1｜轉機 4 小時 25 分",
+          "displayTitle": "上海浦東 T1｜轉機 4 小時 25 分",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "activity": {
+            "description": "20:25 抵達，隔日 00:50 續飛馬德里；依轉機流程與航司指示前往下一航段。",
+            "tips": []
+          },
+          "timezone": "Asia/Shanghai"
+        }
+      ]
+    },
+    {
+      "date": "2026-12-24",
+      "addEvents": [
+        {
+          "id": "journey-mu709",
+          "date": "2026-12-24",
+          "start": "2026-12-24T00:50:00+08:00",
+          "end": "2026-12-24T08:00:00+01:00",
+          "category": "航班",
+          "title": "前往西班牙｜上海浦東 T1 → 馬德里 T1（MU709）",
+          "displayTitle": "前往西班牙｜上海浦東 T1 → 馬德里 T1（MU709）",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "activity": {
+            "description": "搭乘中國東方航空；起飛與抵達時間各依機場當地時間顯示。時間已從原始國際機票行程單核對，後續異動以航空公司通知為準。",
+            "tips": [
+              "航廈及登機門以航空公司最新通知為準。"
+            ]
+          },
+          "timezone": "Asia/Shanghai",
+          "endTimezone": "Europe/Madrid",
+          "isFlight": true,
+          "number": "MU709",
+          "displayTime": "12/24 00:50 → 12/24 08:00（各地時間）"
+        }
+      ]
+    },
+    {
+      "date": "2026-12-29",
+      "title": "直赴住宿、巴特略之家與 El Glop 晚餐",
+      "events": [
+        {
+          "id": "afe6a486c176",
+          "date": "2026-12-29",
+          "start": "2026-12-29T07:00:00+01:00",
+          "end": "2026-12-29T07:25:00+01:00",
+          "category": "早餐",
+          "title": "公寓吃前晚早餐盒",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "displayTitle": "Alhambra Churrería | Granada｜早餐",
+          "activity": {
+            "description": "午餐改Alhambra Churrería | Granada，吃西班牙油條。11:45–12:25含步行、點餐及用餐，12:25離店搭車上山",
+            "mustTry": [
+              "churros＋熱巧克力（供應待核）"
+            ],
+            "tips": [
+              "午餐改Alhambra Churrería | Granada，吃西班牙油條。11:45–12:25含步行、點餐及用餐，12:25離店搭車上山；當日是否午間供應油條與等候需現場確認，不壓縮14:30 Nasrid報到／15:00票面入場。推薦點法：先問現炸churros與熱巧克力，供應及份量依當日菜單。",
+              "推薦餐點依既有美食指南；價格、當日供應與過敏原請點餐前向店家確認。"
+            ]
+          }
+        },
+        {
+          "id": "e88e0422f2b6",
+          "date": "2026-12-29",
+          "start": "2026-12-29T07:25:00+01:00",
+          "end": "2026-12-29T07:45:00+01:00",
+          "category": "退房",
+          "title": "早退房至接車點",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "displayTitle": "早退房至接車點",
+          "activity": {
+            "description": "完成退房、清點行李與隨身物品，依約定方式前往接車點。",
+            "tips": []
+          }
+        },
+        {
+          "id": "509a62a0960b",
+          "date": "2026-12-29",
+          "start": "2026-12-29T07:45:00+01:00",
+          "end": "2026-12-29T08:30:00+01:00",
+          "category": "交通",
+          "title": "住宿至GRX機場",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "displayTitle": "住宿至GRX機場",
+          "activity": {
+            "description": "從上一站前往住宿至GRX機場。先核對接車點、交通方式與行李安排，再開啟導航；表列時間包含規劃緩衝。",
+            "tips": []
+          }
+        },
+        {
+          "id": "f2b7c8376b63",
+          "date": "2026-12-29",
+          "start": "2026-12-29T08:30:00+01:00",
+          "end": "2026-12-29T10:20:00+01:00",
+          "category": "報到",
+          "title": "托運安檢核登機門",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=GRX+%E6%A0%BC%E6%8B%89%E7%B4%8D%E9%81%94%E6%A9%9F%E5%A0%B4+Federico+Garc%C3%ADa+Lorca+Granada%E2%80%93Ja%C3%A9n+Granada",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "displayTitle": "托運安檢核登機門",
+          "activity": {
+            "description": "到入口或車站後，先確認安檢、驗票及排隊位置。這段是報到緩衝，下一段票面入場或發車時間優先。",
+            "tips": []
+          }
+        },
+        {
+          "id": "c08ae5d7258b",
+          "date": "2026-12-29",
+          "start": "2026-12-29T10:20:00+01:00",
+          "end": "2026-12-29T10:55:00+01:00",
+          "category": "登機",
+          "title": "VY1121登機準備",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=GRX+%E6%A0%BC%E6%8B%89%E7%B4%8D%E9%81%94%E6%A9%9F%E5%A0%B4+Federico+Garc%C3%ADa+Lorca+Granada%E2%80%93Ja%C3%A9n+Granada",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "displayTitle": "VY1121登機準備",
+          "activity": {
+            "description": "核對登機門與登機截止時間，依登機證完成登機；航廈和行李規則以票面及航司通知為準。",
+            "tips": []
+          }
+        },
+        {
+          "id": "1927bf1e5d54",
+          "date": "2026-12-29",
+          "start": "2026-12-29T10:55:00+01:00",
+          "end": "2026-12-29T12:20:00+01:00",
+          "category": "交通",
+          "title": "已購VY1121至BCN T1",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=BCN+%E5%B7%B4%E5%A1%9E%E9%9A%86%E7%B4%8D%E6%A9%9F%E5%A0%B4+T1%EF%BC%8FT2+%E4%BB%A5%E8%88%AA%E7%A9%BA%E5%85%AC%E5%8F%B8%E8%88%87+Aena+%E7%82%BA%E6%BA%96+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "displayTitle": "已購VY1121至BCN T1",
+          "activity": {
+            "description": "從上一站前往已購VY1121至BCN T1。先核對接車點、交通方式與行李安排，再開啟導航；表列時間包含規劃緩衝。",
+            "tips": []
+          }
+        },
+        {
+          "id": "60e192cf021d",
+          "date": "2026-12-29",
+          "start": "2026-12-29T12:20:00+01:00",
+          "end": "2026-12-29T13:05:00+01:00",
+          "category": "領箱",
+          "title": "領箱至T1公共區",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=BCN+%E5%B7%B4%E5%A1%9E%E9%9A%86%E7%B4%8D%E6%A9%9F%E5%A0%B4+T1%EF%BC%8FT2+%E4%BB%A5%E8%88%AA%E7%A9%BA%E5%85%AC%E5%8F%B8%E8%88%87+Aena+%E7%82%BA%E6%BA%96+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "displayTitle": "領箱至T1公共區",
+          "activity": {
+            "description": "下車後清點四人行李，確認預約車輛與會合位置再出發。",
+            "tips": []
+          }
+        },
+        {
+          "id": "9cfdff1b412a",
+          "date": "2026-12-29",
+          "start": "2026-12-29T13:05:00+01:00",
+          "end": "2026-12-29T13:15:00+01:00",
+          "category": "報到",
+          "title": "司機會合點",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=BCN+%E5%B7%B4%E5%A1%9E%E9%9A%86%E7%B4%8D%E6%A9%9F%E5%A0%B4+T1%EF%BC%8FT2+%E4%BB%A5%E8%88%AA%E7%A9%BA%E5%85%AC%E5%8F%B8%E8%88%87+Aena+%E7%82%BA%E6%BA%96+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "displayTitle": "司機會合點",
+          "activity": {
+            "description": "到入口或車站後，先確認安檢、驗票及排隊位置。這段是報到緩衝，下一段票面入場或發車時間優先。",
+            "tips": []
+          }
+        },
+        {
+          "id": "7de0b30bce2b",
+          "date": "2026-12-29",
+          "start": "2026-12-29T13:15:00+01:00",
+          "end": "2026-12-29T14:15:00+01:00",
+          "category": "交通",
+          "title": "BCN T1大車到住宿",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "displayTitle": "BCN T1大車到住宿",
+          "activity": {
+            "description": "從上一站前往住宿。先核對接車點、交通方式與行李安排，再開啟導航；表列時間包含規劃緩衝。",
+            "tips": []
+          }
+        },
+        {
+          "id": "7e3a31eba804",
+          "date": "2026-12-29",
+          "start": "2026-12-29T14:15:00+01:00",
+          "end": "2026-12-29T15:15:00+01:00",
+          "category": "入住",
+          "title": "登記門碼入住短休",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "displayTitle": "住宿｜寄放行李、入住與短休",
+          "activity": {
+            "description": "下飛機領箱後直接前往住宿，不安排機場午餐。抵達先放行李；若尚未到入住時間，依住宿安排寄放，再輕裝出門。",
+            "tips": []
+          }
+        },
+        {
+          "id": "d9def6010abb",
+          "date": "2026-12-29",
+          "start": "2026-12-29T15:15:00+01:00",
+          "end": "2026-12-29T16:10:00+01:00",
+          "category": "交通",
+          "title": "Espanya L3至Passeig de Gràcia",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E5%B7%B4%E7%89%B9%E5%A9%81%E4%B9%8B%E5%AE%B6+Casa+Batll%C3%B3+Passeig+de+Gr%C3%A0cia+43+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "displayTitle": "Espanya L3至Passeig de Gràcia",
+          "activity": {
+            "description": "從上一站前往巴特婁之家 Casa Batlló。先核對接車點、交通方式與行李安排，再開啟導航；表列時間包含規劃緩衝。",
+            "tips": []
+          }
+        },
+        {
+          "id": "7a4932f3d0ac",
+          "date": "2026-12-29",
+          "start": "2026-12-29T16:10:00+01:00",
+          "end": "2026-12-29T16:30:00+01:00",
+          "category": "報到",
+          "title": "巴特略驗票候入",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E5%B7%B4%E7%89%B9%E5%A9%81%E4%B9%8B%E5%AE%B6+Casa+Batll%C3%B3+Passeig+de+Gr%C3%A0cia+43+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "displayTitle": "巴特略驗票候入",
+          "activity": {
+            "description": "到入口或車站後，先確認安檢、驗票及排隊位置。這段是報到緩衝，下一段票面入場或發車時間優先。",
+            "tips": []
+          }
+        },
+        {
+          "id": "52b4f87463c4",
+          "date": "2026-12-29",
+          "start": "2026-12-29T16:30:00+01:00",
+          "end": "2026-12-29T18:15:00+01:00",
+          "category": "必看",
+          "title": "已購Casa Batlló鉑金票16:30",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E5%B7%B4%E7%89%B9%E5%A9%81%E4%B9%8B%E5%AE%B6+Casa+Batll%C3%B3+Passeig+de+Gr%C3%A0cia+43+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "displayTitle": "已購Casa Batlló鉑金票16:30",
+          "activity": {
+            "description": "巴特婁之家由高第改造既有住宅，外牆色彩、骨骼般窗框與起伏屋頂，把都市住宅變成有生命感的空間。這站作為巴塞隆納高第旅程的第一站，最容易進入他的想像。",
+            "highlights": [
+              "主樓層大窗；藍色採光井；曲線、通風細節與屋頂。含哪些區域以票種比較頁為準。"
+            ],
+            "tips": [
+              "已購2026/12/29 16:30四人鉑金普通參觀票K11；16:10到場為規劃緩衝。全員含展覽，僅其中1張另含屋頂甜點、後院卡瓦及屋頂開胃酒；無姓名／時長，不能推定4人均含。暫留參觀至18:15，後段散步彈性；票券未載語音語種、退改及遲到條款。"
+            ],
+            "photoTip": "採光井抬頭與窗框細節；避免在窄梯停太久。"
+          }
+        },
+        {
+          "id": "b7bd2b142c9b",
+          "date": "2026-12-29",
+          "start": "2026-12-29T18:15:00+01:00",
+          "end": "2026-12-29T19:15:00+01:00",
+          "category": "必逛",
+          "title": "格拉西亞大道燈飾",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Passeig+de+Gr%C3%A0cia+%E6%A0%BC%E6%8B%89%E8%A5%BF%E4%BA%9E%E5%A4%A7%E9%81%93+Casa+Batll%C3%B3+%E8%87%B3+La+Pedrera+%E4%B8%80%E6%AE%B5+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "displayTitle": "格拉西亞大道燈飾",
+          "activity": {
+            "description": "格拉西亞大道把巴特婁、米拉及其他現代主義建築集中在同一條城市軸線上，既是建築散步路線也是購物大道。冬季傍晚順路看燈飾即可。",
+            "highlights": [
+              "巴特婁鄰近的外牆；街燈與鋪面；街區櫥窗。"
+            ],
+            "tips": [
+              "免費外觀散步；1/1 已安排米拉之家，不再額外加入室內參觀。",
+              "19:15 左右開始前往 El Glop Plaça Catalunya，保留 20:00 訂位。"
+            ],
+            "photoTip": "街道上層建築細節；站在人行道拍夜景。"
+          },
+          "reminderUpdated": true
+        },
+        {
+          "id": "d29-walk-el-glop",
+          "date": "2026-12-29",
+          "start": "2026-12-29T19:15:00+01:00",
+          "end": "2026-12-29T19:45:00+01:00",
+          "category": "交通",
+          "title": "前往加泰隆尼亞餐廳（El Glop Plaça Catalunya）",
+          "displayTitle": "前往加泰隆尼亞餐廳（El Glop Plaça Catalunya）",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=El+Glop+Pla%C3%A7a+Catalunya+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "activity": {
+            "description": "從格拉西亞大道前往餐廳，20:00 已訂位；先核對訂位分店。",
+            "tips": []
+          }
+        },
+        {
+          "id": "d29-el-glop-arrive",
+          "date": "2026-12-29",
+          "start": "2026-12-29T19:45:00+01:00",
+          "end": "2026-12-29T20:00:00+01:00",
+          "category": "報到",
+          "title": "El Glop Plaça Catalunya｜訂位報到",
+          "displayTitle": "El Glop Plaça Catalunya｜訂位報到",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=El+Glop+Pla%C3%A7a+Catalunya+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "activity": {
+            "description": "20:00 已訂位（使用者確認），提早到店報到；目前尚未提供訂位確認信。",
+            "tips": []
+          }
+        },
+        {
+          "id": "d29-el-glop-dinner",
+          "date": "2026-12-29",
+          "start": "2026-12-29T20:00:00+01:00",
+          "end": "2026-12-29T21:15:00+01:00",
+          "category": "晚餐",
+          "title": "加泰隆尼亞餐廳（El Glop Plaça Catalunya）｜晚餐",
+          "displayTitle": "加泰隆尼亞餐廳（El Glop Plaça Catalunya）｜晚餐",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=El+Glop+Pla%C3%A7a+Catalunya+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "20:00 已訂位 · 使用者確認",
+          "statusKind": "confirmed",
+          "activity": {
+            "description": "20:00 晚餐已訂位（使用者確認）；用餐結束時間為規劃估計，依現場上菜調整。",
+            "tips": [
+              "確認 Plaça Catalunya 分店、訂位姓名及人數；依訂位確認紀錄為準。",
+              "飯後若有體力可到家樂福採買，留意超市關門時間。"
+            ],
+            "mustTry": [
+              "可詢問西班牙飯或炭烤料理，再依當日菜單選擇；本分店供應尚未核實。"
+            ]
+          },
+          "reservation": {
+            "id": "REGLOP",
+            "title": "El Glop Plaça Catalunya｜晚餐",
+            "date": "2026-12-29",
+            "time": "20:00",
+            "report": "19:45 到店目標",
+            "status": "已訂位 · 使用者確認",
+            "statusKind": "confirmed",
+            "note": "20:00 已訂位，使用者於 10/19 確認；尚未提供確認信，訂位人數與姓名請依訂位紀錄。",
+            "files": [],
+            "url": ""
+          }
+        },
+        {
+          "id": "d29-walk-carrefour",
+          "date": "2026-12-29",
+          "start": "2026-12-29T21:15:00+01:00",
+          "end": "2026-12-29T21:30:00+01:00",
+          "category": "交通",
+          "title": "步行至家樂福超市（Carrefour Market）",
+          "displayTitle": "步行至家樂福超市（Carrefour Market）",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Carrefour+Market+La+Rambla+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "activity": {
+            "description": "飯後順路前往家樂福；先用導航核對分店、步行距離及當日營業。",
+            "tips": []
+          }
+        },
+        {
+          "id": "d29-carrefour",
+          "date": "2026-12-29",
+          "start": "2026-12-29T21:30:00+01:00",
+          "end": "2026-12-29T22:00:00+01:00",
+          "category": "採買",
+          "title": "家樂福超市（Carrefour Market）｜早餐與飲水採買",
+          "displayTitle": "家樂福超市（Carrefour Market）｜早餐與飲水採買",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Carrefour+Market+La+Rambla+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "activity": {
+            "description": "採買飲水、隔日備用早餐與零食；23:30 打烊為使用者提供，規劃 22:00 前結束採買。",
+            "tips": [
+              "23:30 打烊為使用者提供，當日分店營業仍需確認。",
+              "若晚餐延後或太累可縮短、略過採買。"
+            ]
+          }
+        },
+        {
+          "id": "d29-return-hotel",
+          "date": "2026-12-29",
+          "start": "2026-12-29T22:00:00+01:00",
+          "end": "2026-12-29T22:40:00+01:00",
+          "category": "交通",
+          "title": "返回住宿・整理翌日用品",
+          "displayTitle": "返回住宿・整理翌日用品",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "activity": {
+            "description": "採買後返回住宿，整理隔日用品；翌日早餐出門時帶齊全天票券、身分證件、耳機與保暖衣物。",
+            "tips": []
+          }
+        }
+      ]
+    },
+    {
+      "date": "2026-12-30",
+      "title": "麵包店早餐、聖保祿與聖家堂、Vinitus 晚餐",
+      "events": [
+        {
+          "id": "d30-pack-before-breakfast",
+          "date": "2026-12-30",
+          "start": "2026-12-30T07:40:00+01:00",
+          "end": "2026-12-30T08:00:00+01:00",
+          "category": "準備",
+          "title": "住宿｜出門前帶齊全天用品",
+          "displayTitle": "住宿｜出門前帶齊全天用品",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "activity": {
+            "description": "出門時帶齊全天票券、身分證件、耳機、行動電源及保暖用品；早餐後不再返回住宿。",
+            "tips": []
+          }
+        },
+        {
+          "id": "d30-puiggros",
+          "date": "2026-12-30",
+          "start": "2026-12-30T08:00:00+01:00",
+          "end": "2026-12-30T08:40:00+01:00",
+          "category": "早餐",
+          "title": "普伊格羅斯麵包店（Forn de pa Puiggròs 1）｜早餐",
+          "displayTitle": "普伊格羅斯麵包店（Forn de pa Puiggròs 1）｜早餐",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Forn+de+pa+Puiggr%C3%B2s+1+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "activity": {
+            "description": "改到 Forn de pa Puiggròs 1 吃早餐；出門時已帶齊全天用品，吃完直接前往當天景點。",
+            "tips": [
+              "尚未核實本分店早晨開門時間；太早未開時以附近已開店家或前晚麵包備案。",
+              "原有 10:00 聖保祿、14:30 聖家堂、15:15 登塔時段保留。"
+            ],
+            "mustTry": [
+              "可選麵包、可頌與咖啡；依當日出爐品項選擇，尚未核實固定必點。"
+            ]
+          }
+        },
+        {
+          "id": "d30-breakfast-to-sant-pau",
+          "date": "2026-12-30",
+          "start": "2026-12-30T08:40:00+01:00",
+          "end": "2026-12-30T09:40:00+01:00",
+          "category": "交通",
+          "title": "早餐後直接前往聖保祿醫院（Sant Pau）",
+          "displayTitle": "早餐後直接前往聖保祿醫院（Sant Pau）",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Recinte+Modernista+de+Sant+Pau+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "activity": {
+            "description": "早餐後不回飯店，直接前往 10:00 已購票的聖保祿醫院；14:30 再依原票參觀聖家堂。",
+            "tips": []
+          }
+        },
+        {
+          "id": "5a5e1cb81f79",
+          "date": "2026-12-30",
+          "start": "2026-12-30T09:40:00+01:00",
+          "end": "2026-12-30T10:00:00+01:00",
+          "category": "報到",
+          "title": "驗票洗手間",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Sant+Pau+%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2+Carrer+de+Sant+Antoni+Maria+Claret+167+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "displayTitle": "驗票洗手間",
+          "activity": {
+            "description": "到入口或車站後，先確認安檢、驗票及排隊位置。這段是報到緩衝，下一段票面入場或發車時間優先。",
+            "tips": []
+          }
+        },
+        {
+          "id": "7d6b4d6aa521",
+          "date": "2026-12-30",
+          "start": "2026-12-30T10:00:00+01:00",
+          "end": "2026-12-30T11:30:00+01:00",
+          "category": "必看",
+          "title": "已購聖保祿10:00含英語語音",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Sant+Pau+%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2+Carrer+de+Sant+Antoni+Maria+Claret+167+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "displayTitle": "已購聖保祿10:00含英語語音",
+          "activity": {
+            "description": "聖保祿醫院是多梅內克・蒙塔內爾的現代主義作品，用分散的院館、花園與工藝回應醫療空間。它不屬高第作品，但與聖家堂相鄰，是理解巴塞隆納建築的重要比較。",
+            "highlights": [
+              "入口與裝飾；可開放院館；花園軸線與醫療建築的光線。"
+            ],
+            "tips": [
+              "已購2026/12/30 10:00四人Self-Guided Visit 既有票券，英語語音4人已含（€0項目）；09:40到遊客入口為規劃緩衝。需準時、不可退款或離場重入；出示確認票。與14:30聖家堂同為已出票時段，勿自行對調。"
+            ],
+            "photoTip": "花園對稱院館與馬賽克細節。"
+          }
+        },
+        {
+          "id": "5340290ed456",
+          "date": "2026-12-30",
+          "start": "2026-12-30T11:30:00+01:00",
+          "end": "2026-12-30T12:10:00+01:00",
+          "category": "必逛",
+          "title": "高第大道步行",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Avinguda+de+Gaud%C3%AD+%E9%AB%98%E7%AC%AC%E5%A4%A7%E9%81%93+Sant+Pau+%E8%87%B3%E8%81%96%E5%AE%B6%E5%A0%82%E6%AD%A5%E8%A1%8C%E8%BB%B8%E7%B7%9A+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "displayTitle": "高第大道步行",
+          "activity": {
+            "description": "高第大道是聖保祿醫院與聖家堂之間的步行軸線，名字紀念高第，街道本身提供看兩端建築的視角。留四十五分鐘可以走、拍照並喝水。",
+            "highlights": [
+              "由醫院回望；聖家堂逐步接近的視角；街邊短休息。"
+            ],
+            "tips": [
+              "免費街道散步；接著前往 Hasta Los Andares 或 Sagradas Tapas 擇一午餐，保留 14:00 聖家堂報到。"
+            ],
+            "photoTip": "以大道線條引向聖家堂；不要站在路口中間。"
+          },
+          "reminderUpdated": true
+        },
+        {
+          "id": "d30-find-lunch",
+          "date": "2026-12-30",
+          "start": "2026-12-30T12:10:00+01:00",
+          "end": "2026-12-30T12:30:00+01:00",
+          "category": "交通",
+          "title": "前往聖家堂周邊午餐店",
+          "displayTitle": "前往聖家堂周邊午餐店",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Hasta+Los+Andares+Sagrada+Fam%C3%ADlia+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "activity": {
+            "description": "先前往 Hasta Los Andares；若營業或候位不合適，改 Sagradas Tapas。保留 14:00 聖家堂報到。",
+            "tips": []
+          }
+        },
+        {
+          "id": "d30-hasta-lunch",
+          "date": "2026-12-30",
+          "start": "2026-12-30T12:30:00+01:00",
+          "end": "2026-12-30T13:30:00+01:00",
+          "category": "午餐",
+          "title": "火腿起司餐館（Hasta Los Andares | Sagrada Família）｜午餐",
+          "displayTitle": "火腿起司餐館（Hasta Los Andares | Sagrada Família）｜午餐",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Hasta+Los+Andares+Sagrada+Fam%C3%ADlia+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "activity": {
+            "description": "午餐改為西班牙火腿、起司盤配啤酒；Sagradas Tapas 為同餐次備案，兩間擇一，不重複排餐。",
+            "tips": [
+              "未提供訂位確認，先確認營業及候位。",
+              "若改去 Sagradas Tapas，13:30 左右仍需結束午餐、保留聖家堂報到。"
+            ],
+            "mustTry": [
+              "西班牙火腿、起司拼盤配啤酒（使用者指定）；品項與供應依當日菜單。"
+            ]
+          }
+        },
+        {
+          "id": "9ec7707494ad",
+          "date": "2026-12-30",
+          "start": "2026-12-30T13:30:00+01:00",
+          "end": "2026-12-30T14:00:00+01:00",
+          "category": "交通",
+          "title": "走Marina入口",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E8%81%96%E5%AE%B6%E5%A0%82+Sagrada+Fam%C3%ADlia+Carrer+de+Mallorca+401%EF%BC%9B%E4%B8%80%E8%88%AC%E9%81%8A%E5%AE%A2%E5%85%A5%E5%8F%A3+Carrer+de+la+Marina+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "displayTitle": "走Marina入口",
+          "activity": {
+            "description": "從上一站前往聖家堂 Sagrada Família。先核對接車點、交通方式與行李安排，再開啟導航；表列時間包含規劃緩衝。",
+            "tips": []
+          }
+        },
+        {
+          "id": "5c7cfc564f30",
+          "date": "2026-12-30",
+          "start": "2026-12-30T14:00:00+01:00",
+          "end": "2026-12-30T14:30:00+01:00",
+          "category": "報到",
+          "title": "聖家堂安檢開APP",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E8%81%96%E5%AE%B6%E5%A0%82+Sagrada+Fam%C3%ADlia+Carrer+de+Mallorca+401%EF%BC%9B%E4%B8%80%E8%88%AC%E9%81%8A%E5%AE%A2%E5%85%A5%E5%8F%A3+Carrer+de+la+Marina+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "displayTitle": "聖家堂安檢開APP",
+          "activity": {
+            "description": "到入口或車站後，先確認安檢、驗票及排隊位置。這段是報到緩衝，下一段票面入場或發車時間優先。",
+            "tips": []
+          }
+        },
+        {
+          "id": "0e1c04b9965e",
+          "date": "2026-12-30",
+          "start": "2026-12-30T14:30:00+01:00",
+          "end": "2026-12-30T15:00:00+01:00",
+          "category": "必看",
+          "title": "教堂內部初訪",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E8%81%96%E5%AE%B6%E5%A0%82+Sagrada+Fam%C3%ADlia+Carrer+de+Mallorca+401%EF%BC%9B%E4%B8%80%E8%88%AC%E9%81%8A%E5%AE%A2%E5%85%A5%E5%8F%A3+Carrer+de+la+Marina+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "displayTitle": "聖家堂｜教堂內部與彩繪玻璃",
+          "activity": {
+            "description": "Plaça de Gaudí 位於聖家堂誕生立面對面，池塘與公園讓教堂外觀有完整前景，也是記錄新主塔外觀的方便位置。室內參觀後不用再排隊。",
+            "highlights": [
+              "誕生立面全景；水面倒影；新主塔與十字架的外觀。"
+            ],
+            "tips": [
+              "依已購票保留 14:30 聖家堂入場與 15:15 誕生立面塔。",
+              "16:45–17:15 可在教堂外拍照；之後順路吃 Five Guys 為彈性加餐，視食量與候位決定，再前往 Vinitus。"
+            ],
+            "photoTip": "池邊廣角取水面和建築；需遵守園區邊界。"
+          },
+          "reminderUpdated": true
+        },
+        {
+          "id": "60c864b74d07",
+          "date": "2026-12-30",
+          "start": "2026-12-30T15:00:00+01:00",
+          "end": "2026-12-30T15:15:00+01:00",
+          "category": "報到",
+          "title": "誕生面塔隊伍",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E8%81%96%E5%AE%B6%E5%A0%82+Sagrada+Fam%C3%ADlia+Carrer+de+Mallorca+401%EF%BC%9B%E4%B8%80%E8%88%AC%E9%81%8A%E5%AE%A2%E5%85%A5%E5%8F%A3+Carrer+de+la+Marina+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "displayTitle": "誕生面塔隊伍",
+          "activity": {
+            "description": "到入口或車站後，先確認安檢、驗票及排隊位置。這段是報到緩衝，下一段票面入場或發車時間優先。",
+            "tips": []
+          }
+        },
+        {
+          "id": "c4c1c9f255f0",
+          "date": "2026-12-30",
+          "start": "2026-12-30T15:15:00+01:00",
+          "end": "2026-12-30T16:00:00+01:00",
+          "category": "必看",
+          "title": "已購誕生立面塔",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E8%81%96%E5%AE%B6%E5%A0%82+Sagrada+Fam%C3%ADlia+Carrer+de+Mallorca+401%EF%BC%9B%E4%B8%80%E8%88%AC%E9%81%8A%E5%AE%A2%E5%85%A5%E5%8F%A3+Carrer+de+la+Marina+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "displayTitle": "聖家堂｜誕生立面塔參觀",
+          "activity": {
+            "description": "Plaça de Gaudí 位於聖家堂誕生立面對面，池塘與公園讓教堂外觀有完整前景，也是記錄新主塔外觀的方便位置。室內參觀後不用再排隊。",
+            "highlights": [
+              "誕生立面全景；水面倒影；新主塔與十字架的外觀。"
+            ],
+            "tips": [
+              "依已購票保留 14:30 聖家堂入場與 15:15 誕生立面塔。",
+              "16:45–17:15 可在教堂外拍照；之後順路吃 Five Guys 為彈性加餐，視食量與候位決定，再前往 Vinitus。"
+            ],
+            "photoTip": "池邊廣角取水面和建築；需遵守園區邊界。"
+          },
+          "reminderUpdated": true
+        },
+        {
+          "id": "b3a32f192428",
+          "date": "2026-12-30",
+          "start": "2026-12-30T16:00:00+01:00",
+          "end": "2026-12-30T16:45:00+01:00",
+          "category": "必看",
+          "title": "續看教堂與博物館",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E8%81%96%E5%AE%B6%E5%A0%82+Sagrada+Fam%C3%ADlia+Carrer+de+Mallorca+401%EF%BC%9B%E4%B8%80%E8%88%AC%E9%81%8A%E5%AE%A2%E5%85%A5%E5%8F%A3+Carrer+de+la+Marina+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "displayTitle": "聖家堂｜續看教堂與博物館",
+          "activity": {
+            "description": "Plaça de Gaudí 位於聖家堂誕生立面對面，池塘與公園讓教堂外觀有完整前景，也是記錄新主塔外觀的方便位置。室內參觀後不用再排隊。",
+            "highlights": [
+              "誕生立面全景；水面倒影；新主塔與十字架的外觀。"
+            ],
+            "tips": [
+              "依已購票保留 14:30 聖家堂入場與 15:15 誕生立面塔。",
+              "16:45–17:15 可在教堂外拍照；之後順路吃 Five Guys 為彈性加餐，視食量與候位決定，再前往 Vinitus。"
+            ],
+            "photoTip": "池邊廣角取水面和建築；需遵守園區邊界。"
+          },
+          "reminderUpdated": true
+        },
+        {
+          "id": "8052a125234a",
+          "date": "2026-12-30",
+          "start": "2026-12-30T16:45:00+01:00",
+          "end": "2026-12-30T17:15:00+01:00",
+          "category": "必看",
+          "title": "2026主塔外部拍照",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=2026%E8%80%B6%E7%A9%8C%E5%9F%BA%E7%9D%A3%E4%B8%BB%E5%A1%94%E5%A4%96%E9%83%A8+Sagrada+Fam%C3%ADlia+%E5%A4%96%E8%A7%80+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "displayTitle": "聖家堂｜主塔外觀拍照（開放狀態依現場）",
+          "activity": {
+            "description": "Plaça de Gaudí 位於聖家堂誕生立面對面，池塘與公園讓教堂外觀有完整前景，也是記錄新主塔外觀的方便位置。室內參觀後不用再排隊。",
+            "highlights": [
+              "誕生立面全景；水面倒影；新主塔與十字架的外觀。"
+            ],
+            "tips": [
+              "依已購票保留 14:30 聖家堂入場與 15:15 誕生立面塔。",
+              "16:45–17:15 可在教堂外拍照；之後順路吃 Five Guys 為彈性加餐，視食量與候位決定，再前往 Vinitus。"
+            ],
+            "photoTip": "池邊廣角取水面和建築；需遵守園區邊界。"
+          },
+          "reminderUpdated": true
+        },
+        {
+          "id": "d30-five-guys",
+          "date": "2026-12-30",
+          "start": "2026-12-30T17:15:00+01:00",
+          "end": "2026-12-30T17:40:00+01:00",
+          "category": "甜點",
+          "title": "美式漢堡店（Five Guys）｜彈性加餐",
+          "displayTitle": "美式漢堡店（Five Guys）｜彈性加餐",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Five+Guys+Sagrada+Familia+Barcelona",
+          "infoUrl": "",
+          "conditional": true,
+          "status": "彈性加餐・視食量與候位",
+          "statusKind": "conditional",
+          "activity": {
+            "description": "聖家堂參觀及外觀拍照後，順路到 Five Guys 吃薯條與奶昔；此為彈性加餐，依食量與候位縮短或略過。",
+            "tips": [
+              "使用者推薦薯條與奶昔；可分食，避免影響晚餐食量。",
+              "選擇聖家堂附近順路分店，實際營業與候位待確認。"
+            ],
+            "mustTry": [
+              "薯條、奶昔（使用者推薦）。",
+              "想吃正餐可加漢堡，依當日食量決定。"
+            ]
+          }
+        },
+        {
+          "id": "d30-to-vinitus",
+          "date": "2026-12-30",
+          "start": "2026-12-30T17:40:00+01:00",
+          "end": "2026-12-30T18:15:00+01:00",
+          "category": "交通",
+          "title": "前往塔帕斯餐廳（Vinitus）",
+          "displayTitle": "前往塔帕斯餐廳（Vinitus）",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Vinitus+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "activity": {
+            "description": "離開聖家堂周邊，前往 Vinitus 晚餐；無法訂位，預留現場候位。",
+            "tips": []
+          }
+        },
+        {
+          "id": "d30-vinitus-queue",
+          "date": "2026-12-30",
+          "start": "2026-12-30T18:15:00+01:00",
+          "end": "2026-12-30T18:45:00+01:00",
+          "category": "候位",
+          "title": "塔帕斯餐廳（Vinitus）｜現場候位",
+          "displayTitle": "塔帕斯餐廳（Vinitus）｜現場候位",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Vinitus+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "activity": {
+            "description": "無法訂位（使用者提供）；18:15 到店排隊，18:45 入座為規劃目標，無法保證。",
+            "tips": [
+              "若排隊過久，視體力與店家等位估計調整晚餐及後續散步。"
+            ]
+          }
+        },
+        {
+          "id": "d30-vinitus-dinner",
+          "date": "2026-12-30",
+          "start": "2026-12-30T18:45:00+01:00",
+          "end": "2026-12-30T20:00:00+01:00",
+          "category": "晚餐",
+          "title": "塔帕斯餐廳（Vinitus）｜鵝肝牛排晚餐",
+          "displayTitle": "塔帕斯餐廳（Vinitus）｜鵝肝牛排晚餐",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Vinitus+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "無法訂位 · 現場候位",
+          "statusKind": "neutral",
+          "activity": {
+            "description": "晚餐在 Vinitus，指定想吃鵝肝牛排；無法訂位，實際入座及結束時間依當日候位調整。",
+            "tips": [
+              "無法訂位，需現場候位（使用者提供）。",
+              "鵝肝牛排供應、菜名與份量請向店家確認，不能視為已預留。"
+            ],
+            "mustTry": [
+              "鵝肝牛排（使用者指定）。",
+              "其他 tapas 依現場菜單與四人食量分食。"
+            ]
+          }
+        },
+        {
+          "id": "56a2233f90f0",
+          "date": "2026-12-30",
+          "start": "2026-12-30T20:00:00+01:00",
+          "end": "2026-12-30T20:25:00+01:00",
+          "category": "必逛",
+          "title": "燈飾短逛買翌日早餐",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Passeig+de+Gr%C3%A0cia+%E6%A0%BC%E6%8B%89%E8%A5%BF%E4%BA%9E%E5%A4%A7%E9%81%93+Casa+Batll%C3%B3+%E8%87%B3+La+Pedrera+%E4%B8%80%E6%AE%B5+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "displayTitle": "燈飾短逛買翌日早餐",
+          "activity": {
+            "description": "這一站安排燈飾短逛買翌日早餐。依現場開放與動線參觀，留意下一段固定報到或交通時間。",
+            "tips": []
+          }
+        },
+        {
+          "id": "982f1d8b08f3",
+          "date": "2026-12-30",
+          "start": "2026-12-30T20:25:00+01:00",
+          "end": "2026-12-30T21:00:00+01:00",
+          "category": "交通",
+          "title": "L3回公寓",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "displayTitle": "L3回公寓",
+          "activity": {
+            "description": "從上一站前往住宿。先核對接車點、交通方式與行李安排，再開啟導航；表列時間包含規劃緩衝。",
+            "tips": []
+          }
+        }
+      ],
+      "optionalStops": [
+        {
+          "title": "人氣塔帕斯餐廳（Sagradas Tapas）｜午餐備案",
+          "description": "12/30 午餐與 Hasta Los Andares 擇一；人氣店家為使用者提供。未另安排用餐時段。",
+          "note": "先確認營業與候位，不壓縮 14:00 聖家堂報到。",
+          "mustTry": [
+            "依當日 tapas 菜單選擇，尚未核實固定必點品項。"
+          ],
+          "openingHours": "當日營業待確認",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Sagradas+Tapas+Barcelona",
+          "venue": {
+            "cityId": "barcelona",
+            "nameZh": "人氣塔帕斯餐廳・午餐備案",
+            "nameEn": "Sagradas Tapas"
+          }
+        }
+      ]
+    },
+    {
+      "date": "2027-01-03",
+      "addEvents": [
+        {
+          "id": "journey-mu250",
+          "date": "2027-01-03",
+          "start": "2027-01-03T10:20:00+01:00",
+          "end": "2027-01-04T05:30:00+08:00",
+          "category": "航班",
+          "title": "返國航班｜巴塞隆納 T1 → 上海浦東 T1（MU250）",
+          "displayTitle": "返國航班｜巴塞隆納 T1 → 上海浦東 T1（MU250）",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "activity": {
+            "description": "搭乘中國東方航空；起飛與抵達時間各依機場當地時間顯示。時間已從原始國際機票行程單核對，後續異動以航空公司通知為準。",
+            "tips": [
+              "航廈及登機門以航空公司最新通知為準。"
+            ]
+          },
+          "endTimezone": "Asia/Shanghai",
+          "isFlight": true,
+          "number": "MU250",
+          "displayTime": "01/03 10:20 → 01/04 05:30（各地時間）"
+        }
+      ]
+    },
+    {
+      "date": "2027-01-04",
+      "city": "上海→台灣",
+      "title": "上海轉機、14:00 返抵台灣",
+      "timezone": "Asia/Taipei",
+      "events": [
+        {
+          "id": "journey-return-transfer",
+          "date": "2027-01-04",
+          "start": "2027-01-04T05:30:00+08:00",
+          "end": "2027-01-04T12:05:00+08:00",
+          "category": "轉機",
+          "title": "上海浦東 T1｜轉機 6 小時 35 分",
+          "displayTitle": "上海浦東 T1｜轉機 6 小時 35 分",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "activity": {
+            "description": "05:30 抵達上海，12:05 續飛台灣；轉機時間依票面，留意航班異動。",
+            "tips": []
+          },
+          "timezone": "Asia/Shanghai"
+        },
+        {
+          "id": "journey-mu5007",
+          "date": "2027-01-04",
+          "start": "2027-01-04T12:05:00+08:00",
+          "end": "2027-01-04T14:00:00+08:00",
+          "category": "航班",
+          "title": "返回台灣｜上海浦東 T1 → 桃園 T2（MU5007）",
+          "displayTitle": "返回台灣｜上海浦東 T1 → 桃園 T2（MU5007）",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "activity": {
+            "description": "搭乘中國東方航空；起飛與抵達時間各依機場當地時間顯示。時間已從原始國際機票行程單核對，後續異動以航空公司通知為準。",
+            "tips": [
+              "航廈及登機門以航空公司最新通知為準。"
+            ]
+          },
+          "timezone": "Asia/Shanghai",
+          "endTimezone": "Asia/Taipei",
+          "isFlight": true,
+          "number": "MU5007",
+          "displayTime": "01/04 12:05 → 01/04 14:00（各地時間）"
+        },
+        {
+          "id": "journey-home-arrival",
+          "date": "2027-01-04",
+          "start": "2027-01-04T14:00:00+08:00",
+          "end": "2027-01-04T15:00:00+08:00",
+          "category": "抵達",
+          "title": "返抵台灣｜桃園國際機場 T2",
+          "displayTitle": "返抵台灣｜桃園國際機場 T2",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Taiwan+Taoyuan+International+Airport+Terminal+2",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "activity": {
+            "description": "票面抵達台灣時間為 1/4 14:00；後續入境與領箱預留一小時為規劃估計。",
+            "tips": []
+          },
+          "timezone": "Asia/Taipei"
+        }
+      ]
+    }
+  ],
+  "eventDetails": {
+    "a4880d927f39": {
+      "venue": {
+        "cityId": "madrid",
+        "nameZh": "聖米格爾市場",
+        "nameEn": "Mercado de San Miguel"
+      },
+      "cityId": "madrid",
+      "displayTitle": "聖米格爾市場（Mercado de San Miguel）｜午餐"
+    },
+    "4c92e30416f3": {
+      "venue": {
+        "cityId": "madrid",
+        "nameZh": "主廣場聖誕市集",
+        "nameEn": "Plaza Mayor"
+      },
+      "cityId": "madrid",
+      "displayTitle": "主廣場聖誕市集（Plaza Mayor）"
+    },
+    "1ff0224e52d8": {
+      "venue": {
+        "cityId": "madrid",
+        "nameZh": "英國宮超市",
+        "nameEn": "Supermercado El Corte Inglés"
+      },
+      "cityId": "madrid",
+      "displayTitle": "英國宮超市（Supermercado El Corte Inglés）"
+    },
+    "462e5f639c51": {
+      "venue": {
+        "cityId": "madrid",
+        "nameZh": "格蘭大道聖誕燈飾",
+        "nameEn": "Gran Vía"
+      },
+      "cityId": "madrid",
+      "displayTitle": "格蘭大道聖誕燈飾（Gran Vía）"
+    },
+    "6e3eb5338876": {
+      "venue": {
+        "cityId": "madrid",
+        "nameZh": "聖吉內斯油條店／備好糕餅",
+        "nameEn": "Chocolatería San Ginés"
+      },
+      "cityId": "madrid",
+      "displayTitle": "聖吉內斯油條店／備好糕餅（Chocolatería San Ginés）｜早餐"
+    },
+    "89de8d8937ef": {
+      "venue": {
+        "cityId": "madrid",
+        "nameZh": "阿爾卡拉門",
+        "nameEn": "Puerta de Alcalá"
+      },
+      "cityId": "madrid",
+      "displayTitle": "阿爾卡拉門（Puerta de Alcalá）"
+    },
+    "007f9e376d30": {
+      "venue": {
+        "cityId": "madrid",
+        "nameZh": "麗池公園",
+        "nameEn": "Parque del Retiro"
+      },
+      "cityId": "madrid",
+      "displayTitle": "麗池公園（Parque del Retiro）"
+    },
+    "cbb52fb8fcae": {
+      "venue": {
+        "cityId": "madrid",
+        "nameZh": "普拉多周邊外觀與咖啡",
+        "nameEn": "Museo del Prado"
+      },
+      "cityId": "madrid",
+      "displayTitle": "普拉多周邊外觀與咖啡（Museo del Prado）"
+    },
+    "15f19243c583": {
+      "venue": {
+        "cityId": "madrid",
+        "nameZh": "穆里略咖啡餐廳",
+        "nameEn": "Murillo Café - Restaurante"
+      },
+      "cityId": "madrid",
+      "displayTitle": "穆里略咖啡餐廳（Murillo Café - Restaurante）｜午餐"
+    },
+    "113b2e0c1a6c": {
+      "venue": {
+        "cityId": "madrid",
+        "nameZh": "西班牙高等科學研究理事會・紙房子外景",
+        "nameEn": "Consejo Superior de Investigaciones Científicas (CSIC)"
+      },
+      "cityId": "madrid",
+      "displayTitle": "西班牙高等科學研究理事會・紙房子外景（Consejo Superior de Investigaciones Científicas (CSIC)）"
+    },
+    "db7b7322b96f": {
+      "venue": {
+        "cityId": "madrid",
+        "nameZh": "起司蛋糕店・有開門才去",
+        "nameEn": "Álex Cordobés | Velázquez"
+      },
+      "cityId": "madrid",
+      "displayTitle": "起司蛋糕店・有開門才去（Álex Cordobés | Velázquez）"
+    },
+    "e9e9f922c6f4": {
+      "venue": {
+        "cityId": "madrid",
+        "nameZh": "西貝雷斯廣場",
+        "nameEn": "Plaza de Cibeles"
+      },
+      "cityId": "madrid",
+      "displayTitle": "西貝雷斯廣場（Plaza de Cibeles）"
+    },
+    "0e0df3c814c1": {
+      "venue": {
+        "cityId": "madrid",
+        "nameZh": "格蘭大道燈飾",
+        "nameEn": "Gran Vía"
+      },
+      "cityId": "madrid",
+      "displayTitle": "格蘭大道燈飾（Gran Vía）"
+    },
+    "bcc6fef9517e": {
+      "venue": {
+        "cityId": "madrid",
+        "nameZh": "主廣場",
+        "nameEn": "Plaza Mayor"
+      },
+      "cityId": "madrid",
+      "displayTitle": "主廣場（Plaza Mayor）"
+    },
+    "fdd848c08df5": {
+      "venue": {
+        "cityId": "madrid",
+        "nameZh": "傳統西班牙餐廳",
+        "nameEn": "Los Galayos"
+      },
+      "cityId": "madrid",
+      "displayTitle": "傳統西班牙餐廳（Los Galayos）｜晚餐"
+    },
+    "41c555e62428": {
+      "venue": {
+        "cityId": "madrid",
+        "nameZh": "馬德里王宮",
+        "nameEn": "Palacio Real de Madrid"
+      },
+      "cityId": "madrid",
+      "displayTitle": "馬德里王宮（Palacio Real de Madrid）"
+    },
+    "d57f3a119905": {
+      "venue": {
+        "cityId": "madrid",
+        "nameZh": "波丁烤乳豬餐廳",
+        "nameEn": "Botín"
+      },
+      "cityId": "madrid",
+      "displayTitle": "波丁烤乳豬餐廳（Botín）｜午餐"
+    },
+    "7eaca23d0996": {
+      "venue": {
+        "cityId": "madrid",
+        "nameZh": "普拉多美術館",
+        "nameEn": "Museo del Prado"
+      },
+      "cityId": "madrid",
+      "displayTitle": "普拉多美術館（Museo del Prado）"
+    },
+    "0694b933c12f": {
+      "venue": {
+        "cityId": "sevilla",
+        "nameZh": "老牌塔帕斯酒館",
+        "nameEn": "El Rinconcillo"
+      },
+      "cityId": "sevilla",
+      "displayTitle": "老牌塔帕斯酒館（El Rinconcillo）｜晚餐"
+    },
+    "91e8eb6b5d65": {
+      "venue": {
+        "cityId": "sevilla",
+        "nameZh": "塞維亞西班牙廣場",
+        "nameEn": "Plaza de España"
+      },
+      "cityId": "sevilla",
+      "displayTitle": "塞維亞西班牙廣場（Plaza de España）"
+    },
+    "3c0860e66721": {
+      "venue": {
+        "cityId": "sevilla",
+        "nameZh": "塞維亞王宮",
+        "nameEn": "Real Alcázar de Sevilla"
+      },
+      "cityId": "sevilla",
+      "displayTitle": "塞維亞王宮（Real Alcázar de Sevilla）"
+    },
+    "9815640d3c85": {
+      "venue": {
+        "cityId": "sevilla",
+        "nameZh": "塞維亞王宮",
+        "nameEn": "Real Alcázar de Sevilla"
+      },
+      "cityId": "sevilla",
+      "displayTitle": "塞維亞王宮（Real Alcázar de Sevilla）"
+    },
+    "9b626f668f78": {
+      "venue": {
+        "cityId": "sevilla",
+        "nameZh": "塞維亞王宮",
+        "nameEn": "Real Alcázar de Sevilla"
+      },
+      "cityId": "sevilla",
+      "displayTitle": "塞維亞王宮（Real Alcázar de Sevilla）"
+    },
+    "2e6762c0568e": {
+      "venue": {
+        "cityId": "sevilla",
+        "nameZh": "義式雪糕店",
+        "nameEn": "Gelateria MITO"
+      },
+      "cityId": "sevilla",
+      "displayTitle": "義式雪糕店（Gelateria MITO）"
+    },
+    "6dfd4c9b200c": {
+      "venue": {
+        "cityId": "sevilla",
+        "nameZh": "塔帕斯餐廳",
+        "nameEn": "Bar Postiguillo Tapas"
+      },
+      "cityId": "sevilla",
+      "displayTitle": "塔帕斯餐廳（Bar Postiguillo Tapas）｜午餐"
+    },
+    "18358c1f46cc": {
+      "venue": {
+        "cityId": "sevilla",
+        "nameZh": "塞維亞主教座堂與希拉達塔",
+        "nameEn": "Catedral de Sevilla / Giralda"
+      },
+      "cityId": "sevilla",
+      "displayTitle": "塞維亞主教座堂與希拉達塔（Catedral de Sevilla / Giralda）"
+    },
+    "b6315737d7bd": {
+      "venue": {
+        "cityId": "sevilla",
+        "nameZh": "塞維亞主教座堂與希拉達塔",
+        "nameEn": "Catedral de Sevilla / Giralda"
+      },
+      "cityId": "sevilla",
+      "displayTitle": "塞維亞主教座堂與希拉達塔（Catedral de Sevilla / Giralda）"
+    },
+    "0226d8483c7b": {
+      "venue": {
+        "cityId": "sevilla",
+        "nameZh": "救世主教堂",
+        "nameEn": "Iglesia del Salvador"
+      },
+      "cityId": "sevilla",
+      "displayTitle": "救世主教堂（Iglesia del Salvador）"
+    },
+    "d806de72bda8": {
+      "venue": {
+        "cityId": "sevilla",
+        "nameZh": "記憶之家佛朗明哥",
+        "nameEn": "Casa de la Memoria"
+      },
+      "cityId": "sevilla",
+      "displayTitle": "記憶之家佛朗明哥（Casa de la Memoria）"
+    },
+    "222ad2bad47c": {
+      "venue": {
+        "cityId": "sevilla",
+        "nameZh": "墨魚燉飯餐廳",
+        "nameEn": "Restaurante El Paseíllo"
+      },
+      "cityId": "sevilla",
+      "displayTitle": "墨魚燉飯餐廳（Restaurante El Paseíllo）｜晚餐"
+    },
+    "d65dcdfb32ca": {
+      "venue": {
+        "cityId": "granada",
+        "nameZh": "西班牙油條店",
+        "nameEn": "Alhambra Churrería | Granada"
+      },
+      "cityId": "granada",
+      "displayTitle": "西班牙油條店（Alhambra Churrería | Granada）｜午餐"
+    },
+    "36dc3437e0bb": {
+      "venue": {
+        "cityId": "granada",
+        "nameZh": "阿爾罕布拉・夏宮與花園",
+        "nameEn": "Alhambra / Generalife"
+      },
+      "cityId": "granada",
+      "displayTitle": "阿爾罕布拉・夏宮與花園（Alhambra / Generalife）"
+    },
+    "f0cd0ce27ddc": {
+      "venue": {
+        "cityId": "granada",
+        "nameZh": "阿爾罕布拉・納斯里德宮殿",
+        "nameEn": "Alhambra / Palacios Nazaríes"
+      },
+      "cityId": "granada",
+      "displayTitle": "阿爾罕布拉・納斯里德宮殿（Alhambra / Palacios Nazaríes）"
+    },
+    "d3fcac83c96f": {
+      "venue": {
+        "cityId": "granada",
+        "nameZh": "阿爾罕布拉・帕塔爾花園",
+        "nameEn": "Alhambra / Partal"
+      },
+      "cityId": "granada",
+      "displayTitle": "阿爾罕布拉・帕塔爾花園（Alhambra / Partal）"
+    },
+    "ca0a1fe2df71": {
+      "venue": {
+        "cityId": "granada",
+        "nameZh": "阿爾罕布拉・阿爾卡薩瓦堡壘",
+        "nameEn": "Alhambra / Alcazaba"
+      },
+      "cityId": "granada",
+      "displayTitle": "阿爾罕布拉・阿爾卡薩瓦堡壘（Alhambra / Alcazaba）"
+    },
+    "e695e648ab5f": {
+      "venue": {
+        "cityId": "granada",
+        "nameZh": "聖尼古拉斯觀景臺",
+        "nameEn": "Mirador de San Nicolás"
+      },
+      "cityId": "granada",
+      "displayTitle": "聖尼古拉斯觀景臺（Mirador de San Nicolás）"
+    },
+    "dd324c2dd85c": {
+      "venue": {
+        "cityId": "granada",
+        "nameZh": "塔帕斯餐廳",
+        "nameEn": "La Sitarilla"
+      },
+      "cityId": "granada",
+      "displayTitle": "塔帕斯餐廳（La Sitarilla）｜晚餐"
+    },
+    "52b4f87463c4": {
+      "venue": {
+        "cityId": "barcelona",
+        "nameZh": "巴特略之家",
+        "nameEn": "Casa Batlló"
+      },
+      "cityId": "barcelona",
+      "displayTitle": "巴特略之家（Casa Batlló）｜依已購票時間入場"
+    },
+    "b7bd2b142c9b": {
+      "venue": {
+        "cityId": "barcelona",
+        "nameZh": "格拉西亞大道燈飾",
+        "nameEn": "Passeig de Gràcia"
+      },
+      "cityId": "barcelona"
+    },
+    "d29-el-glop-dinner": {
+      "venue": {
+        "cityId": "barcelona",
+        "nameZh": "加泰隆尼亞餐廳",
+        "nameEn": "El Glop Plaça Catalunya"
+      },
+      "cityId": "barcelona"
+    },
+    "d29-carrefour": {
+      "venue": {
+        "cityId": "barcelona",
+        "nameZh": "家樂福超市",
+        "nameEn": "Carrefour Market"
+      },
+      "cityId": "barcelona"
+    },
+    "d30-puiggros": {
+      "venue": {
+        "cityId": "barcelona",
+        "nameZh": "普伊格羅斯麵包店",
+        "nameEn": "Forn de pa Puiggròs 1"
+      },
+      "cityId": "barcelona"
+    },
+    "7d6b4d6aa521": {
+      "venue": {
+        "cityId": "barcelona",
+        "nameZh": "聖保祿醫院",
+        "nameEn": "Recinte Modernista de Sant Pau"
+      },
+      "cityId": "barcelona",
+      "displayTitle": "聖保祿醫院（Recinte Modernista de Sant Pau）｜依已購票時間入場"
+    },
+    "5340290ed456": {
+      "venue": {
+        "cityId": "barcelona",
+        "nameZh": "高第大道",
+        "nameEn": "Avinguda de Gaudí"
+      },
+      "cityId": "barcelona"
+    },
+    "d30-hasta-lunch": {
+      "venue": {
+        "cityId": "barcelona",
+        "nameZh": "火腿起司餐館",
+        "nameEn": "Hasta Los Andares | Sagrada Família"
+      },
+      "cityId": "barcelona"
+    },
+    "0e1c04b9965e": {
+      "venue": {
+        "cityId": "barcelona",
+        "nameZh": "聖家堂・教堂與誕生立面塔",
+        "nameEn": "Basílica de la Sagrada Família"
+      },
+      "cityId": "barcelona"
+    },
+    "c4c1c9f255f0": {
+      "venue": {
+        "cityId": "barcelona",
+        "nameZh": "聖家堂・教堂與誕生立面塔",
+        "nameEn": "Basílica de la Sagrada Família"
+      },
+      "cityId": "barcelona"
+    },
+    "b3a32f192428": {
+      "venue": {
+        "cityId": "barcelona",
+        "nameZh": "聖家堂・教堂與誕生立面塔",
+        "nameEn": "Basílica de la Sagrada Família"
+      },
+      "cityId": "barcelona"
+    },
+    "8052a125234a": {
+      "venue": {
+        "cityId": "barcelona",
+        "nameZh": "聖家堂・教堂與誕生立面塔",
+        "nameEn": "Basílica de la Sagrada Família"
+      },
+      "cityId": "barcelona"
+    },
+    "d30-five-guys": {
+      "venue": {
+        "cityId": "barcelona",
+        "nameZh": "美式漢堡店",
+        "nameEn": "Five Guys"
+      },
+      "cityId": "barcelona"
+    },
+    "d30-vinitus-dinner": {
+      "venue": {
+        "cityId": "barcelona",
+        "nameZh": "塔帕斯餐廳",
+        "nameEn": "Vinitus"
+      },
+      "cityId": "barcelona"
+    },
+    "918f767ec847": {
+      "venue": {
+        "cityId": "barcelona",
+        "nameZh": "奎爾公園",
+        "nameEn": "Park Güell"
+      },
+      "cityId": "barcelona",
+      "displayTitle": "奎爾公園（Park Güell）"
+    },
+    "faaaedf3569b": {
+      "venue": {
+        "cityId": "barcelona",
+        "nameZh": "文森之家",
+        "nameEn": "Casa Vicens"
+      },
+      "cityId": "barcelona",
+      "displayTitle": "文森之家（Casa Vicens）"
+    },
+    "02a9956e2777": {
+      "venue": {
+        "cityId": "barcelona",
+        "nameZh": "格拉西亞區塔帕斯酒館",
+        "nameEn": "Bodega Quimet Gràcia"
+      },
+      "cityId": "barcelona",
+      "displayTitle": "格拉西亞區塔帕斯酒館（Bodega Quimet Gràcia）｜午餐"
+    },
+    "257f6fd40d2f": {
+      "venue": {
+        "cityId": "barcelona",
+        "nameZh": "自由市場與格拉西亞區",
+        "nameEn": "Mercat de la Llibertat / Gràcia"
+      },
+      "cityId": "barcelona",
+      "displayTitle": "自由市場與格拉西亞區（Mercat de la Llibertat / Gràcia）"
+    },
+    "e8b4a1c7212a": {
+      "venue": {
+        "cityId": "barcelona",
+        "nameZh": "競技場商場餐廳",
+        "nameEn": "La Lola Arenas"
+      },
+      "cityId": "barcelona",
+      "displayTitle": "競技場商場餐廳（La Lola Arenas）｜晚餐"
+    },
+    "2ea9b8e1d4c9": {
+      "venue": {
+        "cityId": "barcelona",
+        "nameZh": "西班牙廣場跨年・歷年場地預案",
+        "nameEn": "Plaça d’Espanya"
+      },
+      "cityId": "barcelona",
+      "displayTitle": "西班牙廣場跨年・歷年場地預案（Plaça d’Espanya）"
+    },
+    "412f9a9e3330": {
+      "venue": {
+        "cityId": "barcelona",
+        "nameZh": "早午餐店",
+        "nameEn": "Ugot Bruncherie"
+      },
+      "cityId": "barcelona",
+      "displayTitle": "早午餐店（Ugot Bruncherie）｜早餐"
+    },
+    "166eff210f86": {
+      "venue": {
+        "cityId": "barcelona",
+        "nameZh": "米拉之家",
+        "nameEn": "Casa Milà / La Pedrera"
+      },
+      "cityId": "barcelona",
+      "displayTitle": "米拉之家（Casa Milà / La Pedrera）"
+    },
+    "437eb707603f": {
+      "venue": {
+        "cityId": "barcelona",
+        "nameZh": "七扇門餐廳",
+        "nameEn": "7 Portes"
+      },
+      "cityId": "barcelona",
+      "displayTitle": "七扇門餐廳（7 Portes）｜午餐"
+    },
+    "097bd02df3ad": {
+      "venue": {
+        "cityId": "barcelona",
+        "nameZh": "舊港",
+        "nameEn": "Port Vell"
+      },
+      "cityId": "barcelona",
+      "displayTitle": "舊港（Port Vell）"
+    },
+    "c3cc0ab27a17": {
+      "venue": {
+        "cityId": "barcelona",
+        "nameZh": "巴塞羅內塔海灘",
+        "nameEn": "Platja de la Barceloneta"
+      },
+      "cityId": "barcelona",
+      "displayTitle": "巴塞羅內塔海灘（Platja de la Barceloneta）"
+    },
+    "99888e1d4d05": {
+      "venue": {
+        "cityId": "barcelona",
+        "nameZh": "加泰隆尼亞餐廳",
+        "nameEn": "Mussol Arenas"
+      },
+      "cityId": "barcelona",
+      "displayTitle": "加泰隆尼亞餐廳（Mussol Arenas）｜晚餐"
+    },
+    "15285a55f9c1": {
+      "venue": {
+        "cityId": "barcelona",
+        "nameZh": "奎爾紡織村地下教堂・票券待改訂",
+        "nameEn": "Cripta de la Colònia Güell"
+      },
+      "cityId": "barcelona",
+      "displayTitle": "奎爾紡織村地下教堂・票券待改訂（Cripta de la Colònia Güell）"
+    },
+    "a4d8d53c6740": {
+      "venue": {
+        "cityId": "barcelona",
+        "nameZh": "波蓋利亞市場餐廳",
+        "nameEn": "El Quim de la Boqueria"
+      },
+      "cityId": "barcelona",
+      "displayTitle": "波蓋利亞市場餐廳（El Quim de la Boqueria）｜午餐"
+    },
+    "0d62df18e45d": {
+      "venue": {
+        "cityId": "barcelona",
+        "nameZh": "波蓋利亞市場",
+        "nameEn": "Mercat de la Boqueria"
+      },
+      "cityId": "barcelona",
+      "displayTitle": "波蓋利亞市場（Mercat de la Boqueria）"
+    },
+    "c9125ccd22d8": {
+      "venue": {
+        "cityId": "barcelona",
+        "nameZh": "奎爾宮・尚未購票",
+        "nameEn": "Palau Güell"
+      },
+      "cityId": "barcelona",
+      "displayTitle": "奎爾宮・尚未購票（Palau Güell）"
+    },
+    "dc534d54def8": {
+      "venue": {
+        "cityId": "barcelona",
+        "nameZh": "皇家廣場、聖若梅廣場與哥德區",
+        "nameEn": "Plaça Reial / Plaça de Sant Jaume / Barri Gòtic"
+      },
+      "cityId": "barcelona",
+      "displayTitle": "皇家廣場、聖若梅廣場與哥德區（Plaça Reial / Plaça de Sant Jaume / Barri Gòtic）"
+    },
+    "58a7c2fff287": {
+      "venue": {
+        "cityId": "barcelona",
+        "nameZh": "市場料理餐廳",
+        "nameEn": "Casa Amàlia"
+      },
+      "cityId": "barcelona",
+      "displayTitle": "市場料理餐廳（Casa Amàlia）｜晚餐"
+    },
+    "581ac8b06e50": {
+      "displayTitle": "公寓吃前日Mallorquina乾糕餅",
+      "activity": {
+        "description": "在住宿吃前晚準備的早餐，完成後依原定接車或外出時間出發。",
+        "mustTry": [
+          "前晚準備的麵包、糕餅與飲水；依實際採買內容。"
+        ],
+        "tips": [
+          "這段為住宿內早餐，沒有安排前往甜點店。"
+        ]
+      }
+    },
+    "f69193b86ba1": {
+      "displayTitle": "公寓吃前晚早餐盒",
+      "activity": {
+        "description": "在住宿吃前晚準備的早餐，完成後依原定接車或外出時間出發。",
+        "mustTry": [
+          "前晚準備的麵包、糕餅與飲水；依實際採買內容。"
+        ],
+        "tips": [
+          "這段為住宿內早餐，沒有安排前往甜點店。"
+        ]
+      }
+    },
+    "afe6a486c176": {
+      "displayTitle": "公寓吃前晚早餐盒",
+      "activity": {
+        "description": "在住宿吃前晚準備的早餐，完成後依原定接車或外出時間出發。",
+        "mustTry": [
+          "前晚準備的麵包、糕餅與飲水；依實際採買內容。"
+        ],
+        "tips": [
+          "這段為住宿內早餐，沒有安排前往甜點店。"
+        ]
+      }
+    },
+    "fc3b8cf69e31": {
+      "lodgingAction": "返回飯店休息",
+      "cityId": "madrid"
+    },
+    "a6462a74eaa9": {
+      "lodgingAction": "寄放行李",
+      "cityId": "madrid"
+    },
+    "df3d24421886": {
+      "lodgingAction": "返回飯店休息",
+      "cityId": "madrid"
+    },
+    "432ca698e3e1": {
+      "lodgingAction": "辦理入住、放行李與休息",
+      "cityId": "madrid"
+    },
+    "39d1d8a19c6b": {
+      "lodgingAction": "返回飯店休息",
+      "cityId": "madrid"
+    },
+    "38986535218b": {
+      "lodgingAction": "休息與整理用品",
+      "cityId": "madrid"
+    },
+    "2015cff95fc2": {
+      "lodgingAction": "返回飯店休息",
+      "cityId": "madrid"
+    },
+    "7bcbf7d580bb": {
+      "lodgingAction": "退房並寄放行李",
+      "cityId": "madrid"
+    },
+    "b25d16feb656": {
+      "lodgingAction": "返回飯店休息",
+      "cityId": "madrid"
+    },
+    "61bfebdfa263": {
+      "lodgingAction": "領回寄放行李",
+      "cityId": "madrid"
+    },
+    "d042676c0e85": {
+      "lodgingAction": "返回飯店休息",
+      "cityId": "sevilla"
+    },
+    "b996636e0765": {
+      "lodgingAction": "辦理入住、放行李與休息",
+      "cityId": "sevilla"
+    },
+    "aa05f20049ef": {
+      "lodgingAction": "返回飯店休息",
+      "cityId": "sevilla"
+    },
+    "77b3eca90f2e": {
+      "lodgingAction": "返回飯店休息",
+      "cityId": "sevilla"
+    },
+    "d3b034723c04": {
+      "lodgingAction": "退房、清點行李",
+      "cityId": "sevilla"
+    },
+    "83b9ea92e5a0": {
+      "lodgingAction": "返回飯店休息",
+      "cityId": "granada"
+    },
+    "88f230fa4543": {
+      "lodgingAction": "寄放行李",
+      "cityId": "granada"
+    },
+    "8c8f74304c98": {
+      "lodgingAction": "返回飯店休息",
+      "cityId": "granada"
+    },
+    "80a3cd7c88ee": {
+      "lodgingAction": "辦理入住、放行李與休息",
+      "cityId": "granada"
+    },
+    "27ee5b70d313": {
+      "lodgingAction": "返回飯店休息",
+      "cityId": "granada"
+    },
+    "e88e0422f2b6": {
+      "lodgingAction": "退房、清點行李",
+      "cityId": "granada"
+    },
+    "7de0b30bce2b": {
+      "lodgingAction": "返回飯店休息",
+      "cityId": "barcelona"
+    },
+    "7e3a31eba804": {
+      "lodgingAction": "先放行李、入住或寄物",
+      "cityId": "barcelona"
+    },
+    "d29-return-hotel": {
+      "lodgingAction": "返回飯店休息",
+      "cityId": "barcelona"
+    },
+    "d30-pack-before-breakfast": {
+      "lodgingAction": "出門前帶齊全天用品",
+      "cityId": "barcelona"
+    },
+    "982f1d8b08f3": {
+      "lodgingAction": "返回飯店休息",
+      "cityId": "barcelona"
+    },
+    "62b4e0c0daf4": {
+      "lodgingAction": "返回飯店休息",
+      "cityId": "barcelona"
+    },
+    "321a8200609f": {
+      "lodgingAction": "休息與整理用品",
+      "cityId": "barcelona"
+    },
+    "21aece7eb70b": {
+      "lodgingAction": "返回飯店休息",
+      "cityId": "barcelona"
+    },
+    "fbc21d49dcc9": {
+      "lodgingAction": "休息與整理用品",
+      "cityId": "barcelona"
+    },
+    "cf894e4e7cea": {
+      "lodgingAction": "返回飯店休息",
+      "cityId": "barcelona"
+    },
+    "b7855d7b8307": {
+      "lodgingAction": "休息與整理用品",
+      "cityId": "barcelona"
+    },
+    "16838d30a4ce": {
+      "lodgingAction": "返回飯店休息",
+      "cityId": "barcelona"
+    },
+    "27a03d586431": {
+      "lodgingAction": "返回飯店休息",
+      "cityId": "barcelona"
+    },
+    "cafe085d0db5": {
+      "lodgingAction": "退房、清點行李",
+      "cityId": "barcelona"
+    }
+  },
+  "optionalDetails": {
+    "99 Cheesecake | Sevilla": {
+      "venue": {
+        "cityId": "sevilla",
+        "nameZh": "起司蛋糕店",
+        "nameEn": "99 Cheesecake | Sevilla"
+      },
+      "displayTitle": "起司蛋糕店（99 Cheesecake | Sevilla）"
+    },
+    "Sexitana Ultramarinos": {
+      "venue": {
+        "cityId": "granada",
+        "nameZh": "起司與食品店",
+        "nameEn": "Sexitana Ultramarinos"
+      },
+      "displayTitle": "起司與食品店（Sexitana Ultramarinos）"
+    }
+  },
+  "reservation": {
+    "id": "REGLOP",
+    "title": "El Glop Plaça Catalunya｜晚餐",
+    "date": "2026-12-29",
+    "time": "20:00",
+    "report": "19:45 到店目標",
+    "status": "已訂位 · 使用者確認",
+    "statusKind": "confirmed",
+    "note": "20:00 已訂位，使用者於 10/19 確認；尚未提供確認信，訂位人數與姓名請依訂位紀錄。",
+    "files": [],
+    "url": ""
+  }
+}
