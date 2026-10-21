@@ -1,0 +1,1641 @@
+{
+  "version": "2026-10-21-v1",
+  "days": [
+    {
+      "date": "2026-12-29",
+      "addOptionalStops": [
+        {
+          "id": "d29-paradiso-fallback",
+          "title": "天堂酒吧・元旦未營業時的備案（Paradiso）",
+          "displayTitle": "天堂酒吧・元旦未營業時的備案（Paradiso）",
+          "description": "出發前先確認1/1是否營業；元旦有營業就在7 Portes晚餐後前往，否則可提前改12/29或12/30擇一。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Paradiso+cocktail+bar+Barcelona",
+          "mustTry": [
+            "可詢問當季調酒及無酒精選項；品項依店家當日酒單。"
+          ],
+          "note": "這是1/1未營業時的提前備案，三天擇一，不代表三晚都去。若選本日，依當天晚餐、採買及次日安排調整，返宿時間順延。",
+          "venue": {
+            "cityId": "barcelona",
+            "nameZh": "天堂酒吧・元旦未營業時的備案",
+            "nameEn": "Paradiso"
+          },
+          "openingHours": "當日營業待確認",
+          "afterEventId": "d29-carrefour",
+          "visitGroup": "paradiso-once",
+          "conditional": true
+        }
+      ]
+    },
+    {
+      "date": "2026-12-30",
+      "addOptionalStops": [
+        {
+          "id": "d30-paradiso-fallback",
+          "title": "天堂酒吧・元旦未營業時的備案（Paradiso）",
+          "displayTitle": "天堂酒吧・元旦未營業時的備案（Paradiso）",
+          "description": "出發前先確認1/1是否營業；元旦有營業就在7 Portes晚餐後前往，否則可提前改12/29或12/30擇一。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Paradiso+cocktail+bar+Barcelona",
+          "mustTry": [
+            "可詢問當季調酒及無酒精選項；品項依店家當日酒單。"
+          ],
+          "note": "這是1/1未營業時的提前備案，三天擇一，不代表三晚都去。若選本日，依當天晚餐、採買及次日安排調整，返宿時間順延。",
+          "venue": {
+            "cityId": "barcelona",
+            "nameZh": "天堂酒吧・元旦未營業時的備案",
+            "nameEn": "Paradiso"
+          },
+          "openingHours": "當日營業待確認",
+          "afterEventId": "d30-vinitus-dinner",
+          "visitGroup": "paradiso-once",
+          "conditional": true
+        }
+      ]
+    },
+    {
+      "date": "2026-12-31",
+      "title": "奎爾、文森、沿路加吃與彈性跨年晚餐",
+      "events": [
+        {
+          "id": "e3a2535b5ff6",
+          "date": "2026-12-31",
+          "start": "2026-12-31T07:30:00+01:00",
+          "end": "2026-12-31T08:00:00+01:00",
+          "category": "早餐",
+          "title": "公寓吃近處已開或前晚早餐",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "displayTitle": "公寓吃近處已開或前晚早餐",
+          "activity": {
+            "description": "用餐並補充熱飲；若店家未開，使用前晚準備的早餐，保留接車與景點報到時間。",
+            "tips": [],
+            "mustTry": [
+              "目前未確認本店固定必點品項，依當日菜單現場選擇。"
+            ]
+          }
+        },
+        {
+          "id": "f092ac525e97",
+          "date": "2026-12-31",
+          "start": "2026-12-31T08:00:00+01:00",
+          "end": "2026-12-31T08:15:00+01:00",
+          "category": "準備",
+          "title": "行前準備／整理用品",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "displayTitle": "保暖身分證件與12顆葡萄",
+          "activity": {
+            "description": "核對翌日票券、航班報到與接車資訊，整理隨身物品和大件行李，並將所需資料存離線。",
+            "tips": []
+          }
+        },
+        {
+          "id": "565e7fe66b11",
+          "date": "2026-12-31",
+          "start": "2026-12-31T08:15:00+01:00",
+          "end": "2026-12-31T09:00:00+01:00",
+          "category": "交通",
+          "title": "大車往奎爾公園",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E5%A5%8E%E7%88%BE%E5%85%AC%E5%9C%92+Park+G%C3%BCell+%E4%B8%8A%E6%96%B9+Carretera+del+Carmel+%E5%85%A5%E5%9C%92%EF%BC%9B%E4%B8%8B%E6%96%B9+Carrer+d%E2%80%99Olot+%E5%87%BA%E5%9C%92+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "displayTitle": "大車往奎爾公園",
+          "activity": {
+            "description": "從上一站前往奎爾公園 Park Güell。先核對接車點、交通方式與行李安排，再開啟導航；表列時間包含規劃緩衝。",
+            "tips": []
+          }
+        },
+        {
+          "id": "23eb044abd03",
+          "date": "2026-12-31",
+          "start": "2026-12-31T09:00:00+01:00",
+          "end": "2026-12-31T09:30:00+01:00",
+          "category": "報到",
+          "title": "驗票與戶外準備",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E5%A5%8E%E7%88%BE%E5%85%AC%E5%9C%92+Park+G%C3%BCell+%E4%B8%8A%E6%96%B9+Carretera+del+Carmel+%E5%85%A5%E5%9C%92%EF%BC%9B%E4%B8%8B%E6%96%B9+Carrer+d%E2%80%99Olot+%E5%87%BA%E5%9C%92+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "displayTitle": "驗票與戶外準備",
+          "activity": {
+            "description": "到入口或車站後，先確認安檢、驗票及排隊位置。這段是報到緩衝，下一段票面入場或發車時間優先。",
+            "tips": []
+          }
+        },
+        {
+          "id": "918f767ec847",
+          "date": "2026-12-31",
+          "start": "2026-12-31T09:30:00+01:00",
+          "end": "2026-12-31T11:15:00+01:00",
+          "category": "必看",
+          "title": "已購奎爾公園09:30",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E5%A5%8E%E7%88%BE%E5%85%AC%E5%9C%92+Park+G%C3%BCell+%E4%B8%8A%E6%96%B9+Carretera+del+Carmel+%E5%85%A5%E5%9C%92%EF%BC%9B%E4%B8%8B%E6%96%B9+Carrer+d%E2%80%99Olot+%E5%87%BA%E5%9C%92+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "displayTitle": "奎爾公園（Park Güell）",
+          "activity": {
+            "description": "奎爾公園把自然地形、排水結構與碎瓷馬賽克變成公共空間。從上方入口進入再下行，可減少爬坡，並把公園與文森之家銜接成一個上午。",
+            "highlights": [
+              "自然廣場與蛇形長椅；百柱廳；龍階梯與入口亭外觀。"
+            ],
+            "tips": [
+              "已購2026/12/31 09:30四人一般票K13；08:15出發、09:00到入口為規劃緩衝。票准最遲10:00入場，仍守09:30；不可離場重入、不含Gaudí House Museum。11:15由下方出口離園、11:45到文森之家。"
+            ],
+            "photoTip": "先拍長椅與城市，再由下方拍龍階梯；不要跨進受保護區。"
+          },
+          "venue": {
+            "cityId": "barcelona",
+            "nameZh": "奎爾公園",
+            "nameEn": "Park Güell"
+          },
+          "cityId": "barcelona"
+        },
+        {
+          "id": "054728ec3ad3",
+          "date": "2026-12-31",
+          "start": "2026-12-31T11:15:00+01:00",
+          "end": "2026-12-31T11:45:00+01:00",
+          "category": "交通",
+          "title": "下坡往文森之家",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E6%96%87%E6%A3%AE%E4%B9%8B%E5%AE%B6+Casa+Vicens+Carrer+de+les+Carolines+20%E2%80%9326+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "displayTitle": "下坡往文森之家",
+          "activity": {
+            "description": "從上一站前往下坡往文森之家。先核對接車點、交通方式與行李安排，再開啟導航；表列時間包含規劃緩衝。",
+            "tips": []
+          }
+        },
+        {
+          "id": "8b8682058201",
+          "date": "2026-12-31",
+          "start": "2026-12-31T11:45:00+01:00",
+          "end": "2026-12-31T12:00:00+01:00",
+          "category": "報到",
+          "title": "文森之家驗票",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E6%96%87%E6%A3%AE%E4%B9%8B%E5%AE%B6+Casa+Vicens+Carrer+de+les+Carolines+20%E2%80%9326+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "displayTitle": "文森之家驗票",
+          "activity": {
+            "description": "到入口或車站後，先確認安檢、驗票及排隊位置。這段是報到緩衝，下一段票面入場或發車時間優先。",
+            "tips": []
+          }
+        },
+        {
+          "id": "faaaedf3569b",
+          "date": "2026-12-31",
+          "start": "2026-12-31T12:00:00+01:00",
+          "end": "2026-12-31T13:00:00+01:00",
+          "category": "必看",
+          "title": "已購文森之家12:00",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E6%96%87%E6%A3%AE%E4%B9%8B%E5%AE%B6+Casa+Vicens+Carrer+de+les+Carolines+20%E2%80%9326+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "displayTitle": "文森之家（Casa Vicens）",
+          "activity": {
+            "description": "文森之家是高第早期住宅作品，帶有鮮明的幾何瓷磚、植物圖案與東方風格裝飾。先看過巴特婁與聖家堂，再回看這裡，能理解高第語言如何形成。",
+            "highlights": [
+              "花草圖案瓷磚；主樓層；吸煙室的幾何裝飾；開放露臺依現場。"
+            ],
+            "tips": [
+              "已購2026/12/31 12:00四人普通成人票K14；11:15公園離園、下坡步行約25–30分鐘、11:45到場為規劃緩衝。票券未載語音、退改或遲到條款，不推定包含；此票已有時段，無須因舊營業待確認文字移至1/2。"
+            ],
+            "photoTip": "外牆瓷磚細節與室內天花；依館方規則攝影。"
+          },
+          "venue": {
+            "cityId": "barcelona",
+            "nameZh": "文森之家",
+            "nameEn": "Casa Vicens"
+          },
+          "cityId": "barcelona"
+        },
+        {
+          "id": "fa0321a7e5e6",
+          "date": "2026-12-31",
+          "start": "2026-12-31T13:00:00+01:00",
+          "end": "2026-12-31T13:15:00+01:00",
+          "category": "交通",
+          "title": "往Gràcia午餐",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Bodega+Quimet+Gr%C3%A0cia+Carrer+de+Vic+23+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "displayTitle": "往Gràcia午餐",
+          "activity": {
+            "description": "從上一站前往往Gràcia午餐。先核對接車點、交通方式與行李安排，再開啟導航；表列時間包含規劃緩衝。",
+            "tips": []
+          }
+        },
+        {
+          "id": "02a9956e2777",
+          "date": "2026-12-31",
+          "start": "2026-12-31T13:15:00+01:00",
+          "end": "2026-12-31T14:15:00+01:00",
+          "category": "午餐",
+          "title": "Bodega Quimet tapas",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Bodega+Quimet+Gr%C3%A0cia+Carrer+de+Vic+23+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "displayTitle": "格拉西亞區塔帕斯酒館（Bodega Quimet Gràcia）｜午餐",
+          "activity": {
+            "description": "Gràcia傳統酒館與小盘",
+            "mustTry": [
+              "罐頭海鮮、火腿起司、tapas"
+            ],
+            "tips": [
+              "Bodega Quimet Gràcia 為原午餐安排；用餐後沿路去 Vermuteria Puigmartí、La Vermuteria del Tano、Puertecillo Sagrada Familia，依營業及食量分食。",
+              "傍晚再回飯店，百貨公司晚餐可略過；保留跨年前暖身休息時間。"
+            ]
+          },
+          "venue": {
+            "cityId": "barcelona",
+            "nameZh": "格拉西亞區塔帕斯酒館",
+            "nameEn": "Bodega Quimet Gràcia"
+          },
+          "cityId": "barcelona",
+          "reminderUpdated": true
+        },
+        {
+          "id": "d31-food-walk",
+          "date": "2026-12-31",
+          "start": "2026-12-31T14:15:00+01:00",
+          "end": "2026-12-31T17:45:00+01:00",
+          "category": "餐飲散步",
+          "title": "格拉西亞區到聖家堂｜沿路分食三間店",
+          "displayTitle": "格拉西亞區到聖家堂｜沿路分食三間店",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "",
+          "infoUrl": "",
+          "conditional": true,
+          "status": "沿路加吃・依營業與食量調整",
+          "statusKind": "conditional",
+          "activity": {
+            "description": "午餐後依序順路走訪 Vermuteria Puigmartí、La Vermuteria del Tano、Puertecillo Sagrada Familia。這段保留整體散步與分食彈性，各店不指定到訪時間，依開門、候位與食量調整。",
+            "tips": [
+              "三間都列在午餐後的淡字備選清單，可縮短或略過個別店，不要求三間都吃完整一餐。",
+              "先確認12/31各店實際營業，再選擇步行或搭車銜接。"
+            ]
+          }
+        },
+        {
+          "id": "d31-evening-return",
+          "date": "2026-12-31",
+          "start": "2026-12-31T17:45:00+01:00",
+          "end": "2026-12-31T18:30:00+01:00",
+          "category": "交通",
+          "title": "住宿｜傍晚返回飯店",
+          "displayTitle": "住宿｜傍晚返回飯店",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "activity": {
+            "description": "沿路加吃後傍晚返回住宿，預留保暖與休息時間；實際返宿可依吃店進度調整。",
+            "tips": []
+          },
+          "lodgingAction": "傍晚返回飯店",
+          "cityId": "barcelona"
+        },
+        {
+          "id": "d31-warm-rest",
+          "date": "2026-12-31",
+          "start": "2026-12-31T18:30:00+01:00",
+          "end": "2026-12-31T19:00:00+01:00",
+          "category": "休息",
+          "title": "住宿｜暖身與跨年用品",
+          "displayTitle": "住宿｜暖身與跨年用品",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "activity": {
+            "description": "回房暖身、休息，帶好跨年所需用品並確認2026年當晚活動公告與管制。",
+            "tips": []
+          },
+          "lodgingAction": "暖身、休息與跨年準備",
+          "cityId": "barcelona"
+        },
+        {
+          "id": "d31-flex-dinner",
+          "date": "2026-12-31",
+          "start": "2026-12-31T19:00:00+01:00",
+          "end": "2026-12-31T20:15:00+01:00",
+          "category": "晚餐",
+          "title": "住宿旁百貨（Arenas de Barcelona）｜隨意晚餐、可略過",
+          "displayTitle": "住宿旁百貨（Arenas de Barcelona）｜隨意晚餐、可略過",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Arenas+de+Barcelona+Barcelona",
+          "infoUrl": "",
+          "conditional": true,
+          "status": "不一定要吃・未指定餐廳",
+          "statusKind": "conditional",
+          "activity": {
+            "description": "晚上可去住宿旁百貨公司隨意吃，依現場店家與食量選擇；下午吃得飽就略過晚餐。",
+            "tips": [
+              "跨年夜百貨與餐廳營業、是否有套餐依當日公告；沒有安排餐廳訂位。",
+              "不餓可直接休息，之後從住宿出發往跨年活動區。"
+            ],
+            "mustTry": [
+              "依當日有營業的店家與食量選擇小餐或飲品。"
+            ]
+          },
+          "venue": {
+            "cityId": "barcelona",
+            "nameZh": "住宿旁百貨・晚餐可略過",
+            "nameEn": "Arenas de Barcelona"
+          },
+          "cityId": "barcelona"
+        },
+        {
+          "id": "232b8f423962",
+          "date": "2026-12-31",
+          "start": "2026-12-31T20:15:00+01:00",
+          "end": "2026-12-31T21:15:00+01:00",
+          "category": "交通",
+          "title": "步行至活動區",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E8%B7%A8%E5%B9%B4%E9%A0%90%E6%A1%88+Reina+Maria+Cristina+Avinguda+de+la+Reina+Maria+Cristina%EF%BC%9B%E7%95%B6%E5%B1%86%E5%A0%B4%E5%9C%B0%E5%BE%85%E5%85%AC%E5%91%8A+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "displayTitle": "步行至活動區",
+          "activity": {
+            "description": "從百貨或住宿出發前往當晚跨年活動區；正式位置與管制以2026年公告為準，原歷年場地保留為規劃預案。",
+            "tips": []
+          },
+          "reminderUpdated": true
+        },
+        {
+          "id": "2ea9b8e1d4c9",
+          "date": "2026-12-31",
+          "start": "2026-12-31T21:15:00+01:00",
+          "end": "2027-01-01T00:15:00+01:00",
+          "category": "跨年",
+          "title": "歷年場地預案與葡萄",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E8%B7%A8%E5%B9%B4%E9%A0%90%E6%A1%88+Reina+Maria+Cristina+Avinguda+de+la+Reina+Maria+Cristina%EF%BC%9B%E7%95%B6%E5%B1%86%E5%A0%B4%E5%9C%B0%E5%BE%85%E5%85%AC%E5%91%8A+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "displayTitle": "西班牙廣場跨年・歷年場地預案（Plaça d’Espanya）",
+          "activity": {
+            "description": "這一站安排歷年場地預案與葡萄。依現場開放與動線參觀，留意下一段固定報到或交通時間。",
+            "tips": []
+          },
+          "venue": {
+            "cityId": "barcelona",
+            "nameZh": "西班牙廣場跨年・歷年場地預案",
+            "nameEn": "Plaça d’Espanya"
+          },
+          "cityId": "barcelona"
+        }
+      ],
+      "optionalStops": [
+        {
+          "id": "d31-puigmarti",
+          "title": "貝爾慕酒小館（Vermuteria Puigmartí）",
+          "displayTitle": "貝爾慕酒小館（Vermuteria Puigmartí）",
+          "description": "午餐後沿路加吃第1站；依食量分食，不另排固定時間。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Vermuteria+Puigmart%C3%AD+Barcelona",
+          "mustTry": [
+            "可詢問 vermut（貝爾慕酒）與當日小食；菜單供應待確認。"
+          ],
+          "note": "依序 Puigmartí → del Tano → Puertecillo；12/31開門時間待確認。",
+          "venue": {
+            "cityId": "barcelona",
+            "nameZh": "貝爾慕酒小館",
+            "nameEn": "Vermuteria Puigmartí"
+          },
+          "openingHours": "當日營業待確認",
+          "afterEventId": "02a9956e2777"
+        },
+        {
+          "id": "d31-tano",
+          "title": "貝爾慕酒小館（La Vermuteria del Tano）",
+          "displayTitle": "貝爾慕酒小館（La Vermuteria del Tano）",
+          "description": "午餐後沿路加吃第2站；可少量分食，與其他酒館依體力調整。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=La+Vermuteria+del+Tano+Barcelona",
+          "mustTry": [
+            "可詢問 vermut 與當日小食，品項依現場。"
+          ],
+          "note": "接在 Vermuteria Puigmartí 後，接著視食量前往 Puertecillo。",
+          "venue": {
+            "cityId": "barcelona",
+            "nameZh": "貝爾慕酒小館",
+            "nameEn": "La Vermuteria del Tano"
+          },
+          "openingHours": "當日營業待確認",
+          "afterEventId": "02a9956e2777"
+        },
+        {
+          "id": "d31-puertecillo",
+          "title": "聖家堂海鮮餐廳（Puertecillo Sagrada Familia）",
+          "displayTitle": "聖家堂海鮮餐廳（Puertecillo Sagrada Familia）",
+          "description": "午餐後沿路加吃第3站；想吃海鮮時再進店，不當作另一頓完整正餐。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Puertecillo+Sagrada+Familia+Barcelona",
+          "mustTry": [
+            "海鮮依當日供應、料理方式與份量詢問後分食。"
+          ],
+          "note": "先核對聖家堂分店與12/31是否供餐；可依前兩站食量略過，傍晚再返宿。",
+          "venue": {
+            "cityId": "barcelona",
+            "nameZh": "聖家堂海鮮餐廳",
+            "nameEn": "Puertecillo Sagrada Familia"
+          },
+          "openingHours": "當日營業待確認",
+          "afterEventId": "02a9956e2777"
+        }
+      ]
+    },
+    {
+      "date": "2027-01-01",
+      "title": "麵包與甜點、米拉、午餐擇一、海邊與七扇門",
+      "events": [
+        {
+          "id": "21aece7eb70b",
+          "date": "2027-01-01",
+          "start": "2027-01-01T00:15:00+01:00",
+          "end": "2027-01-01T00:50:00+01:00",
+          "category": "交通",
+          "title": "散場步行回公寓",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "displayTitle": "散場步行回公寓",
+          "activity": {
+            "description": "從上一站前往住宿。先核對接車點、交通方式與行李安排，再開啟導航；表列時間包含規劃緩衝。",
+            "tips": []
+          },
+          "lodgingAction": "返回飯店休息",
+          "cityId": "barcelona"
+        },
+        {
+          "id": "fbc21d49dcc9",
+          "date": "2027-01-01",
+          "start": "2027-01-01T09:00:00+01:00",
+          "end": "2027-01-01T09:20:00+01:00",
+          "category": "休息",
+          "title": "起床喝水",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "displayTitle": "起床喝水",
+          "activity": {
+            "description": "保留暖身、休息與整理用品的時間；先處理翌日早餐，依當日體力調整免費散步。",
+            "tips": []
+          },
+          "lodgingAction": "休息與整理用品",
+          "cityId": "barcelona"
+        },
+        {
+          "id": "d01-to-forn",
+          "date": "2027-01-01",
+          "start": "2027-01-01T09:20:00+01:00",
+          "end": "2027-01-01T09:40:00+01:00",
+          "category": "交通",
+          "title": "前往早餐麵包店（Forn la Rambla 31）",
+          "displayTitle": "前往早餐麵包店（Forn la Rambla 31）",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Forn+la+Rambla+31+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "activity": {
+            "description": "早餐改到 Forn la Rambla 31；先確認元旦開門，若未開以住宿備用早餐銜接。",
+            "tips": []
+          }
+        },
+        {
+          "id": "d01-forn-breakfast",
+          "date": "2027-01-01",
+          "start": "2027-01-01T09:40:00+01:00",
+          "end": "2027-01-01T10:10:00+01:00",
+          "category": "早餐",
+          "title": "蘭布拉31號麵包店（Forn la Rambla 31）｜早餐",
+          "displayTitle": "蘭布拉31號麵包店（Forn la Rambla 31）｜早餐",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Forn+la+Rambla+31+Barcelona",
+          "infoUrl": "",
+          "conditional": true,
+          "status": "早餐候選・元旦營業待確認",
+          "statusKind": "conditional",
+          "activity": {
+            "description": "元旦早餐候選改為 Forn la Rambla 31。原早餐店已永久歇業（使用者提供），不再列為選項。",
+            "tips": [
+              "元旦是否營業待確認；未開時用備用早餐，保留11:00米拉之家報到。"
+            ],
+            "mustTry": [
+              "依當日出爐選麵包、糕點與咖啡；未指定固定必點。"
+            ]
+          },
+          "venue": {
+            "cityId": "barcelona",
+            "nameZh": "蘭布拉31號麵包店",
+            "nameEn": "Forn la Rambla 31"
+          },
+          "cityId": "barcelona"
+        },
+        {
+          "id": "d01-to-mila",
+          "date": "2027-01-01",
+          "start": "2027-01-01T10:10:00+01:00",
+          "end": "2027-01-01T11:00:00+01:00",
+          "category": "交通",
+          "title": "前往米拉之家｜途中可順訪 Mauri",
+          "displayTitle": "前往米拉之家｜途中可順訪 Mauri",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Casa+Mil%C3%A0+La+Pedrera+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "activity": {
+            "description": "早餐後前往米拉之家；Mauri 為參觀前的甜點備選，只有營業且時間充足才停留，11:00仍須到票券入口報到。",
+            "tips": []
+          }
+        },
+        {
+          "id": "593680afdf45",
+          "date": "2027-01-01",
+          "start": "2027-01-01T11:00:00+01:00",
+          "end": "2027-01-01T11:30:00+01:00",
+          "category": "報到",
+          "title": "安檢候入",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=La+Pedrera+Carrer+de+Proven%C3%A7a+265+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "displayTitle": "安檢候入",
+          "activity": {
+            "description": "到入口或車站後，先確認安檢、驗票及排隊位置。這段是報到緩衝，下一段票面入場或發車時間優先。",
+            "tips": []
+          }
+        },
+        {
+          "id": "166eff210f86",
+          "date": "2027-01-01",
+          "start": "2027-01-01T11:30:00+01:00",
+          "end": "2027-01-01T13:15:00+01:00",
+          "category": "必看",
+          "title": "已購米拉之家11:30",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=La+Pedrera+Carrer+de+Proven%C3%A7a+265+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "displayTitle": "米拉之家（Casa Milà / La Pedrera）",
+          "activity": {
+            "description": "米拉之家把起伏的石造外牆與自由平面推向成熟階段，公寓、閣樓及屋頂使參觀更接近日常生活與建築結構。元旦官網晚開門，排 11:30 正好容納跨年後晚起。",
+            "highlights": [
+              "住居公寓；閣樓結構；屋頂煙囪與曲面；庭院採光。"
+            ],
+            "tips": [
+              "已購2027/1/1 11:30四人La Pedrera Essential 既有票券，票券含免費語音、未載選定語言；11:00到Carrer de Provença 265入口為規劃緩衝。最遲11:45入場，仍守11:30；Flexible Ticket非任意遲到。雨天屋頂關閉不退款，未開始參觀可依票載規定改期。"
+            ],
+            "photoTip": "庭院仰視與屋頂煙囪；屋頂不跨欄拍照。"
+          },
+          "venue": {
+            "cityId": "barcelona",
+            "nameZh": "米拉之家",
+            "nameEn": "Casa Milà / La Pedrera"
+          },
+          "cityId": "barcelona"
+        },
+        {
+          "id": "d01-lunch-transfer",
+          "date": "2027-01-01",
+          "start": "2027-01-01T13:15:00+01:00",
+          "end": "2027-01-01T13:45:00+01:00",
+          "category": "交通",
+          "title": "前往已選午餐店｜Margherita／El Furacu",
+          "displayTitle": "前往已選午餐店｜Margherita／El Furacu",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "activity": {
+            "description": "米拉之家參觀後，依選定店家前往午餐；Margherita訂位13:45、El Furacu訂位14:00，兩間擇一，不連吃兩份已訂正餐。",
+            "tips": []
+          }
+        },
+        {
+          "id": "d01-lunch-options",
+          "date": "2027-01-01",
+          "start": "2027-01-01T13:45:00+01:00",
+          "end": "2027-01-01T15:15:00+01:00",
+          "category": "午餐",
+          "title": "元旦午餐擇一｜Margherita 13:45／El Furacu 14:00",
+          "displayTitle": "元旦午餐擇一｜Margherita 13:45／El Furacu 14:00",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "2間已訂位・午餐擇一",
+          "statusKind": "confirmed",
+          "activity": {
+            "description": "兩間都已訂位，當天擇一：Margherita 13:45、El Furacu Restaurant 14:00。15:15用餐結束為規劃估計，依選定餐廳調整。",
+            "tips": [
+              "兩筆訂位只差15分鐘，不能視為依序吃完兩間。選定後記得依條款取消／調整未使用訂位。",
+              "Sartoria Panatieri是另列的披薩候選或加吃，尚未訂位；多吃一間要縮短下午散步，保留18:30晚餐。"
+            ],
+            "mustTry": [
+              "依選定餐廳當日菜單點餐；這兩間目前沒有使用者指定的必點菜。"
+            ]
+          },
+          "mealOptions": [
+            {
+              "id": "RMARGHERITA",
+              "title": "午餐候選・13:45已訂位（Margherita）",
+              "start": "2027-01-01T13:45:00+01:00",
+              "displayTime": "13:45 訂位・兩間擇一",
+              "category": "午餐候選・擇一",
+              "venue": {
+                "cityId": "barcelona",
+                "nameZh": "午餐候選・13:45已訂位",
+                "nameEn": "Margherita"
+              },
+              "reservation": {
+                "id": "RMARGHERITA",
+                "title": "餐廳（Margherita）｜元旦午餐候選",
+                "date": "2027-01-01",
+                "time": "13:45",
+                "report": "依選定店家提早到店",
+                "status": "已訂位 · 使用者確認",
+                "statusKind": "confirmed",
+                "note": "使用者確認已訂位13:45；與14:00 El Furacu擇一，尚未提供確認信。兩間不是可接續的兩餐，選定後依訂位條款處理未使用的一筆。",
+                "files": [],
+                "url": ""
+              },
+              "status": "已訂位・午餐擇一",
+              "statusKind": "confirmed",
+              "mapUrl": "https://www.google.com/maps/search/?api=1&query=Margherita+Barcelona",
+              "activity": {
+                "description": "13:45 已訂位（使用者確認）；與另一間午餐候選擇一。",
+                "mustTry": [
+                  "未指定必點菜，依當日菜單與食量選擇。"
+                ],
+                "tips": [
+                  "確認訂位分店、姓名、人數與取消條款。"
+                ]
+              }
+            },
+            {
+              "id": "RFURACU",
+              "title": "午餐候選・14:00已訂位（El Furacu Restaurant）",
+              "start": "2027-01-01T14:00:00+01:00",
+              "displayTime": "14:00 訂位・兩間擇一",
+              "category": "午餐候選・擇一",
+              "venue": {
+                "cityId": "barcelona",
+                "nameZh": "午餐候選・14:00已訂位",
+                "nameEn": "El Furacu Restaurant"
+              },
+              "reservation": {
+                "id": "RFURACU",
+                "title": "餐廳（El Furacu Restaurant）｜元旦午餐候選",
+                "date": "2027-01-01",
+                "time": "14:00",
+                "report": "依選定店家提早到店",
+                "status": "已訂位 · 使用者確認",
+                "statusKind": "confirmed",
+                "note": "使用者確認已訂位14:00；與13:45 Margherita擇一，尚未提供確認信。兩間不是可接續的兩餐，選定後依訂位條款處理未使用的一筆。",
+                "files": [],
+                "url": ""
+              },
+              "status": "已訂位・午餐擇一",
+              "statusKind": "confirmed",
+              "mapUrl": "https://www.google.com/maps/search/?api=1&query=El+Furacu+Restaurant+Barcelona",
+              "activity": {
+                "description": "14:00 已訂位（使用者確認）；與另一間午餐候選擇一。",
+                "mustTry": [
+                  "未指定必點菜，依當日菜單與食量選擇。"
+                ],
+                "tips": [
+                  "確認訂位分店、姓名、人數與取消條款。"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": "d01-to-waterfront",
+          "date": "2027-01-01",
+          "start": "2027-01-01T15:15:00+01:00",
+          "end": "2027-01-01T16:00:00+01:00",
+          "category": "交通",
+          "title": "午餐後前往舊港與海邊",
+          "displayTitle": "午餐後前往舊港與海邊",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Port+Vell+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "activity": {
+            "description": "午餐後前往舊港、海邊閒逛；若加吃披薩而延後，就縮短散步，保留18:30七扇門餐廳訂位。",
+            "tips": []
+          }
+        },
+        {
+          "id": "097bd02df3ad",
+          "date": "2027-01-01",
+          "start": "2027-01-01T16:00:00+01:00",
+          "end": "2027-01-01T16:35:00+01:00",
+          "category": "必逛",
+          "title": "Port Vell港邊",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Port+Vell+%E8%88%8A%E6%B8%AF+Moll+de+la+Fusta+%E6%9C%A8%E6%A3%A7%E9%81%93%E4%B8%80%E5%B8%B6+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "displayTitle": "舊港（Port Vell）",
+          "activity": {
+            "description": "Port Vell 是巴塞隆納舊港，以棧道、船隻與海面把舊城連接到海邊。元旦午餐後順路散步，不安排需另排隊的水族館或購物商場。",
+            "highlights": [
+              "Moll de la Fusta；港口船隻；通往海邊的城市視角。"
+            ],
+            "tips": [
+              "戶外免費。用短散步消化午餐，天氣差就提前回飯店。"
+            ],
+            "photoTip": "港面與建築倒影；注意海風。"
+          },
+          "venue": {
+            "cityId": "barcelona",
+            "nameZh": "舊港",
+            "nameEn": "Port Vell"
+          },
+          "cityId": "barcelona"
+        },
+        {
+          "id": "c3cc0ab27a17",
+          "date": "2027-01-01",
+          "start": "2027-01-01T16:35:00+01:00",
+          "end": "2027-01-01T17:45:00+01:00",
+          "category": "必逛",
+          "title": "Barceloneta海邊夕照",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Barceloneta+%E6%B5%B7%E6%BF%B1+Passeig+Mar%C3%ADtim+de+la+Barceloneta+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "displayTitle": "巴塞羅內塔海灘（Platja de la Barceloneta）",
+          "activity": {
+            "description": "Barceloneta 原有漁民街區的背景與海灘相鄰，冬天的海風和開闊視野是這一趟都市旅程的調劑。只安排短段海濱，避免冷天走到太遠。",
+            "highlights": [
+              "沙灘邊外觀；海濱步道；老街區轉角。"
+            ],
+            "tips": [
+              "冬季海邊可依風勢與體力縮短；17:45左右離開，接著前往7 Portes，18:15到店、18:30訂位。"
+            ],
+            "photoTip": "海灘取低地平線與冬季光線；強風不用腳架。"
+          },
+          "venue": {
+            "cityId": "barcelona",
+            "nameZh": "巴塞羅內塔海灘",
+            "nameEn": "Platja de la Barceloneta"
+          },
+          "cityId": "barcelona",
+          "reminderUpdated": true
+        },
+        {
+          "id": "d01-to-7portes",
+          "date": "2027-01-01",
+          "start": "2027-01-01T17:45:00+01:00",
+          "end": "2027-01-01T18:15:00+01:00",
+          "category": "交通",
+          "title": "海邊散步後前往七扇門餐廳（7 Portes）",
+          "displayTitle": "海邊散步後前往七扇門餐廳（7 Portes）",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=7+Portes+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "activity": {
+            "description": "海邊閒逛後前往7 Portes，18:30已訂位；風大或冷時可提早離開海邊。",
+            "tips": []
+          }
+        },
+        {
+          "id": "d01-7portes-checkin",
+          "date": "2027-01-01",
+          "start": "2027-01-01T18:15:00+01:00",
+          "end": "2027-01-01T18:30:00+01:00",
+          "category": "報到",
+          "title": "七扇門餐廳（7 Portes）｜晚餐訂位報到",
+          "displayTitle": "七扇門餐廳（7 Portes）｜晚餐訂位報到",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=7+Portes+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "activity": {
+            "description": "18:30 已訂位（使用者確認）；18:15到店為規劃報到緩衝。",
+            "tips": []
+          }
+        },
+        {
+          "id": "d01-7portes-dinner",
+          "date": "2027-01-01",
+          "start": "2027-01-01T18:30:00+01:00",
+          "end": "2027-01-01T20:15:00+01:00",
+          "category": "晚餐",
+          "title": "七扇門餐廳（7 Portes）｜元旦晚餐",
+          "displayTitle": "七扇門餐廳（7 Portes）｜元旦晚餐",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=7+Portes+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "18:30已訂位・使用者確認",
+          "statusKind": "confirmed",
+          "activity": {
+            "description": "海邊散步後18:30晚餐已訂位；用餐結束20:15為規劃估計。飯後Paradiso有營業再去。",
+            "tips": [
+              "18:30已訂位（使用者確認）；依訂位確認紀錄核對分店、姓名與人數。",
+              "米飯料理份量及等待時間先問店家；飯後酒吧依營業與候位調整。"
+            ],
+            "mustTry": [
+              "arròs Parellada、海鮮飯與蔬菜"
+            ]
+          },
+          "venue": {
+            "cityId": "barcelona",
+            "nameZh": "七扇門餐廳",
+            "nameEn": "7 Portes"
+          },
+          "cityId": "barcelona",
+          "reservation": {
+            "id": "R7PORTES",
+            "title": "七扇門餐廳（7 Portes）｜元旦晚餐",
+            "date": "2027-01-01",
+            "time": "18:30",
+            "report": "依選定店家提早到店",
+            "status": "已訂位 · 使用者確認",
+            "statusKind": "confirmed",
+            "note": "使用者確認1/1 18:30已訂位，改為海邊散步後晚餐；原午餐安排已移除。確認信尚未提供。",
+            "files": [],
+            "url": ""
+          }
+        },
+        {
+          "id": "d01-return-after-dinner",
+          "date": "2027-01-01",
+          "start": "2027-01-01T20:15:00+01:00",
+          "end": "2027-01-01T21:00:00+01:00",
+          "category": "交通",
+          "title": "住宿｜晚餐後返宿或續去酒吧",
+          "displayTitle": "住宿｜晚餐後返宿或續去酒吧",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "",
+          "infoUrl": "",
+          "conditional": true,
+          "status": "未去酒吧時的返宿目標",
+          "statusKind": "conditional",
+          "activity": {
+            "description": "這段為略過Paradiso時的返宿目標；若前往酒吧，實際返宿時間順延，不必為21:00返宿中斷酒吧行程。",
+            "tips": []
+          },
+          "lodgingAction": "晚餐後返宿（若去Paradiso則順延）",
+          "cityId": "barcelona"
+        }
+      ],
+      "optionalStops": [
+        {
+          "id": "d01-mauri",
+          "title": "茂里百年甜點店（Mauri）",
+          "displayTitle": "茂里百年甜點店（Mauri）",
+          "description": "參觀米拉之家之前可先吃甜點，無固定時間；有營業且時間足夠才去。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Mauri+pastisseria+Barcelona",
+          "mustTry": [
+            "可看當日甜點、糕點或巧克力櫃，實際品項依現場供應。"
+          ],
+          "note": "先確認元旦營業；11:00米拉之家報到、11:30票面入場優先，時間不足就略過。",
+          "venue": {
+            "cityId": "barcelona",
+            "nameZh": "茂里百年甜點店",
+            "nameEn": "Mauri"
+          },
+          "openingHours": "當日營業待確認",
+          "beforeEventId": "593680afdf45"
+        },
+        {
+          "id": "d01-sartoria",
+          "title": "披薩候選／加吃（Sartoria Panatieri - Pizzeria Barcelona）",
+          "displayTitle": "披薩候選／加吃（Sartoria Panatieri - Pizzeria Barcelona）",
+          "description": "可取代元旦午餐，或在食量與時間允許時加吃；目前尚未訂位，沒有額外排固定餐次。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Sartoria+Panatieri+Pizzeria+Barcelona+Barcelona",
+          "mustTry": [
+            "披薩（使用者指定）；口味依當日菜單。"
+          ],
+          "note": "使用者筆記：世界第29／全歐第3，榜單年份待核。僅提前一個月開放訂位（使用者提供），12/1開始查1/1位子，精確放位時間待確認。若多吃一間，縮短海邊散步，18:30 7 Portes不變。",
+          "venue": {
+            "cityId": "barcelona",
+            "nameZh": "披薩候選／加吃",
+            "nameEn": "Sartoria Panatieri - Pizzeria Barcelona"
+          },
+          "openingHours": "當日營業待確認",
+          "afterEventId": "d01-lunch-options",
+          "status": "尚未訂位・12/1開始查位",
+          "statusKind": "warning",
+          "reminderId": "sartoria-booking-0101"
+        },
+        {
+          "id": "d01-paradiso",
+          "title": "天堂酒吧・晚餐後（Paradiso）",
+          "displayTitle": "天堂酒吧・晚餐後（Paradiso）",
+          "description": "出發前先確認1/1是否營業；元旦有營業就在7 Portes晚餐後前往，否則可提前改12/29或12/30擇一。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Paradiso+cocktail+bar+Barcelona",
+          "mustTry": [
+            "可詢問當季調酒及無酒精選項；品項依店家當日酒單。"
+          ],
+          "note": "沒有訂位或固定到店時間，視營業與候位調整。若需提前改12/29、12/30，請在出發前確認，避免元旦當天才發現未開。",
+          "venue": {
+            "cityId": "barcelona",
+            "nameZh": "天堂酒吧・晚餐後",
+            "nameEn": "Paradiso"
+          },
+          "openingHours": "當日營業待確認",
+          "afterEventId": "d01-7portes-dinner",
+          "visitGroup": "paradiso-once",
+          "conditional": true
+        }
+      ]
+    },
+    {
+      "date": "2027-01-02",
+      "title": "教堂前早餐備選、博蓋利亞海鮮與奎爾宮",
+      "events": [
+        {
+          "id": "8d1ff7ffdc90",
+          "date": "2027-01-02",
+          "start": "2027-01-02T07:45:00+01:00",
+          "end": "2027-01-02T08:15:00+01:00",
+          "category": "早餐",
+          "title": "住宿輕食備案｜若改 Galisteo 早餐則略過",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "",
+          "infoUrl": "",
+          "conditional": true,
+          "status": "早餐擇一・可略過",
+          "statusKind": "conditional",
+          "displayTitle": "住宿輕食備案｜若改 Galisteo 早餐則略過",
+          "activity": {
+            "description": "出門前可先吃備用輕食；若確定到Restaurant Galisteo吃早餐，這段不用再吃一餐。",
+            "mustTry": [
+              "前晚備好的麵包、糕餅或飲水，依實際採買。"
+            ],
+            "tips": [
+              "Galisteo未排固定時間；若想坐下吃早餐需提早搭FGC，仍保留09:40核票、10:00教堂目標。"
+            ]
+          },
+          "reminderUpdated": true
+        },
+        {
+          "id": "a6f2d720c4d1",
+          "date": "2027-01-02",
+          "start": "2027-01-02T08:15:00+01:00",
+          "end": "2027-01-02T08:30:00+01:00",
+          "category": "準備",
+          "title": "備新教堂票與FGC票（待使用者改訂）",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "displayTitle": "備新教堂票與FGC票（待使用者改訂）",
+          "activity": {
+            "description": "核對翌日票券、航班報到與接車資訊，整理隨身物品和大件行李，並將所需資料存離線。",
+            "tips": []
+          }
+        },
+        {
+          "id": "e8c50bd4e337",
+          "date": "2027-01-02",
+          "start": "2027-01-02T08:30:00+01:00",
+          "end": "2027-01-02T09:00:00+01:00",
+          "category": "交通",
+          "title": "走FGC站換票",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Espanya+%E5%9C%B0%E9%90%B5%E8%88%87+FGC+%E8%BD%89%E4%B9%98+Pla%C3%A7a+d%E2%80%99Espanya%EF%BC%8CFGC+%E5%BE%80+Llobregat%E2%80%93Anoia+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "displayTitle": "走FGC站換票",
+          "activity": {
+            "description": "從上一站前往Espanya 地鐵與 FGC 轉乘。先核對接車點、交通方式與行李安排，再開啟導航；表列時間包含規劃緩衝。",
+            "tips": []
+          }
+        },
+        {
+          "id": "08dd9c17608f",
+          "date": "2027-01-02",
+          "start": "2027-01-02T09:00:00+01:00",
+          "end": "2027-01-02T09:40:00+01:00",
+          "category": "交通",
+          "title": "FGC目標車往Colònia Güell",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Col%C3%B2nia+G%C3%BCell+FGC+%E8%BB%8A%E7%AB%99+Santa+Coloma+de+Cervell%C3%B3%EF%BC%8C2B+%E5%8D%80+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "displayTitle": "FGC目標車往Colònia Güell",
+          "activity": {
+            "description": "從上一站前往Colònia Güell FGC 車站。先核對接車點、交通方式與行李安排，再開啟導航；表列時間包含規劃緩衝。",
+            "tips": []
+          }
+        },
+        {
+          "id": "163a9b2113f7",
+          "date": "2027-01-02",
+          "start": "2027-01-02T09:40:00+01:00",
+          "end": "2027-01-02T10:00:00+01:00",
+          "category": "交通",
+          "title": "到遊客中心核票／語音",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E5%A5%8E%E7%88%BE%E7%B4%A1%E7%B9%94%E6%9D%91%E5%9C%B0%E4%B8%8B%E6%95%99%E5%A0%82+Cripta+Gaud%C3%AD%EF%BC%8CCol%C3%B2nia+G%C3%BCell+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "displayTitle": "到遊客中心核票／語音",
+          "activity": {
+            "description": "從上一站前往奎爾紡織村地下教堂。先核對接車點、交通方式與行李安排，再開啟導航；表列時間包含規劃緩衝。",
+            "tips": []
+          }
+        },
+        {
+          "id": "15285a55f9c1",
+          "date": "2027-01-02",
+          "start": "2027-01-02T10:00:00+01:00",
+          "end": "2027-01-02T11:15:00+01:00",
+          "category": "必看",
+          "title": "地下教堂目標；已訂錯日期待改訂",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E5%A5%8E%E7%88%BE%E7%B4%A1%E7%B9%94%E6%9D%91%E5%9C%B0%E4%B8%8B%E6%95%99%E5%A0%82+Cripta+Gaud%C3%AD%EF%BC%8CCol%C3%B2nia+G%C3%BCell+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "displayTitle": "奎爾紡織村地下教堂・票券待改訂（Cripta de la Colònia Güell）",
+          "activity": {
+            "description": "奎爾紡織村地下教堂是高第實驗結構的重要作品，傾斜柱與不規則窗讓它與城市住宅不同。安排週六上午，下午回城看奎爾宮，完成七處高第主線。",
+            "highlights": [
+              "傾斜石柱；彩色窗；教堂外觀與工人社區街道。"
+            ],
+            "tips": [
+              "Drive已有地下教堂General×4票券K16，原票DATE02/11/2026、HOUR10:00，團€40，含audioguide。使用者於2026/10/14確認訂錯日期，將自行修改訂單；目標仍為2027/1/2 10:00，沿用原計畫，尚未取得新確認信／票券，不能以原票當作1/2有效票。未載FGC往返已含；火車另購。無新TWD付款收據，不加計或重複購票費。 待使用者改訂並提供新確認信／票券後，再依原計畫09:40先到遊客中心、10:00入場。"
+            ],
+            "photoTip": "窗戶與柱子的角度；先看遊客中心村區圖，避免誤入居民私宅。"
+          },
+          "venue": {
+            "cityId": "barcelona",
+            "nameZh": "奎爾紡織村地下教堂・票券待改訂",
+            "nameEn": "Cripta de la Colònia Güell"
+          },
+          "cityId": "barcelona"
+        },
+        {
+          "id": "074779ba75ea",
+          "date": "2027-01-02",
+          "start": "2027-01-02T11:15:00+01:00",
+          "end": "2027-01-02T11:35:00+01:00",
+          "category": "交通",
+          "title": "走回FGC站",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Col%C3%B2nia+G%C3%BCell+FGC+%E8%BB%8A%E7%AB%99+Santa+Coloma+de+Cervell%C3%B3%EF%BC%8C2B+%E5%8D%80+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "displayTitle": "走回FGC站",
+          "activity": {
+            "description": "從上一站前往Colònia Güell FGC 車站。先核對接車點、交通方式與行李安排，再開啟導航；表列時間包含規劃緩衝。",
+            "tips": []
+          }
+        },
+        {
+          "id": "3facb2880063",
+          "date": "2027-01-02",
+          "start": "2027-01-02T11:35:00+01:00",
+          "end": "2027-01-02T12:15:00+01:00",
+          "category": "交通",
+          "title": "FGC回Espanya",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Espanya+%E5%9C%B0%E9%90%B5%E8%88%87+FGC+%E8%BD%89%E4%B9%98+Pla%C3%A7a+d%E2%80%99Espanya%EF%BC%8CFGC+%E5%BE%80+Llobregat%E2%80%93Anoia+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "displayTitle": "FGC回Espanya",
+          "activity": {
+            "description": "從上一站前往Espanya 地鐵與 FGC 轉乘。先核對接車點、交通方式與行李安排，再開啟導航；表列時間包含規劃緩衝。",
+            "tips": []
+          }
+        },
+        {
+          "id": "8cddc06fabf5",
+          "date": "2027-01-02",
+          "start": "2027-01-02T12:15:00+01:00",
+          "end": "2027-01-02T12:40:00+01:00",
+          "category": "交通",
+          "title": "L3到Liceu市場",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Boqueria+%E6%B3%A2%E8%93%8B%E5%88%A9%E4%BA%9E%E5%B8%82%E5%A0%B4+La+Rambla+91+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "displayTitle": "L3到Liceu市場",
+          "activity": {
+            "description": "從上一站前往Boqueria 波蓋利亞市場。先核對接車點、交通方式與行李安排，再開啟導航；表列時間包含規劃緩衝。",
+            "tips": []
+          }
+        },
+        {
+          "id": "a4d8d53c6740",
+          "date": "2027-01-02",
+          "start": "2027-01-02T12:40:00+01:00",
+          "end": "2027-01-02T13:40:00+01:00",
+          "category": "午餐",
+          "title": "Boqueria吧檯午餐",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=El+Quim+de+la+Boqueria+Boqueria%E5%B8%82%E5%A0%B4%E5%85%A7%EF%BC%8CLa+Rambla+91+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "displayTitle": "波蓋利亞市場餐廳（El Quim de la Boqueria）｜午餐",
+          "activity": {
+            "description": "市場現做海鮮吧檯",
+            "mustTry": [
+              "煎蛋配小墨魚、當日海鮮"
+            ],
+            "tips": [
+              "四人連座可能等，10分鐘無座改備選，13:40結帳；見聯絡連結",
+              "按此分店位置換店，取消原主選；先守本餐離席及下個已購報到時間。；市場最多等10分鐘，13:40結帳，13:55離市場、14:10奎爾宮報到，下午票不是可遲到時段。",
+              "推薦餐點依既有美食指南；價格、當日供應與過敏原請點餐前向店家確認。"
+            ]
+          },
+          "venue": {
+            "cityId": "barcelona",
+            "nameZh": "波蓋利亞市場餐廳",
+            "nameEn": "El Quim de la Boqueria"
+          },
+          "cityId": "barcelona"
+        },
+        {
+          "id": "0d62df18e45d",
+          "date": "2027-01-02",
+          "start": "2027-01-02T13:40:00+01:00",
+          "end": "2027-01-02T14:10:00+01:00",
+          "category": "必逛",
+          "title": "博蓋利亞市場海鮮攤（Mercat de la Boqueria）｜短逛後往奎爾宮",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Torrons+Vicens+%E6%B3%A2%E8%93%8B%E5%88%A9%E4%BA%9E%E5%B8%82%E5%A0%B4%E5%BA%97+Boqueria+%E5%85%A7%EF%BC%9B%E4%BE%9D%E5%AE%98%E6%96%B9%E6%94%A4%E4%BD%8D%E5%9C%96+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "displayTitle": "博蓋利亞市場海鮮攤（Mercat de la Boqueria）｜短逛後往奎爾宮",
+          "activity": {
+            "description": "奎爾宮當天可逛博蓋利亞市場的海鮮攤；13:40午餐後短逛，13:55左右離開市場步行前往奎爾宮，14:10報到。",
+            "highlights": [
+              "市場海鮮攤與海鮮料理吧檯，依當日營業走逛。"
+            ],
+            "tips": [
+              "如想加吃，先問料理方式、份量與價格，不壓縮下午報到。",
+              "14:30奎爾宮仍是尚未購票的目標；原地下教堂票券日期待改訂狀態維持。"
+            ]
+          },
+          "venue": {
+            "cityId": "barcelona",
+            "nameZh": "博蓋利亞市場・海鮮攤",
+            "nameEn": "Mercat de la Boqueria"
+          },
+          "cityId": "barcelona",
+          "reminderUpdated": true
+        },
+        {
+          "id": "e364ab4503ec",
+          "date": "2027-01-02",
+          "start": "2027-01-02T14:10:00+01:00",
+          "end": "2027-01-02T14:30:00+01:00",
+          "category": "報到",
+          "title": "奎爾宮驗票",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E5%A5%8E%E7%88%BE%E5%AE%AE+Palau+G%C3%BCell+Carrer+Nou+de+la+Rambla+3%E2%80%935+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "displayTitle": "奎爾宮驗票",
+          "activity": {
+            "description": "到入口或車站後，先確認安檢、驗票及排隊位置。這段是報到緩衝，下一段票面入場或發車時間優先。",
+            "tips": []
+          }
+        },
+        {
+          "id": "c9125ccd22d8",
+          "date": "2027-01-02",
+          "start": "2027-01-02T14:30:00+01:00",
+          "end": "2027-01-02T16:00:00+01:00",
+          "category": "必看",
+          "title": "奎爾宮目標尚未購",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E5%A5%8E%E7%88%BE%E5%AE%AE+Palau+G%C3%BCell+Carrer+Nou+de+la+Rambla+3%E2%80%935+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "displayTitle": "奎爾宮・尚未購票（Palau Güell）",
+          "activity": {
+            "description": "奎爾宮是高第為奎爾家族設計的都市住宅，用小地塊容納接待、生活與服務空間。地窖、中央大廳與屋頂煙囪讓住宅功能變成垂直的建築體驗。",
+            "highlights": [
+              "地下馬廄；中央大廳與採光；多彩屋頂煙囪。"
+            ],
+            "tips": [
+              "冬季通常10:00–17:30、1/1閉館，本行程排1/2。14:10到場報到，14:30–16:00自助參觀；雨天屋頂可能暫停。"
+            ],
+            "photoTip": "中央廳向上取光；屋頂煙囪細節，雨天依工作人員指示。"
+          },
+          "venue": {
+            "cityId": "barcelona",
+            "nameZh": "奎爾宮・尚未購票",
+            "nameEn": "Palau Güell"
+          },
+          "cityId": "barcelona"
+        },
+        {
+          "id": "dc534d54def8",
+          "date": "2027-01-02",
+          "start": "2027-01-02T16:00:00+01:00",
+          "end": "2027-01-02T17:30:00+01:00",
+          "category": "必逛",
+          "title": "皇家廣場聖若梅與哥德區外觀",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E5%93%A5%E5%BE%B7%E5%8D%80+Barri+G%C3%B2tic+Pla%C3%A7a+Reial+%E2%86%92+Sant+Jaume+%E2%86%92+%E4%B8%BB%E6%95%99%E5%BA%A7%E5%A0%82+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "displayTitle": "皇家廣場、聖若梅廣場與哥德區（Plaça Reial / Plaça de Sant Jaume / Barri Gòtic）",
+          "activity": {
+            "description": "哥德區把巴塞隆納舊城廣場、窄巷與政治宗教建築串在一起。路線從奎爾宮近旁的皇家廣場走到聖若梅廣場，再到主教座堂，只看外觀已足以建立城市歷史的層次。",
+            "highlights": [
+              "Plaça Reial 與高第早期路燈；Plaça Sant Jaume 的市府與自治政府；主教座堂外觀。"
+            ],
+            "tips": [
+              "戶外免費，不臨時加博物館。17:30 結束後由 Jaume I 搭 L4 至 Girona，在 Casa Amàlia 周邊休息，19:00 晚餐後才回公寓整理行李。"
+            ],
+            "photoTip": "皇家廣場拱廊、舊巷框景；居民區保持安靜。"
+          },
+          "venue": {
+            "cityId": "barcelona",
+            "nameZh": "皇家廣場、聖若梅廣場與哥德區",
+            "nameEn": "Plaça Reial / Plaça de Sant Jaume / Barri Gòtic"
+          },
+          "cityId": "barcelona"
+        },
+        {
+          "id": "7aa06146b298",
+          "date": "2027-01-02",
+          "start": "2027-01-02T17:30:00+01:00",
+          "end": "2027-01-02T18:15:00+01:00",
+          "category": "交通",
+          "title": "Jaume I L4至Girona",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Casa+Am%C3%A0lia+Passatge+del+Mercat+14+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "displayTitle": "Jaume I L4至Girona",
+          "activity": {
+            "description": "從上一站前往Casa Amàlia。先核對接車點、交通方式與行李安排，再開啟導航；表列時間包含規劃緩衝。",
+            "tips": []
+          }
+        },
+        {
+          "id": "b666522df395",
+          "date": "2027-01-02",
+          "start": "2027-01-02T18:15:00+01:00",
+          "end": "2027-01-02T19:00:00+01:00",
+          "category": "休息",
+          "title": "咖啡暖身與候位",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Casa+Am%C3%A0lia+Passatge+del+Mercat+14+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "displayTitle": "咖啡暖身與候位",
+          "activity": {
+            "description": "市場季節菜與加泰隆尼亞料理",
+            "mustTry": [
+              "季節魚肉菜、crema catalana分食"
+            ],
+            "tips": [
+              "市場季節菜與加泰隆尼亞料理；告別晚餐後直接L4轉L3返公寓；1/2 19:00先訂位，20:15結帳，酒水升級另算",
+              "推薦餐點依既有美食指南；價格、當日供應與過敏原請點餐前向店家確認。"
+            ]
+          }
+        },
+        {
+          "id": "58a7c2fff287",
+          "date": "2027-01-02",
+          "start": "2027-01-02T19:00:00+01:00",
+          "end": "2027-01-02T20:15:00+01:00",
+          "category": "晚餐",
+          "title": "Casa Amàlia市場菜",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Casa+Am%C3%A0lia+Passatge+del+Mercat+14+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "displayTitle": "市場料理餐廳（Casa Amàlia）｜晚餐",
+          "activity": {
+            "description": "市場季節菜與加泰隆尼亞料理",
+            "mustTry": [
+              "季節魚肉菜、crema catalana分食"
+            ],
+            "tips": [
+              "1/2 19:00先訂位，20:15結帳，酒水升級另算；見聯絡連結",
+              "按此分店位置換店，取消原主選；先守本餐離席及下個已購報到時間。；19:00–20:15告別晚餐；LaPepita備選餐後Diagonal L3直接回公寓，20:55前後到住宿收行李。",
+              "推薦餐點依既有美食指南；價格、當日供應與過敏原請點餐前向店家確認。"
+            ]
+          },
+          "venue": {
+            "cityId": "barcelona",
+            "nameZh": "市場料理餐廳",
+            "nameEn": "Casa Amàlia"
+          },
+          "cityId": "barcelona"
+        },
+        {
+          "id": "27a03d586431",
+          "date": "2027-01-02",
+          "start": "2027-01-02T20:15:00+01:00",
+          "end": "2027-01-02T20:55:00+01:00",
+          "category": "交通",
+          "title": "L4轉L3回公寓",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "displayTitle": "L4轉L3回公寓",
+          "activity": {
+            "description": "從上一站前往住宿。先核對接車點、交通方式與行李安排，再開啟導航；表列時間包含規劃緩衝。",
+            "tips": []
+          },
+          "lodgingAction": "返回飯店休息",
+          "cityId": "barcelona"
+        },
+        {
+          "id": "48c1fd40ba3f",
+          "date": "2027-01-02",
+          "start": "2027-01-02T20:55:00+01:00",
+          "end": "2027-01-02T21:45:00+01:00",
+          "category": "準備",
+          "title": "收行李核國際航廈與司機",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "displayTitle": "收行李核國際航廈與司機",
+          "activity": {
+            "description": "核對翌日票券、航班報到與接車資訊，整理隨身物品和大件行李，並將所需資料存離線。",
+            "tips": []
+          }
+        }
+      ],
+      "optionalStops": [
+        {
+          "id": "d02-galisteo",
+          "title": "教堂前早餐候選（Restaurant Galisteo）",
+          "displayTitle": "教堂前早餐候選（Restaurant Galisteo）",
+          "description": "參觀奎爾紡織村地下教堂前可先吃早餐；沒有排固定用餐時間。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Restaurant+Galisteo+Colonia+Guell+Barcelona",
+          "mustTry": [
+            "可先問早餐時段、麵包／三明治與熱飲；菜單未核實。"
+          ],
+          "note": "先核對店址與1/2早餐營業；要坐下用餐就提早搭FGC，保留09:40遊客中心核票、10:00教堂目標。與住宿輕食擇一，不把舊錯日期票當作有效入場票。",
+          "venue": {
+            "cityId": "barcelona",
+            "nameZh": "教堂前早餐候選",
+            "nameEn": "Restaurant Galisteo"
+          },
+          "openingHours": "當日營業待確認",
+          "beforeEventId": "163a9b2113f7"
+        }
+      ]
+    }
+  ],
+  "eventDetails": {
+    "d29-return-hotel": {
+      "conditional": true,
+      "status": "若提前去Paradiso，返宿時間順延",
+      "statusKind": "conditional",
+      "lodgingAction": "返回飯店（若去Paradiso則順延）",
+      "cityId": "barcelona",
+      "activity": {
+        "description": "採買後返回住宿，整理隔日用品；翌日早餐出門時帶齊全天票券、身分證件、耳機與保暖衣物。",
+        "tips": [
+          "只有預先確認元旦Paradiso未營業，才考慮本日提前改訪；若前往酒吧，返宿時間順延。"
+        ]
+      },
+      "reminderUpdated": true
+    },
+    "982f1d8b08f3": {
+      "conditional": true,
+      "status": "若提前去Paradiso，返宿時間順延",
+      "statusKind": "conditional",
+      "lodgingAction": "返回飯店（若去Paradiso則順延）",
+      "cityId": "barcelona",
+      "activity": {
+        "description": "從上一站前往住宿。先核對接車點、交通方式與行李安排，再開啟導航；表列時間包含規劃緩衝。",
+        "tips": [
+          "只有預先確認元旦Paradiso未營業，才考慮本日提前改訪；若前往酒吧，返宿時間順延。"
+        ]
+      },
+      "reminderUpdated": true
+    }
+  },
+  "optionalDetails": {},
+  "planningReminders": [
+    {
+      "id": "sartoria-booking-0101",
+      "title": "12/1開始查位｜Sartoria Panatieri 元旦披薩",
+      "date": "2026-12-01",
+      "note": "1/1披薩候選或加吃，尚未訂位；提前一個月開放為使用者提供，精確放位時間及元旦營業待確認。下載後匯入行事曆，並自行設定通知。",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Sartoria+Panatieri+Pizzeria+Barcelona+Barcelona",
+      "calendar": true
+    },
+    {
+      "id": "choose-newyear-lunch",
+      "title": "1/1午餐訂位擇一，處理未使用訂位",
+      "note": "Margherita 13:45、El Furacu Restaurant 14:00 都已訂位，兩間擇一。Sartoria Panatieri另為未訂的替代／加吃；決定後依店家條款取消或調整未使用訂位。",
+      "mapUrl": ""
+    }
+  ]
+}

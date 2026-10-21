@@ -81,9 +81,48 @@ try:
         page.locator('#event-d30-vinitus-dinner summary').click()
         expect(page.locator('#event-d30-vinitus-dinner .activity-details')).to_contain_text('鵝肝牛排')
         expect(page.locator('#event-d30-vinitus-dinner .activity-details')).to_contain_text('無法訂位')
-        expect(page.locator('.optional-stop')).to_contain_text('Sagradas Tapas')
+        expect(page.locator('.optional-stop').filter(has_text='Sagradas Tapas')).to_have_count(1)
         page.screenshot(path=str(ROOT/'artifacts/barcelona-dining-mobile.png'),full_page=True)
         checks.append('12/30新早餐與午餐、彈性Five Guys、Vinitus必點與候位提醒、Sagradas午餐備案可查看')
+
+        page.locator('[data-action="day"][data-date="2026-12-31"]').click()
+        for stop_id,name in [('d31-puigmarti','Vermuteria Puigmartí'),('d31-tano','La Vermuteria del Tano'),('d31-puertecillo','Puertecillo Sagrada Familia')]:
+            expect(page.locator('#stop-'+stop_id)).to_contain_text(name)
+            assert page.locator('#stop-'+stop_id+' .time-rail').count()==0
+            assert page.evaluate("""id=>!!(document.querySelector('#event-02a9956e2777').compareDocumentPosition(document.getElementById('stop-'+id)) & Node.DOCUMENT_POSITION_FOLLOWING)""",stop_id)
+        expect(page.locator('#event-d31-flex-dinner .badge')).to_contain_text('不一定要吃')
+        expect(page.locator('.event-content h3').filter(has_text='La Lola')).to_have_count(0)
+        checks.append('12/31三間沿路加吃依序列在午餐後，沒有假到店時間；傍晚返宿與可略過晚餐正確')
+
+        page.locator('[data-action="day"][data-date="2027-01-01"]').click()
+        expect(page.locator('#event-d01-forn-breakfast')).to_contain_text('Forn la Rambla 31')
+        assert page.evaluate("""() => !!(document.querySelector('#stop-d01-mauri').compareDocumentPosition(document.querySelector('#event-166eff210f86')) & Node.DOCUMENT_POSITION_FOLLOWING)""")
+        page.locator('#event-d01-lunch-options > .event-content > details > summary').click()
+        expect(page.locator('#event-d01-lunch-options .meal-option')).to_have_count(2)
+        expect(page.locator('#event-d01-lunch-options .meal-option').nth(0)).to_contain_text('13:45')
+        expect(page.locator('#event-d01-lunch-options .meal-option').nth(1)).to_contain_text('14:00')
+        expect(page.locator('#event-d01-7portes-dinner .time-rail strong')).to_have_text('18:30')
+        expect(page.locator('#event-d01-7portes-dinner .badge')).to_contain_text('已訂位')
+        expect(page.locator('#stop-d01-paradiso')).to_contain_text('Paradiso')
+        page.locator('#stop-d01-sartoria summary').click()
+        with page.expect_download() as download_info:
+            page.locator('#stop-d01-sartoria [data-action="calendar"]').click()
+        download=download_info.value
+        calendar=Path(download.path()).read_text()
+        assert 'DTSTART;VALUE=DATE:20261201' in calendar
+        assert 'Sartoria Panatieri' in calendar.replace('\n ','')
+        for width in [320,390,768,1280]:
+            page.set_viewport_size({'width':width,'height':844})
+            assert page.evaluate('document.documentElement.scrollWidth<=innerWidth'),width
+        page.set_viewport_size({'width':390,'height':844})
+        page.screenshot(path=str(ROOT/'artifacts/newyear-dining-mobile.png'),full_page=True)
+        checks.append('元旦Mauri在米拉前，兩筆已訂午餐同框擇一、18:30七扇門與Paradiso可查看；12/1訂位行事曆可下載')
+
+        page.locator('[data-action="day"][data-date="2027-01-02"]').click()
+        expect(page.locator('#stop-d02-galisteo')).to_contain_text('Restaurant Galisteo')
+        assert page.evaluate("""() => !!(document.querySelector('#stop-d02-galisteo').compareDocumentPosition(document.querySelector('#event-15285a55f9c1')) & Node.DOCUMENT_POSITION_FOLLOWING)""")
+        expect(page.locator('#event-0d62df18e45d')).to_contain_text('海鮮攤')
+        checks.append('1/2 Galisteo列在教堂前、博蓋利亞海鮮攤在奎爾宮前，票券待改訂／未購狀態維持')
 
         page.locator('#pack-input').set_input_files(pack)
         expect(page.locator('.mode-pill')).to_contain_text('同行完整版')
@@ -96,6 +135,9 @@ try:
         page.locator('#ticket-search').fill('REGLOP')
         expect(page.locator('.ticket-card')).to_contain_text('El Glop')
         expect(page.locator('.ticket-card')).to_contain_text('已訂位')
+        for tid,time in [('RMARGHERITA','13:45'),('RFURACU','14:00'),('R7PORTES','18:30')]:
+            page.locator('#ticket-search').fill(tid)
+            expect(page.locator('.ticket-card .ticket-time')).to_have_text(time)
         checks.append('原10/16同行包自動套用新版；混合城市日顯示正確飯店、新訂位進票夾，原資料保留')
 
         page.locator('.nav-item[data-tab="trip"]').click()
@@ -115,6 +157,10 @@ try:
         page.locator('.nav-item[data-tab="now"]').click()
         page.locator('.city-tile[data-city="barcelona"]').click()
         expect(page.locator('#city-overview')).to_contain_text('El Glop')
+        expect(page.locator('#city-overview')).to_contain_text('El Furacu Restaurant')
+        expect(page.locator('#city-overview')).to_contain_text('Mauri')
+        page.locator('.nav-item[data-tab="trip"]').click()
+        expect(page.locator('.planning-reminders')).to_contain_text('12/1')
         checks.append('飛航模式重新開啟仍可查看新日期、餐飲及可點選的城市總覽')
         browser.close()
 finally:

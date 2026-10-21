@@ -213,7 +213,7 @@ for day in share['days']:
         e['activity']=public_activity(e['activity'])
         e.update(note='',transport='',ticketIds=[],infoUrl='')
         if sensitive:e['mapUrl']=''
-        if e['statusKind']=='confirmed' and not e.get('reservation'):e.update(status='',statusKind='neutral')
+        if e['statusKind']=='confirmed' and not (e.get('reservation') or any(o.get('reservation') for o in e.get('mealOptions', []))):e.update(status='',statusKind='neutral')
         if '主人' in e['title']:e['title']='自由安排／住宿休息'
         if any(word in e['title'] for word in ['護照','passport']):e['title']='行前準備／整理用品'
 share_json=json.dumps(share,ensure_ascii=False,separators=(',',':'))

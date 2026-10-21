@@ -8,11 +8,16 @@ from datetime import datetime
 from pathlib import Path
 import json
 
-REVISION = Path(__file__).with_name('data') / 'itinerary-2026-10-19.json'
+REVISIONS = Path(__file__).with_name('data')
 
 
 def apply_revision(trip):
-    revision = json.loads(REVISION.read_text())
+    for path in sorted(REVISIONS.glob('itinerary-*.json')):
+        apply_patch(trip, json.loads(path.read_text()))
+    return trip
+
+
+def apply_patch(trip, revision):
     if trip['version'] > revision['version']:
         return trip
     by_date = {day['date']: day for day in trip['days']}
@@ -38,25 +43,34 @@ def apply_revision(trip):
         for key in ['date','city','title','timezone','optionalStops']:
             if key in patch:
                 day[key] = deepcopy(patch[key])
+        for stop in patch.get('addOptionalStops', []):
+            day['optionalStops'] = [s for s in day.get('optionalStops', []) if s.get('id',s['title']) != stop.get('id',stop['title'])]
+            day['optionalStops'].append(deepcopy(stop))
         for event in patch.get('addEvents', []):
             day['events'] = [e for e in day['events'] if e['id'] != event['id']]
             day['events'].append(deepcopy(event))
         day['events'].sort(key=lambda e:datetime.fromisoformat(e['start']).timestamp())
     for day in trip['days']:
         for event in day['events']:
-            event.update(deepcopy(revision['eventDetails'].get(event['id'], {})))
+            event.update(deepcopy(revision.get('eventDetails', {}).get(event['id'], {})))
             if private and event.get('isFlight'):
                 event['ticketIds'] = ['F01']
         for stop in day.get('optionalStops', []):
-            if stop['title'] in revision['optionalDetails']:
+            if stop['title'] in revision.get('optionalDetails', {}):
                 stop.update(deepcopy(revision['optionalDetails'][stop['title']]))
     if private:
-        booking = deepcopy(revision['reservation'])
-        trip['tickets'] = [t for t in trip['tickets'] if t['id'] != booking['id']] + [booking]
+        bookings = {}
         for day in trip['days']:
             for event in day['events']:
-                if event['id'] == 'd29-el-glop-dinner':
-                    event['ticketIds'] = [booking['id']]
+                records = ([event['reservation']] if event.get('reservation') else []) + [o['reservation'] for o in event.get('mealOptions', []) if o.get('reservation')]
+                for booking in records:
+                    old = next((t for t in trip['tickets'] if t['id'] == booking['id']), {})
+                    bookings[booking['id']] = {**deepcopy(booking), 'files':deepcopy(old.get('files') or booking.get('files', []))}
+                if records:
+                    event['ticketIds'] = [r['id'] for r in records]
+        trip['tickets'][:] = [t for t in trip['tickets'] if t['id'] not in bookings] + list(bookings.values())
+    if 'planningReminders' in revision:
+        trip['planningReminders'] = deepcopy(revision['planningReminders'])
     trip['days'].sort(key=lambda day:day['date'])
     trip['version'] = revision['version']
     return trip
