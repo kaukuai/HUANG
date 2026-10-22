@@ -10,6 +10,7 @@
     "test": "node --test tests/*.test.mjs",
     "test:browser": "python tests/browser_test.py",
     "test:updates": "python tests/update_browser_test.py",
-    "test:cities": "python tests/cities_browser_test.py"
+    "test:cities": "python tests/cities_browser_test.py",
+    "test:maps": "python tests/maps_browser_test.py"
   }
 }

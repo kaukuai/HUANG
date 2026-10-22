@@ -45,7 +45,7 @@ function filesIn(folder) {
   });
 }
 const files = filesIn(source);
-const allowed = new Set(['.html', '.js', '.css', '.json', '.png', '.svg', '.webmanifest']);
+const allowed = new Set(['.html', '.js', '.css', '.json', '.png', '.svg', '.webmanifest', '.txt']);
 for (const path of files) {
   assert.ok(allowed.has(extname(path)), `網站中有未支援的附件：${relative(source,path)}`);
   assert.ok(!path.endsWith('.travelpack.json'), '同行資料包不能發佈到網站');

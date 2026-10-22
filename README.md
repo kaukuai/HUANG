@@ -4,6 +4,7 @@
 
 - 依西班牙時區顯示現在與下一步；國際航段保留各機場時區。
 - 西班牙 11 天，加上台灣出發與返抵共 13 個日期、219 段行程；活動展開後有介紹、參觀重點或餐廳推薦與注意事項。
+- 每日時間軸上方有可拖曳、雙指縮放與放大檢視的街道地圖，依序標示景點、餐飲、交通與淡色備選；點標記可看資訊、Google Maps 導航及跳到時間軸。
 - 首頁四個城市可點開，依日期與時間顯示中文在前、外文在後的主要景點與餐廳；無固定時間的備選地點另外標示。
 - 餐飲使用暖橘色、住宿使用紫色與文字標籤；同行完整版會從裝置內資料帶入各城市飯店名稱，公開分享版保留通用住宿標題。
 - 同行資料包匯入後，32 份附件與 11 張每日路線圖保存在裝置 IndexedDB。
@@ -39,7 +40,7 @@
 
 ## 本機開發與驗證
 
-前端使用原生 HTML / CSS / JavaScript，沒有 npm 套件相依。Node 22 或以上可直接建置。
+前端使用原生 HTML / CSS / JavaScript，沒有 npm 套件相依；地圖使用隨站提供的 Leaflet 1.9.4（BSD-2-Clause），不依賴外部 JS CDN。Node 22 或以上可直接建置。
 
 ```bash
 npm ci --ignore-scripts --no-audit --no-fund
@@ -72,9 +73,20 @@ python -m pip install -r requirements-test.txt
 npm run test:browser
 npm run test:updates
 npm run test:cities
+npm run test:maps
 ```
 
 目前瀏覽器測試使用 `/usr/bin/chromium` 與本機 4173 連接埠。測試涵蓋西班牙／台灣跨日、列車精確切換時間、國際機場時區、資料包匯入、手機排版、飛航模式重開、離線 PDF 與路線圖，以及分享版資料分離。`test:updates` 自行啟動暫存伺服器，驗證舊版快取與同行包升級、連網刷新及離線保留。
+
+## 每日互動地圖
+
+`app/map-places.js` 保存逐一核對的公開景點／餐廳座標與來源，`map-data.js` 依當日最新行程、無固定時間地點及用餐替代選項產生標記。重複參觀同一景點只標一點；未知地址或分店不明的地點保留清單與 Google Maps 查詢入口，不推測座標。新增店家時同步加入對應 `cityId|nameEn` 的核實位置。公開地圖不包含住宿名稱／地址，也不從私下提醒推算住宿位置。機場、車站與大型園區為區域位置，入口及航廈仍依票券與時間軸。
+
+底圖使用 OpenStreetMap 標準圖磚，保留 OSM／Leaflet 歸屬資訊。僅請求使用者正在查看的範圍，遵循瀏覽器 HTTP 快取；不批次下載、不由 Service Worker 儲存離線底圖。圖磚請求使用 `strict-origin-when-cross-origin` Referrer Policy，依[供應商規範](https://operations.osmfoundation.org/policies/tiles/)提供網站來源。離線時仍可查看已快取的標記、地點清單與行程，底圖連線後恢復。地圖元件在行程刷新時沿用，以保留縮放與選取位置。
+
+目前沒有設定 Google Maps API 金鑰，因此 App 內使用 OSM 多點總覽，各站另提供 Google Maps 店家／導航連結。若往後切換 Google 官方地圖，需先設定 Google Maps Platform 專案及受網域限制的金鑰，不能把未授權的 Google 圖磚當成底圖。
+
+`npm run test:maps` 使用模擬圖磚測試 13 日標記、縮放／拖曳／雙指操作、放大視窗、位置待核、裝置資料分離與離線重開；不反覆請求第三方圖磚。
 
 ## 後續行程更新
 

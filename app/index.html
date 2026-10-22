@@ -11,6 +11,7 @@
   <link rel="icon" href="./icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="./icon-192.png">
   <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="stylesheet" href="./vendor/leaflet/leaflet.css">
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
@@ -19,6 +20,7 @@
   <div id="toast" role="status" aria-live="polite"></div>
   <input id="pack-input" type="file" accept=".json,application/json" hidden>
   <dialog id="viewer" aria-label="附件檢視"><div class="viewer-head"><strong id="viewer-title"></strong><button class="icon-button" id="close-viewer" aria-label="關閉附件">✕</button></div><div id="viewer-body"></div></dialog>
+  <script defer src="./vendor/leaflet/leaflet.js"></script>
   <script type="module" src="./app.js"></script>
 </body>
 </html>

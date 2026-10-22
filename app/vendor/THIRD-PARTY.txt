@@ -1,0 +1,14 @@
+Leaflet 1.9.4
+https://leafletjs.com/
+BSD-2-Clause. Full license: leaflet/LICENSE.txt
+Distribution obtained from the official npm leaflet@1.9.4 tarball and verified
+against registry dist.integrity (SHA-512); text line endings normalized to LF:
+nxS1ynzJOmOlHp+iL3FyWqK89GtNL8U8rvlMOsQdTTssxZwCXh8N2NB3GDQOL+YR3XnWyZAxwQixURb+FA74PA==
+
+Map coordinates and online street basemap
+OpenStreetMap data copyright OpenStreetMap contributors, ODbL 1.0.
+https://www.openstreetmap.org/copyright
+https://opendatacommons.org/licenses/odbl/1-0/
+Individual coordinate sources are retained in map-places.js.
+Online tiles: https://tile.openstreetmap.org/{z}/{x}/{y}.png
+The map displays visible attribution and does not offer offline tile downloads.

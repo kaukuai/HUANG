@@ -2,6 +2,7 @@ import { dateInZone, clock, currentAndNext, shortDate, minutesUntil, tripPhase }
 import { read, saveSetting, importPack, clearPrivate, isOlderVersion } from './storage.js';
 import { currentTrip, validPublicTrip } from './updates.js';
 import { cities, eventKind, activityTitle as titleFor, eventClock, cityHighlights, calendarText } from './presentation.js';
+import { DailyMap } from './daily-map.js';
 
 const APP_BUILD = '__BUILD_ID__';
 
@@ -30,6 +31,7 @@ const activityTitle = e => titleFor(e, data().days.find(d => d.date === e.date),
 const state = { tab:'now', date:null, city:null, search:'', filter:'all', mode:'share', privateTrip:null, share:null, preview:null, done:new Set(), offlineReady:false, installing:null, busy:false, syncing:false, syncMessage:'尚未檢查', checkedAt:null, siteVersion:null, swReg:null, shellUpdate:false };
 let viewerUrl, toastTimer, lastRefresh;
 let viewCache;
+let dayMap;
 const data = () => {
   if (state.mode !== 'private' || !state.privateTrip) return state.share;
   if (!viewCache || viewCache.publicTrip !== state.share || viewCache.privateTrip !== state.privateTrip) viewCache = {publicTrip:state.share,privateTrip:state.privateTrip,value:currentTrip(state.share,state.privateTrip)};
@@ -136,6 +138,7 @@ function itinerary() {
   const day=selectedDay();const t=now();
   return `<div class="page-heading"><div><p class="eyebrow">ONE DAY AT A TIME</p><h1>每天，都有好風景。</h1></div></div>${dayPicker()}
   <div class="day-heading"><div><p>D${data().days.indexOf(day)+1} · ${esc(day.city)}</p><h2>${esc(day.title)}</h2></div>${privateMode() && day.mapAsset ? `<button class="icon-button" data-action="asset" data-id="${day.mapAsset}" aria-label="開啟當日離線路線圖">${icon('map')}</button>`:''}</div>
+  <div id="daily-map-slot"></div>
   <p class="caption">${day.timezone==='Asia/Taipei'?'本日顯示台灣／上海當地時間':'西班牙行程顯示當地時間；跨國航班依起降機場時間'} · 導航需連線</p><div class="timeline-legend"><span class="legend-dining">餐廳／餐飲</span><span class="legend-lodging">住宿／返回飯店</span></div>
   ${day.offlineMapNeedsUpdate?'<p class="caption map-update-note">本日路線已調整，請匯入新版同行包以更新離線路線圖；景點導航已使用最新行程。</p>':''}
   <div class="timeline">${day.events.map(e => {
@@ -177,6 +180,10 @@ function render() {
   const scroll = window.scrollY;
   const updateBanner=data().hasNewerItinerary?'<div class="data-update-banner">已顯示最新行程；同行附件可另匯入新版。<button data-action="tab" data-tab="trip">查看更新</button></div>':'';
   $('#app').innerHTML = `${header()}${updateBanner}<main id="main" class="main" tabindex="-1">${({now:home,plan:itinerary,tickets,trip:journey})[state.tab]()}</main>${navigation()}`;
+  if (state.tab==='plan') {
+    dayMap ||= new DailyMap();
+    dayMap.mount($('#daily-map-slot'),selectedDay());
+  } else dayMap?.detach();
   if (state.tab==='plan') $('.day-chip.selected')?.scrollIntoView({block:'nearest',inline:'center'});
   window.scrollTo(0,scroll);
 }
