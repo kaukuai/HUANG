@@ -74,6 +74,8 @@ npm run test:browser
 npm run test:updates
 npm run test:cities
 npm run test:maps
+# 有本機私人匯入包與 app-build-report.json 時：
+python tests/travel_pack_browser_test.py
 ```
 
 目前瀏覽器測試使用 `/usr/bin/chromium` 與本機 4173 連接埠。測試涵蓋西班牙／台灣跨日、列車精確切換時間、國際機場時區、資料包匯入、手機排版、飛航模式重開、離線 PDF 與路線圖，以及分享版資料分離。`test:updates` 自行啟動暫存伺服器，驗證舊版快取與同行包升級、連網刷新及離線保留。
@@ -99,6 +101,22 @@ npm run test:maps
 5. 檢查行程與同行附件的版本，再以飛航模式開啟一份票券。
 
 行程完成標記只保留在各自裝置，不會修改供應商訂位或其他同行者的狀態。新版程式會在完成離線快取後載入；匯入資料或開啟附件期間可稍後按「開啟新版畫面」。
+
+## 重建私人票券匯入包
+
+`scripts/build_travel_pack.py` 使用最新私下核對的Excel、原件下載清單與目前公開行程，產生同行包。下載清單含來源 `id`、`path`、`name`、`localPath`、`sha256`、`downloaded`，僅能保存在規劃資料目錄；腳本不含個別Drive檔案ID，不會上傳附件或改寫公開行程。
+
+```bash
+python scripts/build_travel_pack.py \
+  --workbook /workspace/spain-planning/Spain_2026_Travel_Timeline_1022.xlsm \
+  --sources /workspace/spain-planning/review/pack-source-files-1022.json \
+  --output /workspace/spain-planning/app-private \
+  --international /path/to/international-itinerary.pdf
+```
+
+每日動線圖讀取輸出目錄上層的 `assets/YYYY-MM-DD-route.png`，需先完成文件匯出。VY1121原件若可取得，以 `--vueling /path/to/original.pdf` 加入；缺件會明確標示，不能製作假原票。恢復包可透過 `retainExistingTicketIds` 指定保留裝置內該票券已有的附件，僅保留實際存在的Blob，不保留不在清單內的舊票。新包不會覆蓋已有的VY1121與國際航班附件；尚無舊資料的裝置仍需補缺件。新下載的地下教堂舊日期原票仍標為待改訂。無可靠新版預算時顯示待核對；舊裝置已存的預算可沿用並註明尚未重新對帳。
+
+匯入包、原件、清單與輸出報告一律置於Git倉庫外，不得放到Vercel。四位同行者各自下載JSON，先更新App，再到「旅程 → 匯入新版資料」選取。
 
 ## 同步 Excel 與旅行手冊
 
