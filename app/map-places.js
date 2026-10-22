@@ -598,7 +598,7 @@ export const places = {
       41.3743,
       2.149
     ],
-    "source": "https://www.fgc.cat/en/fgc-network/lbarcelona-placa-espanya/",
+    "source": "https://www.fgc.cat/en/lines-and-schedule/",
     "title": "西班牙廣場 FGC 站區",
     "mapUrl": "https://www.google.com/maps/search/?api=1&query=Espanya+FGC+Barcelona",
     "note": "車站區域位置；入口、月台與集合點依現場指示。"
