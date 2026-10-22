@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "version": "2026-10-21-v1",
+  "version": "2026-10-22-v1",
   "title": "西班牙・口袋旅程",
   "timezone": "Europe/Madrid",
   "people": 4,
@@ -5253,7 +5253,7 @@
     {
       "date": "2027-01-02",
       "city": "巴塞隆納／近郊",
-      "title": "教堂前早餐備選、博蓋利亞海鮮與奎爾宮",
+      "title": "教堂、彈性奎爾宮、畢卡索與Sagardi晚餐",
       "hotel": "",
       "events": [
         {
@@ -5464,249 +5464,265 @@
           }
         },
         {
-          "id": "a4d8d53c6740",
+          "id": "d02-palau-checkin",
           "date": "2027-01-02",
           "start": "2027-01-02T12:40:00+01:00",
-          "end": "2027-01-02T13:40:00+01:00",
-          "category": "午餐",
-          "title": "Boqueria吧檯午餐",
-          "transport": "",
-          "note": "",
-          "ticketIds": [],
-          "mapUrl": "https://www.google.com/maps/search/?api=1&query=El+Quim+de+la+Boqueria+Boqueria%E5%B8%82%E5%A0%B4%E5%85%A7%EF%BC%8CLa+Rambla+91+Barcelona",
-          "infoUrl": "",
-          "conditional": false,
-          "status": "",
-          "statusKind": "neutral",
-          "displayTitle": "波蓋利亞市場餐廳（El Quim de la Boqueria）｜午餐",
-          "activity": {
-            "description": "市場現做海鮮吧檯",
-            "mustTry": [
-              "煎蛋配小墨魚、當日海鮮"
-            ],
-            "tips": [
-              "四人連座可能等，10分鐘無座改備選，13:40結帳；見聯絡連結",
-              "按此分店位置換店，取消原主選；先守本餐離席及下個已購報到時間。；市場最多等10分鐘，13:40結帳，13:55離市場、14:10奎爾宮報到，下午票不是可遲到時段。",
-              "推薦餐點依既有美食指南；價格、當日供應與過敏原請點餐前向店家確認。"
-            ]
-          },
-          "venue": {
-            "cityId": "barcelona",
-            "nameZh": "波蓋利亞市場餐廳",
-            "nameEn": "El Quim de la Boqueria"
-          },
-          "cityId": "barcelona"
-        },
-        {
-          "id": "0d62df18e45d",
-          "date": "2027-01-02",
-          "start": "2027-01-02T13:40:00+01:00",
-          "end": "2027-01-02T14:10:00+01:00",
-          "category": "必逛",
-          "title": "博蓋利亞市場海鮮攤（Mercat de la Boqueria）｜短逛後往奎爾宮",
-          "transport": "",
-          "note": "",
-          "ticketIds": [],
-          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Torrons+Vicens+%E6%B3%A2%E8%93%8B%E5%88%A9%E4%BA%9E%E5%B8%82%E5%A0%B4%E5%BA%97+Boqueria+%E5%85%A7%EF%BC%9B%E4%BE%9D%E5%AE%98%E6%96%B9%E6%94%A4%E4%BD%8D%E5%9C%96+Barcelona",
-          "infoUrl": "",
-          "conditional": false,
-          "status": "",
-          "statusKind": "neutral",
-          "displayTitle": "博蓋利亞市場海鮮攤（Mercat de la Boqueria）｜短逛後往奎爾宮",
-          "activity": {
-            "description": "奎爾宮當天可逛博蓋利亞市場的海鮮攤；13:40午餐後短逛，13:55左右離開市場步行前往奎爾宮，14:10報到。",
-            "highlights": [
-              "市場海鮮攤與海鮮料理吧檯，依當日營業走逛。"
-            ],
-            "tips": [
-              "如想加吃，先問料理方式、份量與價格，不壓縮下午報到。",
-              "14:30奎爾宮仍是尚未購票的目標；原地下教堂票券日期待改訂狀態維持。"
-            ]
-          },
-          "venue": {
-            "cityId": "barcelona",
-            "nameZh": "博蓋利亞市場・海鮮攤",
-            "nameEn": "Mercat de la Boqueria"
-          },
-          "cityId": "barcelona",
-          "reminderUpdated": true
-        },
-        {
-          "id": "e364ab4503ec",
-          "date": "2027-01-02",
-          "start": "2027-01-02T14:10:00+01:00",
-          "end": "2027-01-02T14:30:00+01:00",
+          "end": "2027-01-02T13:00:00+01:00",
           "category": "報到",
-          "title": "奎爾宮驗票",
+          "title": "前往奎爾宮（Palau Güell）｜彈性入場準備",
+          "displayTitle": "前往奎爾宮（Palau Güell）｜彈性入場準備",
           "transport": "",
           "note": "",
           "ticketIds": [],
-          "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E5%A5%8E%E7%88%BE%E5%AE%AE+Palau+G%C3%BCell+Carrer+Nou+de+la+Rambla+3%E2%80%935+Barcelona",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Palau+G%C3%BCell+Barcelona",
           "infoUrl": "",
           "conditional": false,
           "status": "",
           "statusKind": "neutral",
-          "displayTitle": "奎爾宮驗票",
           "activity": {
-            "description": "到入口或車站後，先確認安檢、驗票及排隊位置。這段是報到緩衝，下一段票面入場或發車時間優先。",
-            "tips": []
+            "description": "回城後直接前往奎爾宮；先以13:00為可行目標，尚未購票。放票後可依上午教堂、實際FGC班次及步行時間調整，保留入場緩衝。",
+            "tips": [
+              "午餐可略過或就近快速吃；不保留原固定市場午餐時段。"
+            ]
           }
         },
         {
-          "id": "c9125ccd22d8",
+          "id": "d02-palau-visit",
           "date": "2027-01-02",
-          "start": "2027-01-02T14:30:00+01:00",
-          "end": "2027-01-02T16:00:00+01:00",
+          "start": "2027-01-02T13:00:00+01:00",
+          "end": "2027-01-02T14:30:00+01:00",
           "category": "必看",
-          "title": "奎爾宮目標尚未購",
+          "title": "奎爾宮（Palau Güell）｜13:00彈性目標・未購票",
+          "displayTitle": "奎爾宮（Palau Güell）｜13:00彈性目標・未購票",
           "transport": "",
           "note": "",
           "ticketIds": [],
-          "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E5%A5%8E%E7%88%BE%E5%AE%AE+Palau+G%C3%BCell+Carrer+Nou+de+la+Rambla+3%E2%80%935+Barcelona",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Palau+G%C3%BCell+Barcelona",
           "infoUrl": "",
           "conditional": false,
-          "status": "",
-          "statusKind": "neutral",
-          "displayTitle": "奎爾宮・尚未購票（Palau Güell）",
+          "status": "尚未購票・放票後可調整",
+          "statusKind": "warning",
           "activity": {
-            "description": "奎爾宮是高第為奎爾家族設計的都市住宅，用小地塊容納接待、生活與服務空間。地窖、中央大廳與屋頂煙囪讓住宅功能變成垂直的建築體驗。",
-            "highlights": [
-              "地下馬廄；中央大廳與採光；多彩屋頂煙囪。"
-            ],
+            "description": "參觀高第設計的奎爾宮。13:00–14:30是規劃目標，尚未購票；開放訂票後可視情況提前，但要與上午教堂和回城交通銜接。",
             "tips": [
-              "冬季通常10:00–17:30、1/1閉館，本行程排1/2。14:10到場報到，14:30–16:00自助參觀；雨天屋頂可能暫停。"
+              "官網冬季通常10:00–17:30、最後入場16:30；1/2實際時段以可購票日曆為準。",
+              "若買到不同時段，午餐、Re-Cuir與畢卡索博物館一起調整，19:00晚餐訂位保留。"
             ],
-            "photoTip": "中央廳向上取光；屋頂煙囪細節，雨天依工作人員指示。"
+            "highlights": [
+              "地下馬廄、中央大廳、採光與屋頂煙囪；雨天依館方開放。"
+            ]
           },
           "venue": {
             "cityId": "barcelona",
-            "nameZh": "奎爾宮・尚未購票",
+            "nameZh": "奎爾宮・未購票",
             "nameEn": "Palau Güell"
           },
-          "cityId": "barcelona"
-        },
-        {
-          "id": "dc534d54def8",
-          "date": "2027-01-02",
-          "start": "2027-01-02T16:00:00+01:00",
-          "end": "2027-01-02T17:30:00+01:00",
-          "category": "必逛",
-          "title": "皇家廣場聖若梅與哥德區外觀",
-          "transport": "",
-          "note": "",
-          "ticketIds": [],
-          "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E5%93%A5%E5%BE%B7%E5%8D%80+Barri+G%C3%B2tic+Pla%C3%A7a+Reial+%E2%86%92+Sant+Jaume+%E2%86%92+%E4%B8%BB%E6%95%99%E5%BA%A7%E5%A0%82+Barcelona",
-          "infoUrl": "",
-          "conditional": false,
-          "status": "",
-          "statusKind": "neutral",
-          "displayTitle": "皇家廣場、聖若梅廣場與哥德區（Plaça Reial / Plaça de Sant Jaume / Barri Gòtic）",
-          "activity": {
-            "description": "哥德區把巴塞隆納舊城廣場、窄巷與政治宗教建築串在一起。路線從奎爾宮近旁的皇家廣場走到聖若梅廣場，再到主教座堂，只看外觀已足以建立城市歷史的層次。",
-            "highlights": [
-              "Plaça Reial 與高第早期路燈；Plaça Sant Jaume 的市府與自治政府；主教座堂外觀。"
-            ],
-            "tips": [
-              "戶外免費，不臨時加博物館。17:30 結束後由 Jaume I 搭 L4 至 Girona，在 Casa Amàlia 周邊休息，19:00 晚餐後才回公寓整理行李。"
-            ],
-            "photoTip": "皇家廣場拱廊、舊巷框景；居民區保持安靜。"
-          },
-          "venue": {
-            "cityId": "barcelona",
-            "nameZh": "皇家廣場、聖若梅廣場與哥德區",
-            "nameEn": "Plaça Reial / Plaça de Sant Jaume / Barri Gòtic"
-          },
-          "cityId": "barcelona"
-        },
-        {
-          "id": "7aa06146b298",
-          "date": "2027-01-02",
-          "start": "2027-01-02T17:30:00+01:00",
-          "end": "2027-01-02T18:15:00+01:00",
-          "category": "交通",
-          "title": "Jaume I L4至Girona",
-          "transport": "",
-          "note": "",
-          "ticketIds": [],
-          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Casa+Am%C3%A0lia+Passatge+del+Mercat+14+Barcelona",
-          "infoUrl": "",
-          "conditional": false,
-          "status": "",
-          "statusKind": "neutral",
-          "displayTitle": "Jaume I L4至Girona",
-          "activity": {
-            "description": "從上一站前往Casa Amàlia。先核對接車點、交通方式與行李安排，再開啟導航；表列時間包含規劃緩衝。",
-            "tips": []
+          "cityId": "barcelona",
+          "ticketPlan": {
+            "id": "P02",
+            "date": "2027-01-02",
+            "title": "奎爾宮 Palau Güell",
+            "time": "13:00彈性目標",
+            "report": "依最後票面提早到場",
+            "status": "尚未購票・彈性目標",
+            "statusKind": "warning",
+            "note": "尚未購票；開放訂票後可視上午教堂與FGC交通提前，午餐可略過或臨時快速用餐。後續Re-Cuir與畢卡索也須一起對齊。",
+            "files": [],
+            "url": "https://inici.palauguell.cat/en/"
           }
         },
         {
-          "id": "b666522df395",
+          "id": "d02-walk-to-picasso",
           "date": "2027-01-02",
-          "start": "2027-01-02T18:15:00+01:00",
-          "end": "2027-01-02T19:00:00+01:00",
-          "category": "休息",
-          "title": "咖啡暖身與候位",
+          "start": "2027-01-02T14:30:00+01:00",
+          "end": "2027-01-02T15:15:00+01:00",
+          "category": "交通",
+          "title": "奎爾宮 → 畢卡索博物館｜途中可逛 Re-Cuir",
+          "displayTitle": "奎爾宮 → 畢卡索博物館｜途中可逛 Re-Cuir",
           "transport": "",
           "note": "",
           "ticketIds": [],
-          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Casa+Am%C3%A0lia+Passatge+del+Mercat+14+Barcelona",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Museu+Picasso+Barcelona+Barcelona",
           "infoUrl": "",
           "conditional": false,
           "status": "",
           "statusKind": "neutral",
-          "displayTitle": "咖啡暖身與候位",
           "activity": {
-            "description": "市場季節菜與加泰隆尼亞料理",
-            "mustTry": [
-              "季節魚肉菜、crema catalana分食"
-            ],
+            "description": "奎爾宮結束後往畢卡索博物館；Re-Cuir為途中有空再逛的店家，沒有固定到店時間。若需要進食，可依食量找就近快速餐點。",
             "tips": [
-              "市場季節菜與加泰隆尼亞料理；告別晚餐後直接L4轉L3返公寓；1/2 19:00先訂位，20:15結帳，酒水升級另算",
-              "推薦餐點依既有美食指南；價格、當日供應與過敏原請點餐前向店家確認。"
+              "若奎爾宮入場時間改動，沿路停留跟著調整；先確認Re-Cuir分店與當日營業。"
             ]
           }
         },
         {
-          "id": "58a7c2fff287",
+          "id": "d02-picasso-checkin",
+          "date": "2027-01-02",
+          "start": "2027-01-02T15:15:00+01:00",
+          "end": "2027-01-02T15:30:00+01:00",
+          "category": "報到",
+          "title": "畢卡索博物館（Museu Picasso）｜目標入場準備",
+          "displayTitle": "畢卡索博物館（Museu Picasso）｜目標入場準備",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Museu+Picasso+Barcelona+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "activity": {
+            "description": "15:30為未購票目標；先確認實際可售時段及入口，依最後票面提早到場。",
+            "tips": []
+          }
+        },
+        {
+          "id": "d02-picasso-visit",
+          "date": "2027-01-02",
+          "start": "2027-01-02T15:30:00+01:00",
+          "end": "2027-01-02T17:15:00+01:00",
+          "category": "必看",
+          "title": "畢卡索博物館（Museu Picasso）｜新增參觀・未購票",
+          "displayTitle": "畢卡索博物館（Museu Picasso）｜新增參觀・未購票",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Museu+Picasso+Barcelona+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "新增景點・尚未購票",
+          "statusKind": "warning",
+          "activity": {
+            "description": "巴塞隆納畢卡索博物館以早期作品及與城市的連結為參觀主軸，可留意《宮娥》系列。這次新增的參觀尚未購票，15:30–17:15為規劃目標。",
+            "tips": [
+              "官網目前冬季週二至週日10:00–19:00；2027/1/2是否有特殊公告及可售時段仍以訂票頁為準。",
+              "先確定奎爾宮時段，再選接得上的畢卡索票；19:00 Sagardi訂位保留。"
+            ],
+            "highlights": [
+              "畢卡索早期作品與巴塞隆納時期。",
+              "《宮娥》系列，展出依當日展廳開放。"
+            ]
+          },
+          "venue": {
+            "cityId": "barcelona",
+            "nameZh": "畢卡索博物館・未購票",
+            "nameEn": "Museu Picasso"
+          },
+          "cityId": "barcelona",
+          "ticketPlan": {
+            "id": "P03",
+            "date": "2027-01-02",
+            "title": "巴塞隆納畢卡索博物館 Museu Picasso",
+            "time": "15:30彈性目標",
+            "report": "15:15目標報到",
+            "status": "尚未購票・彈性目標",
+            "statusKind": "warning",
+            "note": "新增參觀，尚未購票；先確定奎爾宮時段，再選畢卡索可售時段，19:00晚餐保留。",
+            "files": [],
+            "url": "https://museupicassobcn.cat/en/plan-your-visit/buy-tickets-and-opening-hours"
+          }
+        },
+        {
+          "id": "d02-born-stroll",
+          "date": "2027-01-02",
+          "start": "2027-01-02T17:15:00+01:00",
+          "end": "2027-01-02T18:40:00+01:00",
+          "category": "散步",
+          "title": "波恩區與海洋聖母教堂周邊｜散步或咖啡休息",
+          "displayTitle": "波恩區與海洋聖母教堂周邊｜散步或咖啡休息",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Santa+Maria+del+Mar+Barcelona+Barcelona",
+          "infoUrl": "",
+          "conditional": true,
+          "status": "彈性散步／休息",
+          "statusKind": "conditional",
+          "activity": {
+            "description": "博物館後在波恩區與海洋聖母教堂周邊散步，或找店坐下休息；這段可依博物館進度縮短，接著前往19:00晚餐。",
+            "tips": []
+          },
+          "venue": {
+            "cityId": "barcelona",
+            "nameZh": "波恩區與海洋聖母教堂周邊",
+            "nameEn": "El Born / Santa Maria del Mar"
+          },
+          "cityId": "barcelona"
+        },
+        {
+          "id": "d02-sagardi-checkin",
+          "date": "2027-01-02",
+          "start": "2027-01-02T18:40:00+01:00",
+          "end": "2027-01-02T19:00:00+01:00",
+          "category": "報到",
+          "title": "巴斯克餐廳（Sagardi Argenteria）｜晚餐報到",
+          "displayTitle": "巴斯克餐廳（Sagardi Argenteria）｜晚餐報到",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Sagardi+Argenteria+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "activity": {
+            "description": "19:00已訂位（使用者確認）；提早到店，核對Argenteria分店與訂位紀錄。",
+            "tips": []
+          }
+        },
+        {
+          "id": "d02-sagardi-dinner",
           "date": "2027-01-02",
           "start": "2027-01-02T19:00:00+01:00",
           "end": "2027-01-02T20:15:00+01:00",
           "category": "晚餐",
-          "title": "Casa Amàlia市場菜",
+          "title": "巴斯克餐廳（Sagardi Argenteria）｜19:00已訂位",
+          "displayTitle": "巴斯克餐廳（Sagardi Argenteria）｜19:00已訂位",
           "transport": "",
           "note": "",
           "ticketIds": [],
-          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Casa+Am%C3%A0lia+Passatge+del+Mercat+14+Barcelona",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Sagardi+Argenteria+Barcelona",
           "infoUrl": "",
           "conditional": false,
-          "status": "",
-          "statusKind": "neutral",
-          "displayTitle": "市場料理餐廳（Casa Amàlia）｜晚餐",
+          "status": "19:00已訂位・使用者確認",
+          "statusKind": "confirmed",
           "activity": {
-            "description": "市場季節菜與加泰隆尼亞料理",
-            "mustTry": [
-              "季節魚肉菜、crema catalana分食"
-            ],
+            "description": "晚餐改吃Sagardi Argenteria巴斯克料理，19:00已訂位（使用者確認）。用餐結束時間為規劃估計，依現場上菜調整。",
             "tips": [
-              "1/2 19:00先訂位，20:15結帳，酒水升級另算；見聯絡連結",
-              "按此分店位置換店，取消原主選；先守本餐離席及下個已購報到時間。；19:00–20:15告別晚餐；LaPepita備選餐後Diagonal L3直接回公寓，20:55前後到住宿收行李。",
-              "推薦餐點依既有美食指南；價格、當日供應與過敏原請點餐前向店家確認。"
+              "確認Argenteria分店、姓名、人數與訂位條款；尚未提供訂位確認信。",
+              "這趟已有多次tapas；若想換口味，可詢問巴斯克炭烤肉類或魚類，依當日菜單分食。"
+            ],
+            "mustTry": [
+              "可先詢問巴斯克炭烤肉類／魚類及當日供應；尚未核實固定必點、份量與價格。",
+              "想吃pintxos也可少量嘗試，再依食量決定主菜。"
             ]
           },
           "venue": {
             "cityId": "barcelona",
-            "nameZh": "市場料理餐廳",
-            "nameEn": "Casa Amàlia"
+            "nameZh": "巴斯克餐廳",
+            "nameEn": "Sagardi Argenteria"
           },
-          "cityId": "barcelona"
+          "cityId": "barcelona",
+          "reservation": {
+            "id": "RSAGARDI",
+            "title": "巴斯克餐廳（Sagardi Argenteria）｜晚餐",
+            "date": "2027-01-02",
+            "time": "19:00",
+            "report": "18:40到店目標",
+            "status": "已訂位・使用者確認",
+            "statusKind": "confirmed",
+            "note": "1/2 19:00已訂位，使用者於10/22確認；確認信尚未提供。",
+            "files": [],
+            "url": ""
+          }
         },
         {
-          "id": "27a03d586431",
+          "id": "d02-return-after-sagardi",
           "date": "2027-01-02",
           "start": "2027-01-02T20:15:00+01:00",
           "end": "2027-01-02T20:55:00+01:00",
           "category": "交通",
-          "title": "L4轉L3回公寓",
+          "title": "住宿｜晚餐後返回飯店",
+          "displayTitle": "住宿｜晚餐後返回飯店",
           "transport": "",
           "note": "",
           "ticketIds": [],
@@ -5715,12 +5731,11 @@
           "conditional": false,
           "status": "",
           "statusKind": "neutral",
-          "displayTitle": "L4轉L3回公寓",
           "activity": {
-            "description": "從上一站前往住宿。先核對接車點、交通方式與行李安排，再開啟導航；表列時間包含規劃緩衝。",
+            "description": "晚餐後返回住宿，保留翌日國際航班、接車與行李整理時間。",
             "tips": []
           },
-          "lodgingAction": "返回飯店休息",
+          "lodgingAction": "晚餐後返回飯店",
           "cityId": "barcelona"
         },
         {
@@ -5764,6 +5779,40 @@
           },
           "openingHours": "當日營業待確認",
           "beforeEventId": "163a9b2113f7"
+        },
+        {
+          "id": "d02-flex-market-food",
+          "title": "博蓋利亞市場海鮮／附近簡餐（Mercat de la Boqueria）｜彈性午餐",
+          "displayTitle": "博蓋利亞市場海鮮／附近簡餐（Mercat de la Boqueria）｜彈性午餐",
+          "description": "午餐不鎖餐廳與時間，可略過、快速分食或臨時找吃的；市場海鮮仍保留為順路備選。",
+          "note": "若要提前奎爾宮就直接去報到；有空再逛海鮮攤或找附近簡餐。先問價格、份量和候位，不為吃午餐壓縮已購入場。",
+          "mustTry": [
+            "海鮮或簡餐依當日供應與食量選擇。"
+          ],
+          "openingHours": "1/2各攤與廚房營業待確認",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Mercat+de+la+Boqueria+Barcelona",
+          "venue": {
+            "cityId": "barcelona",
+            "nameZh": "市場海鮮／簡餐・可略過",
+            "nameEn": "Mercat de la Boqueria"
+          },
+          "beforeEventId": "d02-palau-checkin"
+        },
+        {
+          "id": "d02-re-cuir",
+          "title": "途中店家（Re-Cuir）｜奎爾宮後順路逛",
+          "displayTitle": "途中店家（Re-Cuir）｜奎爾宮後順路逛",
+          "description": "奎爾宮參觀後、前往畢卡索博物館途中，有空可逛Re-Cuir；不安排固定時間。",
+          "note": "先核對分店、位置與1/2營業；若博物館入場時間接近，縮短或略過購物。",
+          "mustTry": [],
+          "openingHours": "當日營業待確認",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Re-Cuir+Barcelona",
+          "venue": {
+            "cityId": "barcelona",
+            "nameZh": "途中店家",
+            "nameEn": "Re-Cuir"
+          },
+          "afterEventId": "d02-palau-visit"
         }
       ],
       "offlineMapNeedsUpdate": false
@@ -6066,6 +6115,20 @@
       "title": "1/1午餐訂位擇一，處理未使用訂位",
       "note": "Margherita 13:45、El Furacu Restaurant 14:00 都已訂位，兩間擇一。Sartoria Panatieri另為未訂的替代／加吃；決定後依店家條款取消或調整未使用訂位。",
       "mapUrl": ""
+    },
+    {
+      "id": "palau-picasso-booking",
+      "title": "1/2先訂奎爾宮，再銜接畢卡索博物館",
+      "note": "奎爾宮13:00、畢卡索15:30皆為彈性未購目標；放票後可調整，午餐可略過。19:00 Sagardi已訂位。",
+      "mapUrl": "https://inici.palauguell.cat/en/"
+    }
+  ],
+  "todoUpdates": [
+    {
+      "matchTitle": "Prado與奎爾宮仍待購票",
+      "title": "Prado、奎爾宮與畢卡索仍待購票",
+      "note": "Prado12/26 15:45目標；1/2奎爾宮13:00、畢卡索15:30皆未購彈性目標，依實際放票與上午交通調整。",
+      "url": "https://entradas.museodelprado.es/"
     }
   ]
 }

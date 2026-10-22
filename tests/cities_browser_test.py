@@ -121,8 +121,15 @@ try:
         page.locator('[data-action="day"][data-date="2027-01-02"]').click()
         expect(page.locator('#stop-d02-galisteo')).to_contain_text('Restaurant Galisteo')
         assert page.evaluate("""() => !!(document.querySelector('#stop-d02-galisteo').compareDocumentPosition(document.querySelector('#event-15285a55f9c1')) & Node.DOCUMENT_POSITION_FOLLOWING)""")
-        expect(page.locator('#event-0d62df18e45d')).to_contain_text('海鮮攤')
-        checks.append('1/2 Galisteo列在教堂前、博蓋利亞海鮮攤在奎爾宮前，票券待改訂／未購狀態維持')
+        expect(page.locator('#stop-d02-flex-market-food')).to_contain_text('彈性午餐')
+        expect(page.locator('#event-d02-palau-visit .time-rail strong')).to_have_text('13:00')
+        expect(page.locator('#event-d02-picasso-visit .badge')).to_contain_text('尚未購票')
+        expect(page.locator('#event-d02-sagardi-dinner .time-rail strong')).to_have_text('19:00')
+        expect(page.locator('#event-d02-sagardi-dinner .badge')).to_contain_text('已訂位')
+        assert page.evaluate("""() => !!(document.querySelector('#event-d02-palau-visit').compareDocumentPosition(document.querySelector('#stop-d02-re-cuir')) & Node.DOCUMENT_POSITION_FOLLOWING) && !!(document.querySelector('#stop-d02-re-cuir').compareDocumentPosition(document.querySelector('#event-d02-picasso-visit')) & Node.DOCUMENT_POSITION_FOLLOWING)""")
+        page.locator('#event-d02-picasso-visit summary').click()
+        expect(page.locator('#event-d02-picasso-visit a').filter(has_text='購票／官方資訊')).to_have_count(1)
+        checks.append('1/2彈性午餐、奎爾宮後Re-Cuir與畢卡索、19:00 Sagardi，以及未購票官方入口正確')
 
         page.locator('#pack-input').set_input_files(pack)
         expect(page.locator('.mode-pill')).to_contain_text('同行完整版')
@@ -135,7 +142,7 @@ try:
         page.locator('#ticket-search').fill('REGLOP')
         expect(page.locator('.ticket-card')).to_contain_text('El Glop')
         expect(page.locator('.ticket-card')).to_contain_text('已訂位')
-        for tid,time in [('RMARGHERITA','13:45'),('RFURACU','14:00'),('R7PORTES','18:30')]:
+        for tid,time in [('RMARGHERITA','13:45'),('RFURACU','14:00'),('R7PORTES','18:30'),('P02','13:00彈性目標'),('P03','15:30彈性目標'),('RSAGARDI','19:00')]:
             page.locator('#ticket-search').fill(tid)
             expect(page.locator('.ticket-card .ticket-time')).to_have_text(time)
         checks.append('原10/16同行包自動套用新版；混合城市日顯示正確飯店、新訂位進票夾，原資料保留')

@@ -55,7 +55,7 @@ function ticketAction(e) {
   return privateMode() && e.ticketIds?.length ? `<button class="button secondary" data-action="event-tickets" data-ids="${esc(e.ticketIds.join(','))}">${icon('ticket')}票券</button>` : '';
 }
 function eventActions(e) {
-  return `<div class="actions">${extLink(e.mapUrl, `${icon('map')}開啟導航`)}${ticketAction(e)}</div>`;
+  return `<div class="actions">${extLink(e.mapUrl, `${icon('map')}開啟導航`)}${e.ticketPlan?extLink(e.ticketPlan.url,'購票／官方資訊 ↗'):''}${ticketAction(e)}</div>`;
 }
 function activityDetails(e) {
   const info=e.activity||{};

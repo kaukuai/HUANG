@@ -1,0 +1,598 @@
+{
+  "version": "2026-10-22-v1",
+  "days": [
+    {
+      "date": "2027-01-02",
+      "title": "教堂、彈性奎爾宮、畢卡索與Sagardi晚餐",
+      "events": [
+        {
+          "id": "8d1ff7ffdc90",
+          "date": "2027-01-02",
+          "start": "2027-01-02T07:45:00+01:00",
+          "end": "2027-01-02T08:15:00+01:00",
+          "category": "早餐",
+          "title": "住宿輕食備案｜若改 Galisteo 早餐則略過",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "",
+          "infoUrl": "",
+          "conditional": true,
+          "status": "早餐擇一・可略過",
+          "statusKind": "conditional",
+          "displayTitle": "住宿輕食備案｜若改 Galisteo 早餐則略過",
+          "activity": {
+            "description": "出門前可先吃備用輕食；若確定到Restaurant Galisteo吃早餐，這段不用再吃一餐。",
+            "mustTry": [
+              "前晚備好的麵包、糕餅或飲水，依實際採買。"
+            ],
+            "tips": [
+              "Galisteo未排固定時間；若想坐下吃早餐需提早搭FGC，仍保留09:40核票、10:00教堂目標。"
+            ]
+          },
+          "reminderUpdated": true
+        },
+        {
+          "id": "a6f2d720c4d1",
+          "date": "2027-01-02",
+          "start": "2027-01-02T08:15:00+01:00",
+          "end": "2027-01-02T08:30:00+01:00",
+          "category": "準備",
+          "title": "備新教堂票與FGC票（待使用者改訂）",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "displayTitle": "備新教堂票與FGC票（待使用者改訂）",
+          "activity": {
+            "description": "核對翌日票券、航班報到與接車資訊，整理隨身物品和大件行李，並將所需資料存離線。",
+            "tips": []
+          }
+        },
+        {
+          "id": "e8c50bd4e337",
+          "date": "2027-01-02",
+          "start": "2027-01-02T08:30:00+01:00",
+          "end": "2027-01-02T09:00:00+01:00",
+          "category": "交通",
+          "title": "走FGC站換票",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Espanya+%E5%9C%B0%E9%90%B5%E8%88%87+FGC+%E8%BD%89%E4%B9%98+Pla%C3%A7a+d%E2%80%99Espanya%EF%BC%8CFGC+%E5%BE%80+Llobregat%E2%80%93Anoia+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "displayTitle": "走FGC站換票",
+          "activity": {
+            "description": "從上一站前往Espanya 地鐵與 FGC 轉乘。先核對接車點、交通方式與行李安排，再開啟導航；表列時間包含規劃緩衝。",
+            "tips": []
+          }
+        },
+        {
+          "id": "08dd9c17608f",
+          "date": "2027-01-02",
+          "start": "2027-01-02T09:00:00+01:00",
+          "end": "2027-01-02T09:40:00+01:00",
+          "category": "交通",
+          "title": "FGC目標車往Colònia Güell",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Col%C3%B2nia+G%C3%BCell+FGC+%E8%BB%8A%E7%AB%99+Santa+Coloma+de+Cervell%C3%B3%EF%BC%8C2B+%E5%8D%80+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "displayTitle": "FGC目標車往Colònia Güell",
+          "activity": {
+            "description": "從上一站前往Colònia Güell FGC 車站。先核對接車點、交通方式與行李安排，再開啟導航；表列時間包含規劃緩衝。",
+            "tips": []
+          }
+        },
+        {
+          "id": "163a9b2113f7",
+          "date": "2027-01-02",
+          "start": "2027-01-02T09:40:00+01:00",
+          "end": "2027-01-02T10:00:00+01:00",
+          "category": "交通",
+          "title": "到遊客中心核票／語音",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E5%A5%8E%E7%88%BE%E7%B4%A1%E7%B9%94%E6%9D%91%E5%9C%B0%E4%B8%8B%E6%95%99%E5%A0%82+Cripta+Gaud%C3%AD%EF%BC%8CCol%C3%B2nia+G%C3%BCell+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "displayTitle": "到遊客中心核票／語音",
+          "activity": {
+            "description": "從上一站前往奎爾紡織村地下教堂。先核對接車點、交通方式與行李安排，再開啟導航；表列時間包含規劃緩衝。",
+            "tips": []
+          }
+        },
+        {
+          "id": "15285a55f9c1",
+          "date": "2027-01-02",
+          "start": "2027-01-02T10:00:00+01:00",
+          "end": "2027-01-02T11:15:00+01:00",
+          "category": "必看",
+          "title": "地下教堂目標；已訂錯日期待改訂",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E5%A5%8E%E7%88%BE%E7%B4%A1%E7%B9%94%E6%9D%91%E5%9C%B0%E4%B8%8B%E6%95%99%E5%A0%82+Cripta+Gaud%C3%AD%EF%BC%8CCol%C3%B2nia+G%C3%BCell+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "displayTitle": "奎爾紡織村地下教堂・票券待改訂（Cripta de la Colònia Güell）",
+          "activity": {
+            "description": "奎爾紡織村地下教堂是高第實驗結構的重要作品，傾斜柱與不規則窗讓它與城市住宅不同。安排週六上午，下午回城看奎爾宮，完成七處高第主線。",
+            "highlights": [
+              "傾斜石柱；彩色窗；教堂外觀與工人社區街道。"
+            ],
+            "tips": [
+              "Drive已有地下教堂General×4票券K16，原票DATE02/11/2026、HOUR10:00，團€40，含audioguide。使用者於2026/10/14確認訂錯日期，將自行修改訂單；目標仍為2027/1/2 10:00，沿用原計畫，尚未取得新確認信／票券，不能以原票當作1/2有效票。未載FGC往返已含；火車另購。無新TWD付款收據，不加計或重複購票費。 待使用者改訂並提供新確認信／票券後，再依原計畫09:40先到遊客中心、10:00入場。"
+            ],
+            "photoTip": "窗戶與柱子的角度；先看遊客中心村區圖，避免誤入居民私宅。"
+          },
+          "venue": {
+            "cityId": "barcelona",
+            "nameZh": "奎爾紡織村地下教堂・票券待改訂",
+            "nameEn": "Cripta de la Colònia Güell"
+          },
+          "cityId": "barcelona"
+        },
+        {
+          "id": "074779ba75ea",
+          "date": "2027-01-02",
+          "start": "2027-01-02T11:15:00+01:00",
+          "end": "2027-01-02T11:35:00+01:00",
+          "category": "交通",
+          "title": "走回FGC站",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Col%C3%B2nia+G%C3%BCell+FGC+%E8%BB%8A%E7%AB%99+Santa+Coloma+de+Cervell%C3%B3%EF%BC%8C2B+%E5%8D%80+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "displayTitle": "走回FGC站",
+          "activity": {
+            "description": "從上一站前往Colònia Güell FGC 車站。先核對接車點、交通方式與行李安排，再開啟導航；表列時間包含規劃緩衝。",
+            "tips": []
+          }
+        },
+        {
+          "id": "3facb2880063",
+          "date": "2027-01-02",
+          "start": "2027-01-02T11:35:00+01:00",
+          "end": "2027-01-02T12:15:00+01:00",
+          "category": "交通",
+          "title": "FGC回Espanya",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Espanya+%E5%9C%B0%E9%90%B5%E8%88%87+FGC+%E8%BD%89%E4%B9%98+Pla%C3%A7a+d%E2%80%99Espanya%EF%BC%8CFGC+%E5%BE%80+Llobregat%E2%80%93Anoia+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "displayTitle": "FGC回Espanya",
+          "activity": {
+            "description": "從上一站前往Espanya 地鐵與 FGC 轉乘。先核對接車點、交通方式與行李安排，再開啟導航；表列時間包含規劃緩衝。",
+            "tips": []
+          }
+        },
+        {
+          "id": "8cddc06fabf5",
+          "date": "2027-01-02",
+          "start": "2027-01-02T12:15:00+01:00",
+          "end": "2027-01-02T12:40:00+01:00",
+          "category": "交通",
+          "title": "L3到Liceu市場",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Boqueria+%E6%B3%A2%E8%93%8B%E5%88%A9%E4%BA%9E%E5%B8%82%E5%A0%B4+La+Rambla+91+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "displayTitle": "L3到Liceu市場",
+          "activity": {
+            "description": "從上一站前往Boqueria 波蓋利亞市場。先核對接車點、交通方式與行李安排，再開啟導航；表列時間包含規劃緩衝。",
+            "tips": []
+          }
+        },
+        {
+          "id": "d02-palau-checkin",
+          "date": "2027-01-02",
+          "start": "2027-01-02T12:40:00+01:00",
+          "end": "2027-01-02T13:00:00+01:00",
+          "category": "報到",
+          "title": "前往奎爾宮（Palau Güell）｜彈性入場準備",
+          "displayTitle": "前往奎爾宮（Palau Güell）｜彈性入場準備",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Palau+G%C3%BCell+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "activity": {
+            "description": "回城後直接前往奎爾宮；先以13:00為可行目標，尚未購票。放票後可依上午教堂、實際FGC班次及步行時間調整，保留入場緩衝。",
+            "tips": [
+              "午餐可略過或就近快速吃；不保留原固定市場午餐時段。"
+            ]
+          }
+        },
+        {
+          "id": "d02-palau-visit",
+          "date": "2027-01-02",
+          "start": "2027-01-02T13:00:00+01:00",
+          "end": "2027-01-02T14:30:00+01:00",
+          "category": "必看",
+          "title": "奎爾宮（Palau Güell）｜13:00彈性目標・未購票",
+          "displayTitle": "奎爾宮（Palau Güell）｜13:00彈性目標・未購票",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Palau+G%C3%BCell+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "尚未購票・放票後可調整",
+          "statusKind": "warning",
+          "activity": {
+            "description": "參觀高第設計的奎爾宮。13:00–14:30是規劃目標，尚未購票；開放訂票後可視情況提前，但要與上午教堂和回城交通銜接。",
+            "tips": [
+              "官網冬季通常10:00–17:30、最後入場16:30；1/2實際時段以可購票日曆為準。",
+              "若買到不同時段，午餐、Re-Cuir與畢卡索博物館一起調整，19:00晚餐訂位保留。"
+            ],
+            "highlights": [
+              "地下馬廄、中央大廳、採光與屋頂煙囪；雨天依館方開放。"
+            ]
+          },
+          "venue": {
+            "cityId": "barcelona",
+            "nameZh": "奎爾宮・未購票",
+            "nameEn": "Palau Güell"
+          },
+          "cityId": "barcelona",
+          "ticketPlan": {
+            "id": "P02",
+            "date": "2027-01-02",
+            "title": "奎爾宮 Palau Güell",
+            "time": "13:00彈性目標",
+            "report": "依最後票面提早到場",
+            "status": "尚未購票・彈性目標",
+            "statusKind": "warning",
+            "note": "尚未購票；開放訂票後可視上午教堂與FGC交通提前，午餐可略過或臨時快速用餐。後續Re-Cuir與畢卡索也須一起對齊。",
+            "files": [],
+            "url": "https://inici.palauguell.cat/en/"
+          }
+        },
+        {
+          "id": "d02-walk-to-picasso",
+          "date": "2027-01-02",
+          "start": "2027-01-02T14:30:00+01:00",
+          "end": "2027-01-02T15:15:00+01:00",
+          "category": "交通",
+          "title": "奎爾宮 → 畢卡索博物館｜途中可逛 Re-Cuir",
+          "displayTitle": "奎爾宮 → 畢卡索博物館｜途中可逛 Re-Cuir",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Museu+Picasso+Barcelona+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "activity": {
+            "description": "奎爾宮結束後往畢卡索博物館；Re-Cuir為途中有空再逛的店家，沒有固定到店時間。若需要進食，可依食量找就近快速餐點。",
+            "tips": [
+              "若奎爾宮入場時間改動，沿路停留跟著調整；先確認Re-Cuir分店與當日營業。"
+            ]
+          }
+        },
+        {
+          "id": "d02-picasso-checkin",
+          "date": "2027-01-02",
+          "start": "2027-01-02T15:15:00+01:00",
+          "end": "2027-01-02T15:30:00+01:00",
+          "category": "報到",
+          "title": "畢卡索博物館（Museu Picasso）｜目標入場準備",
+          "displayTitle": "畢卡索博物館（Museu Picasso）｜目標入場準備",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Museu+Picasso+Barcelona+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "activity": {
+            "description": "15:30為未購票目標；先確認實際可售時段及入口，依最後票面提早到場。",
+            "tips": []
+          }
+        },
+        {
+          "id": "d02-picasso-visit",
+          "date": "2027-01-02",
+          "start": "2027-01-02T15:30:00+01:00",
+          "end": "2027-01-02T17:15:00+01:00",
+          "category": "必看",
+          "title": "畢卡索博物館（Museu Picasso）｜新增參觀・未購票",
+          "displayTitle": "畢卡索博物館（Museu Picasso）｜新增參觀・未購票",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Museu+Picasso+Barcelona+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "新增景點・尚未購票",
+          "statusKind": "warning",
+          "activity": {
+            "description": "巴塞隆納畢卡索博物館以早期作品及與城市的連結為參觀主軸，可留意《宮娥》系列。這次新增的參觀尚未購票，15:30–17:15為規劃目標。",
+            "tips": [
+              "官網目前冬季週二至週日10:00–19:00；2027/1/2是否有特殊公告及可售時段仍以訂票頁為準。",
+              "先確定奎爾宮時段，再選接得上的畢卡索票；19:00 Sagardi訂位保留。"
+            ],
+            "highlights": [
+              "畢卡索早期作品與巴塞隆納時期。",
+              "《宮娥》系列，展出依當日展廳開放。"
+            ]
+          },
+          "venue": {
+            "cityId": "barcelona",
+            "nameZh": "畢卡索博物館・未購票",
+            "nameEn": "Museu Picasso"
+          },
+          "cityId": "barcelona",
+          "ticketPlan": {
+            "id": "P03",
+            "date": "2027-01-02",
+            "title": "巴塞隆納畢卡索博物館 Museu Picasso",
+            "time": "15:30彈性目標",
+            "report": "15:15目標報到",
+            "status": "尚未購票・彈性目標",
+            "statusKind": "warning",
+            "note": "新增參觀，尚未購票；先確定奎爾宮時段，再選畢卡索可售時段，19:00晚餐保留。",
+            "files": [],
+            "url": "https://museupicassobcn.cat/en/plan-your-visit/buy-tickets-and-opening-hours"
+          }
+        },
+        {
+          "id": "d02-born-stroll",
+          "date": "2027-01-02",
+          "start": "2027-01-02T17:15:00+01:00",
+          "end": "2027-01-02T18:40:00+01:00",
+          "category": "散步",
+          "title": "波恩區與海洋聖母教堂周邊｜散步或咖啡休息",
+          "displayTitle": "波恩區與海洋聖母教堂周邊｜散步或咖啡休息",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Santa+Maria+del+Mar+Barcelona+Barcelona",
+          "infoUrl": "",
+          "conditional": true,
+          "status": "彈性散步／休息",
+          "statusKind": "conditional",
+          "activity": {
+            "description": "博物館後在波恩區與海洋聖母教堂周邊散步，或找店坐下休息；這段可依博物館進度縮短，接著前往19:00晚餐。",
+            "tips": []
+          },
+          "venue": {
+            "cityId": "barcelona",
+            "nameZh": "波恩區與海洋聖母教堂周邊",
+            "nameEn": "El Born / Santa Maria del Mar"
+          },
+          "cityId": "barcelona"
+        },
+        {
+          "id": "d02-sagardi-checkin",
+          "date": "2027-01-02",
+          "start": "2027-01-02T18:40:00+01:00",
+          "end": "2027-01-02T19:00:00+01:00",
+          "category": "報到",
+          "title": "巴斯克餐廳（Sagardi Argenteria）｜晚餐報到",
+          "displayTitle": "巴斯克餐廳（Sagardi Argenteria）｜晚餐報到",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Sagardi+Argenteria+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "activity": {
+            "description": "19:00已訂位（使用者確認）；提早到店，核對Argenteria分店與訂位紀錄。",
+            "tips": []
+          }
+        },
+        {
+          "id": "d02-sagardi-dinner",
+          "date": "2027-01-02",
+          "start": "2027-01-02T19:00:00+01:00",
+          "end": "2027-01-02T20:15:00+01:00",
+          "category": "晚餐",
+          "title": "巴斯克餐廳（Sagardi Argenteria）｜19:00已訂位",
+          "displayTitle": "巴斯克餐廳（Sagardi Argenteria）｜19:00已訂位",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Sagardi+Argenteria+Barcelona",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "19:00已訂位・使用者確認",
+          "statusKind": "confirmed",
+          "activity": {
+            "description": "晚餐改吃Sagardi Argenteria巴斯克料理，19:00已訂位（使用者確認）。用餐結束時間為規劃估計，依現場上菜調整。",
+            "tips": [
+              "確認Argenteria分店、姓名、人數與訂位條款；尚未提供訂位確認信。",
+              "這趟已有多次tapas；若想換口味，可詢問巴斯克炭烤肉類或魚類，依當日菜單分食。"
+            ],
+            "mustTry": [
+              "可先詢問巴斯克炭烤肉類／魚類及當日供應；尚未核實固定必點、份量與價格。",
+              "想吃pintxos也可少量嘗試，再依食量決定主菜。"
+            ]
+          },
+          "venue": {
+            "cityId": "barcelona",
+            "nameZh": "巴斯克餐廳",
+            "nameEn": "Sagardi Argenteria"
+          },
+          "cityId": "barcelona",
+          "reservation": {
+            "id": "RSAGARDI",
+            "title": "巴斯克餐廳（Sagardi Argenteria）｜晚餐",
+            "date": "2027-01-02",
+            "time": "19:00",
+            "report": "18:40到店目標",
+            "status": "已訂位・使用者確認",
+            "statusKind": "confirmed",
+            "note": "1/2 19:00已訂位，使用者於10/22確認；確認信尚未提供。",
+            "files": [],
+            "url": ""
+          }
+        },
+        {
+          "id": "d02-return-after-sagardi",
+          "date": "2027-01-02",
+          "start": "2027-01-02T20:15:00+01:00",
+          "end": "2027-01-02T20:55:00+01:00",
+          "category": "交通",
+          "title": "住宿｜晚餐後返回飯店",
+          "displayTitle": "住宿｜晚餐後返回飯店",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "activity": {
+            "description": "晚餐後返回住宿，保留翌日國際航班、接車與行李整理時間。",
+            "tips": []
+          },
+          "lodgingAction": "晚餐後返回飯店",
+          "cityId": "barcelona"
+        },
+        {
+          "id": "48c1fd40ba3f",
+          "date": "2027-01-02",
+          "start": "2027-01-02T20:55:00+01:00",
+          "end": "2027-01-02T21:45:00+01:00",
+          "category": "準備",
+          "title": "收行李核國際航廈與司機",
+          "transport": "",
+          "note": "",
+          "ticketIds": [],
+          "mapUrl": "",
+          "infoUrl": "",
+          "conditional": false,
+          "status": "",
+          "statusKind": "neutral",
+          "displayTitle": "收行李核國際航廈與司機",
+          "activity": {
+            "description": "核對翌日票券、航班報到與接車資訊，整理隨身物品和大件行李，並將所需資料存離線。",
+            "tips": []
+          }
+        }
+      ],
+      "optionalStops": [
+        {
+          "id": "d02-galisteo",
+          "title": "教堂前早餐候選（Restaurant Galisteo）",
+          "displayTitle": "教堂前早餐候選（Restaurant Galisteo）",
+          "description": "參觀奎爾紡織村地下教堂前可先吃早餐；沒有排固定用餐時間。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Restaurant+Galisteo+Colonia+Guell+Barcelona",
+          "mustTry": [
+            "可先問早餐時段、麵包／三明治與熱飲；菜單未核實。"
+          ],
+          "note": "先核對店址與1/2早餐營業；要坐下用餐就提早搭FGC，保留09:40遊客中心核票、10:00教堂目標。與住宿輕食擇一，不把舊錯日期票當作有效入場票。",
+          "venue": {
+            "cityId": "barcelona",
+            "nameZh": "教堂前早餐候選",
+            "nameEn": "Restaurant Galisteo"
+          },
+          "openingHours": "當日營業待確認",
+          "beforeEventId": "163a9b2113f7"
+        },
+        {
+          "id": "d02-flex-market-food",
+          "title": "博蓋利亞市場海鮮／附近簡餐（Mercat de la Boqueria）｜彈性午餐",
+          "displayTitle": "博蓋利亞市場海鮮／附近簡餐（Mercat de la Boqueria）｜彈性午餐",
+          "description": "午餐不鎖餐廳與時間，可略過、快速分食或臨時找吃的；市場海鮮仍保留為順路備選。",
+          "note": "若要提前奎爾宮就直接去報到；有空再逛海鮮攤或找附近簡餐。先問價格、份量和候位，不為吃午餐壓縮已購入場。",
+          "mustTry": [
+            "海鮮或簡餐依當日供應與食量選擇。"
+          ],
+          "openingHours": "1/2各攤與廚房營業待確認",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Mercat+de+la+Boqueria+Barcelona",
+          "venue": {
+            "cityId": "barcelona",
+            "nameZh": "市場海鮮／簡餐・可略過",
+            "nameEn": "Mercat de la Boqueria"
+          },
+          "beforeEventId": "d02-palau-checkin"
+        },
+        {
+          "id": "d02-re-cuir",
+          "title": "途中店家（Re-Cuir）｜奎爾宮後順路逛",
+          "displayTitle": "途中店家（Re-Cuir）｜奎爾宮後順路逛",
+          "description": "奎爾宮參觀後、前往畢卡索博物館途中，有空可逛Re-Cuir；不安排固定時間。",
+          "note": "先核對分店、位置與1/2營業；若博物館入場時間接近，縮短或略過購物。",
+          "mustTry": [],
+          "openingHours": "當日營業待確認",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Re-Cuir+Barcelona",
+          "venue": {
+            "cityId": "barcelona",
+            "nameZh": "途中店家",
+            "nameEn": "Re-Cuir"
+          },
+          "afterEventId": "d02-palau-visit"
+        }
+      ]
+    }
+  ],
+  "planningReminders": [
+    {
+      "id": "sartoria-booking-0101",
+      "title": "12/1開始查位｜Sartoria Panatieri 元旦披薩",
+      "date": "2026-12-01",
+      "note": "1/1披薩候選或加吃，尚未訂位；提前一個月開放為使用者提供，精確放位時間及元旦營業待確認。下載後匯入行事曆，並自行設定通知。",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Sartoria+Panatieri+Pizzeria+Barcelona+Barcelona",
+      "calendar": true
+    },
+    {
+      "id": "choose-newyear-lunch",
+      "title": "1/1午餐訂位擇一，處理未使用訂位",
+      "note": "Margherita 13:45、El Furacu Restaurant 14:00 都已訂位，兩間擇一。Sartoria Panatieri另為未訂的替代／加吃；決定後依店家條款取消或調整未使用訂位。",
+      "mapUrl": ""
+    },
+    {
+      "id": "palau-picasso-booking",
+      "title": "1/2先訂奎爾宮，再銜接畢卡索博物館",
+      "note": "奎爾宮13:00、畢卡索15:30皆為彈性未購目標；放票後可調整，午餐可略過。19:00 Sagardi已訂位。",
+      "mapUrl": "https://inici.palauguell.cat/en/"
+    }
+  ],
+  "todoUpdates": [
+    {
+      "matchTitle": "Prado與奎爾宮仍待購票",
+      "title": "Prado、奎爾宮與畢卡索仍待購票",
+      "note": "Prado12/26 15:45目標；1/2奎爾宮13:00、畢卡索15:30皆未購彈性目標，依實際放票與上午交通調整。",
+      "url": "https://entradas.museodelprado.es/"
+    }
+  ]
+}

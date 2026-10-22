@@ -4,6 +4,10 @@ export function reservationsForEvent(event) {
   return [...(event.reservation ? [event.reservation] : []), ...(event.mealOptions || []).flatMap(option=>option.reservation ? [option.reservation] : [])];
 }
 
+function ticketRecordsForEvent(event) {
+  return [...reservationsForEvent(event), ...(event.ticketPlan ? [event.ticketPlan] : [])];
+}
+
 // Public itinerary updates can be applied without uploading or replacing private files.
 export function currentTrip(publicTrip, privateTrip) {
   if (!privateTrip) return publicTrip;
@@ -21,7 +25,7 @@ export function currentTrip(publicTrip, privateTrip) {
       offlineMapNeedsUpdate: routeChanged && !!old?.mapAsset,
       events: day.events.map(event => {
         const saved = previous.get(event.id);
-        const bookings=reservationsForEvent(event);
+        const bookings=ticketRecordsForEvent(event);
         const unchanged = saved && saved.start === event.start && saved.end === event.end;
         if (!unchanged) return { ...event, ticketIds: bookings.length ? bookings.map(b=>b.id) : saved?.ticketIds || (event.isFlight && privateTrip.tickets.some(t=>t.id==='F01') ? ['F01'] : []) };
         return {
@@ -41,9 +45,10 @@ export function currentTrip(publicTrip, privateTrip) {
   const ticketReview=publicTrip.ticketReview?{...privateTrip.ticketReview,...publicTrip.ticketReview}:privateTrip.ticketReview;
   if(ticketReview && publicTrip.ticketReview?.status==='current' &&
       (privateTrip.ticketReview?.status!=='current' || (privateTrip.ticketReview?.last_verified || '') < publicTrip.ticketReview.last_verified))ticketReview.status='import_required';
-  const reservations=publicTrip.days.flatMap(d=>d.events).flatMap(reservationsForEvent);
+  const reservations=publicTrip.days.flatMap(d=>d.events).flatMap(ticketRecordsForEvent);
   const tickets=reservations.length ? [...privateTrip.tickets.filter(t=>!reservations.some(r=>r.id===t.id)),...reservations.map(r=>({...r,files:privateTrip.tickets.find(t=>t.id===r.id)?.files?.length ? privateTrip.tickets.find(t=>t.id===r.id).files : r.files}))] : privateTrip.tickets;
-  return { ...privateTrip, days, tickets, ticketReview, planningReminders:publicTrip.planningReminders || privateTrip.planningReminders || [], version: publicTrip.version, companionVersion: privateTrip.version, hasNewerItinerary: true };
+  const todos=publicTrip.todoUpdates?.length ? privateTrip.todos.map(todo=>{const update=publicTrip.todoUpdates.find(u=>u.matchTitle===todo.title);return update?{...todo,title:update.title,note:update.note,url:update.url}:todo;}) : privateTrip.todos;
+  return { ...privateTrip, days, tickets, todos, ticketReview, planningReminders:publicTrip.planningReminders || privateTrip.planningReminders || [], version: publicTrip.version, companionVersion: privateTrip.version, hasNewerItinerary: true };
 }
 
 export function validPublicTrip(trip) {

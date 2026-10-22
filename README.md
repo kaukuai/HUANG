@@ -16,6 +16,7 @@
 - 10/19 更新：12/23 18:40 桃園出發、1/4 14:00 返抵台灣及全部國際轉機航段；12/29 直赴住宿、20:00 El Glop 已訂與飯後家樂福；12/30 Puiggròs 早餐後直赴聖保祿、Hasta Los Andares／Sagradas Tapas 午餐、彈性 Five Guys 與 Vinitus 鵝肝牛排晚餐。10:00 聖保祿、14:30 聖家堂及 15:15 登塔時間維持原票。
 - 10/21 更新：12/31 午餐後依序順路加吃三店、傍晚返宿與可略過的百貨晚餐；1/1 新早餐、米拉前 Mauri、Margherita 13:45／El Furacu 14:00 已訂午餐擇一、18:30 七扇門晚餐與 Paradiso 酒吧備案；1/2 教堂前 Galisteo 早餐備選及博蓋利亞海鮮攤。彈性地點可放在相應活動前後，沒有固定到店時刻，首頁城市總覽也依動線列出。
 - 「旅程」提供 Sartoria Panatieri 12/1 查詢元旦訂位的全天行事曆下載；匯入手機行事曆後自行設定通知，不會在背景代訂或推播。午餐候選是同一時段的替代選擇，兩筆訂位都保留，未使用的一筆需依店家條款自行處理。
+- 10/22 更新：1/2 奎爾宮改13:00彈性未購目標，午餐可略過或臨時簡餐；途中可逛Re-Cuir、15:30畢卡索博物館未購目標、19:00 Sagardi Argenteria已訂位。新增待購票入口，舊同行包的奎爾宮時段與待辦會同步更新。
 
 已提供可直接由 GitHub 匯入 Vercel 的設定。公開行程連網後會自動更新，已匯入舊同行包的手機也會顯示最新安排；票券、私人提醒與離線路線圖需另匯入新版同行包。尚未在實體 iPhone Safari 測試。沒有伺服器帳號、多人即時同步、背景推播或 Google Drive 自動同步。
 
@@ -86,6 +87,20 @@ npm run test:cities
 5. 檢查行程與同行附件的版本，再以飛航模式開啟一份票券。
 
 行程完成標記只保留在各自裝置，不會修改供應商訂位或其他同行者的狀態。新版程式會在完成離線快取後載入；匯入資料或開啟附件期間可稍後按「開啟新版畫面」。
+
+## 同步 Excel 與旅行手冊
+
+`scripts/export_travel_documents.py` 以目前公開行程、原Excel及私下保存的Drive檔案目錄產生新版XLSM、中文PDF、HTML手冊、票券連結索引與餐飲／待訂檢視。原Excel保留不覆寫；原預算頁明確標為歷史參考，沒有擅自重估新餐費或新增門票。每個彈性地點的開始、結束欄位留白。PDF使用系統Noto CJK字型，動線圖是非等比例示意，附各站導航。
+
+```bash
+python -m pip install -r requirements-documents.txt
+python scripts/export_travel_documents.py \
+  --source /path/to/original.xlsm \
+  --inventory /path/to/private/drive-inventory.json \
+  --output /workspace/spain-planning
+```
+
+匯出需要系統 `/usr/bin/chromium` 與Noto CJK字型。目錄JSON包含 `id`、`path`、`mime` 欄位，只在私人檔案中用來建立原票連結；可用 `--source-url`、`--drive-folder-url` 加入使用者提供的私下入口。原票網址、住宿地址、私人文件與目錄JSON不可提交Git。輸出路徑必須在倉庫外，網站只發佈 `app/` 的公開資料。餐飲與未訂票判斷來自 `scripts/travel_audit.py` 的本次已核對資料；往後若票況改變，需先更新核對結果，不能只改文件日期。
 
 若網站仍顯示舊內容，先查看「旅程 → 行程更新」的版本及網站部署編號。網站的 `/version.json` 也提供 `sourceCommit`、`itineraryVersion` 與建置時間，可對照 GitHub 最新提交及 Vercel Deployments。端點不存在代表部署尚未包含此功能；到 Vercel 確認專案連接 `kaukuai/HUANG`、Production Branch 為 `main`，最新提交已部署成功，必要時重新部署。
 
